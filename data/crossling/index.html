@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crosslinguistic Lexical Analysis Corpus</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0e12;
+    --surface: #141820;
+    --surface-hover: #1a2030;
+    --border: #252d3a;
+    --text: #d4dae4;
+    --text-dim: #6b7a90;
+    --accent: #5ba4cf;
+    --accent-dim: #2d5a78;
+    --tag-bg: #1a2535;
+    --tag-text: #5ba4cf;
+    --json: #e8a855;
+    --conllu: #7ec47e;
+    --npz: #c47eb8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 3rem 2rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  header p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    max-width: 700px;
+  }
+
+  .stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  .stats span { color: var(--accent); font-weight: 500; }
+
+  .search-bar {
+    max-width: 1100px;
+    margin: 1.5rem auto 0;
+    padding: 0 2rem;
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-bar input:focus {
+    border-color: var(--accent-dim);
+  }
+
+  .search-bar input::placeholder {
+    color: var(--text-dim);
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 4rem;
+  }
+
+  .lang-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .lang-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .lang-header:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent-dim);
+  }
+
+  .lang-header.open {
+    border-radius: 6px 6px 0 0;
+    border-bottom-color: transparent;
+  }
+
+  .lang-header .arrow {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    transition: transform 0.2s;
+    width: 1rem;
+    text-align: center;
+  }
+
+  .lang-header.open .arrow {
+    transform: rotate(90deg);
+  }
+
+  .lang-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    flex: 1;
+  }
+
+  .lang-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+
+  .file-list {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    padding: 0.5rem 0;
+  }
+
+  .file-list.open { display: block; }
+
+  .file-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.45rem 1rem 0.45rem 2.75rem;
+    transition: background 0.1s;
+  }
+
+  .file-item:hover { background: var(--surface-hover); }
+
+  .file-item a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    flex: 1;
+  }
+
+  .file-item a:hover { color: var(--accent); }
+
+  .file-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .tag-json { background: rgba(232,168,85,0.15); color: var(--json); }
+  .tag-conllu { background: rgba(126,196,126,0.15); color: var(--conllu); }
+  .tag-npz { background: rgba(196,126,184,0.15); color: var(--npz); }
+
+  .hidden { display: none !important; }
+
+  footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    header, main, .search-bar, footer { padding-left: 1rem; padding-right: 1rem; }
+    header h1 { font-size: 1.2rem; }
+    .stats { flex-wrap: wrap; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Crosslinguistic Lexical Analysis Corpus</h1>
+  <p>Universal Dependencies treebanks, verb classifications, native definitions, referent axis mappings, and definition embeddings across 27 languages.</p>
+  <div class="stats">
+    <div><span>27</span> languages</div>
+    <div><span>~230</span> files</div>
+    <div>UD CoNLL-U &middot; JSON &middot; NumPy</div>
+  </div>
+</header>
+
+<div class="search-bar">
+  <input type="text" id="search" placeholder="Filter languages…" autocomplete="off">
+</div>
+
+<main id="corpus"></main>
+
+<footer>
+  Hosted on <a href="https://storage.googleapis.com/intelechia-content/im/lexical%20analysis/crossling/">Google Cloud Storage</a> &middot; intelechia-content
+</footer>
+
+<script>
+const BASE = "https://storage.googleapis.com/intelechia-content/im/lexical%20analysis/crossling";
+
+const languages = {
+  "Ancient_Greek": ["classified.json","combined.conllu","definition_embeddings.npz","grc_perseus-ud-dev.conllu","grc_perseus-ud-test.conllu","grc_perseus-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Arabic": ["ar_padt-ud-dev.conllu","ar_padt-ud-test.conllu","ar_padt-ud-train.conllu","classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","verbs.json"],
+  "Basque": ["classified.json","combined.conllu","definition_embeddings.npz","eu_bdt-ud-dev.conllu","eu_bdt-ud-test.conllu","eu_bdt-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Classical_Chinese": ["classified.json","combined.conllu","definition_embeddings.npz","lzh_kyoto-ud-dev.conllu","lzh_kyoto-ud-test.conllu","lzh_kyoto-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Coptic": ["classified.json","combined.conllu","cop_scriptorium-ud-dev.conllu","cop_scriptorium-ud-test.conllu","cop_scriptorium-ud-train.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","verbs.json"],
+  "English": ["classified.json","combined.conllu","definition_embeddings.npz","en_ewt-ud-dev.conllu","en_ewt-ud-test.conllu","en_ewt-ud-train.conllu","native_definitions.json","operator_confidence.json","referent_axis.json","sup_rec_reclass.json","verbs.json"],
+  "Finnish": ["classified.json","combined.conllu","definition_embeddings.npz","fi_tdt-ud-dev.conllu","fi_tdt-ud-test.conllu","fi_tdt-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "French": ["classified.json","combined.conllu","definition_embeddings.npz","fr_gsd-ud-dev.conllu","fr_gsd-ud-test.conllu","fr_gsd-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "German": ["classified.json","combined.conllu","de_gsd-ud-dev.conllu","de_gsd-ud-test.conllu","de_gsd-ud-train.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","verbs.json"],
+  "Gothic": ["classified.json","combined.conllu","definition_embeddings.npz","got_proiel-ud-dev.conllu","got_proiel-ud-test.conllu","got_proiel-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Hindi": ["classified.json","combined.conllu","definition_embeddings.npz","hi_hdtb-ud-dev.conllu","hi_hdtb-ud-test.conllu","hi_hdtb-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Indonesian": ["classified.json","combined.conllu","definition_embeddings.npz","id_gsd-ud-dev.conllu","id_gsd-ud-test.conllu","id_gsd-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Japanese": ["classified.json","combined.conllu","definition_embeddings.npz","ja_gsd-ud-dev.conllu","ja_gsd-ud-test.conllu","ja_gsd-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Korean": ["classified.json","combined.conllu","definition_embeddings.npz","ko_kaist-ud-dev.conllu","ko_kaist-ud-test.conllu","ko_kaist-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Latin": ["classified.json","combined.conllu","definition_embeddings.npz","la_perseus-ud-test.conllu","la_perseus-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Naija": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","pcm_nsc-ud-dev.conllu","pcm_nsc-ud-test.conllu","pcm_nsc-ud-train.conllu","referent_axis.json","verbs.json"],
+  "Old_Church_Slavonic": ["classified.json","combined.conllu","cu_proiel-ud-dev.conllu","cu_proiel-ud-test.conllu","cu_proiel-ud-train.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","verbs.json"],
+  "Old_East_Slavic": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","orv_torot-ud-dev.conllu","orv_torot-ud-test.conllu","orv_torot-ud-train.conllu","referent_axis.json","verbs.json"],
+  "Persian": ["classified.json","combined.conllu","definition_embeddings.npz","fa_perdt-ud-dev.conllu","fa_perdt-ud-test.conllu","fa_perdt-ud-train.conllu","native_definitions.json","referent_axis.json","verbs.json"],
+  "Russian": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","ru_syntagrus-ud-dev.conllu","ru_syntagrus-ud-test.conllu","verbs.json"],
+  "Sanskrit": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","sa_vedic-ud-dev.conllu","sa_vedic-ud-test.conllu","sa_vedic-ud-train.conllu","verbs.json"],
+  "Tagalog": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","tl_trg-ud-test.conllu","verbs.json"],
+  "Tamil": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","ta_ttb-ud-dev.conllu","ta_ttb-ud-test.conllu","ta_ttb-ud-train.conllu","verbs.json"],
+  "Turkish": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","tr_boun-ud-dev.conllu","tr_boun-ud-test.conllu","tr_boun-ud-train.conllu","verbs.json"],
+  "Uyghur": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","ug_udt-ud-dev.conllu","ug_udt-ud-test.conllu","ug_udt-ud-train.conllu","verbs.json"],
+  "Vietnamese": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","verbs.json","vi_vtb-ud-dev.conllu","vi_vtb-ud-test.conllu","vi_vtb-ud-train.conllu"],
+  "Wolof": ["classified.json","combined.conllu","definition_embeddings.npz","native_definitions.json","referent_axis.json","verbs.json","wo_wtb-ud-dev.conllu","wo_wtb-ud-test.conllu","wo_wtb-ud-train.conllu"],
+  "Yoruba": ["classified.json","combined.conllu","native_definitions.json","verbs.json","yo_ytb-ud-test.conllu"]
+};
+
+function fileTag(name) {
+  const ext = name.split('.').pop();
+  if (ext === 'json') return '<span class="file-tag tag-json">json</span>';
+  if (ext === 'conllu') return '<span class="file-tag tag-conllu">conllu</span>';
+  if (ext === 'npz') return '<span class="file-tag tag-npz">npz</span>';
+  return '';
+}
+
+function render() {
+  const main = document.getElementById('corpus');
+  let html = '';
+  for (const [lang, files] of Object.entries(languages)) {
+    const display = lang.replace(/_/g, ' ');
+    html += `<div class="lang-section" data-lang="${display.toLowerCase()}">
+      <div class="lang-header" onclick="toggle(this)">
+        <span class="arrow">▶</span>
+        <span class="lang-name">${display}</span>
+        <span class="lang-count">${files.length} files</span>
+      </div>
+      <div class="file-list">`;
+    for (const f of files) {
+      const url = `${BASE}/${lang}/${encodeURIComponent(f)}`;
+      html += `<div class="file-item">
+        <a href="${url}" target="_blank">${f}</a>
+        ${fileTag(f)}
+      </div>`;
+    }
+    html += `</div></div>`;
+  }
+  main.innerHTML = html;
+}
+
+function toggle(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+
+document.getElementById('search').addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase();
+  document.querySelectorAll('.lang-section').forEach(s => {
+    s.classList.toggle('hidden', !s.dataset.lang.includes(q));
+  });
+});
+
+render();
+</script>
+</body>
+</html>
