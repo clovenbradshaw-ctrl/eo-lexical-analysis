@@ -1,0 +1,4699 @@
+{
+  "operator": "SEG",
+  "symbol": "\uff5c",
+  "total_verbs": 555,
+  "scales": {
+    "physical": 402,
+    "social": 77,
+    "informational": 68,
+    "psychological": 8
+  },
+  "confidence": {
+    "high": 494,
+    "medium": 61
+  },
+  "borders": {
+    "INS": 24,
+    "NUL": 21,
+    "REC": 7,
+    "CON": 5,
+    "ALT": 5,
+    "SYN": 2,
+    "DES": 1
+  },
+  "subclusters": [
+    {
+      "id": 0,
+      "size": 99,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 85,
+        "social": 10,
+        "psychological": 2,
+        "informational": 2
+      },
+      "core_verbs": [
+        "part",
+        "pluck",
+        "undo",
+        "detach",
+        "disassemble",
+        "dismantle",
+        "disentangle",
+        "uncork",
+        "pull off",
+        "come off"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "unravel",
+          "scale": "physical",
+          "reason": "Input: tangled/intertwined whole. Output: separate strands or parts. Partitions entangled structure into components.",
+          "confidence": "high"
+        },
+        {
+          "verb": "disunite",
+          "scale": "physical",
+          "reason": "Input: unified whole. Output: separated parts. One becomes many through forced separation.",
+          "confidence": "high"
+        },
+        {
+          "verb": "disentangle",
+          "scale": "physical",
+          "reason": "Input: tangled whole. Output: separated parts. Draws boundaries through interconnected mass to create distinct threads.",
+          "confidence": "high"
+        },
+        {
+          "verb": "come away",
+          "scale": "physical",
+          "reason": "Input: attached whole; output: detached parts, boundary emerged through separation.",
+          "confidence": "high"
+        },
+        {
+          "verb": "draw away",
+          "scale": "physical",
+          "reason": "Input: thing attached/connected; Output: thing separated/removed; pulling divides the previously unified configuration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "dissever",
+          "scale": "physical",
+          "reason": "Input: unified whole. Output: separated parts. Draws boundary through whole, creating division.",
+          "confidence": "high"
+        },
+        {
+          "verb": "unsnarl",
+          "scale": "physical",
+          "reason": "Input: entangled whole. Output: separated parts. The entanglement is divided, freeing the components.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "undo",
+          "scale": "physical",
+          "reason": "Input: bound/fastened whole. Output: parts separated, connection dissolved. Boundary drawn through what was unified.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tease apart",
+          "scale": "physical",
+          "reason": "Input: entangled fibers. Output: separated fibers. The whole is divided into individual parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "part",
+          "scale": "physical",
+          "reason": "Input: unified whole (hair, object). Output: separated parts with boundary drawn through. The verb explicitly partitions one into many.",
+          "confidence": "high"
+        },
+        {
+          "verb": "break away",
+          "scale": "physical",
+          "reason": "Input: entity attached/confined; Output: entity separated from constraint; boundary drawn severing the connection.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "disassemble",
+          "scale": "physical",
+          "reason": "Input: assembled whole. Output: constituent parts separated. A partition through the structure creating components.",
+          "confidence": "high"
+        },
+        {
+          "verb": "throw off",
+          "scale": "physical",
+          "reason": "Input: entity with attached thing. Output: entity and separated thing. A boundary divides what was together.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "pull off",
+          "scale": "physical",
+          "reason": "Input: thing attached or engaged. Output: thing withdrawn, separated. Withdrawal creates separation from prior state.",
+          "confidence": "high"
+        },
+        {
+          "verb": "untwine",
+          "scale": "physical",
+          "reason": "Input: twisted whole. Output: separated strands. A boundary is drawn through the twined structure, partitioning it.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": 138,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 131,
+        "informational": 5,
+        "social": 2
+      },
+      "core_verbs": [
+        "stem",
+        "manicure",
+        "trim",
+        "chip",
+        "chisel",
+        "grind",
+        "whittle",
+        "carve",
+        "rut",
+        "top"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "cut away",
+          "scale": "physical",
+          "reason": "Input: whole object. Output: object divided into remaining-part and removed-part. Creates partition.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cut up",
+          "scale": "physical",
+          "reason": "Input: whole object; output: multiple pieces; boundary drawn through object dividing it into parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "slice up",
+          "scale": "physical",
+          "reason": "Input: whole object; Output: multiple slices; boundaries are drawn through the object dividing it into parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "chop off",
+          "scale": "physical",
+          "reason": "Input: whole object; output: separated parts by cutting, boundary drawn through object.",
+          "confidence": "high"
+        },
+        {
+          "verb": "slice through",
+          "scale": "physical",
+          "reason": "Input: whole object; Output: object divided by cutting plane; the blade partitions the material.",
+          "confidence": "high"
+        },
+        {
+          "verb": "chop up",
+          "scale": "physical",
+          "reason": "Input: whole object; Output: multiple pieces; boundaries drawn through the object dividing it into parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "snap off",
+          "scale": "physical",
+          "reason": "Input: whole object; output: parts separated by breaking, boundary drawn through whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "scissor",
+          "scale": "physical",
+          "reason": "Input: whole material. Output: parts separated by cuts. A boundary is drawn through the material, dividing it.",
+          "confidence": "high"
+        },
+        {
+          "verb": "crosscut",
+          "scale": "physical",
+          "reason": "Input: whole material; Output: material divided by diagonal cut; a partition is drawn through it.",
+          "confidence": "high"
+        },
+        {
+          "verb": "slice into",
+          "scale": "physical",
+          "reason": "Input: intact body/object; Output: body/object with internal partition created; a boundary is drawn through matter.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cut across",
+          "scale": "physical",
+          "reason": "Input: whole material; Output: material divided by diagonal cut; a partition is drawn through it.",
+          "confidence": "high"
+        },
+        {
+          "verb": "slice",
+          "scale": "physical",
+          "reason": "Input: whole object. Output: separated slices. Boundary drawn through creating parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cut into",
+          "scale": "physical",
+          "reason": "Input: solid earth mass. Output: earth divided into loosened parts. The verb partitions the soil.",
+          "confidence": "high"
+        },
+        {
+          "verb": "lop off",
+          "scale": "physical",
+          "reason": "Input: whole object; output: separated parts by cutting, boundary drawn through object.",
+          "confidence": "high"
+        },
+        {
+          "verb": "snip off",
+          "scale": "physical",
+          "reason": "Input: a whole object. Output: parts separated by snipping. A boundary is drawn through something, dividing it.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 24,
+      "dominant_scale": "social",
+      "scales": {
+        "social": 21,
+        "physical": 2,
+        "informational": 1
+      },
+      "core_verbs": [
+        "abduct",
+        "cabbage",
+        "confiscate",
+        "cop",
+        "embezzle",
+        "extort",
+        "filch",
+        "hook",
+        "kidnap",
+        "misappropriate"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "cop",
+          "scale": "social",
+          "reason": "Input: property with owner; Output: property separated from rightful owner; boundary drawn through legitimate possession.",
+          "confidence": "high"
+        },
+        {
+          "verb": "thieve",
+          "scale": "social",
+          "reason": "Input: property with owner; Output: property separated from rightful owner; boundary drawn through theft.",
+          "confidence": "high"
+        },
+        {
+          "verb": "pilfer",
+          "scale": "social",
+          "reason": "Input: belongings with owner; Output: belongings separated from owner; boundary drawn through petty theft.",
+          "confidence": "high"
+        },
+        {
+          "verb": "pirate",
+          "scale": "social",
+          "reason": "Input: property with owner; Output: property separated from rightful owner by force; boundary drawn through forcible taking.",
+          "confidence": "high"
+        },
+        {
+          "verb": "purloin",
+          "scale": "social",
+          "reason": "Input: belongings with owner; Output: belongings separated from owner; boundary drawn through theft.",
+          "confidence": "high"
+        },
+        {
+          "verb": "hook",
+          "scale": "social",
+          "reason": "Input: property with owner; Output: property separated from rightful owner; boundary drawn through theft.",
+          "confidence": "high"
+        },
+        {
+          "verb": "filch",
+          "scale": "social",
+          "reason": "Input: belongings with owner; Output: belongings separated from owner; boundary drawn between thing and rightful possessor.",
+          "confidence": "high"
+        },
+        {
+          "verb": "embezzle",
+          "scale": "social",
+          "reason": "Input: property under trust; Output: property separated from legitimate owner; boundary drawn between entrusted thing and rightful possessor.",
+          "confidence": "high"
+        },
+        {
+          "verb": "confiscate",
+          "scale": "social",
+          "reason": "Input: property with owner; Output: property separated from owner; boundary drawn between possessor and possession.",
+          "confidence": "high"
+        },
+        {
+          "verb": "misappropriate",
+          "scale": "social",
+          "reason": "Input: property under care; Output: property separated from legitimate owner; boundary drawn through fraudulent use.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cabbage",
+          "scale": "social",
+          "reason": "Input: object with owner; Output: object separated from rightful owner; boundary drawn between thing and legitimate possessor.",
+          "confidence": "high"
+        },
+        {
+          "verb": "peculate",
+          "scale": "social",
+          "reason": "Input: entrusted property as whole; Output: portion separated and redirected to self; partitioning trusted funds.",
+          "confidence": "high"
+        },
+        {
+          "verb": "snatch away",
+          "scale": "physical",
+          "reason": "Input: object with possessor; Output: object rapidly separated from possessor; boundary drawn through quick removal.",
+          "confidence": "high"
+        },
+        {
+          "verb": "kidnap",
+          "scale": "social",
+          "reason": "Input: person in their context; Output: person separated from context against will; boundary drawn between person and their rightful location.",
+          "confidence": "high"
+        },
+        {
+          "verb": "malversate",
+          "scale": "social",
+          "reason": "Input: entrusted property as whole; Output: portion separated and redirected to self; partitioning trusted funds.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "size": 88,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 78,
+        "social": 7,
+        "psychological": 3
+      },
+      "core_verbs": [
+        "demoralize",
+        "discombobulate",
+        "tease",
+        "break",
+        "burst",
+        "crack",
+        "fracture",
+        "rip",
+        "shatter",
+        "smash"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "tear up",
+          "scale": "physical",
+          "reason": "Input: intact object; Output: object divided into torn pieces; partitions through tearing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "break",
+          "scale": "physical",
+          "reason": "Input: whole object. Output: parts separated by boundary drawn through it. Partitions unity into fragments.",
+          "confidence": "high"
+        },
+        {
+          "verb": "break apart",
+          "scale": "physical",
+          "reason": "Input: unified whole; Output: separated parts; a boundary is drawn through the object dividing it.",
+          "confidence": "high"
+        },
+        {
+          "verb": "bust up",
+          "scale": "physical",
+          "reason": "Input: whole object. Output: broken fragments. One becomes many through forceful breaking.",
+          "confidence": "high"
+        },
+        {
+          "verb": "shatter",
+          "scale": "physical",
+          "reason": "Input: whole object. Output: many fragments. A boundary divides the whole into numerous parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fragment",
+          "scale": "physical",
+          "reason": "Input: unified whole; Output: multiple fragments; boundaries drawn through object partitioning it.",
+          "confidence": "high"
+        },
+        {
+          "verb": "come apart",
+          "scale": "physical",
+          "reason": "Input: unified object. Output: that object partitioned into separate pieces or fragments. Divides into parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fragmentise",
+          "scale": "physical",
+          "reason": "Input: whole object. Output: that object partitioned into fragments. Divides into pieces.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fragmentize",
+          "scale": "physical",
+          "reason": "Input: whole object. Output: that object partitioned into fragments. Divides into pieces.",
+          "confidence": "high"
+        },
+        {
+          "verb": "wear out",
+          "scale": "physical",
+          "reason": "Input: intact object. Output: object broken into pieces/parts. Thing partitions into fragments.",
+          "confidence": "high"
+        },
+        {
+          "verb": "rip up",
+          "scale": "physical",
+          "reason": "Input: whole paper/material; Output: material segmented into shreds; divides into multiple parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "rupture",
+          "scale": "physical",
+          "reason": "Input: continuous whole. Output: separated parts. The abrupt separation partitions the structure into fragments.",
+          "confidence": "high"
+        },
+        {
+          "verb": "take apart",
+          "scale": "physical",
+          "reason": "Input: assembled whole; Output: component parts separated; divides assembly into pieces.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tear off",
+          "scale": "physical",
+          "reason": "Input: whole attached thing. Output: parts separated by force. A violent boundary creates division.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fall apart",
+          "scale": "physical",
+          "reason": "Input: cohesive whole. Output: that whole partitioned into pieces. Structure divides into parts.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 206,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 106,
+        "informational": 60,
+        "social": 37,
+        "psychological": 3
+      },
+      "core_verbs": [
+        "analyze",
+        "panel",
+        "vary",
+        "isolate",
+        "quarantine",
+        "screen",
+        "seclude",
+        "sequester",
+        "confine",
+        "discriminate"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "split up",
+          "scale": "physical",
+          "reason": "Input: whole. Output: that whole divided into parts or portions. Partitioning transformation.",
+          "confidence": "high"
+        },
+        {
+          "verb": "section",
+          "scale": "physical",
+          "reason": "Input: whole. Output: parts separated by boundaries. Thing partitioned into segments.",
+          "confidence": "high"
+        },
+        {
+          "verb": "segregate",
+          "scale": "physical",
+          "reason": "Input: integrated whole. Output: separated parts. Partitions a mass by drawing boundaries and creating distinct subsets.",
+          "confidence": "high"
+        },
+        {
+          "verb": "segment",
+          "scale": "physical",
+          "reason": "Input: whole. Output: multiple parts. Boundaries drawn through to create divisions.",
+          "confidence": "high"
+        },
+        {
+          "verb": "separate off",
+          "scale": "physical",
+          "reason": "Input: unified space. Output: space partitioned by divider into separate areas. Boundary drawn through space.",
+          "confidence": "high"
+        },
+        {
+          "verb": "separate out",
+          "scale": "physical",
+          "reason": "Input: mixture of substances. Output: separated components via filtering. Substances are partitioned into subsets.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sectionalise",
+          "scale": "social",
+          "reason": "Input: undivided territory. Output: multiple sections with boundaries between them. Partitions a whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sever",
+          "scale": "physical",
+          "reason": "Input: connected whole. Output: separated parts. A boundary is drawn through something, dividing it.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sectionalize",
+          "scale": "social",
+          "reason": "Input: undivided territory. Output: multiple sections with boundaries between them. Partitions a whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "set apart",
+          "scale": "physical",
+          "reason": "Input: unified group; Output: element separated from others; a boundary partitions one from the whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "partition",
+          "scale": "physical",
+          "reason": "Input: undivided space or thing. Output: multiple sections divided by boundaries. Classic partition operation.",
+          "confidence": "high"
+        },
+        {
+          "verb": "parcel",
+          "scale": "physical",
+          "reason": "Input: whole; Output: multiple parts; a boundary is drawn through the whole, dividing it into segments.",
+          "confidence": "high"
+        },
+        {
+          "verb": "partition off",
+          "scale": "physical",
+          "reason": "Input: unified space or thing. Output: separated sections. Draws boundaries to create parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "divide",
+          "scale": "informational",
+          "reason": "Input: whole number or entity; Output: parts separated by division; unity is partitioned into quotient and remainder.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sieve out",
+          "scale": "informational",
+          "reason": "Input: a collection containing unwanted items; Output: that collection partitioned into separated/removed vs. kept; a boundary divides wanted from unwanted",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "boundary_verbs_from_other_ops": [
+    {
+      "verb": "secernate",
+      "operator": "DES",
+      "similarity": 0.6709784012192828,
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others."
+    },
+    {
+      "verb": "severalize",
+      "operator": "DES",
+      "similarity": 0.6684618883132502,
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others."
+    },
+    {
+      "verb": "separate",
+      "operator": "DES",
+      "similarity": 0.6633943916993723,
+      "scale": "informational",
+      "reason": "Input: unmarked things. Output: things marked as different. The verb assigns categorical distinction."
+    },
+    {
+      "verb": "fit together",
+      "operator": "SYN",
+      "similarity": 0.6550201974217489,
+      "scale": "physical",
+      "reason": "Input: separate parts; Output: assembled structure; parts merged into coherent whole."
+    },
+    {
+      "verb": "severalise",
+      "operator": "DES",
+      "similarity": 0.6509581333138297,
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others."
+    },
+    {
+      "verb": "edit out",
+      "operator": "SYN",
+      "similarity": 0.6454674690879493,
+      "scale": "informational",
+      "reason": "Input: separate components; output: assembled whole; components combined into new unified work."
+    },
+    {
+      "verb": "secern",
+      "operator": "DES",
+      "similarity": 0.6444056579278412,
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others."
+    },
+    {
+      "verb": "desegregate",
+      "operator": "NUL",
+      "similarity": 0.6407880854214548,
+      "scale": "social",
+      "reason": "Input: place with racial barriers; Output: same place with barriers absent; the segregation (a structural division) is removed/voided."
+    },
+    {
+      "verb": "serrate",
+      "operator": "INS",
+      "similarity": 0.6375004492228951,
+      "scale": "physical",
+      "reason": "Input: smooth edge; Output: saw-toothed edge; new serrations appear on the edge."
+    },
+    {
+      "verb": "segue",
+      "operator": "ALT",
+      "similarity": 0.6299098914293153,
+      "scale": "informational",
+      "reason": "Input: topic A frame; Output: topic B frame; smooth reframing without disruption."
+    },
+    {
+      "verb": "snag",
+      "operator": "INS",
+      "similarity": 0.6288699175660901,
+      "scale": "physical",
+      "reason": "Input: smooth surface; Output: surface with jagged cuts; new jagged features appear on the surface."
+    },
+    {
+      "verb": "seam",
+      "operator": "CON",
+      "similarity": 0.6260921236992072,
+      "scale": "physical",
+      "reason": "Input: two unjoined pieces; output: pieces with persistent structural seam connection."
+    },
+    {
+      "verb": "sew",
+      "operator": "SYN",
+      "similarity": 0.6175013419606892,
+      "scale": "physical",
+      "reason": "Input: separate fabric pieces. Output: unified garment. Cloth pieces are combined and transformed into a new whole object."
+    },
+    {
+      "verb": "resect",
+      "operator": "NUL",
+      "similarity": 0.6152601016132214,
+      "scale": "physical",
+      "reason": "Input: organ/structure with part; Output: organ/structure without that part; a portion that was present becomes absent through surgical removal."
+    },
+    {
+      "verb": "piece together",
+      "operator": "SYN",
+      "similarity": 0.614784197415835,
+      "scale": "physical",
+      "reason": "Input: scattered pieces; Output: reconstructed whole; fragments merged into unified structure."
+    },
+    {
+      "verb": "conglomerate",
+      "operator": "SYN",
+      "similarity": 0.6137455641653791,
+      "scale": "physical",
+      "reason": "Input: separate entities. Output: conglomerate whole transcending parts. Entities merge into unified mass."
+    },
+    {
+      "verb": "unseal",
+      "operator": "NUL",
+      "similarity": 0.6123692479748497,
+      "scale": "physical",
+      "reason": "Input: sealed boundary present; Output: sealed boundary removed, gap where seal was; makes absence of seal explicit."
+    },
+    {
+      "verb": "peg down",
+      "operator": "DES",
+      "similarity": 0.6122393861026756,
+      "scale": "informational",
+      "reason": "Input: something vague or undefined. Output: that thing with a clear definition/boundary. Assigns categorical identity."
+    },
+    {
+      "verb": "straiten",
+      "operator": "SYN",
+      "similarity": 0.6085698122643972,
+      "scale": "physical",
+      "reason": "Input: separated elements. Output: elements pressed into unified tighter configuration."
+    },
+    {
+      "verb": "select",
+      "operator": "DES",
+      "similarity": 0.6072171883990963,
+      "scale": "informational",
+      "reason": "Input: undifferentiated set of alternatives; Output: one alternative marked as 'chosen'; designates selection status"
+    }
+  ],
+  "peripheral_verbs": [
+    {
+      "verb": "coinsure",
+      "similarity": 0.5238256385792756,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: insurance risk as whole. Output: risk divided among multiple insurers. The coverage is partitioned."
+    },
+    {
+      "verb": "cloture",
+      "similarity": 0.5371984273105794,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: ongoing debate. Output: debate divided into closed phase and voting phase. Draws boundary through temporal process."
+    },
+    {
+      "verb": "plagiarize",
+      "similarity": 0.5532815693849817,
+      "alternative": "NUL",
+      "scale": "informational",
+      "reason": "Input: content with attribution link; Output: content separated from original author; boundary drawn between work and creator."
+    },
+    {
+      "verb": "redline",
+      "similarity": 0.5593656364521515,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: neighborhood as whole market. Output: neighborhood partitioned into allowed and forbidden areas for selling/renting."
+    },
+    {
+      "verb": "deaminize",
+      "similarity": 0.5626549431339136,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: amino compound with amino radical attached. Output: compound with amino radical separated/removed. A chemical partition removing a part from a whole."
+    },
+    {
+      "verb": "alligator",
+      "similarity": 0.5663998629427291,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: smooth surface. Output: surface partitioned into cracked segments. Creates pattern of divisions."
+    },
+    {
+      "verb": "proofread",
+      "similarity": 0.5675839063793808,
+      "alternative": "INS",
+      "scale": "informational",
+      "reason": "Input: complete text; output: errors filtered/identified; boundaries drawn around problematic elements."
+    },
+    {
+      "verb": "deaminate",
+      "similarity": 0.5786120406168673,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: amino compound (whole); Output: compound with amino radical removed (parts separated)."
+    },
+    {
+      "verb": "home-school",
+      "similarity": 0.5805425563296209,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: children in general school system. Output: children separated into home-based education. Boundary drawn partitioning system."
+    },
+    {
+      "verb": "heckle",
+      "similarity": 0.5819702870586214,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: fiber mass as whole; output: fiber separated into aligned parts; the material is divided/organized through combing."
+    }
+  ],
+  "all_verbs": [
+    {
+      "verb": "abbreviate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: full text/duration. Output: essential parts extracted, rest removed. Whole divided into kept and discarded portions.",
+      "alternative": null
+    },
+    {
+      "verb": "abduct",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person in their context; Output: person separated from context; a boundary drawn between person and their environment.",
+      "alternative": null
+    },
+    {
+      "verb": "aberrate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: norm-conforming set; Output: norm-conforming subset + divergent element; separates deviant from expected.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "abridge",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a whole text or work; Output: a subset with parts removed; creates a filtered version by dividing and selecting portions.",
+      "alternative": null
+    },
+    {
+      "verb": "adjourn",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: ongoing session. Output: session divided into completed portion and future portion. A temporal boundary marks the end of current segment.",
+      "alternative": null
+    },
+    {
+      "verb": "aerosolise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in bulk form. Output: substance divided into fine droplets/particles. The whole is partitioned into many tiny parts.",
+      "alternative": null
+    },
+    {
+      "verb": "aerosolize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in bulk form. Output: substance divided into fine droplets/particles. The whole is partitioned into many tiny parts.",
+      "alternative": null
+    },
+    {
+      "verb": "alligator",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: smooth surface. Output: surface partitioned into cracked segments. Creates pattern of divisions.",
+      "alternative": null
+    },
+    {
+      "verb": "allowance",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: total food supply. Output: fixed portions allocated. The whole is divided into regulated amounts.",
+      "alternative": null
+    },
+    {
+      "verb": "amputate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole body, Output: body partitioned into kept/removed parts \u2014 draws boundary through organism.",
+      "alternative": null
+    },
+    {
+      "verb": "analyse",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: whole psychological state. Output: constituent parts/components identified. Divides psyche into elements.",
+      "alternative": null
+    },
+    {
+      "verb": "analyze",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: complex whole, Output: identified constituent parts/aspects, Change: whole divided into components",
+      "alternative": null
+    },
+    {
+      "verb": "anatomise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body as whole. Output: body divided into constituent parts for analysis. Whole is partitioned into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "anatomize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole body or organism; output: separated parts created by cutting through the whole to expose internal structures.",
+      "alternative": null
+    },
+    {
+      "verb": "arborise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: trunk structure. Output: trunk divided into tree-like branches. Partitions into branching subparts.",
+      "alternative": null
+    },
+    {
+      "verb": "arborize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: trunk structure. Output: trunk divided into tree-like branches. Partitions into branching subparts.",
+      "alternative": null
+    },
+    {
+      "verb": "atomise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid mass. Output: fine spray particles. Divides liquid into tiny droplets.",
+      "alternative": null
+    },
+    {
+      "verb": "atomize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid whole; Output: fine droplet parts; divides continuous substance into separated particles.",
+      "alternative": null
+    },
+    {
+      "verb": "autotomise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole organism. Output: organism with separated body part. A boundary is drawn through the body, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "autotomize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole organism. Output: organism with separated body part. A boundary is drawn through the body, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "avert",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: attention unified toward object. Output: attention separated/divided away from object.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "avulse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole tissue/structure; Output: part forcibly torn away from whole; a partition is created through tearing.",
+      "alternative": null
+    },
+    {
+      "verb": "ax",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: object divided into parts. Boundary drawn through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "axe",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: object divided into parts. Boundary drawn through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "backscatter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: directed radiation beam. Output: radiation divided into scattered directions. Disperses into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "balkanise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unified territory. Output: multiple small hostile states. Divides one into many parts.",
+      "alternative": null
+    },
+    {
+      "verb": "balkanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unified territory. Output: multiple small hostile states. Divides one into many parts.",
+      "alternative": null
+    },
+    {
+      "verb": "ban",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person in community. Output: person separated from community. Boundary drawn partitioning member from group.",
+      "alternative": null
+    },
+    {
+      "verb": "beat down",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity in position; Output: entity separated from position; a boundary is drawn between occupant and place.",
+      "alternative": null
+    },
+    {
+      "verb": "behead",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body as whole. Output: body partitioned into head and remainder. A boundary is drawn through the organism.",
+      "alternative": null
+    },
+    {
+      "verb": "beneficiate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw ore with valuable and waste materials mixed. Output: valuable material separated from waste through processing. Partition/filtering operation.",
+      "alternative": null
+    },
+    {
+      "verb": "benficiate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: ore as whole mixture. Output: ore with valuable material separated from waste. Partitioning into desired and undesired parts.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "bifurcate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: single branch or path; Output: two separate branches; divides one into two parts.",
+      "alternative": null
+    },
+    {
+      "verb": "biodegrade",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact organic material; Output: material broken into simpler components; the whole is partitioned into molecular parts.",
+      "alternative": null
+    },
+    {
+      "verb": "bisect",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; Output: two equal halves; draws boundary through the middle to create parts.",
+      "alternative": null
+    },
+    {
+      "verb": "bite off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; output: object divided into attached part and bitten-off part.",
+      "alternative": null
+    },
+    {
+      "verb": "block off",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: continuous accessible space; output: space divided into accessible/inaccessible regions; partition created.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "bracket out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text as whole. Output: portion separated by brackets. Boundary drawn through content.",
+      "alternative": null
+    },
+    {
+      "verb": "breach",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole barrier/boundary. Output: parts with gap created; boundary divided by opening cut through it.",
+      "alternative": null
+    },
+    {
+      "verb": "break",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: parts separated by boundary drawn through it. Partitions unity into fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "break apart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified whole; Output: separated parts; a boundary is drawn through the object dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "break away",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: entity attached/confined; Output: entity separated from constraint; boundary drawn severing the connection.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "break loose",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity bound to confinement. Output: entity separated from confinement. A boundary is drawn between entity and constraint.",
+      "alternative": null
+    },
+    {
+      "verb": "break open",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: sealed whole. Output: opened parts with interior exposed. A boundary is drawn through the closure, creating opening.",
+      "alternative": null
+    },
+    {
+      "verb": "break through",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: intact barrier. Output: barrier with opening, thing on other side. The barrier is partitioned by creating passage.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "break up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid ice mass; Output: ice separated into parts; divides whole into segments.",
+      "alternative": null
+    },
+    {
+      "verb": "brecciate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: rock material. Output: rock broken into angular fragments (breccia). Partitions into distinct pieces.",
+      "alternative": "SYN"
+    },
+    {
+      "verb": "buckle",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: intact structure. Output: structure divided into collapsed/folded parts. Boundary drawn through whole creating parts.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "burst",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: contained whole. Output: container breached, contents dispersed into parts. Boundary drawn through containment.",
+      "alternative": null
+    },
+    {
+      "verb": "bust",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: object divided into pieces. Boundary drawn through object creating fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "bust up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: broken fragments. One becomes many through forceful breaking.",
+      "alternative": null
+    },
+    {
+      "verb": "butcher",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: living animal as whole; Output: animal separated into meat parts; whole divided through boundaries",
+      "alternative": null
+    },
+    {
+      "verb": "cabbage",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: object with owner; Output: object separated from rightful owner; boundary drawn between thing and legitimate possessor.",
+      "alternative": null
+    },
+    {
+      "verb": "cage in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity with movement possibilities. Output: entity with movement partitioned into allowed (inside cage) and forbidden (outside).",
+      "alternative": null
+    },
+    {
+      "verb": "canton",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unified country. Output: country divided into cantons. Draws administrative boundaries through territory.",
+      "alternative": null
+    },
+    {
+      "verb": "card",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: matted/tangled fibers; Output: separated fibers; boundary drawn between previously joined fibers.",
+      "alternative": null
+    },
+    {
+      "verb": "carve",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid block. Output: block divided into shaped sections and removed pieces. Material is partitioned through cutting.",
+      "alternative": null
+    },
+    {
+      "verb": "carve out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole. Output: parts (removed piece + remainder). Boundary drawn through something, dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "carve up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole territory or object. Output: multiple separated parts. A boundary drawn through divides it.",
+      "alternative": null
+    },
+    {
+      "verb": "catabolise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: complex molecule. Output: molecule broken down into simpler parts. A whole is partitioned into components.",
+      "alternative": null
+    },
+    {
+      "verb": "catabolize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: complex molecule. Output: molecule broken down into simpler parts. A whole is partitioned into components.",
+      "alternative": null
+    },
+    {
+      "verb": "centrifugate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of liquids and solids. Output: separated components. The whole is partitioned into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "centrifuge",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of liquids and solids. Output: separated components. The whole is partitioned into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "channelise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: undifferentiated flow. Output: flow partitioned into distinct channels. Boundaries drawn through space to create separated paths.",
+      "alternative": null
+    },
+    {
+      "verb": "channelize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: undifferentiated flow. Output: flow partitioned into distinct channels. Boundaries drawn through space to create separated paths.",
+      "alternative": null
+    },
+    {
+      "verb": "chap",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous skin surface. Output: surface divided by cracks. Partition through dehydration.",
+      "alternative": null
+    },
+    {
+      "verb": "chew",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food as whole; Output: food as broken parts; partitions solid into smaller pieces through grinding.",
+      "alternative": null
+    },
+    {
+      "verb": "chine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact backbone. Output: backbone severed/cut through. The spine is partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "chink",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous surface; Output: surface divided by cracks; boundaries are drawn through the material.",
+      "alternative": null
+    },
+    {
+      "verb": "chip",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: object with piece removed. A boundary divides the whole, creating a fragment.",
+      "alternative": null
+    },
+    {
+      "verb": "chip off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; Output: object separated into main piece and chip; boundary drawn separating the chip from the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "chisel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: uncarved material. Output: material with carved-away parts. Tool divides whole by removing segments.",
+      "alternative": null
+    },
+    {
+      "verb": "choke",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: living creature with intact neck; Output: creature with severed/wrung neck; structural separation of neck.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "chomp",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food as whole; Output: food divided into parts; biting action partitions through the material.",
+      "alternative": null
+    },
+    {
+      "verb": "choose up",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: undivided group of players; Output: players partitioned into teams; group split into opposing sides.",
+      "alternative": null
+    },
+    {
+      "verb": "chop",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: object divided by sharp blow. Boundary drawn through creating parts.",
+      "alternative": null
+    },
+    {
+      "verb": "chop down",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: standing tree; Output: tree separated from base; boundary drawn at the base severing it from root system.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "chop off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; output: separated parts by cutting, boundary drawn through object.",
+      "alternative": null
+    },
+    {
+      "verb": "chop up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; Output: multiple pieces; boundaries drawn through the object dividing it into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "cleave",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: material divided into parts by cutting through it. A boundary is drawn through the object.",
+      "alternative": null
+    },
+    {
+      "verb": "closure",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: ongoing debate. Output: debate divided into closed phase and voting phase. Draws boundary through temporal process.",
+      "alternative": null
+    },
+    {
+      "verb": "cloture",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: ongoing debate. Output: debate divided into closed phase and voting phase. Draws boundary through temporal process.",
+      "alternative": null
+    },
+    {
+      "verb": "coinsure",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: insurance risk as whole. Output: risk divided among multiple insurers. The coverage is partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "collapse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact structure, Output: structure broken into parts (partition through failure)",
+      "alternative": null
+    },
+    {
+      "verb": "collate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: texts as wholes. Output: texts partitioned into comparable units. Draws analytical boundaries through content.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "come apart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified object. Output: that object partitioned into separate pieces or fragments. Divides into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "come away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: attached whole; output: detached parts, boundary emerged through separation.",
+      "alternative": null
+    },
+    {
+      "verb": "come off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing attached. Output: thing detached, separated. Separation creates parts from formerly connected whole.",
+      "alternative": null
+    },
+    {
+      "verb": "comminute",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid whole. Output: many small pieces. Divides by pounding into fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "compart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: undivided whole. Output: whole divided into parts according to plan. Partitioning creates subsets.",
+      "alternative": null
+    },
+    {
+      "verb": "compartmentalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unified field. Output: separated compartments/categories. Boundaries drawn through whole creating parts.",
+      "alternative": null
+    },
+    {
+      "verb": "compartmentalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unified field. Output: separated compartments/categories. Boundaries drawn through whole creating parts.",
+      "alternative": null
+    },
+    {
+      "verb": "confine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity in unrestricted space. Output: entity restricted within boundary. Space partitioned into inside/outside.",
+      "alternative": null
+    },
+    {
+      "verb": "confiscate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property with owner; Output: property separated from owner; boundary drawn between possessor and possession.",
+      "alternative": null
+    },
+    {
+      "verb": "constrain",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: full range of possibilities. Output: limited subset. Boundary imposed that partitions possible from impossible.",
+      "alternative": null
+    },
+    {
+      "verb": "contradistinguish",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated set; Output: parts distinguished by contrasting qualities; boundary drawn between things via their differences.",
+      "alternative": null
+    },
+    {
+      "verb": "coop in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity with freedom of movement; Output: entity with movement restricted to bounded space; creates spatial partition separating inside from outside.",
+      "alternative": null
+    },
+    {
+      "verb": "cop",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property with owner; Output: property separated from rightful owner; boundary drawn through legitimate possession.",
+      "alternative": null
+    },
+    {
+      "verb": "cordon off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: undivided space; output: space partitioned into inside/outside by boundary; division drawn through continuous area.",
+      "alternative": null
+    },
+    {
+      "verb": "crack",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact surface. Output: surface with fissure. A boundary is drawn through the material, dividing its continuity.",
+      "alternative": null
+    },
+    {
+      "verb": "craze",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous surface. Output: surface partitioned by network of fine cracks. Multiple boundaries through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cream off",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a set with varying quality; Output: that set partitioned into best vs. rest; a quality boundary separates top tier from others",
+      "alternative": null
+    },
+    {
+      "verb": "crosscut",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material; Output: material divided by diagonal cut; a partition is drawn through it.",
+      "alternative": null
+    },
+    {
+      "verb": "crumb",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole bread/food. Output: multiple crumb parts. Thing divided into fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "crumble",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole structure, Output: structure broken into pieces (partition into parts)",
+      "alternative": null
+    },
+    {
+      "verb": "crunch",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food as whole; Output: food fractured into parts; grinding divides through boundaries in material.",
+      "alternative": null
+    },
+    {
+      "verb": "cube",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: material divided into cube-shaped parts. A boundary is drawn through the material, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "cull out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a group or list; Output: that group partitioned into desirable parts vs. rejected parts; a quality-based boundary divides the collection",
+      "alternative": null
+    },
+    {
+      "verb": "curdle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: homogeneous liquid, Output: liquid separated into curds/parts (partition occurs)",
+      "alternative": null
+    },
+    {
+      "verb": "curtain off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified space; Output: space divided by curtain; a boundary partitions the space into regions.",
+      "alternative": null
+    },
+    {
+      "verb": "cut across",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material; Output: material divided by diagonal cut; a partition is drawn through it.",
+      "alternative": null
+    },
+    {
+      "verb": "cut away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: object divided into remaining-part and removed-part. Creates partition.",
+      "alternative": null
+    },
+    {
+      "verb": "cut in",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: continuous conversation flow. Output: conversation divided by interruption. Boundary drawn through temporal whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cut into",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid earth mass. Output: earth divided into loosened parts. The verb partitions the soil.",
+      "alternative": null
+    },
+    {
+      "verb": "cut to ribbons",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: opponent as whole/intact; Output: opponent in pieces/fragments; total partitioning through defeat.",
+      "alternative": null
+    },
+    {
+      "verb": "cut up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; output: multiple pieces; boundary drawn through object dividing it into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "dash",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact object. Output: broken parts. The verb partitions a whole into fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "deal out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: whole deck or supply; Output: cards or items separated and distributed; partitioning into dealt portions.",
+      "alternative": null
+    },
+    {
+      "verb": "deaminate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: amino compound (whole); Output: compound with amino radical removed (parts separated).",
+      "alternative": null
+    },
+    {
+      "verb": "deaminize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: amino compound with amino radical attached. Output: compound with amino radical separated/removed. A chemical partition removing a part from a whole.",
+      "alternative": null
+    },
+    {
+      "verb": "decapitate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body as whole. Output: body partitioned into head and remainder. A dividing cut is made.",
+      "alternative": null
+    },
+    {
+      "verb": "declutch",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: engine connected to transmission; output: engine separated from transmission; a mechanical link is severed.",
+      "alternative": null
+    },
+    {
+      "verb": "decollate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole body. Output: body divided into head-part and body-part. Partitions through cutting.",
+      "alternative": null
+    },
+    {
+      "verb": "defalcate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entrusted property as whole; Output: portion separated and redirected to self; partitioning trusted funds.",
+      "alternative": null
+    },
+    {
+      "verb": "defeat",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: contest with undetermined outcome. Output: contest partitioned into winner/loser \u2014 a boundary drawn through competitive space.",
+      "alternative": null
+    },
+    {
+      "verb": "defuse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: complete explosive device; Output: device separated from triggering mechanism; boundary drawn between components.",
+      "alternative": null
+    },
+    {
+      "verb": "dehisce",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: closed pod/structure. Output: split parts with contents exposed. A boundary is drawn through the sealed structure.",
+      "alternative": null
+    },
+    {
+      "verb": "demarcate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous space; Output: space divided by boundaries; creates partitions separating regions.",
+      "alternative": null
+    },
+    {
+      "verb": "demineralise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance with minerals/salts integrated. Output: substance with minerals/salts separated out. Partition of components from whole.",
+      "alternative": null
+    },
+    {
+      "verb": "demineralize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance with minerals/salts integrated. Output: substance with minerals/salts separated out. Partition of components from whole.",
+      "alternative": null
+    },
+    {
+      "verb": "demob",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person integrated in military; Output: person separated from military structure; link to service severed.",
+      "alternative": null
+    },
+    {
+      "verb": "demobilise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person integrated in military; Output: person separated from military structure; link to service severed.",
+      "alternative": null
+    },
+    {
+      "verb": "demodulate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: modulated signal containing information; Output: information separated from carrier wave; partitions signal from information.",
+      "alternative": null
+    },
+    {
+      "verb": "demolish",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: opponent as unified entity. Output: opponent broken into defeated parts (soundly beaten). Structure partitioned through defeat.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "demoralize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: ordered/coherent state. Output: that state divided into disordered parts. Creates confusion by fragmenting organization.",
+      "alternative": null
+    },
+    {
+      "verb": "demulsify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: emulsion (mixed whole). Output: separated components. Divides the unified mixture into constituent parts.",
+      "alternative": null
+    },
+    {
+      "verb": "deracinate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: plant integrated with ground. Output: plant separated from roots/ground. Partitions connection.",
+      "alternative": null
+    },
+    {
+      "verb": "desorb",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: adsorbed substance on surface (whole); Output: substance separated from surface (parts).",
+      "alternative": null
+    },
+    {
+      "verb": "desquamate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous skin surface. Output: skin divided into separating scales. Partitioning of whole into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "detach",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: connected whole. Output: parts separated. Boundary drawn through attachment, creating distinct elements.",
+      "alternative": null
+    },
+    {
+      "verb": "dial",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a set of possible dial positions; Output: that set partitioned into the chosen position vs. all others; a selection boundary is drawn",
+      "alternative": "DES"
+    },
+    {
+      "verb": "dialyse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixed solution. Output: solution separated into components. Filters/partitions by molecular size.",
+      "alternative": null
+    },
+    {
+      "verb": "dialyze",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixed solution. Output: solution separated into components. Filters/partitions by molecular size.",
+      "alternative": null
+    },
+    {
+      "verb": "dice",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole food item. Output: food item divided into small cube parts. A boundary is drawn through the material, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "dichotomise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a set or continuum; Output: two opposing parts; a boundary is drawn through the whole, creating binary division.",
+      "alternative": null
+    },
+    {
+      "verb": "dichotomize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a set or continuum; Output: two opposing parts; a boundary is drawn through the whole, creating binary division.",
+      "alternative": null
+    },
+    {
+      "verb": "diffract",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: coherent wave; Output: wave split into multiple paths/components; light is partitioned through an opening.",
+      "alternative": null
+    },
+    {
+      "verb": "diffuse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: concentrated substance; Output: substance dispersed into parts moving outward; concentration is partitioned spatially.",
+      "alternative": null
+    },
+    {
+      "verb": "dig up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object buried in ground. Output: object separated from ground. Partitioning object from surrounding earth.",
+      "alternative": null
+    },
+    {
+      "verb": "digress",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: unified discourse path; Output: main path and divergent branch; attention splits from main topic.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "dip into",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: complete text; output: selected passages filtered out; boundaries drawn to isolate parts.",
+      "alternative": null
+    },
+    {
+      "verb": "disambiguate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: ambiguous whole with multiple meanings; Output: separated distinct meanings; partitions interpretations.",
+      "alternative": null
+    },
+    {
+      "verb": "disarticulate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: articulated whole; output: parts separated at joints, partition at structural boundaries.",
+      "alternative": null
+    },
+    {
+      "verb": "disassemble",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: assembled whole. Output: constituent parts separated. A partition through the structure creating components.",
+      "alternative": null
+    },
+    {
+      "verb": "discerp",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole. Output: pieces. One becomes many through division.",
+      "alternative": null
+    },
+    {
+      "verb": "discombobulate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: coherent emotional state. Output: that state fragmented into confused parts. Partitions emotional organization.",
+      "alternative": null
+    },
+    {
+      "verb": "discriminate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: undifferentiated set. Output: set partitioned by distinctions. Draws boundaries separating categories.",
+      "alternative": null
+    },
+    {
+      "verb": "disembroil",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity embroiled in entanglement; Output: entity severed from that entanglement \u2014 divides the bound relationship.",
+      "alternative": null
+    },
+    {
+      "verb": "disentangle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tangled whole. Output: separated parts. Draws boundaries through interconnected mass to create distinct threads.",
+      "alternative": null
+    },
+    {
+      "verb": "disintegrate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: integrated whole; Output: separated particles/fragments; nucleus or structure is partitioned into constituent parts.",
+      "alternative": null
+    },
+    {
+      "verb": "disinter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body unified with burial ground. Output: body separated from ground. Breaks the spatial containment, creating separation.",
+      "alternative": null
+    },
+    {
+      "verb": "disinvolve",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity entangled with situation; Output: entity separated from involvement \u2014 partitions the connection that bound them.",
+      "alternative": null
+    },
+    {
+      "verb": "disjoin",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: joined whole; output: separated parts, boundary drawn through connection.",
+      "alternative": null
+    },
+    {
+      "verb": "disjoint",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: joined structure; output: parts separated at joints, dividing whole into components.",
+      "alternative": null
+    },
+    {
+      "verb": "dismantle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: assembled structure. Output: parts separated. Dividing whole into components.",
+      "alternative": null
+    },
+    {
+      "verb": "dismember",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole body. Output: separated pieces. A boundary is drawn through the whole, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "dispel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: gathered/unified group; output: group separated and going different directions; whole divided into scattered parts.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "disperse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: gathered group; Output: group separated into scattered parts; concentration is partitioned spatially.",
+      "alternative": null
+    },
+    {
+      "verb": "disrupt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous whole. Output: whole broken into parts. Draws boundary through continuity.",
+      "alternative": null
+    },
+    {
+      "verb": "dissect",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact organism/object; Output: organism divided into separated parts; partitions through cutting.",
+      "alternative": null
+    },
+    {
+      "verb": "disseminate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: concentrated information; Output: information distributed to multiple recipients; partitions knowledge from source to many destinations.",
+      "alternative": null
+    },
+    {
+      "verb": "dissever",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified whole. Output: separated parts. Draws boundary through whole, creating division.",
+      "alternative": null
+    },
+    {
+      "verb": "dissimilate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: similar entities. Output: entities with increased differentiation. Distinctions and boundaries between them emerge.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "distribute",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: concentrated resource; Output: resource divided among multiple recipients; partitions whole into distributed parts.",
+      "alternative": null
+    },
+    {
+      "verb": "district",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: town as undivided whole. Output: town partitioned into housing areas with different regulations.",
+      "alternative": null
+    },
+    {
+      "verb": "disunify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unified whole. Output: separated parts, boundary drawn through unity.",
+      "alternative": null
+    },
+    {
+      "verb": "disunite",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified whole. Output: separated parts. One becomes many through forced separation.",
+      "alternative": null
+    },
+    {
+      "verb": "divagate",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: clear unified focus; Output: scattered fragmented attention; coherence divided into parts.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "divaricate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: parts together/converged; Output: parts separated/diverged; a boundary is drawn between unified elements.",
+      "alternative": null
+    },
+    {
+      "verb": "diverge",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: unified path/set. Output: paths/elements separated, moving apart. Boundary drawn creating distinct subsets.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "divide",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: whole number or entity; Output: parts separated by division; unity is partitioned into quotient and remainder.",
+      "alternative": null
+    },
+    {
+      "verb": "divvy up",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: whole to be shared; Output: parts allocated to recipients; partitioning into shares.",
+      "alternative": null
+    },
+    {
+      "verb": "do a job on",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: functional whole. Output: destroyed/fragmented parts. Partitions through destructive force.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "dole out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: whole amount; Output: small portions separated sparingly; partitioning into meager shares.",
+      "alternative": null
+    },
+    {
+      "verb": "draw and quarter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole body; Output: body partitioned into parts; divides one into many through physical partition.",
+      "alternative": null
+    },
+    {
+      "verb": "draw away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing attached/connected; Output: thing separated/removed; pulling divides the previously unified configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "draw off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing attached/connected; Output: thing separated/removed; pulling divides the previously unified configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "dress out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole animal. Output: market-ready parts. The whole is divided through butchering.",
+      "alternative": null
+    },
+    {
+      "verb": "drive out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing inside a space/container. Output: thing separated from that space, pushed to outside. Partition from containing whole.",
+      "alternative": null
+    },
+    {
+      "verb": "drop off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: person/cargo integrated with vehicle/carrier; output: person/cargo separated from vehicle; partition created.",
+      "alternative": null
+    },
+    {
+      "verb": "drop out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: student integrated in educational system; Output: student separated from system; a link is severed, not just made absent.",
+      "alternative": null
+    },
+    {
+      "verb": "elute",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of substances. Output: separated components via solvent. Filtering/partitioning occurs between dissolved and retained.",
+      "alternative": null
+    },
+    {
+      "verb": "embezzle",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property under trust; Output: property separated from legitimate owner; boundary drawn between entrusted thing and rightful possessor.",
+      "alternative": null
+    },
+    {
+      "verb": "empanel",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: complete list; output: subset selected from list; boundary drawn to separate chosen from unchosen.",
+      "alternative": null
+    },
+    {
+      "verb": "estrange",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person + environment as unified context. Output: person separated from customary associations, creating distance.",
+      "alternative": null
+    },
+    {
+      "verb": "excerpt",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a literary work as a whole; Output: that work partitioned into cited portion vs. remainder; a boundary is drawn through the text",
+      "alternative": null
+    },
+    {
+      "verb": "exfoliate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: surface as whole. Output: surface with outer layer separated off. A thin piece is partitioned from the main body.",
+      "alternative": null
+    },
+    {
+      "verb": "exhume",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body unified with burial ground. Output: body separated from ground. Breaks the spatial containment, creating separation.",
+      "alternative": null
+    },
+    {
+      "verb": "explode",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact whole. Output: many fragments. The thing is violently partitioned into pieces.",
+      "alternative": null
+    },
+    {
+      "verb": "extirpate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body with organ as part of whole. Output: organ separated from body. A boundary is drawn through the body, removing a part.",
+      "alternative": null
+    },
+    {
+      "verb": "extort",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with resources; Output: person separated from resources through coercion; boundary drawn through forced transfer.",
+      "alternative": null
+    },
+    {
+      "verb": "extricate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing entangled with others; Output: thing separated from entanglement; a boundary divides the stuck-together mass.",
+      "alternative": null
+    },
+    {
+      "verb": "factor",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: whole number/expression. Output: component factors identified. Whole decomposed into multiplicative parts.",
+      "alternative": null
+    },
+    {
+      "verb": "factor analyse",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unified correlational data; Output: separated underlying factors; divides data into constituent components.",
+      "alternative": null
+    },
+    {
+      "verb": "factor analyze",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unified correlational data; Output: separated underlying factors; divides data into constituent components.",
+      "alternative": null
+    },
+    {
+      "verb": "factor in",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: whole number/expression. Output: component factors with new element included. Partitioning to incorporate new factor.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "factor out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: expression. Output: expression with common factor extracted. Whole partitioned to isolate shared component.",
+      "alternative": null
+    },
+    {
+      "verb": "factorise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unified polynomial; Output: separated factors; divides whole into constituent parts.",
+      "alternative": null
+    },
+    {
+      "verb": "factorize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unified polynomial; Output: separated factors; divides whole into constituent parts.",
+      "alternative": null
+    },
+    {
+      "verb": "fall apart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: cohesive whole. Output: that whole partitioned into pieces. Structure divides into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "fan out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: concentrated group. Output: dispersed parts moving outward. The group is partitioned into spreading segments.",
+      "alternative": null
+    },
+    {
+      "verb": "filch",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: belongings with owner; Output: belongings separated from owner; boundary drawn between thing and rightful possessor.",
+      "alternative": null
+    },
+    {
+      "verb": "filet",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole fish/meat. Output: filets (parts) separated from bone. A boundary is drawn through the material, dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "fillet",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole fish/meat. Output: fish/meat divided into fillet parts. A boundary is drawn through the material, separating it into cuts.",
+      "alternative": null
+    },
+    {
+      "verb": "filter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixed set of things. Output: separated subsets (what passes through vs. what doesn't). Partition created.",
+      "alternative": null
+    },
+    {
+      "verb": "filter out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of substances. Output: separated components via filtering. Substances are partitioned into subsets.",
+      "alternative": null
+    },
+    {
+      "verb": "filtrate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of substances. Output: separated components via filtering. Substances are partitioned into subsets.",
+      "alternative": null
+    },
+    {
+      "verb": "fission",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: one nucleus; Output: multiple fragments; a whole is divided into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "fissure",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous solid. Output: solid with fissures and cracks dividing it. Boundaries drawn through material.",
+      "alternative": null
+    },
+    {
+      "verb": "flake",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: divided into flakes. Partitioning creates distinct pieces.",
+      "alternative": null
+    },
+    {
+      "verb": "flake off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: surface with coating; Output: surface and separated flakes; boundaries drawn separating flakes from the surface.",
+      "alternative": null
+    },
+    {
+      "verb": "flatten",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: three-dimensional form. Output: form compressed into fewer dimensions/planes. Dimensional structure is partitioned/reduced.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "flay",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole body with skin. Output: skin separated from body. Boundary drawn between skin and flesh, partitioning the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "fluff up",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: compressed unified mass. Output: separated expanded parts with air between.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "foreshorten",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: full scope. Output: reduced scope with parts filtered out while essentials remain. Creates subset by removing non-essential parts.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "fork",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified path or shape. Output: path split into branches. What changed: one became many diverging parts.",
+      "alternative": null
+    },
+    {
+      "verb": "fraction",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a whole number; output: parts (numerator and denominator) created by drawing a division through the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "fractionate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of substances. Output: separated fractions. The whole is divided into parts by differential properties.",
+      "alternative": null
+    },
+    {
+      "verb": "fracture",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous bone. Output: bone in separated pieces. A boundary divides the whole into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "fragment",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified whole; Output: multiple fragments; boundaries drawn through object partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "fragmentise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: that object partitioned into fragments. Divides into pieces.",
+      "alternative": null
+    },
+    {
+      "verb": "fragmentize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: that object partitioned into fragments. Divides into pieces.",
+      "alternative": null
+    },
+    {
+      "verb": "fray",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact material edge. Output: edge with separated threads/fibers. The unified edge is partitioned into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "french",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole bean; output: lengthwise parts, boundary drawn through length.",
+      "alternative": null
+    },
+    {
+      "verb": "furcate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: single branch. Output: multiple branches. Divides one into many.",
+      "alternative": null
+    },
+    {
+      "verb": "gap",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous surface; Output: surface with opening; a partition is created through the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "garotte",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: living person. Output: person with life separated from body. Partitions life through strangulation.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "garrote",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: living person. Output: person with life separated from body. Partitions life through strangulation.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "gash",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact surface. Output: surface with opening/cut dividing it. A boundary is drawn through the material, creating separation.",
+      "alternative": null
+    },
+    {
+      "verb": "gather in",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: fabric extended. Output: fabric folded into parts. The continuous surface is partitioned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "ghettoise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: integrated population; Output: population separated into ghetto subset; a boundary partitions people into isolated group.",
+      "alternative": null
+    },
+    {
+      "verb": "ghettoize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: integrated population; Output: population separated into ghetto subset; a boundary partitions people into isolated group.",
+      "alternative": null
+    },
+    {
+      "verb": "gnarl",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: straight/unified form; output: twisted form with irregular parts; the structure is divided into contorted segments.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "gnaw",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object as whole; Output: object with parts separated; repeated biting partitions material into pieces.",
+      "alternative": null
+    },
+    {
+      "verb": "go dutch",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: total cost as whole. Output: cost divided into equal parts among participants. The whole is partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "go to pieces",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: integrated emotional/mental composure. Output: composure fragments into pieces, psyche partitioned.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "gore",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fabric as whole; output: fabric divided into triangular sections (gores).",
+      "alternative": null
+    },
+    {
+      "verb": "gouge",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid surface. Output: surface with groove carved into it, separating material. A boundary is drawn through the surface, removing a channel.",
+      "alternative": null
+    },
+    {
+      "verb": "grain",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous substance. Output: granular substance (many parts). The whole is partitioned into grains.",
+      "alternative": null
+    },
+    {
+      "verb": "granulate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous mass. Output: discrete granules/particles. The mass is partitioned into grain-sized units.",
+      "alternative": null
+    },
+    {
+      "verb": "grind",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid whole material. Output: many small particles. The material is divided into smaller constituent parts.",
+      "alternative": null
+    },
+    {
+      "verb": "group",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated collection. Output: organized subgroups. Boundaries drawn dividing whole into categories.",
+      "alternative": null
+    },
+    {
+      "verb": "grub out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object in ground. Output: object separated from ground. Partitioning object from context.",
+      "alternative": null
+    },
+    {
+      "verb": "grub up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object embedded in ground. Output: object separated from ground. Dividing object from earth.",
+      "alternative": null
+    },
+    {
+      "verb": "guillotine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: person whole. Output: head separated from body. Partitions person into severed parts.",
+      "alternative": null
+    },
+    {
+      "verb": "halve",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole; output: two equal parts created by partitioning through the middle.",
+      "alternative": null
+    },
+    {
+      "verb": "hand-pick",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a set of candidates; Output: that set partitioned into chosen vs. not-chosen with great care; a careful selection boundary divides the set",
+      "alternative": null
+    },
+    {
+      "verb": "hash",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole food item; Output: chopped pieces; boundaries drawn through the item dividing it into smaller parts.",
+      "alternative": null
+    },
+    {
+      "verb": "heckle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fiber mass as whole; output: fiber separated into aligned parts; the material is divided/organized through combing.",
+      "alternative": null
+    },
+    {
+      "verb": "hive off",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unified group. Output: group divided with part separated. Partitions whole into distinct parts.",
+      "alternative": null
+    },
+    {
+      "verb": "hob",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: material with cuts. Cutting divides continuous material into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "hock",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole functioning leg/joint. Output: hock severed from functional state (partition through cutting).",
+      "alternative": null
+    },
+    {
+      "verb": "hoe",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous soil surface; Output: soil divided into broken/turned parts; the earth is partitioned by cutting action.",
+      "alternative": null
+    },
+    {
+      "verb": "home-school",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: children in general school system. Output: children separated into home-based education. Boundary drawn partitioning system.",
+      "alternative": null
+    },
+    {
+      "verb": "homogenise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole fat globules; Output: fragmented fat globules; partition into smaller units.",
+      "alternative": null
+    },
+    {
+      "verb": "homogenize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fat globules intact; Output: fat globules broken into smaller parts; whole partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "hook",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property with owner; Output: property separated from rightful owner; boundary drawn through theft.",
+      "alternative": null
+    },
+    {
+      "verb": "hydrolise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole compound. Output: compound split into constituent parts by water reaction. Partitions molecule.",
+      "alternative": null
+    },
+    {
+      "verb": "hydrolize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole compound. Output: compound split into constituent parts by water reaction. Partitions molecule.",
+      "alternative": null
+    },
+    {
+      "verb": "hydrolyse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole compound. Output: compound split into constituent parts by water reaction. Partitions molecule.",
+      "alternative": null
+    },
+    {
+      "verb": "hydrolyze",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole compound. Output: compound split into constituent parts by water reaction. Partitions molecule.",
+      "alternative": null
+    },
+    {
+      "verb": "hyphen",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: word as whole. Output: word divided by hyphen. Boundary drawn through continuous text.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "hyphenate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: word as whole. Output: word divided by hyphen into parts. Boundary drawn through word.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "impale",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact body; Output: body with boundary drawn through it by stake; divides/penetrates the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "impanel",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: complete list; output: subset selected from list; boundary drawn to separate chosen from unchosen.",
+      "alternative": null
+    },
+    {
+      "verb": "incise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous surface. Output: surface with division cut through it. A boundary is drawn by cutting.",
+      "alternative": null
+    },
+    {
+      "verb": "insulate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing connected to environment. Output: thing separated/partitioned from environmental influences.",
+      "alternative": null
+    },
+    {
+      "verb": "interrupt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous process; output: process divided into before-break and after-break; partitions temporal continuity.",
+      "alternative": null
+    },
+    {
+      "verb": "ionise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: neutral molecule. Output: separated ions (cation and anion). The whole molecule is partitioned into charged parts.",
+      "alternative": null
+    },
+    {
+      "verb": "isolate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing among others (whole context). Output: thing set apart from others (partitioned). Separation creates parts.",
+      "alternative": null
+    },
+    {
+      "verb": "jimmy",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: closed/locked thing; Output: thing forced open/separated; prying divides the previously joined surfaces.",
+      "alternative": null
+    },
+    {
+      "verb": "julienne",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole food item; Output: long thin strips; boundaries drawn through the item dividing it into strip-shaped parts.",
+      "alternative": null
+    },
+    {
+      "verb": "keep apart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: potential unity; Output: maintained separation; a boundary maintains partition between elements.",
+      "alternative": null
+    },
+    {
+      "verb": "keep in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: person with full spatial access. Output: person's location partitioned into allowed (indoors) and forbidden (outdoors).",
+      "alternative": null
+    },
+    {
+      "verb": "kick down",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact door/barrier; Output: door broken/separated from frame; partition divides the previously unified structure.",
+      "alternative": null
+    },
+    {
+      "verb": "kidnap",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person in their context; Output: person separated from context against will; boundary drawn between person and their rightful location.",
+      "alternative": null
+    },
+    {
+      "verb": "lacerate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact tissue. Output: tissue divided into torn parts. Partitions through irregular cutting.",
+      "alternative": null
+    },
+    {
+      "verb": "ladder",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: woven fabric structure. Output: fabric divided by unraveling (runs/ladders). Partition through structure failure.",
+      "alternative": null
+    },
+    {
+      "verb": "laminate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: wood block, output: multiple thin sheets, divides whole into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "lance",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: closed surface. Output: surface with opening created by piercing. Boundary drawn through.",
+      "alternative": null
+    },
+    {
+      "verb": "lay waste to",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact whole (place/thing). Output: fragmented parts, destroyed structure. Divides through violent partition.",
+      "alternative": null
+    },
+    {
+      "verb": "leave behind",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: person + things together. Output: person separated from things. A boundary divides what was unified.",
+      "alternative": null
+    },
+    {
+      "verb": "leech",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: blood in body; output: blood separated into internal and extracted portions; whole partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "lever",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: closed/stuck thing; Output: thing pried open/separated; leveraging divides the previously joined surfaces.",
+      "alternative": null
+    },
+    {
+      "verb": "lift out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing embedded in context. Output: thing separated from context. The verb partitions object from surroundings.",
+      "alternative": null
+    },
+    {
+      "verb": "limit",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unrestricted possibility space. Output: restricted subset. Boundary drawn through possibility space creating inside/outside.",
+      "alternative": null
+    },
+    {
+      "verb": "lock away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity accessible in space; Output: entity isolated in inaccessible partition; separates thing from reachable world.",
+      "alternative": null
+    },
+    {
+      "verb": "lock in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: space with open access; Output: space sealed off from exterior; creates boundary partition preventing passage.",
+      "alternative": null
+    },
+    {
+      "verb": "lop off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; output: separated parts by cutting, boundary drawn through object.",
+      "alternative": null
+    },
+    {
+      "verb": "lot",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous land; Output: discrete lots with boundaries; partitioning space into subdivisions.",
+      "alternative": null
+    },
+    {
+      "verb": "malversate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entrusted property as whole; Output: portion separated and redirected to self; partitioning trusted funds.",
+      "alternative": null
+    },
+    {
+      "verb": "manicure",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: nails as whole growth. Output: nails trimmed into shaped parts. Material is removed by partitioning excess from desired portion.",
+      "alternative": null
+    },
+    {
+      "verb": "marginalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: people distributed across social space. Output: certain groups separated/pushed to edges. Boundary drawn through social field.",
+      "alternative": null
+    },
+    {
+      "verb": "marginalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: people distributed across social space. Output: certain groups separated/pushed to edges. Boundary drawn through social field.",
+      "alternative": null
+    },
+    {
+      "verb": "maroon",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person + community; Output: person isolated on island, separated from resources; partition creates stranded subset.",
+      "alternative": null
+    },
+    {
+      "verb": "masticate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food as whole; Output: food as divided parts; grinding and kneading partition the mass.",
+      "alternative": null
+    },
+    {
+      "verb": "mete out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: whole amount to distribute; Output: small portions separated and given; partitioning into measured parts.",
+      "alternative": null
+    },
+    {
+      "verb": "mill",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: grain or material. Output: ground particles. Whole divided into fine parts.",
+      "alternative": null
+    },
+    {
+      "verb": "mine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: earth with embedded material. Output: extracted material separated from earth. The excavation partitions desired from undesired matter.",
+      "alternative": null
+    },
+    {
+      "verb": "misappropriate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property under care; Output: property separated from legitimate owner; boundary drawn through fraudulent use.",
+      "alternative": null
+    },
+    {
+      "verb": "moulder",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact material. Output: material broken into decaying parts. Structure partitions through decay.",
+      "alternative": null
+    },
+    {
+      "verb": "mow",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: standing grass. Output: grass separated from ground. Boundary drawn through plant-earth connection.",
+      "alternative": null
+    },
+    {
+      "verb": "munch",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food as whole; Output: food broken into parts; chewing action divides through material.",
+      "alternative": null
+    },
+    {
+      "verb": "nab",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: free person; Output: person separated from freedom; boundary drawn between person and liberty.",
+      "alternative": null
+    },
+    {
+      "verb": "nett",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fish free in water; Output: fish captured and partitioned within net; creates boundary separating caught from uncaught.",
+      "alternative": null
+    },
+    {
+      "verb": "nibble",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food as whole; Output: small parts separated from whole; gentle biting partitions off pieces.",
+      "alternative": null
+    },
+    {
+      "verb": "nick",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact surface. Output: surface with boundary drawn through it creating a nick. Partitions the continuity.",
+      "alternative": null
+    },
+    {
+      "verb": "nip off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole object. Output: parts separated by pinching. A boundary is drawn through something, dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "notch",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous edge. Output: edge with indentation separating parts. Boundary drawn through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "ostracise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person within community whole. Output: person separated from community. Draws boundary through social whole, creating separation.",
+      "alternative": null
+    },
+    {
+      "verb": "oxygenise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: hydrogenated compound; Output: compound with hydrogen removed (separated); hydrogen is partitioned away from the molecule.",
+      "alternative": null
+    },
+    {
+      "verb": "oxygenize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: hydrogenated compound; Output: compound with hydrogen removed (separated); hydrogen is partitioned away from the molecule.",
+      "alternative": null
+    },
+    {
+      "verb": "pan off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of dirt and minerals. Output: separated dirt and precious minerals. Whole is divided into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "panel",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: complete list. Output: subset selected from list. A filtering operation partitions the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "parcel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole; Output: multiple parts; a boundary is drawn through the whole, dividing it into segments.",
+      "alternative": null
+    },
+    {
+      "verb": "parcel out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: whole to be distributed; Output: parcels separated and allocated; partitioning into portions.",
+      "alternative": null
+    },
+    {
+      "verb": "pare",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fruit with skin attached. Output: fruit separated from skin. Whole partitioned into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "parse",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a sentence as continuous string; output: parts (constituents) created by identifying syntactic boundaries within it.",
+      "alternative": null
+    },
+    {
+      "verb": "part",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified whole (hair, object). Output: separated parts with boundary drawn through. The verb explicitly partitions one into many.",
+      "alternative": null
+    },
+    {
+      "verb": "partition",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: undivided space or thing. Output: multiple sections divided by boundaries. Classic partition operation.",
+      "alternative": null
+    },
+    {
+      "verb": "partition off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified space or thing. Output: separated sections. Draws boundaries to create parts.",
+      "alternative": null
+    },
+    {
+      "verb": "peculate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entrusted property as whole; Output: portion separated and redirected to self; partitioning trusted funds.",
+      "alternative": null
+    },
+    {
+      "verb": "peel off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified formation. Output: formation divided into departing member and remainder. A boundary is drawn through the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "peptise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: aggregated particles. Output: particles dispersed as colloid. Separates mass into distributed particles.",
+      "alternative": null
+    },
+    {
+      "verb": "peptize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: aggregated particles. Output: particles dispersed as colloid. Separates mass into distributed particles.",
+      "alternative": null
+    },
+    {
+      "verb": "perforate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid barrier. Output: barrier with holes separating inside from outside. Creates passages through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "pestle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid substance in mortar. Output: same substance divided into many smaller particles. Partition through grinding.",
+      "alternative": null
+    },
+    {
+      "verb": "phase",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: continuous process. Output: process divided into distinct phases/stages. Temporal boundaries drawn through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "phlebotomise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: blood in body; output: blood separated into internal and external portions; whole partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "phlebotomize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: blood in body; output: blood separated into internal and external portions; whole partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "pick off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: group of targets; output: group partitioned by removing individuals one-by-one; divides whole into eliminated and remaining.",
+      "alternative": null
+    },
+    {
+      "verb": "pick out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a perceptual field with multiple things; Output: that field partitioned into detected vs. background; a boundary is drawn through sensory input",
+      "alternative": null
+    },
+    {
+      "verb": "pick over",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a collection containing items to remove; Output: that collection partitioned into removed vs. retained; a selection boundary divides the collection",
+      "alternative": null
+    },
+    {
+      "verb": "pilfer",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: belongings with owner; Output: belongings separated from owner; boundary drawn through petty theft.",
+      "alternative": null
+    },
+    {
+      "verb": "pinch",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: plant with top or property with owner; Output: part separated from whole; boundary drawn through removal.",
+      "alternative": null
+    },
+    {
+      "verb": "pirate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property with owner; Output: property separated from rightful owner by force; boundary drawn through forcible taking.",
+      "alternative": null
+    },
+    {
+      "verb": "plagiarize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: content with attribution link; Output: content separated from original author; boundary drawn between work and creator.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "pleat",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: flat fabric. Output: fabric divided into folded sections. Continuous surface becomes segments.",
+      "alternative": null
+    },
+    {
+      "verb": "plicate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: flat material. Output: material divided into pleated parts. Whole partitioned into folds.",
+      "alternative": null
+    },
+    {
+      "verb": "plough",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous earth surface. Output: earth broken into furrows and ridges. Surface partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "plow",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous earth surface. Output: earth broken into furrows and ridges. Surface partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "pluck",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: feathers/hair attached to body. Output: feathers/hair separated from body. Boundary drawn between body and growth, partitioning them.",
+      "alternative": null
+    },
+    {
+      "verb": "plump up",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: compressed mass. Output: expanded separated parts with air introduced.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "portion",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole quantity; Output: quantity divided into portions; the whole is partitioned into distributed parts.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "portion out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: whole to be distributed; Output: portions separated and allocated; partitioning into shares.",
+      "alternative": null
+    },
+    {
+      "verb": "pound off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified space. Output: separated compartments. Divides whole into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "powderise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid material. Output: that material divided into powder particles. Partitioning into fine parts.",
+      "alternative": null
+    },
+    {
+      "verb": "powderize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid material. Output: that material divided into powder particles. Partitioning into fine parts.",
+      "alternative": null
+    },
+    {
+      "verb": "prang",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: intact vehicle. Output: vehicle broken into damaged parts. Partitions through impact.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "predigest",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole food. Output: food broken into parts before consumption. Boundary drawn through substance.",
+      "alternative": "SYN"
+    },
+    {
+      "verb": "preisolate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified set; Output: element separated beforehand; early partition creates isolated subset.",
+      "alternative": null
+    },
+    {
+      "verb": "proof",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text as undifferentiated whole. Output: text with errors separated from correct parts. Filtering creates subset.",
+      "alternative": null
+    },
+    {
+      "verb": "proofread",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: complete text; output: errors filtered/identified; boundaries drawn around problematic elements.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "prorate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: whole amount. Output: amount divided proportionally. Total partitioned into proportional shares.",
+      "alternative": null
+    },
+    {
+      "verb": "prune",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole with wanted and unwanted parts. Output: wanted parts separated from unwanted. Filters/divides whole.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "pull off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing attached or engaged. Output: thing withdrawn, separated. Withdrawal creates separation from prior state.",
+      "alternative": null
+    },
+    {
+      "verb": "pulverize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid object. Output: many tiny particles. Extreme partitioning into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "puncture",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact membrane. Output: membrane with hole created. A boundary is drawn through the surface, creating opening.",
+      "alternative": null
+    },
+    {
+      "verb": "purloin",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: belongings with owner; Output: belongings separated from owner; boundary drawn through theft.",
+      "alternative": null
+    },
+    {
+      "verb": "quantise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: continuous signal. Output: signal partitioned into discrete levels. Continuous range divided into bins.",
+      "alternative": null
+    },
+    {
+      "verb": "quantize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: continuous signal. Output: signal partitioned into discrete levels. Continuous range divided into bins.",
+      "alternative": null
+    },
+    {
+      "verb": "quarantine",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person in general population. Output: person separated into isolation. Boundary drawn through social space.",
+      "alternative": null
+    },
+    {
+      "verb": "quarry",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole stone deposit. Output: extracted stones separated from deposit. Material partitioned from whole.",
+      "alternative": null
+    },
+    {
+      "verb": "quarter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole. Output: four parts. Boundary drawn through whole dividing it into quarters.",
+      "alternative": null
+    },
+    {
+      "verb": "rail off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified space; Output: space divided by railing; a boundary partitions the space into regions.",
+      "alternative": null
+    },
+    {
+      "verb": "rake off",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: total transaction amount; Output: partitioned into legitimate portion and illegal portion taken off; filtering operation.",
+      "alternative": null
+    },
+    {
+      "verb": "rasterize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: continuous image; output: image as discrete pixels; boundary drawn through image partitioning it into units.",
+      "alternative": null
+    },
+    {
+      "verb": "ration",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole supply. Output: that supply divided into measured portions for distribution.",
+      "alternative": null
+    },
+    {
+      "verb": "ravel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tangled/wound fibers. Output: separated strands. The whole is partitioned into constituent parts.",
+      "alternative": null
+    },
+    {
+      "verb": "ravel out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tangled/wound fibers. Output: separated strands. The whole is partitioned into constituent parts.",
+      "alternative": null
+    },
+    {
+      "verb": "redline",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: neighborhood as whole market. Output: neighborhood partitioned into allowed and forbidden areas for selling/renting.",
+      "alternative": null
+    },
+    {
+      "verb": "reduce",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: larger whole. Output: smaller portion. Partitions the original by removing parts, creating a subset.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "refracture",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: abnormally mended bone (whole); output: bone in parts again; boundary drawn through the bone dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "rend",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact fabric/material; Output: material divided into torn parts; partitions whole through boundary.",
+      "alternative": null
+    },
+    {
+      "verb": "renegade",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person integrated with customs; Output: person separated from customs; a boundary is drawn dividing them from tradition.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "repossess",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property with current holder; Output: property separated from holder, returned to original owner; boundary drawn through reclamation.",
+      "alternative": null
+    },
+    {
+      "verb": "rescue",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person in danger; Output: person separated from danger; boundary drawn between person and harm.",
+      "alternative": null
+    },
+    {
+      "verb": "resift",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of particles. Output: re-separated components. The mixture is partitioned again into subsets.",
+      "alternative": null
+    },
+    {
+      "verb": "restrict",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: broad set of options. Output: narrower subset. Boundary drawn through possibility space, filtering.",
+      "alternative": null
+    },
+    {
+      "verb": "rice",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole food mass. Output: rice-grain-sized particles. The whole is divided into small parts via sieving.",
+      "alternative": null
+    },
+    {
+      "verb": "rip",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous material. Output: material torn into pieces. A boundary divides the whole violently.",
+      "alternative": null
+    },
+    {
+      "verb": "rip up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole paper/material; Output: material segmented into shreds; divides into multiple parts.",
+      "alternative": null
+    },
+    {
+      "verb": "rive",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material; Output: material split into violently torn parts; divides through forceful partition.",
+      "alternative": null
+    },
+    {
+      "verb": "roll out",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: rolled unified form. Output: extended separated flat form.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "root out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: plant integrated with ground. Output: plant separated from ground. Partitions by extraction.",
+      "alternative": null
+    },
+    {
+      "verb": "rope in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: undivided space. Output: space partitioned by rope boundary into separate sections.",
+      "alternative": null
+    },
+    {
+      "verb": "rope off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified accessible space; Output: space divided into accessible/restricted zones; rope draws boundary partitioning the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "rout",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: engaged combatants. Output: combatants separated by flight, one side scattered \u2014 partition through dispersal.",
+      "alternative": null
+    },
+    {
+      "verb": "rumple",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: smooth ordered surface. Output: surface broken into disordered areas. Smoothness partitioned into wrinkles.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "rupture",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous whole. Output: separated parts. The abrupt separation partitions the structure into fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "rut",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous surface. Output: surface with furrow carved out. The surface is partitioned into groove and non-groove.",
+      "alternative": null
+    },
+    {
+      "verb": "salvage",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: valuable thing threatened by destruction; Output: valuable thing separated from destruction; boundary drawn between salvageable and lost.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "sample",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole population/substance. Output: subset extracted as representative part. Boundary drawn through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "saw",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous material; Output: material divided into parts; a boundary is drawn through something, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "scatter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: grouped/concentrated things; Output: separated dispersed things; a whole is partitioned into distributed parts.",
+      "alternative": null
+    },
+    {
+      "verb": "scissor",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: parts separated by cuts. A boundary is drawn through the material, dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "scoop",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole mass of material; Output: portion separated from mass; a boundary is drawn extracting a subset.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "scoop up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material in mass. Output: portion separated from mass. Dividing a subset from the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "scrag",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: living creature. Output: creature with neck broken/life separated. Partitions life from body.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "scratch up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact surface. Output: surface with cuts/divisions. The surface is partitioned by cutting lines.",
+      "alternative": null
+    },
+    {
+      "verb": "screen",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated set of candidates. Output: candidates filtered/sorted into categories. Examination partitions the set.",
+      "alternative": null
+    },
+    {
+      "verb": "screen off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified space. Output: space partitioned by divider into separate areas. Boundary drawn through space.",
+      "alternative": null
+    },
+    {
+      "verb": "screen out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: mixed set of candidates. Output: suitable vs unsuitable subsets created. Filtering operation partitions the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "scythe",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: attached vegetation. Output: vegetation severed from base. Partitioning plants from their roots.",
+      "alternative": null
+    },
+    {
+      "verb": "seal in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: container with contents potentially escapable; Output: container with boundary sealed, contents partitioned inside; creates impermeable partition.",
+      "alternative": null
+    },
+    {
+      "verb": "secede",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: whole organization with member; Output: organization divided with member separated out; a boundary drawn through the collective",
+      "alternative": null
+    },
+    {
+      "verb": "seclude",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person among others. Output: person separated away from others. Boundary drawn, creating partition.",
+      "alternative": null
+    },
+    {
+      "verb": "section",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole. Output: parts separated by boundaries. Thing partitioned into segments.",
+      "alternative": null
+    },
+    {
+      "verb": "sectionalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: undivided territory. Output: multiple sections with boundaries between them. Partitions a whole.",
+      "alternative": null
+    },
+    {
+      "verb": "sectionalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: undivided territory. Output: multiple sections with boundaries between them. Partitions a whole.",
+      "alternative": null
+    },
+    {
+      "verb": "segment",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole. Output: multiple parts. Boundaries drawn through to create divisions.",
+      "alternative": null
+    },
+    {
+      "verb": "segregate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: integrated whole. Output: separated parts. Partitions a mass by drawing boundaries and creating distinct subsets.",
+      "alternative": null
+    },
+    {
+      "verb": "send down",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: student with full university access. Output: student's access partitioned into allowed (outside) and forbidden (inside university).",
+      "alternative": null
+    },
+    {
+      "verb": "send packing",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: associated entities. Output: entities separated with association broken. Severs social connection, creating separation.",
+      "alternative": null
+    },
+    {
+      "verb": "separate off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified space. Output: space partitioned by divider into separate areas. Boundary drawn through space.",
+      "alternative": null
+    },
+    {
+      "verb": "separate out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture of substances. Output: separated components via filtering. Substances are partitioned into subsets.",
+      "alternative": null
+    },
+    {
+      "verb": "sequester",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity in general context. Output: entity set apart from general context. Partitioning creates separation.",
+      "alternative": null
+    },
+    {
+      "verb": "sequestrate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: group; Output: group with one element separated; a boundary partitions one item from the rest.",
+      "alternative": null
+    },
+    {
+      "verb": "set apart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unified group; Output: element separated from others; a boundary partitions one from the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "sever",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: connected whole. Output: separated parts. A boundary is drawn through something, dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "shatter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: many fragments. A boundary divides the whole into numerous parts.",
+      "alternative": null
+    },
+    {
+      "verb": "shave",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: surface with hair; Output: hair separated from surface by close cutting; partitioning of hair from skin",
+      "alternative": null
+    },
+    {
+      "verb": "shear",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material (wool, hair, metal sheet). Output: material cut into separate parts. Partition created.",
+      "alternative": null
+    },
+    {
+      "verb": "shipwreck",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: intact ship. Output: ship broken into wreckage parts. Partitions through catastrophic damage.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "shovel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous mass of earth; Output: earth divided and displaced; material is partitioned from its original location.",
+      "alternative": null
+    },
+    {
+      "verb": "shred",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: many strips or pieces. Divides whole into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "shut away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity in accessible space; Output: entity partitioned into inaccessible space; creates isolation boundary.",
+      "alternative": null
+    },
+    {
+      "verb": "sideline",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person in central activity set. Output: person filtered out to peripheral set. Partitions central from peripheral.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "sieve",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a mixed collection; Output: that collection partitioned into kept vs. discarded by careful checking; a boundary divides the collection",
+      "alternative": null
+    },
+    {
+      "verb": "sieve out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a collection containing unwanted items; Output: that collection partitioned into separated/removed vs. kept; a boundary divides wanted from unwanted",
+      "alternative": null
+    },
+    {
+      "verb": "sift",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixed collection. Output: sorted subsets separated by filter criteria. Creating parts from whole.",
+      "alternative": null
+    },
+    {
+      "verb": "single out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a group; Output: that group partitioned into the singled-out individual vs. the rest; a boundary isolates one from many",
+      "alternative": null
+    },
+    {
+      "verb": "size",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unsorted collection. Output: collection divided into size-based subsets. Partitions by criterion.",
+      "alternative": null
+    },
+    {
+      "verb": "skim off",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a set with varying quality; Output: that set partitioned into best vs. rest; a quality boundary separates top tier from others",
+      "alternative": null
+    },
+    {
+      "verb": "skim over",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: complete text; output: surface elements filtered out; boundaries drawn around superficial content.",
+      "alternative": null
+    },
+    {
+      "verb": "skin",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with skin attached. Output: skin separated from body. The stripping partitions the covering from the core.",
+      "alternative": null
+    },
+    {
+      "verb": "skive",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with surface layer. Output: object with surface layer separated/removed. A boundary is drawn between surface and substrate.",
+      "alternative": null
+    },
+    {
+      "verb": "slash",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous whole; Output: whole cut/divided; cutting drastically partitions something.",
+      "alternative": null
+    },
+    {
+      "verb": "slice",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: separated slices. Boundary drawn through creating parts.",
+      "alternative": null
+    },
+    {
+      "verb": "slice into",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact body/object; Output: body/object with internal partition created; a boundary is drawn through matter.",
+      "alternative": null
+    },
+    {
+      "verb": "slice through",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; Output: object divided by cutting plane; the blade partitions the material.",
+      "alternative": null
+    },
+    {
+      "verb": "slice up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; Output: multiple slices; boundaries are drawn through the object dividing it into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "slit",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous surface. Output: surface with linear cut separating sides. Partitions through boundary.",
+      "alternative": null
+    },
+    {
+      "verb": "sliver",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material; Output: material divided into thin sliver parts; partitions into specific shapes.",
+      "alternative": null
+    },
+    {
+      "verb": "smash",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact object. Output: object broken into pieces. The impact divides the whole through force.",
+      "alternative": null
+    },
+    {
+      "verb": "smash up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact object. Output: damaged/fragmented parts. Partitions through violent force.",
+      "alternative": null
+    },
+    {
+      "verb": "smelt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: ore (whole mixture). Output: separated metal and slag. Heating partitions components.",
+      "alternative": null
+    },
+    {
+      "verb": "snap off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object; output: parts separated by breaking, boundary drawn through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "snatch away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with possessor; Output: object rapidly separated from possessor; boundary drawn through quick removal.",
+      "alternative": null
+    },
+    {
+      "verb": "snip",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: connected material; Output: severed parts; pinching/snipping divides one into many.",
+      "alternative": null
+    },
+    {
+      "verb": "snip off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole object. Output: parts separated by snipping. A boundary is drawn through something, dividing it.",
+      "alternative": null
+    },
+    {
+      "verb": "sort",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undivided collection. Output: collection partitioned into suitable/unsuitable. Draws boundary through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "sort out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unsorted whole; output: parts divided by categories; boundaries drawn through collection.",
+      "alternative": null
+    },
+    {
+      "verb": "spade",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: earth in place. Output: earth separated/loosened from mass. Dividing earth from its surrounding.",
+      "alternative": null
+    },
+    {
+      "verb": "spear",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: continuous body. Output: body with piercing creating opening. Boundary drawn through.",
+      "alternative": null
+    },
+    {
+      "verb": "splinter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid object. Output: object divided into slivers. A boundary creates multiple thin parts from whole.",
+      "alternative": null
+    },
+    {
+      "verb": "split",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unified group. Output: separated parts moving apart. A boundary divides the whole into independent segments.",
+      "alternative": null
+    },
+    {
+      "verb": "split up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole. Output: that whole divided into parts or portions. Partitioning transformation.",
+      "alternative": null
+    },
+    {
+      "verb": "squeeze out",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: thing integrated in difficult context; Output: thing extracted and separated from context; partitions desired thing from surrounding.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "stave in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact barrel staves. Output: broken/separated stave pieces. A boundary is drawn through the staves, breaking them.",
+      "alternative": null
+    },
+    {
+      "verb": "stem",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole plant with stem. Output: plant body and separated stem. Boundary drawn to partition parts.",
+      "alternative": null
+    },
+    {
+      "verb": "stratify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: homogeneous whole; Output: divided into distinct layers or strata; boundaries drawn creating parts.",
+      "alternative": null
+    },
+    {
+      "verb": "strip off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: clothed body (whole). Output: body and separated clothing (parts). A boundary divides the composite.",
+      "alternative": null
+    },
+    {
+      "verb": "subdivide",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: a division or whole. Output: that whole partitioned into smaller subdivisions. Creates finer parts.",
+      "alternative": null
+    },
+    {
+      "verb": "subsume",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: undifferentiated set; Output: subset relation identified within whole; draws boundary marking part-of relationship.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "sunder",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: one thing. Output: two or more pieces violently separated. Breaking through to create parts.",
+      "alternative": null
+    },
+    {
+      "verb": "surface-mine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact earth with ore embedded; output: ore separated from surrounding material; partitioning the whole into extracted and remaining parts.",
+      "alternative": null
+    },
+    {
+      "verb": "swipe",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with owner or intact surface; Output: object separated from owner or surface divided by strike; boundary drawn through motion.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "syllabicate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: word as whole. Output: word divided into syllable parts. Partitions linguistic unit.",
+      "alternative": null
+    },
+    {
+      "verb": "syllabify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: word as whole. Output: word divided into syllable parts. Partitions linguistic unit.",
+      "alternative": null
+    },
+    {
+      "verb": "syllabise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: continuous word; Output: word partitioned into syllables; boundary drawn through whole",
+      "alternative": null
+    },
+    {
+      "verb": "syllabize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: continuous word; Output: word partitioned into syllables; boundary drawn through whole",
+      "alternative": null
+    },
+    {
+      "verb": "take apart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: assembled whole; Output: component parts separated; divides assembly into pieces.",
+      "alternative": null
+    },
+    {
+      "verb": "take break",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: continuous activity. Output: activity divided into active period and pause period. A temporal boundary is drawn through ongoing activity.",
+      "alternative": null
+    },
+    {
+      "verb": "tear",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact surface. Output: surface divided by force. A boundary rips through the material creating parts.",
+      "alternative": null
+    },
+    {
+      "verb": "tear away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole attached thing. Output: parts separated by force. A violent boundary creates division.",
+      "alternative": null
+    },
+    {
+      "verb": "tear off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole attached thing. Output: parts separated by force. A violent boundary creates division.",
+      "alternative": null
+    },
+    {
+      "verb": "tear up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact object; Output: object divided into torn pieces; partitions through tearing.",
+      "alternative": null
+    },
+    {
+      "verb": "tease",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: pieces. The verb partitions something into fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "tease apart",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entangled fibers. Output: separated fibers. The whole is divided into individual parts.",
+      "alternative": null
+    },
+    {
+      "verb": "tell apart",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated set. Output: set with boundaries drawn between members. Creates distinct parts.",
+      "alternative": null
+    },
+    {
+      "verb": "tell from",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated pair. Output: pair with distinguishing boundary. Separates one from another.",
+      "alternative": null
+    },
+    {
+      "verb": "thieve",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property with owner; Output: property separated from rightful owner; boundary drawn through theft.",
+      "alternative": null
+    },
+    {
+      "verb": "throw off",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: entity with attached thing. Output: entity and separated thing. A boundary divides what was together.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "tomahawk",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: intact body. Output: body severed/cut. The cutting action partitions the body.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "top",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole object with top. Output: object with top separated/removed. Partition creates parts.",
+      "alternative": null
+    },
+    {
+      "verb": "trample",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: raised/intact object. Output: object flattened (structural integrity broken). The object is divided from its original form.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "transaminate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: amino group in one compound. Output: amino group separated and transferred to another compound. Partition from original, though followed by connection.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "transect",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole object. Output: parts created by cutting across it. A boundary is drawn through it.",
+      "alternative": null
+    },
+    {
+      "verb": "transgress",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: bounded domain. Output: parts on either side of boundary; crossing creates partition between permitted/forbidden.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "tread",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole object. Output: crushed parts. Divides through compression.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "trephine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact skull bone. Output: skull with hole cut through it. A partition is created by removing a section.",
+      "alternative": null
+    },
+    {
+      "verb": "trifurcate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: single unit. Output: three separate parts. Divides one into three.",
+      "alternative": null
+    },
+    {
+      "verb": "trim",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: hair/material as whole growth. Output: hair/material with excess cut away. Boundary drawn between kept and removed portions.",
+      "alternative": null
+    },
+    {
+      "verb": "trisect",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: a whole. Output: three parts. Divides one into many by drawing boundaries through it.",
+      "alternative": null
+    },
+    {
+      "verb": "trounce",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: contest with undetermined outcome. Output: contest sharply partitioned into dominant victor and defeated opponent \u2014 extreme division.",
+      "alternative": null
+    },
+    {
+      "verb": "truncate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: polyhedron with corner. Output: polyhedron with corner cut off by plane. A boundary is drawn through the corner, removing it.",
+      "alternative": null
+    },
+    {
+      "verb": "tussle",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: ordered/tidy state. Output: disordered/untidy state. The organization is broken into disorder.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "tweeze",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing embedded/attached; Output: thing extracted/separated; plucking divides thing from its surround.",
+      "alternative": null
+    },
+    {
+      "verb": "twig",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: branch. Output: branch divided into twiglike subdivisions. Partitions into smaller branches.",
+      "alternative": null
+    },
+    {
+      "verb": "ultracentrifuge",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixture requiring ultra-high speed separation. Output: separated components. The whole is partitioned into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "unbind",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: bound whole; output: separated parts by removing binding, boundary drawn through connection.",
+      "alternative": null
+    },
+    {
+      "verb": "unbox",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object-in-box as unified container system; Output: object and box as separate parts; the containment relationship is severed.",
+      "alternative": null
+    },
+    {
+      "verb": "unbraid",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: braided whole. Output: separated strands. A boundary is drawn through the braid, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "uncoil",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: coiled structure. Output: uncoiled separated strands. The twisted whole is partitioned into distinct parts.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "uncompress",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: unified compressed whole. Output: expanded separated parts restored.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "uncork",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: bottle as sealed whole. Output: cork separated from bottle. Partitions closure seal from container.",
+      "alternative": null
+    },
+    {
+      "verb": "uncouple",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: coupled whole; output: separated parts, boundary drawn through coupling connection.",
+      "alternative": null
+    },
+    {
+      "verb": "uncrate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object-in-crate as contained unit; Output: object and crate as separate parts; containment is partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "undercut",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact underpart. Output: underpart removed, separated. The bottom is cut away from the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "undermine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid structure. Output: hollowed structure with cavity. A void is carved out, dividing solid from hollow.",
+      "alternative": null
+    },
+    {
+      "verb": "undo",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: bound/fastened whole. Output: parts separated, connection dissolved. Boundary drawn through what was unified.",
+      "alternative": null
+    },
+    {
+      "verb": "undock",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: docked vessel-dock whole; output: separated vessel from dock, boundary drawn through mooring.",
+      "alternative": null
+    },
+    {
+      "verb": "unhorse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: rider-horse unit. Output: separated rider and horse. The mounted state is partitioned into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "unknot",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: knotted whole. Output: separated fibers/threads. A boundary is drawn through the knot, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "unlash",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: lashed whole; output: separated parts by removing lashing, boundary drawn through binding.",
+      "alternative": null
+    },
+    {
+      "verb": "unpack",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: packed items as contained unit; Output: items separated from packing; the whole is divided into parts.",
+      "alternative": null
+    },
+    {
+      "verb": "unplug",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: appliance-outlet connection. Output: separated appliance and outlet. An existing link is severed.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "unravel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tangled/intertwined whole. Output: separate strands or parts. Partitions entangled structure into components.",
+      "alternative": null
+    },
+    {
+      "verb": "unreel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: wound/integrated mass on reel. Output: separated, extended strand. The whole is partitioned into linear parts.",
+      "alternative": null
+    },
+    {
+      "verb": "unsheathe",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: blade+sheath as unified whole; Output: blade and sheath separated; a boundary divides the previously joined pair.",
+      "alternative": null
+    },
+    {
+      "verb": "unsnarl",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: entangled whole. Output: separated parts. The entanglement is divided, freeing the components.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "unsolder",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: soldered whole; output: parts separated by removing solder, boundary drawn through join.",
+      "alternative": null
+    },
+    {
+      "verb": "untangle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tangled whole. Output: separated strands. A boundary is drawn through the entanglement, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "untwine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: twisted whole. Output: separated strands. A boundary is drawn through the twined structure, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "unweave",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: woven whole. Output: separated strands. A boundary is drawn through the fabric, partitioning it.",
+      "alternative": null
+    },
+    {
+      "verb": "upend",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: hierarchical contest. Output: hierarchy inverted, separating previous top from bottom \u2014 partition through power structure.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "vandalize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact property. Output: damaged/broken property. The whole is partitioned into broken parts.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "vary",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: homogeneous set; Output: differentiated parts within that set; internal diversity is partitioned",
+      "alternative": null
+    },
+    {
+      "verb": "venesect",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: blood in body; output: blood separated into internal and external portions; whole partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "vivisect",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: living body as whole. Output: living body opened/divided into observable parts. Boundary drawn through whole.",
+      "alternative": null
+    },
+    {
+      "verb": "wash",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: surface/land whole; Output: material separated through erosion; water partitions material from surface",
+      "alternative": "INS"
+    },
+    {
+      "verb": "wear",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact whole. Output: fragmented parts. Partitions structure through deterioration, creating pieces from unity.",
+      "alternative": null
+    },
+    {
+      "verb": "wear out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact object. Output: object broken into pieces/parts. Thing partitions into fragments.",
+      "alternative": null
+    },
+    {
+      "verb": "weed out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: mixed collection; Output: wanted parts separated from unwanted parts; a boundary divides the whole.",
+      "alternative": null
+    },
+    {
+      "verb": "whipsaw",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: material divided by saw cut. Creates partition.",
+      "alternative": null
+    },
+    {
+      "verb": "whittle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: larger piece of wood. Output: smaller piece plus shavings. Material is progressively divided into smaller parts.",
+      "alternative": null
+    },
+    {
+      "verb": "whittle away",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: material divided into kept-part and removed-parts. Partitions through cutting.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "whittle down",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole material. Output: material divided into kept-part and removed-parts. Partitions through cutting.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "wind off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: wound/twisted whole. Output: separated, straightened parts. The integrated structure is partitioned.",
+      "alternative": null
+    },
+    {
+      "verb": "winkle out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing embedded in position; Output: thing extracted and separated from position; partitions thing from its lodged context.",
+      "alternative": null
+    },
+    {
+      "verb": "winnow out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undivided set of candidates; Output: set filtered into kept/dismissed parts; partitions by selection.",
+      "alternative": null
+    },
+    {
+      "verb": "wrack",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: whole structure. Output: broken pieces. Partitions through forceful destruction.",
+      "alternative": null
+    },
+    {
+      "verb": "wring out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid integrated in material; Output: liquid separated from material through mechanical force; partitions liquid from solid.",
+      "alternative": null
+    },
+    {
+      "verb": "zone",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: undivided space or territory. Output: that space partitioned into zones. Creates boundaries through whole.",
+      "alternative": null
+    }
+  ]
+}

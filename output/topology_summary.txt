@@ -1,0 +1,431 @@
+======================================================================
+EO OPERATOR TOPOLOGY: CENTROIDS, HORIZONS, AND EMPIRICAL DEFINITIONS
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+  NUL (∅) — 1467 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):     1297 (88.4%)
+    Settled (0.02 < m < 0.10):  169 (11.5%)
+    Contested (-0.02 < m < 0.02):    1 (0.1%)
+    Foreign (margin < -0.02):     0 (0.0%)
+    Mean margin: 0.1572  |  100.0% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' NUL verbs):
+    get rid of                [margin=0.295, physical]
+      → Input: state with something present. Output: state with that thing absent. A gap
+    eliminate                 [margin=0.282, physical]
+      → Input: existing thing. Output: that thing absent. Makes something void.
+    rid of                    [margin=0.284, physical]
+      → Input: state with unwanted thing present; Output: state with that thing absent; 
+    cut out                   [margin=0.257, physical]
+      → Input: operating process. Output: process absent, stopped. Gap where operation w
+    do away with              [margin=0.253, physical]
+      → Input: thing present; Output: thing eliminated/absent; makes removal explicit.
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: absent, void, made, gap, person, expected, makes, where, absence, removed
+    Input pattern:  "target expected to be reached"
+    Output pattern: "same state with contact/success made explicit as absent, gap marked"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    intromit                  ↔ INS [margin=+0.001] alt:SEG
+      → Input: person with entry barrier present. Output: same person with ent
+    conk                      ↔ CON [margin=+0.021] alt:
+      → Input: ongoing motion/operation. Output: same state with motion absent
+    affranchise               ↔ CON [margin=+0.023] alt:INS
+      → Input: person with slavery/servitude expected. Output: bondage absent,
+    abacinate                 ↔ INS [margin=+0.026] alt:
+      → Input: person with vision capacity. Output: person with vision capacit
+    condone                   ↔ CON [margin=+0.027] alt:
+      → Input: expected censure; Output: same state with censure explicitly ab
+
+  NEAREST OPERATORS:
+    NUL ↔ INS: centroid sim = 0.7513
+    NUL ↔ ALT: centroid sim = 0.7399
+    NUL ↔ SEG: centroid sim = 0.6908
+
+──────────────────────────────────────────────────────────────────────
+  DES (⊡) — 448 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):      363 (81.0%)
+    Settled (0.02 < m < 0.10):   83 (18.5%)
+    Contested (-0.02 < m < 0.02):    1 (0.2%)
+    Foreign (margin < -0.02):     1 (0.2%)
+    Mean margin: 0.1399  |  99.8% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' DES verbs):
+    style                     [margin=0.253, informational]
+      → Input: unnamed thing. Output: thing with identifying term. Category or label ass
+    define                    [margin=0.228, informational]
+      → Input: thing without explicit definition; Output: thing with definitional bounda
+    designate                 [margin=0.253, social]
+      → Input: unnamed thing, Output: thing with assigned role/identity, Change: categor
+    okay                      [margin=0.234, social]
+      → Input: thing without sanctioned status. Output: thing designated as acceptable. 
+    characterise              [margin=0.207, informational]
+      → Input: thing untyped; Output: thing designated as having certain characteristic;
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: thing, designated, without, assigned, category, assigns, status, person, identity, entity
+    Input pattern:  "entity without god-status"
+    Output pattern: "entity now designated as god or godlike, categorical identity assigned"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    choreograph               ↔ REC [margin=+0.009] alt:INS
+      → Input: movements without defined structure; output: movements now desi
+    secernate                 ↔ SEG [margin=+0.027] alt:
+      → Input: unmarked thing; output: thing with a distinguishing mark/catego
+    jinx                      ↔ INS [margin=+0.034] alt:
+      → Input: undertaking with unmarked fate; output: undertaking designated 
+    animize                   ↔ ALT [margin=+0.034] alt:INS
+      → Input: thing without animate typing. Output: thing typed as lifelike. 
+    secern                    ↔ SEG [margin=+0.034] alt:
+      → Input: unmarked thing; output: thing with a distinguishing mark/catego
+
+  NEAREST OPERATORS:
+    DES ↔ INS: centroid sim = 0.7685
+    DES ↔ ALT: centroid sim = 0.7564
+    DES ↔ CON: centroid sim = 0.7417
+
+  FOREIGN TERRITORY (1 verbs closer to another centroid):
+    reconvict                 → actually near REC [margin=-0.062]
+
+──────────────────────────────────────────────────────────────────────
+  INS (△) — 7528 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):     4288 (57.0%)
+    Settled (0.02 < m < 0.10): 3033 (40.3%)
+    Contested (-0.02 < m < 0.02):  173 (2.3%)
+    Foreign (margin < -0.02):    34 (0.5%)
+    Mean margin: 0.1037  |  98.9% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' INS verbs):
+    change state              [margin=0.160, physical]
+      → Input: existing state. Output: new state appears. The verb instantiates a transf
+    act on                    [margin=0.133, social]
+      → Input: information/decision exists. Output: new action/behavior appears in respo
+    go in                     [margin=0.200, physical]
+      → Input: person outside; Output: person + entering movement; the entry action is a
+    step forward              [margin=0.175, physical]
+      → Input: person in background. Output: person visible/prominent with action taken.
+    come on                   [margin=0.164, physical]
+      → Input: position A. Output: position closer to target. A movement trajectory appe
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: appears, world, event, person, without, present, at, surface, action, object
+    Input pattern:  "two entities in separate locations"
+    Output pattern: "two entities co-present in space as a transient event, no persistent s"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    opalize                   ↔ ALT [margin=-0.000] alt:ALT
+      → Input: non-opalescent material; output: material + opalescent quality;
+    nuke                      ↔ NUL [margin=-0.001] alt:
+      → Input: target area. Output: target with atomic explosion occurring. Bo
+    alcoholise                ↔ ALT [margin=+0.001] alt:
+      → Input: substance. Output: substance + alcohol. Alcohol appears in or o
+    motley                    ↔ SYN [margin=+0.001] alt:SEG
+      → Input: uniform thing. Output: thing with varied colors/patterns added.
+    meet                      ↔ SYN [margin=+0.001] alt:
+      → Input: dispersed entities; Output: co-location event appears; creates 
+
+  NEAREST OPERATORS:
+    INS ↔ CON: centroid sim = 0.7894
+    INS ↔ ALT: centroid sim = 0.7891
+    INS ↔ SYN: centroid sim = 0.7786
+
+  FOREIGN TERRITORY (10 verbs closer to another centroid):
+    consort                   → actually near CON [margin=-0.122]
+    cooccur                   → actually near CON [margin=-0.069]
+    recreate                  → actually near REC [margin=-0.056]
+
+──────────────────────────────────────────────────────────────────────
+  SEG (｜) — 555 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):      470 (84.7%)
+    Settled (0.02 < m < 0.10):   82 (14.8%)
+    Contested (-0.02 < m < 0.02):    2 (0.4%)
+    Foreign (margin < -0.02):     1 (0.2%)
+    Mean margin: 0.1526  |  99.8% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' SEG verbs):
+    split up                  [margin=0.273, physical]
+      → Input: whole. Output: that whole divided into parts or portions. Partitioning tr
+    segment                   [margin=0.308, physical]
+      → Input: whole. Output: multiple parts. Boundaries drawn through to create divisio
+    section                   [margin=0.309, physical]
+      → Input: whole. Output: parts separated by boundaries. Thing partitioned into segm
+    segregate                 [margin=0.264, physical]
+      → Input: integrated whole. Output: separated parts. Partitions a mass by drawing b
+    snap off                  [margin=0.265, physical]
+      → Input: whole object; output: parts separated by breaking, boundary drawn through
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: whole, into, parts, separated, through, boundary, drawn, partitioned, divided, object
+    Input pattern:  "ordered/coherent state"
+    Output pattern: "that state divided into disordered parts"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    keep in                   ↔ INS [margin=+0.015] alt:
+      → Input: person with full spatial access. Output: person's location part
+    transaminate              ↔ ALT [margin=+0.016] alt:CON
+      → Input: amino group in one compound. Output: amino group separated and 
+    coinsure                  ↔ CON [margin=+0.023] alt:
+      → Input: insurance risk as whole. Output: risk divided among multiple in
+    coop in                   ↔ CON [margin=-0.033] alt:
+      → Input: entity with freedom of movement; Output: entity with movement r
+    subsume                   ↔ SYN [margin=+0.043] alt:CON
+      → Input: undifferentiated set; Output: subset relation identified within
+
+  NEAREST OPERATORS:
+    SEG ↔ SYN: centroid sim = 0.7506
+    SEG ↔ INS: centroid sim = 0.7471
+    SEG ↔ DES: centroid sim = 0.7071
+
+  FOREIGN TERRITORY (1 verbs closer to another centroid):
+    coop in                   → actually near CON [margin=-0.033]
+
+──────────────────────────────────────────────────────────────────────
+  CON (⋈) — 745 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):      457 (61.3%)
+    Settled (0.02 < m < 0.10):  268 (36.0%)
+    Contested (-0.02 < m < 0.02):   18 (2.4%)
+    Foreign (margin < -0.02):     2 (0.3%)
+    Mean margin: 0.1129  |  98.7% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' CON verbs):
+    hang on                   [margin=0.210, physical]
+      → Input: two unattached things. Output: things attached with persistent link. Stru
+    link up                   [margin=0.152, informational]
+      → Input: two unconnected logical/causal entities. Output: those entities with a pe
+    interconnect              [margin=0.127, physical]
+      → Input: separate entities. Output: entities with persistent interconnection links
+    couple                    [margin=0.197, physical]
+      → Input: two unlinked entities. Output: entities with persistent structural link. 
+    belong to                 [margin=0.175, social]
+      → Input: thing and whole unlinked; output: persistent structural part-whole relati
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: persistent, link, structural, relationship, unlinked, built, person, connection, two, separate
+    Input pattern:  "two entities (adopter, adoptee) unlinked"
+    Output pattern: "entities with persistent family-relation link"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    synchronize               ↔ SYN [margin=-0.001] alt:
+      → Input: multiple processes unlinked temporally. Output: processes with 
+    reassign                  ↔ REC [margin=-0.002] alt:REC
+      → Input: person linked to old position. Output: person linked to new pos
+    rehouse                   ↔ REC [margin=+0.003] alt:
+      → Input: person with old housing link. Output: person with new housing l
+    reallot                   ↔ REC [margin=-0.003] alt:
+      → Input: things with old allocation links. Output: same things with new 
+    resew                     ↔ REC [margin=-0.004] alt:
+      → Input: separated or damaged fabric pieces. Output: pieces reconnected 
+
+  NEAREST OPERATORS:
+    CON ↔ SYN: centroid sim = 0.7997
+    CON ↔ INS: centroid sim = 0.7894
+    CON ↔ REC: centroid sim = 0.7460
+
+  FOREIGN TERRITORY (10 verbs closer to another centroid):
+    rededicate                → actually near REC [margin=-0.042]
+    reapportion               → actually near REC [margin=-0.023]
+    reallocate                → actually near REC [margin=-0.019]
+
+──────────────────────────────────────────────────────────────────────
+  SYN (∨) — 284 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):      192 (67.6%)
+    Settled (0.02 < m < 0.10):   90 (31.7%)
+    Contested (-0.02 < m < 0.02):    2 (0.7%)
+    Foreign (margin < -0.02):     0 (0.0%)
+    Mean margin: 0.1213  |  99.6% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' SYN verbs):
+    put together              [margin=0.203, physical]
+      → Input: separate components; Output: unified assembly transcending parts; compone
+    synthesize                [margin=0.274, informational]
+      → Input: separate elements. Output: unified synthesis exists. Components merged in
+    synthesise                [margin=0.243, physical]
+      → Input: multiple components; output: unified product transcending parts; combines
+    meld                      [margin=0.242, informational]
+      → Input: separate elements. Output: unified whole transcending parts. Elements syn
+    combine                   [margin=0.202, physical]
+      → Input: separate things. Output: unified whole. Multiple elements synthesized int
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: into, whole, unified, separate, parts, multiple, elements, merge, transcending, components
+    Input pattern:  "separate parts"
+    Output pattern: "unified whole"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    resolve                   ↔ SUP [margin=+0.004] alt:
+      → Input: multiple conflicting options, Output: unified decision state — 
+    meet half-way             ↔ SUP [margin=-0.010] alt:
+      → Input: two opposing positions; Output: a single compromise position th
+    malt                      ↔ ALT [margin=+0.025] alt:
+      → Input: grain; output: malt (transformed whole); grain transforms into 
+    propitiate                ↔ CON [margin=+0.038] alt:ALT
+      → Input: conflict state between parties. Output: reconciled state mergin
+    constringe                ↔ CON [margin=+0.039] alt:NUL
+      → Input: loose parts, Output: tight unified whole (binding together)
+
+  NEAREST OPERATORS:
+    SYN ↔ CON: centroid sim = 0.7997
+    SYN ↔ INS: centroid sim = 0.7786
+    SYN ↔ REC: centroid sim = 0.7641
+
+  FOREIGN TERRITORY (1 verbs closer to another centroid):
+    meet half-way             → actually near SUP [margin=-0.010]
+
+──────────────────────────────────────────────────────────────────────
+  ALT (∿) — 474 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):      346 (73.0%)
+    Settled (0.02 < m < 0.10):  123 (25.9%)
+    Contested (-0.02 < m < 0.02):    3 (0.6%)
+    Foreign (margin < -0.02):     2 (0.4%)
+    Mean margin: 0.1235  |  99.6% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' ALT verbs):
+    re-explain                [margin=0.218, informational]
+      → Input: thing with one explanatory frame. Output: same thing with different expla
+    exaggerate                [margin=0.191, informational]
+      → Input: thing + proportional frame. Output: same thing + excessive frame. Magnitu
+    interpret                 [margin=0.159, informational]
+      → Input: text in original frame. Output: same text with new understanding frame. L
+    alternate                 [margin=0.205, informational]
+      → Input: activity in one mode. Output: same activity in different mode. The frame 
+    change over               [margin=0.156, informational]
+      → Input: system in arrangement A. Output: system in arrangement B. Shifts operatio
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: frame, thing, shifts, substance, person, content, lens, event, changes, one
+    Input pattern:  "activity in one mode"
+    Output pattern: "same activity in different mode"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    reclaim                   ↔ REC [margin=+0.003] alt:
+      → Input: waste material; Output: same material reframed as resource; per
+    convince                  ↔ CON [margin=+0.010] alt:
+      → Input: person holding frame X. Output: same person now holding frame Y
+    reclassify                ↔ REC [margin=+0.016] alt:
+      → Input: thing with old category assignment; Output: same thing with new
+    conform to                ↔ CON [margin=+0.023] alt:INS
+      → Input: thing + non-conforming frame. Output: same thing + conforming f
+    recode                    ↔ REC [margin=-0.025] alt:
+      → Input: information in one code; output: same information in a differen
+
+  NEAREST OPERATORS:
+    ALT ↔ INS: centroid sim = 0.7891
+    ALT ↔ REC: centroid sim = 0.7627
+    ALT ↔ SYN: centroid sim = 0.7572
+
+  FOREIGN TERRITORY (2 verbs closer to another centroid):
+    segue                     → actually near SEG [margin=-0.032]
+    recode                    → actually near REC [margin=-0.025]
+
+──────────────────────────────────────────────────────────────────────
+  SUP (⊕) — 19 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):       19 (100.0%)
+    Settled (0.02 < m < 0.10):    0 (0.0%)
+    Contested (-0.02 < m < 0.02):    0 (0.0%)
+    Foreign (margin < -0.02):     0 (0.0%)
+    Mean margin: 0.2146  |  100.0% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' SUP verbs):
+    go back and forth         [margin=0.255, psychological]
+      → Input: resolved position. Output: state oscillating between incompatible positio
+    conflict                  [margin=0.235, psychological]
+      → Input: resolved state. Output: incompatible values coexist. The verb creates con
+    waver                     [margin=0.273, psychological]
+      → Input: resolved state. Output: state where incompatible choices coexist. Holds c
+    contradict                [margin=0.275, informational]
+      → Input: resolved claim. Output: incompatible claims held together. Creates state 
+    fly in the face of        [margin=0.252, informational]
+      → Input: resolved state. Output: state where contradictory positions coexist; acti
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: incompatible, resolved, holding, simultaneously, contradiction, creates, where, positions, values, coexist
+    Input pattern:  "resolved position,"
+    Output pattern: "unresolved state holding incompatible positions simultaneously,"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    two-time                  ↔ CON [margin=+0.145] alt:INS
+      → Input: person in one relationship; Output: person simultaneously in tw
+    fly in the teeth of       ↔ INS [margin=+0.145] alt:
+      → Input: expectation of compliance; Output: action that contradicts that
+    higgle                    ↔ INS [margin=+0.155] alt:INS
+      → Input: single price expectation. Output: multiple incompatible valuati
+    haunt                     ↔ INS [margin=+0.166] alt:INS
+      → Input: resolved state (present or absent). Output: unresolved state wh
+    discord                   ↔ CON [margin=+0.174] alt:
+      → Input: entities expected to align; output: entities holding incompatib
+
+  NEAREST OPERATORS:
+    SUP ↔ INS: centroid sim = 0.7049
+    SUP ↔ CON: centroid sim = 0.6803
+    SUP ↔ SYN: centroid sim = 0.6524
+
+──────────────────────────────────────────────────────────────────────
+  REC (⟳) — 413 verbs
+──────────────────────────────────────────────────────────────────────
+
+  TERRITORY:
+    Core (margin > 0.10):      347 (84.0%)
+    Settled (0.02 < m < 0.10):   65 (15.7%)
+    Contested (-0.02 < m < 0.02):    1 (0.2%)
+    Foreign (margin < -0.02):     0 (0.0%)
+    Mean margin: 0.1449  |  100.0% closer to own centroid
+
+  PROTOTYPES (centroid-nearest, the 'purest' REC verbs):
+    reorganize                [margin=0.271, social]
+      → Input: organization with structure A; Output: organization with structure B; the
+    reorganise                [margin=0.275, social]
+      → Input: existing organizational structure; Output: structure rebuilt around new o
+    raise up                  [margin=0.230, physical]
+      → Input: existing arrangement. Output: reorganized arrangement. The spatial struct
+    transform                 [margin=0.184, physical]
+      → Input: thing with one structure. Output: thing with fundamentally different stru
+    update                    [margin=0.229, informational]
+      → Input: outdated structure. Output: restructured modern form. The thing is rebuil
+
+  EMPIRICAL DEFINITION (from high-confidence reasoning):
+    Key words: structure, reorganized, around, architecture, rebuilt, rebuilds, into, reorganizes, existing, organization
+    Input pattern:  "existing structure/organism"
+    Output pattern: "structure reorganized with new adaptive features"
+
+  EVENT HORIZON (boundary verbs, margin ≈ 0):
+    solemnise                 ↔ SYN [margin=+0.016] alt:ALT
+      → Input: event/thing with ordinary affective weight. Output: same thing 
+    solemnize                 ↔ SYN [margin=+0.023] alt:ALT
+      → Input: event/thing with ordinary affective weight. Output: same thing 
+    animalize                 ↔ ALT [margin=+0.030] alt:ALT
+      → Input: human with empathic structure; output: human with brutal/unfeel
+    inspissate                ↔ INS [margin=+0.033] alt:
+      → Input: thin consistency structure. Output: thick consistency structure
+    animalise                 ↔ ALT [margin=+0.035] alt:ALT
+      → Input: human with empathic structure; output: human with brutal/unfeel
+
+  NEAREST OPERATORS:
+    REC ↔ SYN: centroid sim = 0.7641
+    REC ↔ ALT: centroid sim = 0.7627
+    REC ↔ INS: centroid sim = 0.7527

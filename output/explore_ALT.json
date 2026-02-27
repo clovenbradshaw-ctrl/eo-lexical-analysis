@@ -1,0 +1,4130 @@
+{
+  "operator": "ALT",
+  "symbol": "\u223f",
+  "total_verbs": 474,
+  "scales": {
+    "informational": 229,
+    "physical": 123,
+    "social": 71,
+    "psychological": 51
+  },
+  "confidence": {
+    "high": 389,
+    "medium": 85
+  },
+  "borders": {
+    "REC": 62,
+    "INS": 21,
+    "NUL": 7,
+    "DES": 4,
+    "SYN": 2,
+    "CON": 1,
+    "SUP": 1
+  },
+  "subclusters": [
+    {
+      "id": 0,
+      "size": 36,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 34,
+        "physical": 2
+      },
+      "core_verbs": [
+        "denigrate",
+        "emphasize",
+        "underline",
+        "underscore",
+        "highlight",
+        "overcapitalize",
+        "overcapitalise",
+        "minify",
+        "background",
+        "play down"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "background",
+          "scale": "informational",
+          "reason": "Input: thing + prominent frame. Output: same thing + diminished frame. Shifts perceptual salience without changing the thing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "play down",
+          "scale": "informational",
+          "reason": "Input: thing + emphasized frame. Output: same thing + de-emphasized frame. Reframes importance level.",
+          "confidence": "high"
+        },
+        {
+          "verb": "overemphasize",
+          "scale": "informational",
+          "reason": "Input: thing + proportional emphasis. Output: same thing + excessive emphasis frame. Importance reinterpreted beyond proportion.",
+          "confidence": "high"
+        },
+        {
+          "verb": "exaggerate",
+          "scale": "informational",
+          "reason": "Input: thing + proportional frame. Output: same thing + excessive frame. Magnitude reinterpreted beyond truth.",
+          "confidence": "high"
+        },
+        {
+          "verb": "overemphasise",
+          "scale": "informational",
+          "reason": "Input: thing + proportional emphasis. Output: same thing + excessive emphasis frame. Importance reinterpreted beyond proportion.",
+          "confidence": "high"
+        },
+        {
+          "verb": "de-emphasise",
+          "scale": "informational",
+          "reason": "Input: thing + high-emphasis frame. Output: same thing + reduced-emphasis frame. Reframes salience level.",
+          "confidence": "high"
+        },
+        {
+          "verb": "downplay",
+          "scale": "informational",
+          "reason": "Input: thing + high-importance frame. Output: same thing + low-importance frame. Shifts interpretive lens.",
+          "confidence": "high"
+        },
+        {
+          "verb": "de-emphasize",
+          "scale": "informational",
+          "reason": "Input: thing + high-emphasis frame. Output: same thing + reduced-emphasis frame. Reframes salience level.",
+          "confidence": "high"
+        },
+        {
+          "verb": "understate",
+          "scale": "informational",
+          "reason": "Input: thing + accurate frame. Output: same thing + diminished frame. The representation changes, not the thing itself.",
+          "confidence": "high"
+        },
+        {
+          "verb": "overstate",
+          "scale": "informational",
+          "reason": "Input: fact + accurate frame. Output: same fact + exaggerated frame. Truth reinterpreted beyond bounds.",
+          "confidence": "high"
+        },
+        {
+          "verb": "overstress",
+          "scale": "informational",
+          "reason": "Input: thing + balanced emphasis. Output: same thing + excessive emphasis frame. Importance reinterpreted with undue stress.",
+          "confidence": "high"
+        },
+        {
+          "verb": "hyperbolise",
+          "scale": "informational",
+          "reason": "Input: fact + literal frame. Output: same fact + hyperbolic frame. Truth reinterpreted with extreme exaggeration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "hyperbolize",
+          "scale": "informational",
+          "reason": "Input: fact + literal frame. Output: same fact + hyperbolic frame. Truth reinterpreted with extreme exaggeration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "emphasize",
+          "scale": "informational",
+          "reason": "Input: content + neutral weighting. Output: same content + prominence frame; shifts interpretive frame without changing content itself.",
+          "confidence": "high"
+        },
+        {
+          "verb": "derogate",
+          "scale": "informational",
+          "reason": "Input: thing viewed as serious. Output: same thing reframed as less serious. The evaluative frame shifts downward.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": 66,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 66
+      },
+      "core_verbs": [
+        "hay",
+        "black",
+        "silver",
+        "freeze",
+        "melt",
+        "acetify",
+        "acidify",
+        "alkalify",
+        "blacken",
+        "calcify"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "liquify",
+          "scale": "physical",
+          "reason": "Input: solid substance; Output: same substance as liquid; phase state changes, not the substance itself.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alkalize",
+          "scale": "physical",
+          "reason": "Input: substance + acidic pH frame. Output: same substance + basic pH frame. The chemical reading shifts along pH scale.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alkalify",
+          "scale": "physical",
+          "reason": "Input: acidic substance; Output: same substance now basic; reframes chemical character toward alkaline.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alkalinize",
+          "scale": "physical",
+          "reason": "Input: substance + acidic/neutral properties. Output: substance + alkaline properties. Chemical character shifts without creating new substance.",
+          "confidence": "high"
+        },
+        {
+          "verb": "acidify",
+          "scale": "physical",
+          "reason": "Input: substance with neutral/basic pH; Output: same substance now acidic; shifts the chemical frame of the existing material.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alkalinise",
+          "scale": "physical",
+          "reason": "Input: substance + acidic/neutral properties. Output: substance + alkaline properties. Chemical character shifts without creating new substance.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alkalise",
+          "scale": "physical",
+          "reason": "Input: substance + acidic pH frame. Output: same substance + basic pH frame. The chemical reading shifts along pH scale.",
+          "confidence": "high"
+        },
+        {
+          "verb": "vaporize",
+          "scale": "physical",
+          "reason": "Input: substance in liquid/solid phase. Output: same substance in gas phase. Phase shift without creating new substance.",
+          "confidence": "high"
+        },
+        {
+          "verb": "calcify",
+          "scale": "physical",
+          "reason": "Input: soft organic tissue; Output: same tissue reframed as lime/calcium deposit; shifts material character.",
+          "confidence": "high"
+        },
+        {
+          "verb": "melt",
+          "scale": "physical",
+          "reason": "Input: substance + solid phase-frame. Output: same substance + liquid phase-frame. State changes but molecular identity persists through phase reframing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "vitrify",
+          "scale": "physical",
+          "reason": "Input: substance in non-glass state. Output: same substance in glass state. Phase/structure shift without new substance.",
+          "confidence": "high"
+        },
+        {
+          "verb": "acetify",
+          "scale": "physical",
+          "reason": "Input: substance with neutral/basic pH; Output: same substance now acidic; reframes the chemical character without creating new matter.",
+          "confidence": "high"
+        },
+        {
+          "verb": "gelatinise",
+          "scale": "physical",
+          "reason": "Input: substance + liquid/solid frame. Output: same substance + gel frame. Physical state transformation is frame shift.",
+          "confidence": "high"
+        },
+        {
+          "verb": "volatilise",
+          "scale": "physical",
+          "reason": "Input: substance + liquid/solid frame. Output: same substance + vapor frame. Physical state transformation is frame shift.",
+          "confidence": "high"
+        },
+        {
+          "verb": "evaporate",
+          "scale": "physical",
+          "reason": "Input: substance in liquid phase. Output: same substance in vapor phase. Phase transition is frame shift in physical state.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 95,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 32,
+        "physical": 32,
+        "social": 16,
+        "psychological": 15
+      },
+      "core_verbs": [
+        "alternate",
+        "interchange",
+        "distract",
+        "divert",
+        "upgrade",
+        "revert",
+        "change over",
+        "convert",
+        "switch",
+        "switch over"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "change over",
+          "scale": "informational",
+          "reason": "Input: system in arrangement A. Output: system in arrangement B. Shifts operational frame.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alternate",
+          "scale": "informational",
+          "reason": "Input: activity in one mode. Output: same activity in different mode. The frame shifts between perspectives.",
+          "confidence": "high"
+        },
+        {
+          "verb": "switch over",
+          "scale": "informational",
+          "reason": "Input: sequence order A. Output: sequence order B. Shifts ordering frame.",
+          "confidence": "high"
+        },
+        {
+          "verb": "flip over",
+          "scale": "physical",
+          "reason": "Input: object + original orientation. Output: same object + inverted orientation. The spatial frame reverses.",
+          "confidence": "high"
+        },
+        {
+          "verb": "interchange",
+          "scale": "physical",
+          "reason": "Input: entities in positions A and B. Output: same entities in positions B and A. Frame/position shifts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "counterchange",
+          "scale": "physical",
+          "reason": "Input: A in place1, B in place2. Output: A in place2, B in place1. Things swap positions\u2014a reframing of spatial relationships.",
+          "confidence": "high"
+        },
+        {
+          "verb": "switch",
+          "scale": "informational",
+          "reason": "Input: system using tool A. Output: system using tool B. Changes operational frame by exchanging.",
+          "confidence": "high"
+        },
+        {
+          "verb": "transpose",
+          "scale": "physical",
+          "reason": "Input: elements in position set1. Output: elements in position set2. Swapping positions reframes spatial/sequential relationships.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fall asleep",
+          "scale": "psychological",
+          "reason": "Input: person in waking frame; output: same person in sleeping frame; state transitions from one mode to another.",
+          "confidence": "high"
+        },
+        {
+          "verb": "come round",
+          "scale": "psychological",
+          "reason": "Input: position held in one frame; output: same issue now viewed from opposite frame, changing stance.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "switch off",
+          "scale": "physical",
+          "reason": "Input: device in 'on' state. Output: device in 'off' state. The operational frame shifts from active to inactive.",
+          "confidence": "high"
+        },
+        {
+          "verb": "switch on",
+          "scale": "physical",
+          "reason": "Input: device in 'off' state. Output: device in 'on' state. The operational frame shifts from inactive to active.",
+          "confidence": "high"
+        },
+        {
+          "verb": "stand in",
+          "scale": "social",
+          "reason": "Input: position occupied by original. Output: substitute occupies same position. The lens/frame shifts to new actor.",
+          "confidence": "high"
+        },
+        {
+          "verb": "move up",
+          "scale": "informational",
+          "reason": "Input: event at time T1; output: same event at earlier time T0; temporal position reframed forward.",
+          "confidence": "high"
+        },
+        {
+          "verb": "change surface",
+          "scale": "physical",
+          "reason": "Input: object with surface A. Output: same object with surface B. Frame of surface properties shifts.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "size": 145,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 73,
+        "social": 46,
+        "psychological": 18,
+        "physical": 8
+      },
+      "core_verbs": [
+        "africanize",
+        "americanize",
+        "anglicize",
+        "bolshevize",
+        "europeanize",
+        "germanize",
+        "hellenize",
+        "objectify",
+        "popularize",
+        "sentimentalise"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "americanize",
+          "scale": "social",
+          "reason": "Input: thing with non-American character; Output: same thing reframed with American characteristics; shifts cultural lens.",
+          "confidence": "high"
+        },
+        {
+          "verb": "literalise",
+          "scale": "informational",
+          "reason": "Input: thing with figurative frame; output: same thing with literal frame; perspective shifts from metaphorical to literal.",
+          "confidence": "high"
+        },
+        {
+          "verb": "mythologise",
+          "scale": "informational",
+          "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+          "confidence": "high"
+        },
+        {
+          "verb": "individualise",
+          "scale": "informational",
+          "reason": "Input: generic thing. Output: same thing viewed/framed as individual-specific. The frame shifts to foreground individual qualities.",
+          "confidence": "high"
+        },
+        {
+          "verb": "universalise",
+          "scale": "informational",
+          "reason": "Input: particular case. Output: same case reframed as universal principle. Shifts interpretive scope.",
+          "confidence": "high"
+        },
+        {
+          "verb": "romanticise",
+          "scale": "informational",
+          "reason": "Input: thing + neutral style; output: same thing + romantic style; interpretive frame shifts to romantic lens.",
+          "confidence": "high"
+        },
+        {
+          "verb": "mythologize",
+          "scale": "informational",
+          "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+          "confidence": "high"
+        },
+        {
+          "verb": "mythicize",
+          "scale": "informational",
+          "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+          "confidence": "high"
+        },
+        {
+          "verb": "mythicise",
+          "scale": "informational",
+          "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+          "confidence": "high"
+        },
+        {
+          "verb": "glamourise",
+          "scale": "informational",
+          "reason": "Input: thing + neutral frame; output: same thing + romantic frame; interpretive lens shifts to romantic perspective.",
+          "confidence": "high"
+        },
+        {
+          "verb": "externalise",
+          "scale": "psychological",
+          "reason": "Input: phenomenon + subjective frame; output: same phenomenon + objective frame; interpretive lens shifts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "depersonalise",
+          "scale": "informational",
+          "reason": "Input: person viewed as subject. Output: same person viewed/framed as object. The frame shifts from personal to impersonal.",
+          "confidence": "high"
+        },
+        {
+          "verb": "literalize",
+          "scale": "informational",
+          "reason": "Input: thing with figurative frame; output: same thing with literal frame; perspective shifts from metaphorical to literal.",
+          "confidence": "high"
+        },
+        {
+          "verb": "etherialise",
+          "scale": "informational",
+          "reason": "Input: material frame. Output: ethereal frame applied to same thing. The lens shifts from material to ethereal.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "individualize",
+          "scale": "informational",
+          "reason": "Input: generic thing. Output: same thing viewed/framed as individual-specific. The frame shifts to foreground individual qualities.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 132,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 90,
+        "psychological": 18,
+        "physical": 15,
+        "social": 9
+      },
+      "core_verbs": [
+        "confound",
+        "convince",
+        "sober",
+        "interpret",
+        "reveal",
+        "shade",
+        "riddle",
+        "focus",
+        "stultify",
+        "compress"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "re-explain",
+          "scale": "informational",
+          "reason": "Input: thing with one explanatory frame. Output: same thing with different explanatory frame. Lens changes.",
+          "confidence": "high"
+        },
+        {
+          "verb": "interpret",
+          "scale": "informational",
+          "reason": "Input: text in original frame. Output: same text with new understanding frame. Lens shifts on existing content.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reinterpret",
+          "scale": "informational",
+          "reason": "Input: thing with old interpretation; output: same thing with new interpretation; frame shifts without changing thing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "rephrase",
+          "scale": "informational",
+          "reason": "Input: message in one phrasing. Output: same message in different phrasing. Frame shifts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reword",
+          "scale": "informational",
+          "reason": "Input: message in one wording. Output: same message in different wording. Frame shifts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "misinterpret",
+          "scale": "informational",
+          "reason": "Input: text/event with one interpretation. Output: same thing with wrong interpretation. The interpretive frame shifts incorrectly.",
+          "confidence": "high"
+        },
+        {
+          "verb": "clarify",
+          "scale": "informational",
+          "reason": "Input: information with opaque framing. Output: same information with transparent framing. The understanding-frame shifts while content remains.",
+          "confidence": "high"
+        },
+        {
+          "verb": "misconceive",
+          "scale": "informational",
+          "reason": "Input: concept with one understanding. Output: same concept with wrong understanding. The conceptual frame shifts incorrectly.",
+          "confidence": "high"
+        },
+        {
+          "verb": "misuse",
+          "scale": "informational",
+          "reason": "Input: thing with inherent purpose; output: same thing viewed/used with different purpose; the functional frame shifts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "retranslate",
+          "scale": "informational",
+          "reason": "Input: text in one frame/language. Output: same text in different frame/language. The perspective shifts again.",
+          "confidence": "high"
+        },
+        {
+          "verb": "misconstrue",
+          "scale": "informational",
+          "reason": "Input: statement with one interpretation. Output: same statement with wrong interpretation. The meaning frame shifts incorrectly.",
+          "confidence": "high"
+        },
+        {
+          "verb": "contort",
+          "scale": "physical",
+          "reason": "Input: material + original shape-frame. Output: same material + twisted shape-frame. Form changes but substance persists through reframing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "mistake",
+          "scale": "informational",
+          "reason": "Input: thing with correct identity. Output: same thing with wrong identity assigned. The identification frame shifts incorrectly.",
+          "confidence": "high"
+        },
+        {
+          "verb": "construe",
+          "scale": "informational",
+          "reason": "Input: text/event + no interpretation. Output: same text/event + interpretive frame. The lens shifts, not the thing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "rethink",
+          "scale": "psychological",
+          "reason": "Input: idea + old thinking frame; Output: same idea + new thinking frame; reinterprets existing thought.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "boundary_verbs_from_other_ops": [
+    {
+      "verb": "alchemize",
+      "operator": "SYN",
+      "similarity": 0.6825250781630056,
+      "scale": "physical",
+      "reason": "Input: base elements. Output: transmuted substance (new whole). Synthesis creates a fundamentally new compound."
+    },
+    {
+      "verb": "alchemise",
+      "operator": "SYN",
+      "similarity": 0.6824808509275496,
+      "scale": "physical",
+      "reason": "Input: base elements. Output: transmuted substance (new whole). Synthesis creates a fundamentally new compound."
+    },
+    {
+      "verb": "exalt",
+      "operator": "INS",
+      "similarity": 0.6822670277710023,
+      "scale": "psychological",
+      "reason": "Input: thing at current intensity. Output: heightened state appears, thing gains intensified properties."
+    },
+    {
+      "verb": "idealise",
+      "operator": "INS",
+      "similarity": 0.6671971033692545,
+      "scale": "psychological",
+      "reason": "Input: thing as is; output: idealized conception arises; new mental construct appears."
+    },
+    {
+      "verb": "redefine",
+      "operator": "DES",
+      "similarity": 0.6620470330275077,
+      "scale": "informational",
+      "reason": "Input: thing with old definition. Output: same thing with new definitional boundary. The category assignment changes."
+    },
+    {
+      "verb": "transmute",
+      "operator": "REC",
+      "similarity": 0.6614027217719605,
+      "scale": "physical",
+      "reason": "Input: element with one nature. Output: element with altered fundamental nature. The essential structure rebuilds."
+    },
+    {
+      "verb": "actualise",
+      "operator": "INS",
+      "similarity": 0.656619365012642,
+      "scale": "informational",
+      "reason": "Input: unrepresented reality; Output: realistic representation exists; new description appears"
+    },
+    {
+      "verb": "idealize",
+      "operator": "INS",
+      "similarity": 0.6522866889220946,
+      "scale": "psychological",
+      "reason": "Input: thing as is; output: idealized conception arises; new mental construct appears."
+    },
+    {
+      "verb": "transform",
+      "operator": "REC",
+      "similarity": 0.6478193063893135,
+      "scale": "physical",
+      "reason": "Input: thing with one structure. Output: thing with fundamentally different structure. The architecture reorganizes around new center."
+    },
+    {
+      "verb": "transition",
+      "operator": "INS",
+      "similarity": 0.6447553277717452,
+      "scale": "psychological",
+      "reason": "Input: entity in state A. Output: entity in state B. A new state arises through passage."
+    },
+    {
+      "verb": "alienate",
+      "operator": "CON",
+      "similarity": 0.6434899447104603,
+      "scale": "social",
+      "reason": "Input: property without transfer link; output: property with new ownership link to different entity; structural relationship of ownership is reconstructed."
+    },
+    {
+      "verb": "actualize",
+      "operator": "INS",
+      "similarity": 0.6417888841218317,
+      "scale": "informational",
+      "reason": "Input: unrepresented reality; Output: realistic representation exists; new description appears"
+    },
+    {
+      "verb": "animalise",
+      "operator": "REC",
+      "similarity": 0.6407082389458234,
+      "scale": "psychological",
+      "reason": "Input: human with empathic structure; output: human with brutal/unfeeling structure; the psychological architecture is rebuilt around brutality."
+    },
+    {
+      "verb": "turn",
+      "operator": "INS",
+      "similarity": 0.6384207125751606,
+      "scale": "physical",
+      "reason": "Input: thing with color A. Output: thing with color B. New color state appears."
+    },
+    {
+      "verb": "magnify",
+      "operator": "INS",
+      "similarity": 0.6383167778055407,
+      "scale": "informational",
+      "reason": "Input: size/importance X, output: size/importance X+n present, additional scale appears."
+    },
+    {
+      "verb": "transmogrify",
+      "operator": "REC",
+      "similarity": 0.6370241188190475,
+      "scale": "physical",
+      "reason": "Input: entity with existing nature/structure. Output: same entity with fundamentally rebuilt nature. The core architecture reorganizes completely."
+    },
+    {
+      "verb": "malt",
+      "operator": "SYN",
+      "similarity": 0.6368591144329101,
+      "scale": "physical",
+      "reason": "Input: grain; output: malt (transformed whole); grain transforms into new substance transcending original form."
+    },
+    {
+      "verb": "cross-dress",
+      "operator": "INS",
+      "similarity": 0.6364477437986327,
+      "scale": "physical",
+      "reason": "Input: body; Output: body with opposite-sex clothing added; garments appear (though ALT could argue frame-shift)."
+    },
+    {
+      "verb": "metamorphose",
+      "operator": "REC",
+      "similarity": 0.6348132634154997,
+      "scale": "physical",
+      "reason": "Input: entity with one structure. Output: entity with fundamentally rebuilt structure. The whole architecture reorganizes."
+    },
+    {
+      "verb": "sublimate",
+      "operator": "INS",
+      "similarity": 0.6327399648757861,
+      "scale": "informational",
+      "reason": "Input: thing with current refinement level. Output: thing with enhanced subtle qualities now present."
+    }
+  ],
+  "peripheral_verbs": [
+    {
+      "verb": "switch-hit",
+      "similarity": 0.5094780063077124,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: batting stance. Output: alternate batting stance based on pitcher handedness. Frame switches but batter unchanged."
+    },
+    {
+      "verb": "diazotize",
+      "similarity": 0.5600432335397632,
+      "alternative": "REC",
+      "scale": "physical",
+      "reason": "Input: amine compound. Output: compound reframed as diazo compound through chemical transformation. Molecular identity reinterpreted."
+    },
+    {
+      "verb": "chiromance",
+      "similarity": 0.5858815022222627,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: palm lines + no meaning; Output: palm lines + divined meaning; the frame shifts from physical to prophetic."
+    },
+    {
+      "verb": "preempt",
+      "similarity": 0.5903212112292222,
+      "alternative": "REC",
+      "scale": "informational",
+      "reason": "Input: priority structure with original first. Output: reframed structure with substitute taking precedence position."
+    },
+    {
+      "verb": "misdate",
+      "similarity": 0.590397537781166,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: event with one temporal frame. Output: same event with wrong temporal frame. The date assignment shifts incorrectly."
+    },
+    {
+      "verb": "jellify",
+      "similarity": 0.5911043650751915,
+      "alternative": "REC",
+      "scale": "physical",
+      "reason": "Input: substance with liquid/solid form. Output: same substance with gel structure. The physical state shifts to jelly."
+    },
+    {
+      "verb": "disharmonize",
+      "similarity": 0.5926787467836289,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: sound; Output: same sound perceived through harsh/unpleasant frame."
+    },
+    {
+      "verb": "laicize",
+      "similarity": 0.5943746116993021,
+      "alternative": "DES",
+      "scale": "social",
+      "reason": "Input: person + clergy status; output: same person + lay status; categorical frame shifts from sacred to secular."
+    },
+    {
+      "verb": "spondaize",
+      "similarity": 0.596770568551333,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: verse with existing meter; output: same verse in spondaic meter; the metrical frame changes."
+    },
+    {
+      "verb": "defer",
+      "similarity": 0.5968939668700681,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: event scheduled at earlier time; output: same event scheduled at later time; temporal coordinate reframed."
+    }
+  ],
+  "all_verbs": [
+    {
+      "verb": "acetify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance with neutral/basic pH; Output: same substance now acidic; reframes the chemical character without creating new matter.",
+      "alternative": null
+    },
+    {
+      "verb": "acidify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance with neutral/basic pH; Output: same substance now acidic; shifts the chemical frame of the existing material.",
+      "alternative": null
+    },
+    {
+      "verb": "act as",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity + original frame; output: same entity + functional reframe; perspective shifts to view entity as performing different role.",
+      "alternative": null
+    },
+    {
+      "verb": "activate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dormant operational state; Output: active operational state; reframes the functional mode without adding new entities.",
+      "alternative": null
+    },
+    {
+      "verb": "aerify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in non-gas state; Output: same substance in gas state; phase transition reframes matter organization.",
+      "alternative": null
+    },
+    {
+      "verb": "africanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with non-African character; Output: same thing reframed with African characteristics; shifts cultural lens.",
+      "alternative": null
+    },
+    {
+      "verb": "airt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: flow in old direction. Output: same flow in new direction. The trajectory frame shifts, not the thing itself.",
+      "alternative": null
+    },
+    {
+      "verb": "alkalify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: acidic substance; Output: same substance now basic; reframes chemical character toward alkaline.",
+      "alternative": null
+    },
+    {
+      "verb": "alkalinise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + acidic/neutral properties. Output: substance + alkaline properties. Chemical character shifts without creating new substance.",
+      "alternative": null
+    },
+    {
+      "verb": "alkalinize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + acidic/neutral properties. Output: substance + alkaline properties. Chemical character shifts without creating new substance.",
+      "alternative": null
+    },
+    {
+      "verb": "alkalise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + acidic pH frame. Output: same substance + basic pH frame. The chemical reading shifts along pH scale.",
+      "alternative": null
+    },
+    {
+      "verb": "alkalize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + acidic pH frame. Output: same substance + basic pH frame. The chemical reading shifts along pH scale.",
+      "alternative": null
+    },
+    {
+      "verb": "allegorise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story + literal frame. Output: same story + allegorical frame. Reinterprets through symbolic/allegorical lens.",
+      "alternative": null
+    },
+    {
+      "verb": "allegorize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story + literal frame. Output: same story + allegorical frame. Reinterprets through symbolic/allegorical lens.",
+      "alternative": null
+    },
+    {
+      "verb": "alternate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: activity in one mode. Output: same activity in different mode. The frame shifts between perspectives.",
+      "alternative": null
+    },
+    {
+      "verb": "americanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with non-American character; Output: same thing reframed with American characteristics; shifts cultural lens.",
+      "alternative": null
+    },
+    {
+      "verb": "anagram",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: letters in standard order; output: same letters reordered to reveal hidden meaning; frame shifts through rearrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "anagrammatise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: letters in standard order; output: same letters reordered to reveal hidden meaning; frame shifts through rearrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "anagrammatize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: letters in standard order; output: same letters reordered to reveal hidden meaning; frame shifts through rearrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "anglicise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with non-English frame. Output: same thing reframed as English. Perspective shifted to English lens.",
+      "alternative": null
+    },
+    {
+      "verb": "anglicize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with non-English character; Output: same thing reframed with English characteristics; shifts cultural lens.",
+      "alternative": null
+    },
+    {
+      "verb": "antiquate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with modern appearance. Output: same thing framed as antique. The appearance frame changes, not the thing itself.",
+      "alternative": null
+    },
+    {
+      "verb": "apperceive",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: perception + no frame; Output: same perception + past-experience frame; the interpretive lens shifts to include history.",
+      "alternative": null
+    },
+    {
+      "verb": "approximate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing + exact frame; Output: thing + approximate frame; reframes precision as closeness without changing the thing",
+      "alternative": "DES"
+    },
+    {
+      "verb": "archaise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + modern appearance. Output: same thing + archaic appearance. Shifts temporal frame without structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "archaize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + modern appearance. Output: same thing + archaic appearance. Shifts temporal frame without structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "arterialise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: blood + venous properties. Output: same blood + arterial properties. The substance doesn't change, only its oxygen/chemical state reframes it.",
+      "alternative": null
+    },
+    {
+      "verb": "arterialize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: blood + venous properties. Output: same blood + arterial properties. The substance doesn't change, only its oxygen/chemical state reframes it.",
+      "alternative": null
+    },
+    {
+      "verb": "assibilate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sound + non-sibilant interpretation. Output: same sound + sibilant interpretation. The phonetic frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "attemper",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance at temperature T1. Output: same substance at temperature T2. The thermal property shifts, not the substance.",
+      "alternative": null
+    },
+    {
+      "verb": "background",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + prominent frame. Output: same thing + diminished frame. Shifts perceptual salience without changing the thing.",
+      "alternative": null
+    },
+    {
+      "verb": "barbarise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: behavior/speech + civilized character. Output: same behavior/speech + crude/savage frame. Reinterprets through barbaric lens.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "barbarize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: behavior/speech + civilized character. Output: same behavior/speech + crude/savage frame. Reinterprets through barbaric lens.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "bargain down",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: price at high value. Output: price reframed at lower value. The valuation frame shifts through negotiation.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "basify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + acidic pH frame. Output: same substance + basic pH frame. The chemical reading shifts along pH scale.",
+      "alternative": null
+    },
+    {
+      "verb": "belie",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + true representation. Output: same thing + false frame. Thing reinterpreted falsely.",
+      "alternative": null
+    },
+    {
+      "verb": "bevel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: edge with one angle; Output: same edge with different angle (beveled); the geometric frame of the edge shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "bias",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with neutral frame. Output: person with skewed frame on same content. The interpretive lens shifts toward partiality.",
+      "alternative": null
+    },
+    {
+      "verb": "black",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with original color. Output: same object now perceived as black. The color frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "blacken",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: surface with original color; Output: same surface reframed as black; shifts the color property.",
+      "alternative": null
+    },
+    {
+      "verb": "blackleg",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: position occupied by striker. Output: same position reframed as occupied by replacement. Occupant-frame shifts.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "body forth",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: abstract thing; Output: same thing reframed as bodily manifestation \u2014 translates to physical representation.",
+      "alternative": null
+    },
+    {
+      "verb": "bolshevize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-Communist system; Output: same system reframed with Communist principles; shifts ideological lens.",
+      "alternative": null
+    },
+    {
+      "verb": "braille",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in visual form; output: same content in braille; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "bring out",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing + hidden frame. Output: same thing + visible frame. Changes perceptual accessibility not the thing itself.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "bulldoze",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: rough/elevated terrain; Output: same terrain now flat; the spatial frame/configuration changes but no new thing appears.",
+      "alternative": null
+    },
+    {
+      "verb": "calcify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: soft organic tissue; Output: same tissue reframed as lime/calcium deposit; shifts material character.",
+      "alternative": null
+    },
+    {
+      "verb": "camouflage",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing visible in frame. Output: same thing perceived as background. Frame shifts from visible to hidden without changing the thing itself.",
+      "alternative": null
+    },
+    {
+      "verb": "capsize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: upright vessel, Output: overturned vessel \u2014 same thing, different orientation/frame",
+      "alternative": null
+    },
+    {
+      "verb": "carnalise",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person/behavior + elevated character. Output: same person + debased carnal frame. Reframes through lens of base gratification.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "carnify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tissue with one structure. Output: same tissue reorganized as muscle/flesh. The tissue transforms its type while remaining tissue.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "cash",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: value in check form. Output: same value in cash form (frame shifted, value unchanged).",
+      "alternative": null
+    },
+    {
+      "verb": "cash in",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: asset in one form. Output: same value in cash form. The representation changes, not the underlying value.",
+      "alternative": null
+    },
+    {
+      "verb": "cause to sleep",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: target in waking frame; output: target in sleeping frame; induces state transition to sleep mode.",
+      "alternative": null
+    },
+    {
+      "verb": "change",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: voice at original tone; Output: same voice at deeper tone; the pitch frame shifts but the voice persists",
+      "alternative": null
+    },
+    {
+      "verb": "change by reversal",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + one polarity. Output: same thing + opposite polarity. The frame/direction reverses while the thing persists.",
+      "alternative": null
+    },
+    {
+      "verb": "change intensity",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: phenomenon at intensity X; output: same phenomenon at intensity Y; the magnitude frame shifts while the thing remains.",
+      "alternative": null
+    },
+    {
+      "verb": "change magnitude",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: thing with magnitude M. Output: same thing with magnitude N. The scalar property shifts while the entity persists.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "change over",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: system in arrangement A. Output: system in arrangement B. Shifts operational frame.",
+      "alternative": null
+    },
+    {
+      "verb": "change surface",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with surface A. Output: same object with surface B. Frame of surface properties shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "change taste",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with taste profile X; output: same thing with taste profile Y; the sensory frame shifts while the thing remains.",
+      "alternative": null
+    },
+    {
+      "verb": "cheapen",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing + high-worth frame, Output: same thing + low-worth frame (reframing value)",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "chiromance",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: palm lines + no meaning; Output: palm lines + divined meaning; the frame shifts from physical to prophetic.",
+      "alternative": null
+    },
+    {
+      "verb": "chondrify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tissue with one structure. Output: same tissue reorganized as cartilage. The tissue transforms its type.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "cinematise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story in original medium; output: same story adapted to film medium; medium/frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "cinematize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story in original medium; output: same story adapted to film medium; medium/frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "cipher",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message in plaintext. Output: same message in code. Content unchanged, representation shifts to encoded form.",
+      "alternative": null
+    },
+    {
+      "verb": "citify",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person with rural/non-urban frame. Output: same person with urban frame of reference. Reframes habits and perspectives.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "clabber",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid milk; Output: curdled milk; phase/texture transformation reframes substance.",
+      "alternative": null
+    },
+    {
+      "verb": "clarify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: information with opaque framing. Output: same information with transparent framing. The understanding-frame shifts while content remains.",
+      "alternative": null
+    },
+    {
+      "verb": "classicise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: work in original style. Output: same work now framed/presented as classical. Shifts the interpretive lens rather than rebuilding structure.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "classicize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: work in original style. Output: same work now framed/presented as classical. Shifts the interpretive lens rather than rebuilding structure.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "coke",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: coal with one molecular structure. Output: same material with different molecular structure (coke). The substance transforms its form while remaining carbon-based.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "come alive",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in sleeping frame; output: same person in waking frame; state transitions from sleep to wake mode.",
+      "alternative": null
+    },
+    {
+      "verb": "come round",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: position held in one frame; output: same issue now viewed from opposite frame, changing stance.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "communise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property under old ownership frame. Output: same property under state ownership frame.",
+      "alternative": null
+    },
+    {
+      "verb": "communize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: property under old ownership frame. Output: same property under state ownership frame.",
+      "alternative": null
+    },
+    {
+      "verb": "commutate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: alternating current. Output: unidirectional current. The frame shifts from bidirectional to unidirectional flow.",
+      "alternative": null
+    },
+    {
+      "verb": "commute",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: elements in order A. Output: same elements in order B. The arrangement changes, elements stay.",
+      "alternative": null
+    },
+    {
+      "verb": "compress",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material + expanded frame. Output: same material + compressed frame. Volume changes but material identity persists through reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "concretise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: abstract concept. Output: same concept reframed with specific details. Changes the level of abstraction in representation.",
+      "alternative": null
+    },
+    {
+      "verb": "concretize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: abstract concept. Output: same concept reframed with specific details. Changes the level of abstraction in representation.",
+      "alternative": null
+    },
+    {
+      "verb": "cone",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with one shape; Output: same thing now cone-shaped; the geometric frame reorganizes without new material.",
+      "alternative": null
+    },
+    {
+      "verb": "conform to",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: thing + non-conforming frame. Output: same thing + conforming frame. The thing aligns with the standard lens.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "confound",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing A seen as A, thing B seen as B. Output: A seen as B (frame shifted). Misidentification is reframing without structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "construe",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text/event + no interpretation. Output: same text/event + interpretive frame. The lens shifts, not the thing.",
+      "alternative": null
+    },
+    {
+      "verb": "contort",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material + original shape-frame. Output: same material + twisted shape-frame. Form changes but substance persists through reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "convert",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing in form A. Output: thing in form B. Reinterprets or translates to different form.",
+      "alternative": null
+    },
+    {
+      "verb": "convince",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: person holding frame X. Output: same person now holding frame Y (truth realization). Frame shift from one belief state to another.",
+      "alternative": null
+    },
+    {
+      "verb": "corrupt",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing + original frame, Output: thing + altered frame (deviation from original reading)",
+      "alternative": "REC"
+    },
+    {
+      "verb": "couch",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content + old expression style; Output: same content + new stylistic frame.",
+      "alternative": null
+    },
+    {
+      "verb": "counterchange",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: A in place1, B in place2. Output: A in place2, B in place1. Things swap positions\u2014a reframing of spatial relationships.",
+      "alternative": null
+    },
+    {
+      "verb": "curve",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material + straight shape-frame. Output: same material + curved shape-frame. Geometry changes but material persists through reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "cut back",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: narrative/scene at time T. Output: same narrative viewed from earlier time T-n. The temporal frame shifts backward.",
+      "alternative": null
+    },
+    {
+      "verb": "cutinize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: plant tissue in original state. Output: tissue converted into cutin form. Biochemical composition reframed.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "cypher",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message in plaintext. Output: same message in code. Content unchanged, representation shifts to encoded form.",
+      "alternative": null
+    },
+    {
+      "verb": "de-emphasise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + high-emphasis frame. Output: same thing + reduced-emphasis frame. Reframes salience level.",
+      "alternative": null
+    },
+    {
+      "verb": "de-emphasize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + high-emphasis frame. Output: same thing + reduced-emphasis frame. Reframes salience level.",
+      "alternative": null
+    },
+    {
+      "verb": "decode",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: coded message; output: same content in plain language; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "deconstruct",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text with one reading. Output: same text with reinterpreted frame. Perspective shifts without changing the text.",
+      "alternative": null
+    },
+    {
+      "verb": "decriminalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action with criminal status; Output: same action with non-criminal status; reframing within legal system.",
+      "alternative": null
+    },
+    {
+      "verb": "decriminalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action with criminal status; Output: same action with non-criminal status; reframing within legal system.",
+      "alternative": null
+    },
+    {
+      "verb": "decrypt",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: encrypted text; output: same content decrypted; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "defer",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event scheduled at earlier time; output: same event scheduled at later time; temporal coordinate reframed.",
+      "alternative": null
+    },
+    {
+      "verb": "deflect",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: attention on X. Output: attention on Y. Frame of focus shifts from one target to another.",
+      "alternative": null
+    },
+    {
+      "verb": "demote",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person in high-rank position. Output: same person now viewed/framed as low-rank. The person doesn't change, the hierarchical frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "denationalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: asset under state control; Output: same asset under private control; the ownership frame shifts but the asset itself persists.",
+      "alternative": null
+    },
+    {
+      "verb": "denationalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: asset under state control; Output: same asset under private control; the ownership frame shifts but the asset itself persists.",
+      "alternative": null
+    },
+    {
+      "verb": "denaturalise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing viewed as natural; Output: same thing viewed as unnatural; the interpretive frame shifts from natural to artificial.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "denaturalize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing viewed as natural; Output: same thing viewed as unnatural; the interpretive frame shifts from natural to artificial.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "denigrate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing seen as serious. Output: same thing reframed as less serious. The perspective shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "depersonalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: person viewed as subject. Output: same person viewed/framed as object. The frame shifts from personal to impersonal.",
+      "alternative": null
+    },
+    {
+      "verb": "depersonalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: person viewed as subject. Output: same person viewed/framed as object. The frame shifts from personal to impersonal.",
+      "alternative": null
+    },
+    {
+      "verb": "derate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: apparatus + high rating; output: same apparatus + lower rating; the rated capacity (frame) changes, not the physical object.",
+      "alternative": null
+    },
+    {
+      "verb": "derogate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing viewed as serious. Output: same thing reframed as less serious. The evaluative frame shifts downward.",
+      "alternative": null
+    },
+    {
+      "verb": "desacralize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing in ecclesiastical frame; Output: same thing in civil frame; the interpretive context shifts from sacred to secular.",
+      "alternative": null
+    },
+    {
+      "verb": "devitrify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: glass (amorphous structure). Output: same material with crystalline structure. The molecular organization shifts from one form to another.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "diazotize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: amine compound. Output: compound reframed as diazo compound through chemical transformation. Molecular identity reinterpreted.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "digitalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content + analog frame. Output: same content + digital frame. Translates representation format.",
+      "alternative": null
+    },
+    {
+      "verb": "digitalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: analog form; output: digital form; same content in different representational frame.",
+      "alternative": null
+    },
+    {
+      "verb": "digitise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content + analog frame. Output: same content + digital frame. Translates representation format.",
+      "alternative": null
+    },
+    {
+      "verb": "digitize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content + analog frame. Output: same content + digital frame. Translates representation format.",
+      "alternative": null
+    },
+    {
+      "verb": "discount",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: price at full value. Output: same item at reduced value frame. Revaluation through different lens.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "disguise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + true appearance. Output: same thing + false appearance. The readable identity shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "disharmonize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sound; Output: same sound perceived through harsh/unpleasant frame.",
+      "alternative": null
+    },
+    {
+      "verb": "disincarnate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: concrete entity. Output: same entity now without material form. The frame shifts from material to immaterial.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "dissemble",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with true appearance. Output: same thing with false appearance/frame obscuring true nature.",
+      "alternative": null
+    },
+    {
+      "verb": "distort",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material + original shape-frame. Output: same material + spiral/distorted shape-frame. Form changes but substance persists through reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "distract",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: attention on original object; Output: attention reframed toward different object; the attentional frame shifts without destroying the original focus.",
+      "alternative": null
+    },
+    {
+      "verb": "divert",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: trajectory toward original target; Output: trajectory reframed toward new target; the directional frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "do duty",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity A in role. Output: entity B now viewed as filling that role. Same function reframed to different entity.",
+      "alternative": null
+    },
+    {
+      "verb": "dope off",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in waking frame; output: same person in sleeping frame; state transitions from one mode to another.",
+      "alternative": null
+    },
+    {
+      "verb": "downgrade",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing with higher value frame; Output: same thing with lower value frame; the assessment lens shifts, not the thing itself.",
+      "alternative": "DES"
+    },
+    {
+      "verb": "downplay",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + high-importance frame. Output: same thing + low-importance frame. Shifts interpretive lens.",
+      "alternative": null
+    },
+    {
+      "verb": "drowse off",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in waking frame; output: same person in sleeping frame; state transitions from one mode to another.",
+      "alternative": null
+    },
+    {
+      "verb": "dynamise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + static frame. Output: same thing + dynamic frame. Reframes by changing how we view the thing's temporal properties.",
+      "alternative": null
+    },
+    {
+      "verb": "dynamize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + static frame. Output: same thing + dynamic frame. Reframes by changing how we view the thing's temporal properties.",
+      "alternative": null
+    },
+    {
+      "verb": "echo",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: present phenomenon + no past connection. Output: same phenomenon now framed as recalling/resembling something past. Frame shifts to establish resemblance.",
+      "alternative": null
+    },
+    {
+      "verb": "effeminate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person with masculine frame; Output: same person framed as feminine; the interpretive lens shifts from masculine to feminine.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "effeminise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with current appearance; Output: same thing with feminine quality frame.",
+      "alternative": null
+    },
+    {
+      "verb": "effeminize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with current appearance; Output: same thing with feminine quality frame imposed.",
+      "alternative": null
+    },
+    {
+      "verb": "embody",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: abstract concept; Output: same concept reframed in bodily form \u2014 shifts from abstract to physical representation.",
+      "alternative": null
+    },
+    {
+      "verb": "embrittle",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: material with ductile properties. Output: same material with brittle properties. The mechanical character shifts.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "emend",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text with errors. Output: corrected text. The frame/interpretation shifts to accurate representation without structural rebuild.",
+      "alternative": null
+    },
+    {
+      "verb": "emphasize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content + neutral weighting. Output: same content + prominence frame; shifts interpretive frame without changing content itself.",
+      "alternative": null
+    },
+    {
+      "verb": "encipher",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: plain language text; output: same content in cipher; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "encode",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: information in plain format; output: same information in coded format; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "encrypt",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: plain language text; output: same content encrypted; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "equalize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: unequal state. Output: equal state. The frame shifts from imbalanced to balanced comparison.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "equilibrate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: system out of balance. Output: system in equilibrium. The frame/relationship between forces shifts to balance.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "eroticize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing with neutral character. Output: same thing viewed through erotic frame. The thing doesn't change; the interpretive lens does.",
+      "alternative": null
+    },
+    {
+      "verb": "esterify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: compound with one molecular form. Output: same compound reorganized as ester. Chemical structure transforms to ester configuration.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "eternalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person/event + mortal/temporal frame. Output: same person/event + eternal frame. Reframes in collective memory.",
+      "alternative": null
+    },
+    {
+      "verb": "eternise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person/event + mortal/temporal frame. Output: same person/event + eternal frame. Reframes in collective memory.",
+      "alternative": null
+    },
+    {
+      "verb": "eternize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person/event + mortal/temporal frame. Output: same person/event + eternal frame. Reframes in collective memory.",
+      "alternative": null
+    },
+    {
+      "verb": "etherealize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: material frame. Output: ethereal frame applied to same thing. The lens shifts from material to ethereal.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "etherialise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: material frame. Output: ethereal frame applied to same thing. The lens shifts from material to ethereal.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "etherify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: compound with one molecular form. Output: same compound reorganized as ether. Chemical structure transforms to ether configuration.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "euphemise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: direct reference; output: indirect/softened reference; the framing shifts without changing the referent.",
+      "alternative": null
+    },
+    {
+      "verb": "euphemize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: direct reference; output: indirect/softened reference; the framing shifts without changing the referent.",
+      "alternative": null
+    },
+    {
+      "verb": "europeanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity with non-European cultural frame. Output: same entity viewed/operating through European cultural frame.",
+      "alternative": null
+    },
+    {
+      "verb": "evaporate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in liquid phase. Output: same substance in vapor phase. Phase transition is frame shift in physical state.",
+      "alternative": null
+    },
+    {
+      "verb": "exaggerate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + proportional frame. Output: same thing + excessive frame. Magnitude reinterpreted beyond truth.",
+      "alternative": null
+    },
+    {
+      "verb": "extenuate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: act viewed as serious; output: same act reframed as less serious; the interpretation shifts without changing the act itself.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "exteriorise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: subjective state; output: that state given objective reality; the frame shifts from internal to external perspective.",
+      "alternative": null
+    },
+    {
+      "verb": "exteriorize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: organ inside body; output: organ outside body but still connected; spatial frame shifts from interior to exterior position.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "externalise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: phenomenon + subjective frame; output: same phenomenon + objective frame; interpretive lens shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "externalize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: phenomenon + subjective frame; output: same phenomenon + objective frame; interpretive lens shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "fall asleep",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in waking frame; output: same person in sleeping frame; state transitions from one mode to another.",
+      "alternative": null
+    },
+    {
+      "verb": "felt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: uncovered surface; Output: surface with felt covering; changes the material frame/appearance without rebuilding structure.",
+      "alternative": null
+    },
+    {
+      "verb": "felt up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: smooth texture; Output: matted felt-like texture; changes material quality/frame without creating new entity.",
+      "alternative": null
+    },
+    {
+      "verb": "feminise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with current gendered characteristics; Output: same thing viewed through feminine frame.",
+      "alternative": null
+    },
+    {
+      "verb": "fit",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: mismatched elements. Output: same elements reframed as harmonious. Perspective on compatibility shifts.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "flake out",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in waking frame; output: same person in sleeping frame; state transitions from one mode to another.",
+      "alternative": null
+    },
+    {
+      "verb": "flash back",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: narrative at present timeframe; output: same narrative viewed from past timeframe; temporal frame shifts backward.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "flip over",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object + original orientation. Output: same object + inverted orientation. The spatial frame reverses.",
+      "alternative": null
+    },
+    {
+      "verb": "flip-flop",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: direction/attitude A. Output: direction/attitude reversed to not-A. The frame flips but the thing itself persists.",
+      "alternative": "SUP"
+    },
+    {
+      "verb": "focalise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unfocused image frame. Output: focused image frame. The viewing frame shifts from blurred to sharp; structure unchanged.",
+      "alternative": null
+    },
+    {
+      "verb": "focalize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unfocused image frame. Output: focused image frame. The viewing frame shifts from blurred to sharp; structure unchanged.",
+      "alternative": null
+    },
+    {
+      "verb": "focus",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: blurry image. Output: same image viewed sharply. Frame of clarity shifts without changing image structure.",
+      "alternative": null
+    },
+    {
+      "verb": "foreground",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + background frame. Output: same thing + prominent frame. Shifts perceptual position without changing thing.",
+      "alternative": null
+    },
+    {
+      "verb": "format",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content with old format. Output: same content viewed through new format frame. Display structure reframed.",
+      "alternative": null
+    },
+    {
+      "verb": "formularise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: idea in prose; Output: same idea in formula format; frame shifts to formal notation",
+      "alternative": null
+    },
+    {
+      "verb": "formularize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: idea in prose; Output: same idea in formula format; frame shifts to formal notation",
+      "alternative": null
+    },
+    {
+      "verb": "fossilize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organic material in living/fresh state. Output: same material in fossil state. Phase/form transition shifts the frame.",
+      "alternative": null
+    },
+    {
+      "verb": "freeze",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: water + liquid phase-frame. Output: same water + solid phase-frame. State changes but molecular identity persists through phase reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "freeze down",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid; Output: solid; phase transition reframes molecular organization.",
+      "alternative": null
+    },
+    {
+      "verb": "freeze out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid substance; Output: same substance solidified; cold transforms phase state.",
+      "alternative": null
+    },
+    {
+      "verb": "fudge",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: information in truthful frame. Output: same information in deceptive frame, shifting interpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "garble",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message + accurate frame. Output: same message + distorted frame. Message reinterpreted falsely through mutation.",
+      "alternative": null
+    },
+    {
+      "verb": "gasify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in solid/liquid phase. Output: same substance in gas phase. Phase frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "gelatinise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + liquid/solid frame. Output: same substance + gel frame. Physical state transformation is frame shift.",
+      "alternative": null
+    },
+    {
+      "verb": "generalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: specific statements; output: same content in general frame; the lens shifts from particular to general without rebuilding structure.",
+      "alternative": null
+    },
+    {
+      "verb": "generalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: specific statements; output: same content in general frame; the lens shifts from particular to general without rebuilding structure.",
+      "alternative": null
+    },
+    {
+      "verb": "germanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity with non-German cultural frame. Output: same entity viewed/operating through German cultural frame.",
+      "alternative": null
+    },
+    {
+      "verb": "get by",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: situation viewed as intolerable; Output: same situation reframed as acceptable enough to continue\u2014perspective shift without structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "glamorize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + neutral frame; output: same thing + romantic frame; interpretive lens shifts to romantic perspective.",
+      "alternative": null
+    },
+    {
+      "verb": "glamourise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + neutral frame; output: same thing + romantic frame; interpretive lens shifts to romantic perspective.",
+      "alternative": null
+    },
+    {
+      "verb": "glass over",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: surface + original appearance. Output: surface + glassy appearance frame. The thing takes on glass-like quality as new interpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "go by",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: action + default frame. Output: action + rule-based frame. Behavior viewed through standard lens.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "go to sleep",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in waking frame; output: same person in sleeping frame; state transitions from wake to sleep mode.",
+      "alternative": null
+    },
+    {
+      "verb": "hay",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: plant material as growing plants. Output: same material now framed as hay. The material's form changes but this is reframing it as processed hay.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "hellenize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity with non-Greek cultural frame. Output: same entity viewed/operating through Greek cultural frame.",
+      "alternative": null
+    },
+    {
+      "verb": "highlight",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing in background context. Output: same thing foregrounded. Shifts perceptual frame of prominence.",
+      "alternative": null
+    },
+    {
+      "verb": "hold over",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event positioned in current period; output: same event positioned in next period; temporal frame extended.",
+      "alternative": null
+    },
+    {
+      "verb": "hyperbolise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: fact + literal frame. Output: same fact + hyperbolic frame. Truth reinterpreted with extreme exaggeration.",
+      "alternative": null
+    },
+    {
+      "verb": "hyperbolize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: fact + literal frame. Output: same fact + hyperbolic frame. Truth reinterpreted with extreme exaggeration.",
+      "alternative": null
+    },
+    {
+      "verb": "hypnotise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in normal consciousness frame; output: same person in hypnotic frame; consciousness state reframed.",
+      "alternative": null
+    },
+    {
+      "verb": "hypnotize",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person in normal consciousness frame. Output: same person viewed through altered consciousness frame. Shifts experiential lens.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "immaterialise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: material frame. Output: immaterial frame applied. The thing is reinterpreted as incorporeal.",
+      "alternative": null
+    },
+    {
+      "verb": "immaterialize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: material frame. Output: immaterial frame applied. The thing is reinterpreted as incorporeal.",
+      "alternative": null
+    },
+    {
+      "verb": "immortalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person/event + mortal/temporal frame. Output: same person/event + eternal frame. Reframes in collective memory.",
+      "alternative": null
+    },
+    {
+      "verb": "immortalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person/event + mortal/temporal frame. Output: same person/event + eternal frame. Reframes in collective memory.",
+      "alternative": null
+    },
+    {
+      "verb": "impersonate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with true identity. Output: person framed as having different identity. The identity frame shifts deceptively.",
+      "alternative": null
+    },
+    {
+      "verb": "incarnate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: abstract entity. Output: same entity now in concrete form. The frame shifts from abstract to material.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "individualise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: generic thing. Output: same thing viewed/framed as individual-specific. The frame shifts to foreground individual qualities.",
+      "alternative": null
+    },
+    {
+      "verb": "individualize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: generic thing. Output: same thing viewed/framed as individual-specific. The frame shifts to foreground individual qualities.",
+      "alternative": null
+    },
+    {
+      "verb": "interchange",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entities in positions A and B. Output: same entities in positions B and A. Frame/position shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "interpret",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in original frame. Output: same text with new understanding frame. Lens shifts on existing content.",
+      "alternative": null
+    },
+    {
+      "verb": "intoxicate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: person in sober state frame. Output: same person in intoxicated frame. Shifts consciousness lens, though bodily state also changes.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "introvert",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: thing oriented outward; output: same thing oriented inward; spatial/directional frame reverses.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "invert",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object + orientation frame, output: same object + reversed frame, spatial perspective shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "italicise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in regular font; output: same text in italic font; the content unchanged, only the visual presentation frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "italicize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in regular font; output: same text in italic font; the content unchanged, only the visual presentation frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "jaundice",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: thing + neutral view; output: same thing + distorted adverse frame; the lens of perception shifts negatively.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "jellify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance with liquid/solid form. Output: same substance with gel structure. The physical state shifts to jelly.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "jelly",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance with non-gel form. Output: same substance with gel structure. The physical state shifts to jelly.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "keratinise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: tissue as one substance type. Output: same tissue reinterpreted/transformed into keratin form. Chemical reframing of composition.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "keratinize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: tissue as one substance type. Output: same tissue reinterpreted/transformed into keratin form. Chemical reframing of composition.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "kick downstairs",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person in high position. Output: same person reframed as lower position. Metaphorical reframing of hierarchical status.",
+      "alternative": null
+    },
+    {
+      "verb": "laicise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person + clergy status; output: same person + lay status; categorical frame shifts from sacred to secular.",
+      "alternative": "DES"
+    },
+    {
+      "verb": "laicize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person + clergy status; output: same person + lay status; categorical frame shifts from sacred to secular.",
+      "alternative": "DES"
+    },
+    {
+      "verb": "lapidify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organic/soft material. Output: same material with stone structure. The substance transforms to petrified state.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "latinize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text + source language frame. Output: same content + Latin frame. Frame shifts to Latin.",
+      "alternative": null
+    },
+    {
+      "verb": "laugh away",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: problem in serious frame. Output: same problem reframed as amusing. The frame shifts from serious to dismissive.",
+      "alternative": null
+    },
+    {
+      "verb": "laugh off",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: problem + serious frame. Output: same problem + humorous frame. Reinterpretation changes gravity.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "launder",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: funds with illegal status; Output: same funds with legal status; the frame/designation shifts but the money itself doesn't change.",
+      "alternative": null
+    },
+    {
+      "verb": "lead astray",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person with moral frame. Output: same person with corrupted moral frame. Perspective/values shift.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "legalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action with illegal status; Output: same action with legal status; the action itself doesn't change, only its legal frame.",
+      "alternative": null
+    },
+    {
+      "verb": "legitimatise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with illegitimate status; Output: same thing with legitimate status; perspective shift on validity.",
+      "alternative": null
+    },
+    {
+      "verb": "legitimatize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with illegitimate status; Output: same thing with legitimate status; perspective shift on validity.",
+      "alternative": null
+    },
+    {
+      "verb": "legitimise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with illegitimate status; Output: same thing with legitimate status; perspective shift on validity.",
+      "alternative": null
+    },
+    {
+      "verb": "legitimize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with illegitimate status; Output: same thing with legitimate status; perspective shift on validity.",
+      "alternative": null
+    },
+    {
+      "verb": "level off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: uneven surface. Output: even surface. Frame shifts from variation to uniformity.",
+      "alternative": null
+    },
+    {
+      "verb": "light up",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: situation perceived as unclear. Output: same situation perceived as clear. The interpretive frame shifts from obscure to evident.",
+      "alternative": null
+    },
+    {
+      "verb": "liquidate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: asset in one form. Output: same asset reframed as cash. Frame shifts, structure stays.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "liquidise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid substance; Output: same substance liquefied; phase transformation changes state frame.",
+      "alternative": null
+    },
+    {
+      "verb": "liquify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid substance; Output: same substance as liquid; phase state changes, not the substance itself.",
+      "alternative": null
+    },
+    {
+      "verb": "literalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with figurative frame; output: same thing with literal frame; perspective shifts from metaphorical to literal.",
+      "alternative": null
+    },
+    {
+      "verb": "literalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with figurative frame; output: same thing with literal frame; perspective shifts from metaphorical to literal.",
+      "alternative": null
+    },
+    {
+      "verb": "lour",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: sound at volume V. Output: same sound perceived at lower volume. The frame of intensity shifts.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "marbleise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: surface with original appearance. Output: same surface now viewed/appearing as marble-like. The thing doesn't change substance, only its visual presentation.",
+      "alternative": null
+    },
+    {
+      "verb": "marbleize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: surface with original appearance. Output: same surface now viewed/appearing as marble-like. The thing doesn't change substance, only its visual presentation.",
+      "alternative": null
+    },
+    {
+      "verb": "masculinise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body with current hormonal state; Output: same body with masculine characteristic frame via hormones.",
+      "alternative": null
+    },
+    {
+      "verb": "masculinize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with current appearance; Output: same thing with masculine character frame.",
+      "alternative": null
+    },
+    {
+      "verb": "masquerade",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity with true identity frame. Output: entity with false identity frame. Same entity reframed without structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "mat up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: smooth texture; Output: matted texture; transforms surface quality without creating new thing.",
+      "alternative": null
+    },
+    {
+      "verb": "matt-up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: smooth texture; Output: matted texture; changes surface frame/quality.",
+      "alternative": null
+    },
+    {
+      "verb": "matte",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: smooth texture; Output: matted texture; changes surface quality frame.",
+      "alternative": null
+    },
+    {
+      "verb": "matte up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: smooth texture; Output: matted texture; shifts material quality frame.",
+      "alternative": null
+    },
+    {
+      "verb": "maximise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: resource viewed as partial. Output: resource viewed as fully utilized. Frame shifts to optimization perspective.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "maximize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: resource viewed as partial. Output: resource viewed as fully utilized. Frame shifts to optimization perspective.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "melt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + solid phase-frame. Output: same substance + liquid phase-frame. State changes but molecular identity persists through phase reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "melt down",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid material; Output: same material as liquid; heating induces phase state reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "mesmerize",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person in normal consciousness frame. Output: same person in mesmerized frame. Shifts attentional/experiential lens.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "metricate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: measurement + non-metric frame. Output: same measurement + metric frame. Frame shifts to metric system.",
+      "alternative": null
+    },
+    {
+      "verb": "metricise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: measurement + imperial frame. Output: same measurement + metric frame. Frame shifts from one system to another.",
+      "alternative": null
+    },
+    {
+      "verb": "metricize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: measurement + imperial frame. Output: same measurement + metric frame. Frame shifts from one system to another.",
+      "alternative": null
+    },
+    {
+      "verb": "militarise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing in civilian/non-military context. Output: same thing reframed/adapted for military use. Functional reinterpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "militarize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing in civilian/non-military context. Output: same thing reframed/adapted for military use. Functional reinterpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "miniaturise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: design at normal scale. Output: same design at smaller scale. The structure remains identical; only the scale frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "miniaturize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: design at normal scale. Output: same design at smaller scale. The structure remains identical; only the scale frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "minify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object at original size; Output: same object viewed/represented as smaller; the thing remains, scale parameter changes.",
+      "alternative": null
+    },
+    {
+      "verb": "minimise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing viewed at normal scale. Output: thing viewed as insignificant. Frame shifts to diminish perceived importance.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "minimize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing viewed at normal scale. Output: thing viewed as insignificant. Frame shifts to diminish perceived importance.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "misconceive",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: concept with one understanding. Output: same concept with wrong understanding. The conceptual frame shifts incorrectly.",
+      "alternative": null
+    },
+    {
+      "verb": "misconstrue",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: statement with one interpretation. Output: same statement with wrong interpretation. The meaning frame shifts incorrectly.",
+      "alternative": null
+    },
+    {
+      "verb": "misdate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event with one temporal frame. Output: same event with wrong temporal frame. The date assignment shifts incorrectly.",
+      "alternative": null
+    },
+    {
+      "verb": "misidentify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity with one identity frame. Output: same entity with wrong identity frame. The identification shifts incorrectly.",
+      "alternative": null
+    },
+    {
+      "verb": "misinterpret",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text/event with one interpretation. Output: same thing with wrong interpretation. The interpretive frame shifts incorrectly.",
+      "alternative": null
+    },
+    {
+      "verb": "misperceive",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: phenomenon + no frame; Output: same phenomenon + incorrect interpretive frame; the lens shifts to a wrong reading.",
+      "alternative": null
+    },
+    {
+      "verb": "misremember",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: event with one interpretation. Output: same event with incorrect interpretation. The frame of recall shifts wrongly.",
+      "alternative": null
+    },
+    {
+      "verb": "misrepresent",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with true representation. Output: same thing with false frame/representation replacing accurate one.",
+      "alternative": null
+    },
+    {
+      "verb": "misstate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: fact + correct frame. Output: same fact + incorrect frame. Reinterpretation that produces error.",
+      "alternative": null
+    },
+    {
+      "verb": "mistake",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with correct identity. Output: same thing with wrong identity assigned. The identification frame shifts incorrectly.",
+      "alternative": null
+    },
+    {
+      "verb": "mistranslate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in one frame. Output: text in wrong frame. Still a frame shift, just incorrect.",
+      "alternative": null
+    },
+    {
+      "verb": "misuse",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with inherent purpose; output: same thing viewed/used with different purpose; the functional frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "modulate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: music in key X, output: same music in key Y, shifts tonal frame without rebuilding melody.",
+      "alternative": null
+    },
+    {
+      "verb": "moralize",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person + current moral frame. Output: same person + improved moral frame. Character reframed toward better values.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "move back",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event at time T1; output: same event at later time T2; temporal coordinate shifted backward.",
+      "alternative": null
+    },
+    {
+      "verb": "move up",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event at time T1; output: same event at earlier time T0; temporal position reframed forward.",
+      "alternative": null
+    },
+    {
+      "verb": "mythicise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+      "alternative": null
+    },
+    {
+      "verb": "mythicize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+      "alternative": null
+    },
+    {
+      "verb": "mythologise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+      "alternative": null
+    },
+    {
+      "verb": "mythologize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: story/event + literal frame. Output: same story/event + mythic frame. Reinterprets through mythological lens.",
+      "alternative": null
+    },
+    {
+      "verb": "nationalize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: entity with local/private frame. Output: same entity viewed through national frame. The lens shifts, not the structure.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "notate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: music/movement in performed form; output: same content in notation system; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "novate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: old obligation. Output: new obligation replacing the old one. The framing/terms of the obligation shift while the relationship context persists.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "obfuscate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: clear reading of something. Output: same thing with obscured/unclear reading. Frame becomes murky.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "objectify",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: entity viewed as subject. Output: same entity reframed as object. The interpretive frame shifts from person to thing.",
+      "alternative": null
+    },
+    {
+      "verb": "outmode",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing + fashionable frame. Output: same thing + obsolete frame. Reframes cultural relevance.",
+      "alternative": null
+    },
+    {
+      "verb": "overbalance",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: balance state. Output: weight perspective shifted to show greater heaviness. The comparative frame changes.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "overcapitalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: asset with true market value. Output: same asset viewed through inflated valuation frame. The interpretive lens shifts upward.",
+      "alternative": null
+    },
+    {
+      "verb": "overcapitalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: asset with true market value. Output: same asset viewed through inflated valuation frame. The interpretive lens shifts upward.",
+      "alternative": null
+    },
+    {
+      "verb": "overdraw",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + accurate depiction. Output: same thing + exaggerated depiction. Representation reframed beyond truth.",
+      "alternative": null
+    },
+    {
+      "verb": "overemphasise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + proportional emphasis. Output: same thing + excessive emphasis frame. Importance reinterpreted beyond proportion.",
+      "alternative": null
+    },
+    {
+      "verb": "overemphasize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + proportional emphasis. Output: same thing + excessive emphasis frame. Importance reinterpreted beyond proportion.",
+      "alternative": null
+    },
+    {
+      "verb": "overgeneralise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: specific observations. Output: same observations viewed through overly broad frame. Frame shifted inappropriately.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "overgeneralize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: specific observations. Output: same observations viewed through overly broad frame. Frame shifted inappropriately.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "overstate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: fact + accurate frame. Output: same fact + exaggerated frame. Truth reinterpreted beyond bounds.",
+      "alternative": null
+    },
+    {
+      "verb": "overstress",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + balanced emphasis. Output: same thing + excessive emphasis frame. Importance reinterpreted with undue stress.",
+      "alternative": null
+    },
+    {
+      "verb": "paganise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with current character; Output: same thing through pagan character frame.",
+      "alternative": null
+    },
+    {
+      "verb": "paganize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with current character; Output: same thing viewed through pagan frame.",
+      "alternative": null
+    },
+    {
+      "verb": "palm off",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with true identity. Output: same thing framed as something else. The thing is reframed deceptively as genuine.",
+      "alternative": null
+    },
+    {
+      "verb": "paraphrase",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message in one expression. Output: same message in different expression. Frame shifts while content stays.",
+      "alternative": null
+    },
+    {
+      "verb": "pdf",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: document in one format. Output: same document in PDF format. The representation changes, not the content.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "personalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: generic thing. Output: same thing viewed/framed as personal. The frame shifts from impersonal to personal perspective.",
+      "alternative": null
+    },
+    {
+      "verb": "personify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: abstract concept + dramatic frame. Output: same concept reframed as character. Shifts perspective/representation without changing thing.",
+      "alternative": null
+    },
+    {
+      "verb": "plasticise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: rigid material; Output: material with plastic quality; property frame changes via plasticizer.",
+      "alternative": null
+    },
+    {
+      "verb": "plasticize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: rigid material; Output: same material now plastic in quality; material property frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "play down",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + emphasized frame. Output: same thing + de-emphasized frame. Reframes importance level.",
+      "alternative": null
+    },
+    {
+      "verb": "poetise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content in prose form; output: same content in verse form; reframing content into poetic structure.",
+      "alternative": null
+    },
+    {
+      "verb": "poetize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content in prose form; output: same content in verse form; reframing content into poetic structure.",
+      "alternative": null
+    },
+    {
+      "verb": "polish",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: dull surface. Output: shiny surface. The appearance changes without adding substance\u2014reframing visual properties.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "popularise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: information in specialized/technical frame. Output: same information translated to general public frame. Perspective shift making accessible.",
+      "alternative": null
+    },
+    {
+      "verb": "popularize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: concept in technical frame. Output: same concept in accessible frame. The interpretive lens shifts to general understanding.",
+      "alternative": null
+    },
+    {
+      "verb": "postpone",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event mapped to time T1; output: same event mapped to time T2; temporal frame shifts, event unchanged.",
+      "alternative": null
+    },
+    {
+      "verb": "preempt",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: priority structure with original first. Output: reframed structure with substitute taking precedence position.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "privatise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: asset under governmental control; Output: same asset under private control; the control frame shifts but the asset itself persists.",
+      "alternative": null
+    },
+    {
+      "verb": "privatize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: asset under governmental control; Output: same asset under private control; the control frame shifts but the asset itself persists.",
+      "alternative": null
+    },
+    {
+      "verb": "professionalise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: activity in amateur/casual frame. Output: same activity reframed with professional standards/character. Contextual reinterpretation.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "professionalize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: activity in amateur/casual frame. Output: same activity reframed with professional standards/character. Contextual reinterpretation.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "promote",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: entity at position X, Output: same entity viewed/positioned at higher X, Change: frame shifts (higher status/position)",
+      "alternative": "REC"
+    },
+    {
+      "verb": "proselytise",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person identified with faith A. Output: same person reframed as adherent of faith B.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "proselytize",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person identified with faith A. Output: same person reframed as adherent of faith B.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "psychoanalyse",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: patient's behaviors/thoughts in ordinary frame; output: same behaviors reinterpreted through psychoanalytic lens (unconscious, trauma, etc.).",
+      "alternative": null
+    },
+    {
+      "verb": "psychoanalyze",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: patient's behaviors/thoughts in ordinary frame; output: same behaviors reinterpreted through psychoanalytic lens (unconscious, trauma, etc.).",
+      "alternative": null
+    },
+    {
+      "verb": "publicise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: information in private frame; Output: same information in public frame; the access context shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "put off",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event at current time-frame; output: event at future time-frame; temporal lens shifted later.",
+      "alternative": null
+    },
+    {
+      "verb": "rarefy",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: concept in coarse frame. Output: same concept in refined/subtle frame. The interpretive lens shifts to higher abstraction.",
+      "alternative": null
+    },
+    {
+      "verb": "rationalise away",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event with supernatural frame; output: same event with natural frame; perspective shifts from supernatural to natural explanation.",
+      "alternative": null
+    },
+    {
+      "verb": "rationalize away",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event with supernatural frame; output: same event with natural frame; perspective shifts from supernatural to natural explanation.",
+      "alternative": null
+    },
+    {
+      "verb": "re-address",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: envelope with old address; output: same envelope viewed through new address; frame of destination shifts",
+      "alternative": null
+    },
+    {
+      "verb": "re-explain",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with one explanatory frame. Output: same thing with different explanatory frame. Lens changes.",
+      "alternative": null
+    },
+    {
+      "verb": "reappraise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with old assessment. Output: same thing with new assessment frame. Perspective shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "reassess",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + old assessment frame; Output: same thing + new assessment frame; reinterprets existing entity.",
+      "alternative": null
+    },
+    {
+      "verb": "rebound",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: thing in altered state. Output: thing returned to former state, re-framed in original condition. Reverses the interpretive frame.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "reclaim",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: waste material; Output: same material reframed as resource; perspective shift from discarded to valuable.",
+      "alternative": null
+    },
+    {
+      "verb": "reclassify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with old category assignment; Output: same thing with new category assignment; the thing hasn't changed, only its categorical frame.",
+      "alternative": null
+    },
+    {
+      "verb": "recode",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: information in one code; output: same information in a different code, shifting the representational frame.",
+      "alternative": null
+    },
+    {
+      "verb": "reconsider",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: decision/view under original frame; output: same decision viewed through new evaluative lens, potentially reversing judgment.",
+      "alternative": null
+    },
+    {
+      "verb": "reconvert",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing in converted frame; output: thing in original frame; the lens shifts back to original perspective reversibly.",
+      "alternative": null
+    },
+    {
+      "verb": "redact",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content in one style; output: same content in different style/language; the frame/expression shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "redeem",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person framed as sinful; Output: same person reframed as saved; interpretive shift in spiritual status.",
+      "alternative": null
+    },
+    {
+      "verb": "redirect",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing moving in direction A. Output: same thing now viewed as moving in direction B. Frame of trajectory shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "reevaluate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + old evaluation frame; Output: same thing + new evaluation frame; shifts perspective on existing assessment.",
+      "alternative": null
+    },
+    {
+      "verb": "refinish",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with old surface finish; Output: object with new surface finish; the surface presentation is reframed/renewed.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "refocus",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: current focus frame. Output: new focus frame. The viewing frame shifts to different focal point; structure unchanged.",
+      "alternative": null
+    },
+    {
+      "verb": "refract",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: light with one path; output: light with bent path; the frame/trajectory shifts without changing the light itself.",
+      "alternative": null
+    },
+    {
+      "verb": "reharmonise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: melody with existing harmony; output: same melody with different harmony; harmonic frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "reharmonize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: melody with existing harmony; output: same melody with different harmony; harmonic frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "reinterpret",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with old interpretation; output: same thing with new interpretation; frame shifts without changing thing.",
+      "alternative": null
+    },
+    {
+      "verb": "relativise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + absolute frame; Output: same thing + relative frame; shifts from fixed to contextual perspective.",
+      "alternative": null
+    },
+    {
+      "verb": "relativize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + absolute frame; Output: same thing + relative frame; shifts from fixed to contextual perspective.",
+      "alternative": null
+    },
+    {
+      "verb": "reorientate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + old orientation frame. Output: same thing + new orientation frame. The reference frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "rephrase",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message in one phrasing. Output: same message in different phrasing. Frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "reschedule",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event at old time/place; output: same event at new time/place; spatiotemporal frame reassigned.",
+      "alternative": null
+    },
+    {
+      "verb": "rethink",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: idea + old thinking frame; Output: same idea + new thinking frame; reinterprets existing thought.",
+      "alternative": null
+    },
+    {
+      "verb": "retranslate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in one frame/language. Output: same text in different frame/language. The perspective shifts again.",
+      "alternative": null
+    },
+    {
+      "verb": "reveal",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: hidden thing + obscured frame; Output: same thing + visible frame; shifts from hidden to visible perspective",
+      "alternative": null
+    },
+    {
+      "verb": "reverse",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: a ruling or decision in one direction; Output: same case with opposite judgment; frame shifts but entities remain.",
+      "alternative": null
+    },
+    {
+      "verb": "revert",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing in current state. Output: thing viewed as previous state. Shifts frame back to earlier state.",
+      "alternative": null
+    },
+    {
+      "verb": "reword",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message in one wording. Output: same message in different wording. Frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "riddle",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: riddle as opaque puzzle. Output: riddle as transparent explanation. The frame shifts from obscure to clear, the riddle itself unchanged.",
+      "alternative": null
+    },
+    {
+      "verb": "romanise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in non-Latin script; output: same content in Latin alphabet; frame of script shifts",
+      "alternative": null
+    },
+    {
+      "verb": "romanize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in non-Latin script; output: same content in Latin alphabet; frame of script shifts",
+      "alternative": null
+    },
+    {
+      "verb": "romanticise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + neutral style; output: same thing + romantic style; interpretive frame shifts to romantic lens.",
+      "alternative": null
+    },
+    {
+      "verb": "round",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: precise number; Output: same value reframed as approximate round number; representational shift.",
+      "alternative": null
+    },
+    {
+      "verb": "round down",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: precise number + precise frame. Output: same value + rounded-down frame. The interpretive lens shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "round off",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: precise number + precise frame. Output: same value + approximation frame. The lens shifts from exact to rounded.",
+      "alternative": null
+    },
+    {
+      "verb": "round out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: precise number + precise frame. Output: same value + approximation frame. The lens shifts from exact to rounded.",
+      "alternative": null
+    },
+    {
+      "verb": "schematise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing in natural form; Output: same thing through conventional form frame.",
+      "alternative": null
+    },
+    {
+      "verb": "schematize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing in natural form; Output: same thing viewed through conventional schema frame.",
+      "alternative": null
+    },
+    {
+      "verb": "scroll",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text + viewing frame1. Output: same text + viewing frame2. The content doesn't change, only which part is visible shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "see (through)",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: deception as surface truth. Output: same situation reframed as revealing hidden truth. Frame shifts from appearance to reality.",
+      "alternative": null
+    },
+    {
+      "verb": "see through",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing + obscured/false frame; Output: same thing + true frame; the perception shifts to reveal what was already there.",
+      "alternative": null
+    },
+    {
+      "verb": "segue",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: topic A frame; Output: topic B frame; smooth reframing without disruption.",
+      "alternative": null
+    },
+    {
+      "verb": "sensualise",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person/behavior + elevated character. Output: same person + debased carnal frame. Reframes through lens of base gratification.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "sentimentalise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: object + neutral frame. Output: same object + sentimental frame. Lens shifts to emotional interpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "sentimentalize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: object + neutral frame. Output: same object + sentimental frame. Lens shifts to emotional interpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "sex up",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing with neutral character. Output: same thing viewed as more interesting/exciting. Frame shift, not structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "shade",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: quality + original value. Output: same quality + slightly shifted value. Frame of degree changes, not structure.",
+      "alternative": null
+    },
+    {
+      "verb": "silhouette",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing plus full visual detail. Output: same thing viewed as outline only. Frame shifts to shadow-form.",
+      "alternative": null
+    },
+    {
+      "verb": "silver",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with original color. Output: object appearing silver. The visual property shifts without structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "slag",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: material in original form. Output: material converted to slag state. Chemical/physical state reframed through processing.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "slenderise",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: thing viewed normally. Output: thing reframed to appear slender. Perceptual shift, not structural change.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "sober",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: unrealistic frame. Output: realistic frame. The perspective shifts from idealistic to realistic without rebuilding the structure.",
+      "alternative": null
+    },
+    {
+      "verb": "sober up",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person + unrealistic frame. Output: same person + realistic frame. Perspective shifts toward reality.",
+      "alternative": null
+    },
+    {
+      "verb": "soft-pedal",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + prominent frame. Output: same thing + obscured diminished frame. Significance reinterpreted downward.",
+      "alternative": null
+    },
+    {
+      "verb": "spondaise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: verse with existing meter; output: same verse in spondaic meter; the metrical frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "spondaize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: verse with existing meter; output: same verse in spondaic meter; the metrical frame changes.",
+      "alternative": null
+    },
+    {
+      "verb": "square",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing in non-square frame. Output: same thing viewed as square. Reinterprets geometry or alignment without rebuilding structure.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "stand in",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: position occupied by original. Output: substitute occupies same position. The lens/frame shifts to new actor.",
+      "alternative": null
+    },
+    {
+      "verb": "stenograph",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content + longhand frame. Output: content + shorthand frame. Same content, different notation system.",
+      "alternative": null
+    },
+    {
+      "verb": "stultify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: person seen in normal light. Output: same person reframed as foolish. The perception shifts, not the person.",
+      "alternative": null
+    },
+    {
+      "verb": "stylise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: subject + naturalistic frame. Output: subject + conventional style frame. The representation mode shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "stylize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: subject + naturalistic frame. Output: subject + conventional style frame. The representation mode shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "sub",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: role filled by A. Output: role filled by B. Same structural position, different occupant\u2014frame shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "sublime",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: substance in solid phase; output: same substance cycled through gas and back to solid; phase-frame oscillates while substance persists.",
+      "alternative": "SYN"
+    },
+    {
+      "verb": "submerge",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object in air. Output: same object in water. The object's relationship to its medium changes (air\u2192water frame shift).",
+      "alternative": null
+    },
+    {
+      "verb": "suburbanise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: area + urban/rural character. Output: same area + suburban character frame. The place is reinterpreted through suburban lens.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "suburbanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: area + urban/rural character. Output: same area + suburban character frame. The place is reinterpreted through suburban lens.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "sugarcoat",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unpleasant thing with harsh framing. Output: same thing reframed pleasantly. Shifts interpretive lens.",
+      "alternative": null
+    },
+    {
+      "verb": "sulfate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: substance without sulfate form. Output: substance converted to sulfate compound. Chemical identity reframed.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "summarise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: full text + one framing. Output: same content through condensed lens. Reframes content without changing source structure.",
+      "alternative": "SYN"
+    },
+    {
+      "verb": "supercede",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: A occupies role. Output: B now seen as occupying that role. Frame shift of occupant (variant spelling of supersede).",
+      "alternative": "REC"
+    },
+    {
+      "verb": "supersede",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing A in functional role. Output: thing B now in that role, reframing what fulfills the function. Frame shift of role-filler.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "supervene upon",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: prior state/thing in position. Output: new state occupying position, reframing what's present. Perspectival replacement.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "supplant",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: position occupied by A. Output: same position now framed as occupied by B. The position persists, occupant-frame shifts.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "swage",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: metal with original shape; Output: metal with new shape; the form is reframed/reshaped without changing the substance.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "swing over",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with one position/allegiance; Output: same person now viewed/aligned from different position; the frame of allegiance shifts",
+      "alternative": null
+    },
+    {
+      "verb": "switch",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: system using tool A. Output: system using tool B. Changes operational frame by exchanging.",
+      "alternative": null
+    },
+    {
+      "verb": "switch off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: device in 'on' state. Output: device in 'off' state. The operational frame shifts from active to inactive.",
+      "alternative": null
+    },
+    {
+      "verb": "switch on",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: device in 'off' state. Output: device in 'on' state. The operational frame shifts from inactive to active.",
+      "alternative": null
+    },
+    {
+      "verb": "switch over",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sequence order A. Output: sequence order B. Shifts ordering frame.",
+      "alternative": null
+    },
+    {
+      "verb": "switch-hit",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: batting stance. Output: alternate batting stance based on pitcher handedness. Frame switches but batter unchanged.",
+      "alternative": null
+    },
+    {
+      "verb": "take turns",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person A active + frame1. Output: person B active + frame2. The activity shifts perspective/role cyclically without structural change.",
+      "alternative": null
+    },
+    {
+      "verb": "talk into",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person viewing action as undesirable. Output: same person reframing action as desirable through persuasion.",
+      "alternative": null
+    },
+    {
+      "verb": "talk out of",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person viewing action as desirable. Output: same person reframing action as undesirable through persuasion.",
+      "alternative": null
+    },
+    {
+      "verb": "telescope",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: thing at full length. Output: same thing at compressed length. The structure collapses but remains the same thing at different scale.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "thaw",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in solid phase. Output: same substance in liquid phase. Phase shift without new substance appearing.",
+      "alternative": null
+    },
+    {
+      "verb": "theologise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: subject with secular frame. Output: subject with theological frame. Same content, lens shifts to theological interpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "theologize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: subject with secular frame. Output: subject with theological frame. Same content, lens shifts to theological interpretation.",
+      "alternative": null
+    },
+    {
+      "verb": "tone",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: image in black-white frame. Output: same image in color frame. The interpretive frame shifts without changing the underlying structure.",
+      "alternative": null
+    },
+    {
+      "verb": "transduce",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: energy in form A. Output: same energy in form B. The manifestation frame shifts while energy persists.",
+      "alternative": null
+    },
+    {
+      "verb": "translate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: meaning in one language. Output: same meaning in different language. The frame/expression shifts, content stays.",
+      "alternative": null
+    },
+    {
+      "verb": "transliterate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text in one script; output: same phonetic content in different script; frame of notation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "transpose",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: elements in position set1. Output: elements in position set2. Swapping positions reframes spatial/sequential relationships.",
+      "alternative": null
+    },
+    {
+      "verb": "transship",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: cargo associated with first conveyance; output: same cargo reframed as associated with second conveyance; shifts container context.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "travesty",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with original meaning. Output: same thing reframed as grotesque distortion. Perspective on thing shifts.",
+      "alternative": null
+    },
+    {
+      "verb": "trivialise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + significant frame. Output: same thing + trivial frame. Importance reinterpreted as insignificant.",
+      "alternative": null
+    },
+    {
+      "verb": "trivialize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + significant frame. Output: same thing + trivial frame. Importance reinterpreted as insignificant.",
+      "alternative": null
+    },
+    {
+      "verb": "tune in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: device receiving signal A. Output: same device receiving signal B. Frame of reception shifts to new channel.",
+      "alternative": null
+    },
+    {
+      "verb": "twist around",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: clear meaning; output: vague/shifted meaning; the interpretive frame changes to mislead.",
+      "alternative": null
+    },
+    {
+      "verb": "uncross",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: crossed configuration; Output: uncrossed configuration; the limbs themselves don't change, only their spatial arrangement/frame.",
+      "alternative": null
+    },
+    {
+      "verb": "underline",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message + neutral reading. Output: same message + importance frame; reframes attention without changing message structure.",
+      "alternative": null
+    },
+    {
+      "verb": "underscore",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: communication + neutral weighting. Output: same communication + emphasis frame; shifts interpretive lens without altering content.",
+      "alternative": null
+    },
+    {
+      "verb": "understate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + accurate frame. Output: same thing + diminished frame. The representation changes, not the thing itself.",
+      "alternative": null
+    },
+    {
+      "verb": "unfold",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: folded object hiding its content. Output: unfolded object revealing content. The viewing frame changes from hidden to visible.",
+      "alternative": null
+    },
+    {
+      "verb": "universalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: particular case. Output: same case reframed as universal principle. Shifts interpretive scope.",
+      "alternative": null
+    },
+    {
+      "verb": "universalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: particular case. Output: same case reframed as universal principle. Shifts interpretive scope.",
+      "alternative": null
+    },
+    {
+      "verb": "unscramble",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: message + scrambled encoding; output: same message + intelligible encoding; interpretive frame shifts from obscure to clear.",
+      "alternative": null
+    },
+    {
+      "verb": "unsubstantialise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: substantial frame. Output: insubstantial frame applied. The thing is reinterpreted as incorporeal.",
+      "alternative": null
+    },
+    {
+      "verb": "unsubstantialize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: substantial frame. Output: insubstantial frame applied. The thing is reinterpreted as incorporeal.",
+      "alternative": null
+    },
+    {
+      "verb": "upgrade",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: service at tier X, Output: same service viewed/accessed at tier X+1, Change: reframing to better category",
+      "alternative": null
+    },
+    {
+      "verb": "vaporize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in liquid/solid phase. Output: same substance in gas phase. Phase shift without creating new substance.",
+      "alternative": null
+    },
+    {
+      "verb": "verbify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: word + noun frame. Output: same word + verb frame. Reframes grammatical category without changing the word itself.",
+      "alternative": null
+    },
+    {
+      "verb": "versify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: content in prose form; output: same content in verse form; the frame/structure changes but content persists.",
+      "alternative": null
+    },
+    {
+      "verb": "virilise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body with current state; Output: same body with masculine characteristic frame.",
+      "alternative": null
+    },
+    {
+      "verb": "virilize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body with current characteristics; Output: same body with masculine frame via hormonal change.",
+      "alternative": null
+    },
+    {
+      "verb": "visualize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: non-visible information; Output: same information in visual frame; shifts modality of presentation",
+      "alternative": "INS"
+    },
+    {
+      "verb": "vitrify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance in non-glass state. Output: same substance in glass state. Phase/structure shift without new substance.",
+      "alternative": null
+    },
+    {
+      "verb": "volatilise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + liquid/solid frame. Output: same substance + vapor frame. Physical state transformation is frame shift.",
+      "alternative": null
+    },
+    {
+      "verb": "volatilize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: non-volatile substance. Output: same substance in volatile vapor form. Phase transition changes the frame.",
+      "alternative": null
+    },
+    {
+      "verb": "wad",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material + flat/extended shape-frame. Output: same material + wadded/compressed shape-frame. Form changes but material persists through reframing.",
+      "alternative": null
+    },
+    {
+      "verb": "wake",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in sleep state. Output: same person in waking state. Consciousness frame shifts from sleep to wake.",
+      "alternative": null
+    },
+    {
+      "verb": "waken",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in sleep state. Output: same person in waking state. Consciousness frame shifts from sleep to wake.",
+      "alternative": null
+    },
+    {
+      "verb": "what become (of)",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: past state known. Output: current state queried under new temporal frame. Shifts frame from past to present inquiry.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "whiten",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with some color; output: same thing now appearing white; the thing's appearance (frame) changed, not its structure.",
+      "alternative": null
+    },
+    {
+      "verb": "win over",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person viewing claim as false/invalid. Output: same person reframing claim as true/valid.",
+      "alternative": null
+    },
+    {
+      "verb": "worsen",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: state evaluated one way; output: same state now evaluated as worse; the evaluative frame shifted along a quality dimension.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "write in code",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: plain language message; output: same message in code; frame of representation shifts",
+      "alternative": null
+    },
+    {
+      "verb": "yellow",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with some color; output: same thing now appearing yellow; the thing's appearance (frame) changed, not its structure.",
+      "alternative": null
+    },
+    {
+      "verb": "zoom in",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing + wide frame. Output: same thing + narrow frame. The viewing lens shifts to detail focus.",
+      "alternative": null
+    }
+  ]
+}

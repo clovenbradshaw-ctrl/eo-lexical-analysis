@@ -1,0 +1,245 @@
+{
+  "Ancient_Greek": {
+    "operators": -26.119596481323242,
+    "triads": -60.666908264160156,
+    "positions": -84.27422332763672,
+    "data_driven": -55.10097122192383,
+    "family": "IE-Hellenic",
+    "era": "ancient",
+    "n_verbs": 1898
+  },
+  "Arabic": {
+    "operators": -30.236722946166992,
+    "triads": -53.727638244628906,
+    "positions": -63.622135162353516,
+    "data_driven": -41.6114616394043,
+    "family": "Afro-Asiatic",
+    "era": "modern",
+    "n_verbs": 1048
+  },
+  "Basque": {
+    "operators": -12.989991188049316,
+    "triads": -20.471900939941406,
+    "positions": -16.308618545532227,
+    "data_driven": -12.596423149108887,
+    "family": "Isolate",
+    "era": "modern",
+    "n_verbs": 666
+  },
+  "Classical_Chinese": {
+    "operators": -21.61825180053711,
+    "triads": -109.88761138916016,
+    "positions": -110.97006225585938,
+    "data_driven": -70.72689056396484,
+    "family": "Sino-Tibetan",
+    "era": "ancient",
+    "n_verbs": 2599
+  },
+  "Coptic": {
+    "operators": -2.3692235946655273,
+    "triads": -5.643763542175293,
+    "positions": -4.713073253631592,
+    "data_driven": -3.6208834648132324,
+    "family": "Afro-Asiatic",
+    "era": "ancient",
+    "n_verbs": 410
+  },
+  "English": {
+    "operators": -40.52116394042969,
+    "triads": -66.07039642333984,
+    "positions": -91.51863861083984,
+    "data_driven": -63.22126388549805,
+    "family": "IE-Germanic",
+    "era": "modern",
+    "n_verbs": 1194
+  },
+  "Finnish": {
+    "operators": -28.131027221679688,
+    "triads": -71.00035858154297,
+    "positions": -85.64240264892578,
+    "data_driven": -54.734500885009766,
+    "family": "Uralic",
+    "era": "modern",
+    "n_verbs": 1168
+  },
+  "French": {
+    "operators": -30.638790130615234,
+    "triads": -86.2335205078125,
+    "positions": -117.48884582519531,
+    "data_driven": -89.69022369384766,
+    "family": "IE-Romance",
+    "era": "modern",
+    "n_verbs": 1489
+  },
+  "German": {
+    "operators": -19.65703010559082,
+    "triads": -74.82344055175781,
+    "positions": -120.28052520751953,
+    "data_driven": -77.5001449584961,
+    "family": "IE-Germanic",
+    "era": "modern",
+    "n_verbs": 1430
+  },
+  "Gothic": {
+    "operators": -3.2581417560577393,
+    "triads": -7.766910552978516,
+    "positions": -8.289536476135254,
+    "data_driven": -12.90169620513916,
+    "family": "IE-Germanic",
+    "era": "ancient",
+    "n_verbs": 673
+  },
+  "Hindi": {
+    "operators": -5.768113136291504,
+    "triads": -17.68996810913086,
+    "positions": -18.610483169555664,
+    "data_driven": -17.08460807800293,
+    "family": "IE-Indo-Aryan",
+    "era": "modern",
+    "n_verbs": 423
+  },
+  "Indonesian": {
+    "operators": -6.72960090637207,
+    "triads": -42.97259521484375,
+    "positions": -67.68690490722656,
+    "data_driven": -50.15053176879883,
+    "family": "Austronesian",
+    "era": "modern",
+    "n_verbs": 885
+  },
+  "Japanese": {
+    "operators": -49.359310150146484,
+    "triads": -93.67338562011719,
+    "positions": -134.20501708984375,
+    "data_driven": -72.613037109375,
+    "family": "Japonic",
+    "era": "modern",
+    "n_verbs": 1522
+  },
+  "Korean": {
+    "operators": -78.00127410888672,
+    "triads": -111.89097595214844,
+    "positions": -205.57986450195312,
+    "data_driven": -191.659912109375,
+    "family": "Koreanic",
+    "era": "modern",
+    "n_verbs": 2749
+  },
+  "Latin": {
+    "operators": -7.9581098556518555,
+    "triads": -25.262569427490234,
+    "positions": -38.82917785644531,
+    "data_driven": -28.168243408203125,
+    "family": "IE-Italic",
+    "era": "ancient",
+    "n_verbs": 770
+  },
+  "Naija": {
+    "operators": -6.1573638916015625,
+    "triads": -27.954607009887695,
+    "positions": -31.697134017944336,
+    "data_driven": -23.56601333618164,
+    "family": "Creole-English",
+    "era": "modern",
+    "n_verbs": 566
+  },
+  "Old_Church_Slavonic": {
+    "operators": -14.179024696350098,
+    "triads": -53.396263122558594,
+    "positions": -54.07102584838867,
+    "data_driven": -57.429046630859375,
+    "family": "IE-Slavic",
+    "era": "ancient",
+    "n_verbs": 1677
+  },
+  "Old_East_Slavic": {
+    "operators": -27.457178115844727,
+    "triads": -67.77070617675781,
+    "positions": -86.10076904296875,
+    "data_driven": -80.25968170166016,
+    "family": "IE-Slavic",
+    "era": "medieval",
+    "n_verbs": 2333
+  },
+  "Persian": {
+    "operators": -10.14122200012207,
+    "triads": -15.8607816696167,
+    "positions": -26.196386337280273,
+    "data_driven": -11.419526100158691,
+    "family": "IE-Iranian",
+    "era": "modern",
+    "n_verbs": 290
+  },
+  "Russian": {
+    "operators": -57.33745574951172,
+    "triads": -145.36285400390625,
+    "positions": -210.47169494628906,
+    "data_driven": -135.98768615722656,
+    "family": "IE-Slavic",
+    "era": "modern",
+    "n_verbs": 2906
+  },
+  "Sanskrit": {
+    "operators": -8.010367393493652,
+    "triads": -36.09318542480469,
+    "positions": -66.62313842773438,
+    "data_driven": -38.04814910888672,
+    "family": "IE-Indo-Aryan",
+    "era": "ancient",
+    "n_verbs": 1869
+  },
+  "Tagalog": {
+    "operators": -2.002598762512207,
+    "triads": -5.301105976104736,
+    "positions": -4.594912528991699,
+    "data_driven": 0.5209234356880188,
+    "family": "Austronesian",
+    "era": "modern",
+    "n_verbs": 50
+  },
+  "Tamil": {
+    "operators": -1.6820460557937622,
+    "triads": -4.363503932952881,
+    "positions": -4.539421558380127,
+    "data_driven": -3.685028076171875,
+    "family": "Dravidian",
+    "era": "modern",
+    "n_verbs": 176
+  },
+  "Turkish": {
+    "operators": -15.624340057373047,
+    "triads": -49.23882293701172,
+    "positions": -58.33015441894531,
+    "data_driven": -48.329856872558594,
+    "family": "Turkic",
+    "era": "modern",
+    "n_verbs": 852
+  },
+  "Uyghur": {
+    "operators": -1.3128938674926758,
+    "triads": -4.291202068328857,
+    "positions": -1.9854176044464111,
+    "data_driven": -2.396372079849243,
+    "family": "Turkic",
+    "era": "modern",
+    "n_verbs": 239
+  },
+  "Vietnamese": {
+    "operators": -34.078643798828125,
+    "triads": -39.50460433959961,
+    "positions": -66.99964141845703,
+    "data_driven": -37.94099807739258,
+    "family": "Austroasiatic",
+    "era": "modern",
+    "n_verbs": 1027
+  },
+  "Wolof": {
+    "operators": -0.2498106062412262,
+    "triads": -3.666851043701172,
+    "positions": -4.595505237579346,
+    "data_driven": -5.967030048370361,
+    "family": "Niger-Congo",
+    "era": "modern",
+    "n_verbs": 200
+  }
+}

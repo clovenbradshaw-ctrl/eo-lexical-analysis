@@ -1,0 +1,26 @@
+{
+  "runner_up_counts": {
+    "INS": 451,
+    "DES": 234,
+    "CON": 464,
+    "SEG": 240,
+    "ALT": 441,
+    "REC": 80,
+    "SYN": 233,
+    "SUP": 75,
+    "NUL": 149
+  },
+  "ALT\u2192SUP": {
+    "KEEP": 203,
+    "CHANGE": 4
+  },
+  "INS\u2192REC": {
+    "KEEP": 480,
+    "CHANGE": 8,
+    "UNCERTAIN": 2
+  },
+  "NUL\u2192SUP": {
+    "KEEP": 67,
+    "CHANGE": 14
+  }
+}

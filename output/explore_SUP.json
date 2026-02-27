@@ -1,0 +1,536 @@
+{
+  "operator": "SUP",
+  "symbol": "\u2295",
+  "total_verbs": 19,
+  "scales": {
+    "psychological": 9,
+    "informational": 6,
+    "social": 3,
+    "physical": 1
+  },
+  "confidence": {
+    "high": 12,
+    "medium": 7
+  },
+  "borders": {
+    "INS": 7
+  },
+  "subclusters": [
+    {
+      "id": 0,
+      "size": 7,
+      "dominant_scale": "psychological",
+      "scales": {
+        "psychological": 5,
+        "physical": 1,
+        "informational": 1
+      },
+      "core_verbs": [
+        "fluctuate",
+        "equivocate",
+        "waffle",
+        "go back and forth"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "vacillate",
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: state where incompatible options are held together. Creates oscillation between contradictions.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "waver",
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: state where incompatible choices coexist. Holds contradiction between options.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "go back and forth",
+          "scale": "psychological",
+          "reason": "Input: resolved position. Output: state oscillating between incompatible positions. The verb maintains contradictory values coexisting.",
+          "confidence": "high"
+        },
+        {
+          "verb": "waffle",
+          "scale": "psychological",
+          "reason": "Input: decision state. Output: state holding multiple incompatible positions simultaneously. The verb creates unresolved contradiction.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fluctuate",
+          "scale": "physical",
+          "reason": "Input: stable state. Output: state holding multiple incompatible values simultaneously. Contradiction maintained.",
+          "confidence": "high"
+        },
+        {
+          "verb": "equivocate",
+          "scale": "informational",
+          "reason": "Input: clear position. Output: contradictory statements coexisting. Multiple incompatible meanings held simultaneously.",
+          "confidence": "high"
+        },
+        {
+          "verb": "haunt",
+          "scale": "psychological",
+          "reason": "Input: resolved state (present or absent). Output: unresolved state where presence and absence coexist, ghost-like persistence. Contradiction maintained.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": 7,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 5,
+        "psychological": 1,
+        "social": 1
+      },
+      "core_verbs": [
+        "conflict",
+        "fly in the face of",
+        "contravene",
+        "contradict",
+        "fly in the teeth of",
+        "disaccord",
+        "discord"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "contradict",
+          "scale": "informational",
+          "reason": "Input: resolved claim. Output: incompatible claims held together. Creates state where opposing values coexist.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fly in the face of",
+          "scale": "informational",
+          "reason": "Input: resolved state. Output: state where contradictory positions coexist; actively maintaining incompatibility between two things.",
+          "confidence": "high"
+        },
+        {
+          "verb": "conflict",
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: incompatible values coexist. The verb creates condition where opposing things are simultaneously present.",
+          "confidence": "high"
+        },
+        {
+          "verb": "contravene",
+          "scale": "informational",
+          "reason": "Input: resolved claim. Output: state where contradictory claim coexists; denial creates holding of incompatibles.",
+          "confidence": "high"
+        },
+        {
+          "verb": "disaccord",
+          "scale": "informational",
+          "reason": "Input: entities in comparison. Output: entities in state of incompatibility/contradiction. Difference-holding condition created.",
+          "confidence": "high"
+        },
+        {
+          "verb": "discord",
+          "scale": "informational",
+          "reason": "Input: entities expected to align; output: entities holding incompatible states simultaneously, contradiction made explicit.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fly in the teeth of",
+          "scale": "social",
+          "reason": "Input: expectation of compliance; Output: action that contradicts that expectation \u2014 creates a state where opposing forces coexist.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 5,
+      "dominant_scale": "psychological",
+      "scales": {
+        "psychological": 3,
+        "social": 2
+      },
+      "core_verbs": [
+        "straddle"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "straddle",
+          "scale": "psychological",
+          "reason": "Input: resolved position, Output: unresolved state holding incompatible positions simultaneously, Change: contradiction maintained",
+          "confidence": "high"
+        },
+        {
+          "verb": "muddle",
+          "scale": "psychological",
+          "reason": "Input: clear distinctions. Output: state where incompatible interpretations coexist. Contradiction created.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "doubt",
+          "scale": "psychological",
+          "reason": "Input: resolved belief state. Output: unresolved state where belief and disbelief coexist. Contradiction held simultaneously.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "two-time",
+          "scale": "social",
+          "reason": "Input: person in one relationship; Output: person simultaneously in two incompatible exclusive relationships; contradictory commitments coexist.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "higgle",
+          "scale": "social",
+          "reason": "Input: single price expectation. Output: multiple incompatible valuations held simultaneously during negotiation. Contradiction state maintained.",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ],
+  "boundary_verbs_from_other_ops": [
+    {
+      "verb": "oppose",
+      "operator": "INS",
+      "similarity": 0.6765751440108254,
+      "scale": "social",
+      "reason": "Input: state without resistance; output: state with resistance present; a new stance or position of opposition arises and exists."
+    },
+    {
+      "verb": "controvert",
+      "operator": "INS",
+      "similarity": 0.6743385606216954,
+      "scale": "psychological",
+      "reason": "Input: state without resistance; Output: state with resistance manifested; new opposing stance appears."
+    },
+    {
+      "verb": "go against",
+      "operator": "INS",
+      "similarity": 0.649173389796797,
+      "scale": "social",
+      "reason": "Input: rules exist. Output: new contradicting action appears. New behavior entering world."
+    },
+    {
+      "verb": "disagree",
+      "operator": "INS",
+      "similarity": 0.6452552710128806,
+      "scale": "social",
+      "reason": "Input: no disagreement expressed. Output: disagreement appears. Oppositional position arises."
+    },
+    {
+      "verb": "take issue",
+      "operator": "INS",
+      "similarity": 0.6395425273694468,
+      "scale": "informational",
+      "reason": "Input: world without disagreement. Output: disagreement event appears, new observation enters discourse."
+    },
+    {
+      "verb": "clash",
+      "operator": "INS",
+      "similarity": 0.6287348549653535,
+      "scale": "social",
+      "reason": "Input: state without violent disagreement. Output: violent disagreement appears. Conflict event arises."
+    },
+    {
+      "verb": "shake",
+      "operator": "INS",
+      "similarity": 0.6280363078204296,
+      "scale": "psychological",
+      "reason": "Input: stable state. Output: state with wavering/undermining present. A new condition (instability) appears in the experiencer."
+    },
+    {
+      "verb": "counter",
+      "operator": "INS",
+      "similarity": 0.6217650531330723,
+      "scale": "informational",
+      "reason": "Input: statement made, no opposition. Output: opposing response appears. A contradicting utterance arises."
+    },
+    {
+      "verb": "compromise",
+      "operator": "SYN",
+      "similarity": 0.6177863947791571,
+      "scale": "social",
+      "reason": "Input: conflicting positions; Output: new unified agreement incorporating concessions from both\u2014positions fused into transcendent whole."
+    },
+    {
+      "verb": "suppose",
+      "operator": "INS",
+      "similarity": 0.6127561593776194,
+      "scale": "informational",
+      "reason": "Input: state without supposition. Output: state with supposition expressed. A hypothetical appears in discourse."
+    },
+    {
+      "verb": "trouble",
+      "operator": "INS",
+      "similarity": 0.6112942447789412,
+      "scale": "psychological",
+      "reason": "Input: calm state. Output: state with disturbance present. A new troubling emotion appears in the experiencer."
+    },
+    {
+      "verb": "prevaricate",
+      "operator": "INS",
+      "similarity": 0.6081076677334478,
+      "scale": "informational",
+      "reason": "Input: communicative context. Output: context with new ambiguous statements added to obscure truth."
+    },
+    {
+      "verb": "shillyshally",
+      "operator": "INS",
+      "similarity": 0.607208203387146,
+      "scale": "psychological",
+      "reason": "Input: decision point; Output: vacillating indecisive state; creates uncertainty and hesitation."
+    },
+    {
+      "verb": "contradance",
+      "operator": "INS",
+      "similarity": 0.6069044483893407,
+      "scale": "physical",
+      "reason": "Input: person in neutral state; Output: person executing contradance steps; specific dance movement appears."
+    },
+    {
+      "verb": "defy",
+      "operator": "INS",
+      "similarity": 0.6051613436521852,
+      "scale": "social",
+      "reason": "Input: defier and authority. Output: resistance act appears. Confrontational behavior enters existence."
+    },
+    {
+      "verb": "pose",
+      "operator": "INS",
+      "similarity": 0.6048056956305565,
+      "scale": "psychological",
+      "reason": "Input: no puzzle. Output: bewildering situation exists. New mystery state created."
+    },
+    {
+      "verb": "dissonate",
+      "operator": "INS",
+      "similarity": 0.6043661314201478,
+      "scale": "physical",
+      "reason": "Input: world state; Output: world with dissonant harsh sound appearing; new phenomenon emerges."
+    },
+    {
+      "verb": "meet half-way",
+      "operator": "SYN",
+      "similarity": 0.6037638061593191,
+      "scale": "social",
+      "reason": "Input: two opposing positions; Output: a single compromise position that transcends both; a new unified stance emerges from conflicting ones."
+    },
+    {
+      "verb": "unsettle",
+      "operator": "INS",
+      "similarity": 0.6012734265426093,
+      "scale": "psychological",
+      "reason": "Input: settled state. Output: state with unsettledness present. A new disturbed condition appears."
+    },
+    {
+      "verb": "altercate",
+      "operator": "INS",
+      "similarity": 0.5991736158424166,
+      "scale": "social",
+      "reason": "Input: no disagreement. Output: disagreement appears as new contentious event."
+    }
+  ],
+  "peripheral_verbs": [
+    {
+      "verb": "higgle",
+      "similarity": 0.6595877503924528,
+      "alternative": "INS",
+      "scale": "social",
+      "reason": "Input: single price expectation. Output: multiple incompatible valuations held simultaneously during negotiation. Contradiction state maintained."
+    },
+    {
+      "verb": "two-time",
+      "similarity": 0.6865024096718947,
+      "alternative": "INS",
+      "scale": "social",
+      "reason": "Input: person in one relationship; Output: person simultaneously in two incompatible exclusive relationships; contradictory commitments coexist."
+    },
+    {
+      "verb": "fly in the teeth of",
+      "similarity": 0.6874811132589946,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: expectation of compliance; Output: action that contradicts that expectation \u2014 creates a state where opposing forces coexist."
+    },
+    {
+      "verb": "haunt",
+      "similarity": 0.7050064286276396,
+      "alternative": "INS",
+      "scale": "psychological",
+      "reason": "Input: resolved state (present or absent). Output: unresolved state where presence and absence coexist, ghost-like persistence. Contradiction maintained."
+    },
+    {
+      "verb": "equivocate",
+      "similarity": 0.7445133363729584,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: clear position. Output: contradictory statements coexisting. Multiple incompatible meanings held simultaneously."
+    },
+    {
+      "verb": "muddle",
+      "similarity": 0.757576214067836,
+      "alternative": "INS",
+      "scale": "psychological",
+      "reason": "Input: clear distinctions. Output: state where incompatible interpretations coexist. Contradiction created."
+    },
+    {
+      "verb": "doubt",
+      "similarity": 0.7584738055007532,
+      "alternative": "INS",
+      "scale": "psychological",
+      "reason": "Input: resolved belief state. Output: unresolved state where belief and disbelief coexist. Contradiction held simultaneously."
+    },
+    {
+      "verb": "waffle",
+      "similarity": 0.7709189016441602,
+      "alternative": "",
+      "scale": "psychological",
+      "reason": "Input: decision state. Output: state holding multiple incompatible positions simultaneously. The verb creates unresolved contradiction."
+    },
+    {
+      "verb": "contravene",
+      "similarity": 0.7727722078730658,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: resolved claim. Output: state where contradictory claim coexists; denial creates holding of incompatibles."
+    },
+    {
+      "verb": "disaccord",
+      "similarity": 0.7775835858769333,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: entities in comparison. Output: entities in state of incompatibility/contradiction. Difference-holding condition created."
+    }
+  ],
+  "all_verbs": [
+    {
+      "verb": "conflict",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: resolved state. Output: incompatible values coexist. The verb creates condition where opposing things are simultaneously present.",
+      "alternative": null
+    },
+    {
+      "verb": "contradict",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: resolved claim. Output: incompatible claims held together. Creates state where opposing values coexist.",
+      "alternative": null
+    },
+    {
+      "verb": "contravene",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: resolved claim. Output: state where contradictory claim coexists; denial creates holding of incompatibles.",
+      "alternative": null
+    },
+    {
+      "verb": "disaccord",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entities in comparison. Output: entities in state of incompatibility/contradiction. Difference-holding condition created.",
+      "alternative": null
+    },
+    {
+      "verb": "discord",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entities expected to align; output: entities holding incompatible states simultaneously, contradiction made explicit.",
+      "alternative": null
+    },
+    {
+      "verb": "doubt",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: resolved belief state. Output: unresolved state where belief and disbelief coexist. Contradiction held simultaneously.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "equivocate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: clear position. Output: contradictory statements coexisting. Multiple incompatible meanings held simultaneously.",
+      "alternative": null
+    },
+    {
+      "verb": "fluctuate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: stable state. Output: state holding multiple incompatible values simultaneously. Contradiction maintained.",
+      "alternative": null
+    },
+    {
+      "verb": "fly in the face of",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: resolved state. Output: state where contradictory positions coexist; actively maintaining incompatibility between two things.",
+      "alternative": null
+    },
+    {
+      "verb": "fly in the teeth of",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: expectation of compliance; Output: action that contradicts that expectation \u2014 creates a state where opposing forces coexist.",
+      "alternative": null
+    },
+    {
+      "verb": "go back and forth",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: resolved position. Output: state oscillating between incompatible positions. The verb maintains contradictory values coexisting.",
+      "alternative": null
+    },
+    {
+      "verb": "haunt",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: resolved state (present or absent). Output: unresolved state where presence and absence coexist, ghost-like persistence. Contradiction maintained.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "higgle",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: single price expectation. Output: multiple incompatible valuations held simultaneously during negotiation. Contradiction state maintained.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "muddle",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: clear distinctions. Output: state where incompatible interpretations coexist. Contradiction created.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "straddle",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: resolved position, Output: unresolved state holding incompatible positions simultaneously, Change: contradiction maintained",
+      "alternative": null
+    },
+    {
+      "verb": "two-time",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person in one relationship; Output: person simultaneously in two incompatible exclusive relationships; contradictory commitments coexist.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "vacillate",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: resolved state. Output: state where incompatible options are held together. Creates oscillation between contradictions.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "waffle",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: decision state. Output: state holding multiple incompatible positions simultaneously. The verb creates unresolved contradiction.",
+      "alternative": null
+    },
+    {
+      "verb": "waver",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: resolved state. Output: state where incompatible choices coexist. Holds contradiction between options.",
+      "alternative": "INS"
+    }
+  ]
+}

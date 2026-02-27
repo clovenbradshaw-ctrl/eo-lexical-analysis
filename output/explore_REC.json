@@ -1,0 +1,3706 @@
+{
+  "operator": "REC",
+  "symbol": "\u27f3",
+  "total_verbs": 413,
+  "scales": {
+    "physical": 216,
+    "social": 87,
+    "informational": 70,
+    "psychological": 40
+  },
+  "confidence": {
+    "high": 326,
+    "medium": 87
+  },
+  "borders": {
+    "INS": 40,
+    "ALT": 35,
+    "SEG": 4,
+    "DES": 3,
+    "NUL": 2,
+    "SUP": 2,
+    "SYN": 1
+  },
+  "subclusters": [
+    {
+      "id": 0,
+      "size": 53,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 30,
+        "informational": 15,
+        "social": 7,
+        "psychological": 1
+      },
+      "core_verbs": [
+        "arrange",
+        "rearrange",
+        "order",
+        "neaten",
+        "tidy",
+        "tousle",
+        "turn the tables",
+        "marshal",
+        "tidy up",
+        "square away"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "rearrange",
+          "scale": "physical",
+          "reason": "Input: elements in configuration A; Output: same elements in configuration B; the internal structure reorganizes around a new ordering principle.",
+          "confidence": "high"
+        },
+        {
+          "verb": "disarrange",
+          "scale": "physical",
+          "reason": "Input: an existing arrangement; output: that arrangement disrupted and reorganized into disorder.",
+          "confidence": "high"
+        },
+        {
+          "verb": "disorder",
+          "scale": "physical",
+          "reason": "Input: things in ordered arrangement; output: things reorganized into disordered state; the organizational architecture is rebuilt into chaos.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "disarray",
+          "scale": "physical",
+          "reason": "Input: things in ordered arrangement; output: things reorganized into disarrayed state; the organizational architecture is rebuilt into disorganization.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "dishevel",
+          "scale": "physical",
+          "reason": "Input: ordered arrangement. Output: arrangement reorganized into disarray. Structure rebuilt around disorder.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "tidy up",
+          "scale": "physical",
+          "reason": "Input: things in disorganized arrangement; output: things reorganized into proper order; the spatial/organizational architecture is rebuilt.",
+          "confidence": "high"
+        },
+        {
+          "verb": "order",
+          "scale": "informational",
+          "reason": "Input: disordered elements. Output: same elements reorganized around principle of order (structure rebuilt).",
+          "confidence": "high"
+        },
+        {
+          "verb": "reorder",
+          "scale": "informational",
+          "reason": "Input: existing ordering structure; Output: rebuilt ordering around new sequence principle; the ordering architecture is reorganized.",
+          "confidence": "high"
+        },
+        {
+          "verb": "arrange",
+          "scale": "physical",
+          "reason": "Input: elements in one configuration. Output: same elements reorganized around aesthetic principle. Structure rebuilds itself.",
+          "confidence": "high"
+        },
+        {
+          "verb": "derange",
+          "scale": "psychological",
+          "reason": "Input: thing with normal structure; output: thing with structure rebuilt into confusion/disorder; the organizing architecture is radically restructured.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tidy",
+          "scale": "physical",
+          "reason": "Input: disordered arrangement. Output: ordered arrangement. The spatial structure of things is reorganized.",
+          "confidence": "high"
+        },
+        {
+          "verb": "commove",
+          "scale": "physical",
+          "reason": "Input: existing arrangement. Output: reorganized arrangement. The spatial structure rebuilds around new positions.",
+          "confidence": "high"
+        },
+        {
+          "verb": "square away",
+          "scale": "physical",
+          "reason": "Input: things in disorganized state; output: things reorganized into proper order; the arrangement architecture is rebuilt.",
+          "confidence": "high"
+        },
+        {
+          "verb": "neaten",
+          "scale": "physical",
+          "reason": "Input: disordered arrangement. Output: ordered arrangement. The structure is reorganized around principles of order.",
+          "confidence": "high"
+        },
+        {
+          "verb": "structure",
+          "scale": "informational",
+          "reason": "Input: unstructured elements. Output: elements reorganized into coherent architecture with defined relationships.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": 85,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 77,
+        "psychological": 6,
+        "informational": 2
+      },
+      "core_verbs": [
+        "evolve",
+        "incinerate",
+        "ionize",
+        "lignify",
+        "liquefy",
+        "mineralize",
+        "ossify",
+        "petrify",
+        "vulcanize",
+        "metamorphose"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "mutate",
+          "scale": "physical",
+          "reason": "Input: organism with one genetic structure. Output: organism with altered genetic structure. The internal architecture rebuilds.",
+          "confidence": "high"
+        },
+        {
+          "verb": "crystallise",
+          "scale": "physical",
+          "reason": "Input: amorphous/vague form. Output: definite crystalline structure. The internal organization rebuilds into clear structure.",
+          "confidence": "high"
+        },
+        {
+          "verb": "crystalise",
+          "scale": "physical",
+          "reason": "Input: amorphous/vague form. Output: definite crystalline structure. The internal organization rebuilds into clear structure.",
+          "confidence": "high"
+        },
+        {
+          "verb": "metamorphose",
+          "scale": "physical",
+          "reason": "Input: entity with one structure. Output: entity with fundamentally rebuilt structure. The whole architecture reorganizes.",
+          "confidence": "high"
+        },
+        {
+          "verb": "crystalize",
+          "scale": "physical",
+          "reason": "Input: amorphous/vague form. Output: definite crystalline structure. The internal organization rebuilds into clear structure.",
+          "confidence": "high"
+        },
+        {
+          "verb": "morph",
+          "scale": "physical",
+          "reason": "Input: object in one shape; Output: object reorganized into different shape; structure continuously rebuilds form.",
+          "confidence": "high"
+        },
+        {
+          "verb": "transfigure",
+          "scale": "physical",
+          "reason": "Input: entity with nature/appearance. Output: entity completely reorganized in nature/appearance. Structure rebuilds itself entirely.",
+          "confidence": "high"
+        },
+        {
+          "verb": "maturate",
+          "scale": "physical",
+          "reason": "Input: younger organism structure. Output: older organism structure. The biological architecture reorganizes toward mature configuration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "transmute",
+          "scale": "physical",
+          "reason": "Input: element with one nature. Output: element with altered fundamental nature. The essential structure rebuilds.",
+          "confidence": "high"
+        },
+        {
+          "verb": "transmogrify",
+          "scale": "physical",
+          "reason": "Input: entity with existing nature/structure. Output: same entity with fundamentally rebuilt nature. The core architecture reorganizes completely.",
+          "confidence": "high"
+        },
+        {
+          "verb": "evolve",
+          "scale": "physical",
+          "reason": "Input: existing structure/organism. Output: structure reorganized with new adaptive features. Architecture rebuilds itself over time.",
+          "confidence": "high"
+        },
+        {
+          "verb": "make grow",
+          "scale": "physical",
+          "reason": "Input: organism at stage A. Output: organism reorganized through natural developmental differentiation. Structure rebuilds according to growth program.",
+          "confidence": "high"
+        },
+        {
+          "verb": "vaporise",
+          "scale": "physical",
+          "reason": "Input: liquid or solid structure. Output: gas structure, complete reorganization of molecular arrangement.",
+          "confidence": "high"
+        },
+        {
+          "verb": "catalyse",
+          "scale": "physical",
+          "reason": "Input: unreacted molecular structure. Output: structure rebuilt through catalyzed reaction. The molecular organization transforms.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "liquefy",
+          "scale": "physical",
+          "reason": "Input: solid structure, output: liquid state, phase change rebuilds molecular organization.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 148,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 90,
+        "informational": 36,
+        "social": 16,
+        "psychological": 6
+      },
+      "core_verbs": [
+        "recast",
+        "reconstitute",
+        "reorganize",
+        "center",
+        "concentrate",
+        "improve",
+        "normalize",
+        "perfect",
+        "regularize",
+        "unroll"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "refashion",
+          "scale": "physical",
+          "reason": "Input: existing thing with old structure. Output: thing rebuilt with new organization. Structure reorganized around new principles.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reorganize",
+          "scale": "social",
+          "reason": "Input: organization with structure A; Output: organization with structure B; the structural relationships are rebuilt.",
+          "confidence": "high"
+        },
+        {
+          "verb": "raise up",
+          "scale": "physical",
+          "reason": "Input: existing arrangement. Output: reorganized arrangement. The spatial structure rebuilds around new positions.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reorganise",
+          "scale": "social",
+          "reason": "Input: existing organizational structure; Output: structure rebuilt around new organizing principles.",
+          "confidence": "high"
+        },
+        {
+          "verb": "restructure",
+          "scale": "social",
+          "reason": "Input: existing organization. Output: organization rebuilt with new architecture. The structure reorganizes itself around new center.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reconstruct",
+          "scale": "physical",
+          "reason": "Input: destroyed/old structure. Output: rebuilt structure around recovered/new plan. Architecture regenerates.",
+          "confidence": "high"
+        },
+        {
+          "verb": "straighten out",
+          "scale": "physical",
+          "reason": "Input: bent/crooked structure. Output: reorganized straight structure. The spatial architecture is rebuilt around a new linear axis.",
+          "confidence": "high"
+        },
+        {
+          "verb": "update",
+          "scale": "informational",
+          "reason": "Input: outdated structure. Output: restructured modern form. The thing is rebuilt around contemporary standards.",
+          "confidence": "high"
+        },
+        {
+          "verb": "recondition",
+          "scale": "physical",
+          "reason": "Input: deteriorated structure. Output: structure rebuilt to improved state. The internal organization is reconstructed.",
+          "confidence": "high"
+        },
+        {
+          "verb": "redesign",
+          "scale": "informational",
+          "reason": "Input: existing design. Output: design rebuilt with new structure. The design architecture is reorganized around new principles.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reinvent",
+          "scale": "informational",
+          "reason": "Input: existing thing with old structure. Output: thing rebuilt from ground up around new principles. Architecture reorganized.",
+          "confidence": "high"
+        },
+        {
+          "verb": "rebuild",
+          "scale": "physical",
+          "reason": "Input: destroyed/dismantled structure. Output: structure reconstructed. The architecture rebuilds itself around same or new organizing principle.",
+          "confidence": "high"
+        },
+        {
+          "verb": "make over",
+          "scale": "physical",
+          "reason": "Input: existing thing in old form. Output: same thing rebuilt in altered form. Structure reorganized while retaining core identity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "overhaul",
+          "scale": "physical",
+          "reason": "Input: existing structure. Output: structure rebuilt with new organization. Comprehensive reconstruction of the system architecture.",
+          "confidence": "high"
+        },
+        {
+          "verb": "repair",
+          "scale": "physical",
+          "reason": "Input: broken structure. Output: structure rebuilt to functional state. System reorganized to proper configuration.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "size": 109,
+      "dominant_scale": "social",
+      "scales": {
+        "social": 63,
+        "psychological": 19,
+        "informational": 17,
+        "physical": 10
+      },
+      "core_verbs": [
+        "decentralize",
+        "democratize",
+        "domesticate",
+        "mechanize",
+        "mobilize",
+        "modernize",
+        "motorize",
+        "secularize",
+        "sovietize",
+        "standardize"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "modernise",
+          "scale": "physical",
+          "reason": "Input: technologically older structure. Output: structure rebuilt around newer technology. The organization evolves to advanced form.",
+          "confidence": "high"
+        },
+        {
+          "verb": "conventionalise",
+          "scale": "social",
+          "reason": "Input: practice with original structure. Output: practice reorganized around conventional norms/patterns. Rebuilds the practice's architecture.",
+          "confidence": "high"
+        },
+        {
+          "verb": "revolutionize",
+          "scale": "social",
+          "reason": "Input: existing system structure. Output: system rebuilt around radically new organizing principles. The architecture fundamentally reorganizes.",
+          "confidence": "high"
+        },
+        {
+          "verb": "urbanize",
+          "scale": "social",
+          "reason": "Input: rural/non-urban structure. Output: urban structure. The spatial and social organization is fundamentally rebuilt.",
+          "confidence": "high"
+        },
+        {
+          "verb": "revolutionise",
+          "scale": "social",
+          "reason": "Input: existing system structure. Output: system rebuilt around radically new organizing principles. The architecture fundamentally reorganizes.",
+          "confidence": "high"
+        },
+        {
+          "verb": "urbanise",
+          "scale": "social",
+          "reason": "Input: area with rural/agricultural structure. Output: area rebuilt as urban/industrial infrastructure. Structure reorganizes around city/industry center.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "mechanise",
+          "scale": "physical",
+          "reason": "Input: thing with organic/manual structure. Output: thing rebuilt around mechanical principles. Architecture reorganized.",
+          "confidence": "high"
+        },
+        {
+          "verb": "internationalize",
+          "scale": "social",
+          "reason": "Input: national-scale structure. Output: structure reorganized to operate across international boundaries.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "modernize",
+          "scale": "physical",
+          "reason": "Input: outdated structure, output: technologically advanced architecture, rebuilds toward contemporary form.",
+          "confidence": "high"
+        },
+        {
+          "verb": "centralise",
+          "scale": "social",
+          "reason": "Input: distributed structure. Output: structure reorganized around single central point.",
+          "confidence": "high"
+        },
+        {
+          "verb": "internationalise",
+          "scale": "social",
+          "reason": "Input: national-scale structure. Output: structure reorganized to operate across international boundaries.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "conventionalize",
+          "scale": "social",
+          "reason": "Input: practice with original structure. Output: practice reorganized around conventional norms/patterns. Rebuilds the practice's architecture.",
+          "confidence": "high"
+        },
+        {
+          "verb": "industrialize",
+          "scale": "social",
+          "reason": "Input: economy/area with pre-industrial structure. Output: economy/area rebuilt around industrial production. Structure reorganizes around manufacturing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "centralize",
+          "scale": "social",
+          "reason": "Input: distributed structure. Output: structure reorganized around single central point.",
+          "confidence": "high"
+        },
+        {
+          "verb": "systemise",
+          "scale": "informational",
+          "reason": "Input: unsystematic elements. Output: elements rebuilt into coherent system. Structure reorganizes around systemic principles.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 18,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 9,
+        "psychological": 8,
+        "social": 1
+      },
+      "core_verbs": [
+        "putrefy",
+        "repent",
+        "relapse",
+        "recidivate",
+        "regress",
+        "retrogress",
+        "go to pot",
+        "go to the dogs",
+        "dilapidate",
+        "go bad"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "retrogress",
+          "scale": "physical",
+          "reason": "Input: advanced state. Output: earlier less developed state. The structure reorganizes backward to prior organization.",
+          "confidence": "high"
+        },
+        {
+          "verb": "get worse",
+          "scale": "physical",
+          "reason": "Input: current health structure. Output: structure reorganized to more degraded state. The physiological architecture deteriorates.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "regress",
+          "scale": "psychological",
+          "reason": "Input: developed state. Output: earlier developmental state. The structure reorganizes backward to prior configuration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "go bad",
+          "scale": "physical",
+          "reason": "Input: functioning system. Output: non-functioning system. The operational structure reorganizes into failure state.",
+          "confidence": "high"
+        },
+        {
+          "verb": "go to pot",
+          "scale": "physical",
+          "reason": "Input: functional structure. Output: ruined structure. The organization collapses and rebuilds into degraded form.",
+          "confidence": "high"
+        },
+        {
+          "verb": "deprave",
+          "scale": "psychological",
+          "reason": "Input: person with moral structure; Output: person with moral structure degraded/reorganized around corruption; the ethical architecture rebuilds.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "dilapidate",
+          "scale": "physical",
+          "reason": "Input: intact structure. Output: decayed structure. The organization breaks down and rebuilds as ruin.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fall from grace",
+          "scale": "psychological",
+          "reason": "Input: moral structure centered on good behavior. Output: structure reorganized around bad behavior as new center. Rebuilds behavioral architecture.",
+          "confidence": "high"
+        },
+        {
+          "verb": "relapse",
+          "scale": "physical",
+          "reason": "Input: improved health state. Output: prior diseased state returns. The structure reverts to earlier pathological organization.",
+          "confidence": "high"
+        },
+        {
+          "verb": "go to the dogs",
+          "scale": "social",
+          "reason": "Input: functional structure. Output: ruined structure. The organization degrades and reorganizes into failed state.",
+          "confidence": "high"
+        },
+        {
+          "verb": "recidivate",
+          "scale": "psychological",
+          "reason": "Input: reformed behavioral state. Output: prior criminal pattern returns. The behavioral structure reorganizes to earlier configuration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "putrefy",
+          "scale": "physical",
+          "reason": "Input: intact organic structure. Output: decomposed structure. The molecular architecture breaks down and rebuilds into decay state.",
+          "confidence": "high"
+        },
+        {
+          "verb": "debauch",
+          "scale": "psychological",
+          "reason": "Input: person with moral structure; Output: person with moral structure degraded/reorganized around corruption; the ethical architecture rebuilds.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "addle",
+          "scale": "physical",
+          "reason": "Input: fresh substance. Output: rotten substance. The internal structure reorganizes into decay.",
+          "confidence": "high"
+        },
+        {
+          "verb": "pervert",
+          "scale": "psychological",
+          "reason": "Input: moral structure; output: corrupted moral structure; the moral architecture is rebuilt around corruption.",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ],
+  "boundary_verbs_from_other_ops": [
+    {
+      "verb": "recreate",
+      "operator": "INS",
+      "similarity": 0.7025962343570873,
+      "scale": "informational",
+      "reason": "Input: destroyed or absent thing. Output: renewed version exists. New instantiation of previous form."
+    },
+    {
+      "verb": "recode",
+      "operator": "ALT",
+      "similarity": 0.7003533901161022,
+      "scale": "informational",
+      "reason": "Input: information in one code; output: same information in a different code, shifting the representational frame."
+    },
+    {
+      "verb": "reallocate",
+      "operator": "CON",
+      "similarity": 0.6797100880067191,
+      "scale": "social",
+      "reason": "Input: resources with old allocation links. Output: new allocation links built. Persistent structural reassignment."
+    },
+    {
+      "verb": "re-create",
+      "operator": "INS",
+      "similarity": 0.6691799436720585,
+      "scale": "physical",
+      "reason": "Input: world without thing; Output: world with thing newly created; brings new instance into existence."
+    },
+    {
+      "verb": "retool",
+      "operator": "INS",
+      "similarity": 0.6669880244350577,
+      "scale": "physical",
+      "reason": "Input: workshop with old tools; output: workshop with new tools present (new equipment instantiated)."
+    },
+    {
+      "verb": "remediate",
+      "operator": "INS",
+      "similarity": 0.6641950749347725,
+      "scale": "informational",
+      "reason": "Input: wrong state; output: right/straight state; a new corrected state appears."
+    },
+    {
+      "verb": "reconquer",
+      "operator": "INS",
+      "similarity": 0.6601556361302358,
+      "scale": "social",
+      "reason": "Input: territory not controlled. Output: territory controlled again. A new state of control appears (the 're-' is temporal context, not structural)."
+    },
+    {
+      "verb": "organise",
+      "operator": "CON",
+      "similarity": 0.6586934745764146,
+      "scale": "social",
+      "reason": "Input: separate workers. Output: workers with new persistent structural link as union members."
+    },
+    {
+      "verb": "renovate",
+      "operator": "INS",
+      "similarity": 0.6586109103826554,
+      "scale": "physical",
+      "reason": "Input: diminished vitality. Output: renewed vitality present. A new energetic state arises."
+    },
+    {
+      "verb": "recuperate",
+      "operator": "INS",
+      "similarity": 0.6579573147443287,
+      "scale": "physical",
+      "reason": "Input: depleted state. Output: depleted state plus regained energy/health. New vitality appears, though it fills a gap."
+    },
+    {
+      "verb": "reassign",
+      "operator": "CON",
+      "similarity": 0.6574668601591857,
+      "scale": "social",
+      "reason": "Input: person linked to old position. Output: person linked to new position. New structural connection built."
+    },
+    {
+      "verb": "redefine",
+      "operator": "DES",
+      "similarity": 0.6551032727550021,
+      "scale": "informational",
+      "reason": "Input: thing with old definition. Output: same thing with new definitional boundary. The category assignment changes."
+    },
+    {
+      "verb": "recurve",
+      "operator": "INS",
+      "similarity": 0.6533477262189402,
+      "scale": "physical",
+      "reason": "Input: straight or differently curved object; Output: object curved back or down; a recurved shape appears."
+    },
+    {
+      "verb": "refine",
+      "operator": "INS",
+      "similarity": 0.6510413926493792,
+      "scale": "informational",
+      "reason": "Input: basic structure. Output: structure with new intricacy/richness added. Additional complexity appears."
+    },
+    {
+      "verb": "recrudesce",
+      "operator": "INS",
+      "similarity": 0.6506286588645221,
+      "scale": "physical",
+      "reason": "Input: healed/closed state. Output: raw/open state appears. A new condition (rawness/openness) emerges."
+    },
+    {
+      "verb": "recite",
+      "operator": "INS",
+      "similarity": 0.6500391540023776,
+      "scale": "social",
+      "reason": "Input: world without recitation-event; output: world with recitation-event occurring; a new verbal rendering appears."
+    },
+    {
+      "verb": "recover",
+      "operator": "INS",
+      "similarity": 0.6497211857961189,
+      "scale": "psychological",
+      "reason": "Input: person in deficit state. Output: person with lost thing/capacity restored. New (restored) state appears."
+    },
+    {
+      "verb": "recoup",
+      "operator": "INS",
+      "similarity": 0.649483121858456,
+      "scale": "social",
+      "reason": "Input: deficit state; Output: recovered state; new resources or compensation appear to restore balance."
+    },
+    {
+      "verb": "reclassify",
+      "operator": "ALT",
+      "similarity": 0.6477045559431441,
+      "scale": "informational",
+      "reason": "Input: thing with old category assignment; Output: same thing with new category assignment; the thing hasn't changed, only its categorical frame."
+    },
+    {
+      "verb": "rear",
+      "operator": "INS",
+      "similarity": 0.6463618867232995,
+      "scale": "physical",
+      "reason": "Input: lowered/horizontal state. Output: raised/vertical state. New upright configuration appears."
+    }
+  ],
+  "peripheral_verbs": [
+    {
+      "verb": "agenize",
+      "similarity": 0.5154904212241367,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: fresh flour structure. Output: aged/bleached flour with altered molecular structure. Chemical process rebuilds substance."
+    },
+    {
+      "verb": "agenise",
+      "similarity": 0.5194170364173349,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: fresh flour structure. Output: aged/bleached flour with altered molecular structure. Chemical process rebuilds substance."
+    },
+    {
+      "verb": "shoehorn",
+      "similarity": 0.5560325871715865,
+      "alternative": "INS",
+      "scale": "physical",
+      "reason": "Input: poorly-suited thing and purpose. Output: thing forcibly reorganized to fit purpose. Structure rebuilt despite mismatch."
+    },
+    {
+      "verb": "lifehack",
+      "similarity": 0.5647217916883422,
+      "alternative": "ALT",
+      "scale": "informational",
+      "reason": "Input: existing activity structure. Output: that structure reorganized around efficiency. Rebuilds how tasks are architected."
+    },
+    {
+      "verb": "pollard",
+      "similarity": 0.5786026265012396,
+      "alternative": "SEG",
+      "scale": "physical",
+      "reason": "Input: normal tree structure. Output: restructured tree (topped, regrown differently). The tree's growth architecture is rebuilt."
+    },
+    {
+      "verb": "spatchcock",
+      "similarity": 0.5789044319500531,
+      "alternative": "SEG",
+      "scale": "physical",
+      "reason": "Input: whole bird. Output: bird restructured (backbone removed, flattened) for cooking. The physical architecture is reorganized."
+    },
+    {
+      "verb": "zero in",
+      "similarity": 0.5958831095224011,
+      "alternative": "DES",
+      "scale": "physical",
+      "reason": "Input: uncalibrated gun. Output: gun reorganized around accurate zero. Structure rebuilt through test firing."
+    },
+    {
+      "verb": "brainwash",
+      "similarity": 0.5965425301136333,
+      "alternative": "",
+      "scale": "psychological",
+      "reason": "Input: person with existing belief structure; output: person with completely reorganized belief structure; the cognitive architecture is rebuilt."
+    },
+    {
+      "verb": "debauch",
+      "similarity": 0.5981685605864402,
+      "alternative": "INS",
+      "scale": "psychological",
+      "reason": "Input: person with moral structure; Output: person with moral structure degraded/reorganized around corruption; the ethical architecture rebuilds."
+    },
+    {
+      "verb": "lower oneself",
+      "similarity": 0.5985050191950214,
+      "alternative": "",
+      "scale": "psychological",
+      "reason": "Input: self-concept structure with dignity. Output: structure reorganized around debased position. Rebuilds moral standing architecture."
+    }
+  ],
+  "all_verbs": [
+    {
+      "verb": "acclimate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism with one climate adaptation. Output: organism restructured for new climate. Internal architecture reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "acclimatise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism with one climate adaptation. Output: organism restructured for new climate. Internal architecture reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "acclimatize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism with one climate adaptation. Output: organism restructured for new climate. Internal architecture reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "acculturate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with original cultural identity. Output: person with restructured identity organized around new culture. The identity architecture rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "acuminate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with distributed form. Output: object restructured toward point. The shape architecture rebuilds toward apex.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "adapt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing structured for old purpose. Output: thing restructured for new purpose. The architecture rebuilds around new center.",
+      "alternative": null
+    },
+    {
+      "verb": "addle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fresh substance. Output: rotten substance. The internal structure reorganizes into decay.",
+      "alternative": null
+    },
+    {
+      "verb": "adolesce",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: child structure. Output: structure reorganized as adolescent. The developmental architecture rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "agenise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fresh flour structure. Output: aged/bleached flour with altered molecular structure. Chemical process rebuilds substance.",
+      "alternative": null
+    },
+    {
+      "verb": "agenize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fresh flour structure. Output: aged/bleached flour with altered molecular structure. Chemical process rebuilds substance.",
+      "alternative": null
+    },
+    {
+      "verb": "air-slake",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: original chemical structure. Output: altered structure (carbonate). The molecular organization rebuilds through air exposure.",
+      "alternative": null
+    },
+    {
+      "verb": "align",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: misaligned objects; Output: objects reorganized around common axis/standard; structure rebuilds around alignment principle.",
+      "alternative": null
+    },
+    {
+      "verb": "aline",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: scattered objects; Output: objects reorganized into linear/parallel configuration; structure rebuilds geometrically.",
+      "alternative": null
+    },
+    {
+      "verb": "alphabetise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unordered items; output: those items reorganized into alphabetical order.",
+      "alternative": null
+    },
+    {
+      "verb": "americanise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-American character structure. Output: structure reorganized according to American patterns.",
+      "alternative": null
+    },
+    {
+      "verb": "angulate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: structure with non-angular form. Output: same structure reorganized around angular geometry. The shape architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "animalise",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: human with empathic structure; output: human with brutal/unfeeling structure; the psychological architecture is rebuilt around brutality.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "animalize",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: human with empathic structure; output: human with brutal/unfeeling structure; the psychological architecture is rebuilt around brutality.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "anneal",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material with undesired properties. Output: material reorganized through heat/cool cycles. Structure rebuilt to desired consistency.",
+      "alternative": null
+    },
+    {
+      "verb": "arrange",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: elements in one configuration. Output: same elements reorganized around aesthetic principle. Structure rebuilds itself.",
+      "alternative": null
+    },
+    {
+      "verb": "ash",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organic matter. Output: same matter rebuilt as ash structure. Material reorganizes into fundamentally new form.",
+      "alternative": null
+    },
+    {
+      "verb": "attune",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unharmonized elements. Output: elements reorganized into harmony. Structure rebuilt around resonance.",
+      "alternative": null
+    },
+    {
+      "verb": "automate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: manually-controlled system. Output: system rebuilt for automatic operation. Architecture reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "automatise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing with volitional structure. Output: thing rebuilt as automaton. Structure reorganizes around automaticity.",
+      "alternative": null
+    },
+    {
+      "verb": "automatize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing with volitional structure. Output: thing rebuilt as automaton. Structure reorganizes around automaticity.",
+      "alternative": null
+    },
+    {
+      "verb": "avianise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: microorganism structure. Output: microorganism with fundamentally reorganized adaptive structure through repeated embryo culture. The organism rebuilds around new biological center.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "avianize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: microorganism structure. Output: microorganism with fundamentally reorganized adaptive structure through repeated embryo culture. The organism rebuilds around new biological center.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "bestialise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: human-character structure. Output: structure reorganized toward brutal, animal-like qualities.",
+      "alternative": null
+    },
+    {
+      "verb": "bestialize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: human-character structure. Output: structure reorganized toward brutal, animal-like qualities.",
+      "alternative": null
+    },
+    {
+      "verb": "blue",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: non-blue colored state. Output: blue colored state. Color transformation rebuilds visual properties.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "bolshevise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-Communist structure. Output: structure reorganized according to Communist principles.",
+      "alternative": null
+    },
+    {
+      "verb": "bounce back",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unhealthy body structure. Output: body rebuilt to healthy functional state. The physiological organization is restored.",
+      "alternative": null
+    },
+    {
+      "verb": "brainwash",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with existing belief structure; output: person with completely reorganized belief structure; the cognitive architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "bushel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: broken structure. Output: structure rebuilt with replaced parts. The whole is reorganized by replacing components.",
+      "alternative": null
+    },
+    {
+      "verb": "calcine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance with original molecular structure. Output: oxidized/reduced substance with reorganized chemical structure.",
+      "alternative": null
+    },
+    {
+      "verb": "carbonate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: non-carbonate compound; Output: carbonate compound; the molecular identity is fundamentally rebuilt into a new chemical class.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "cash out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: life structured around career complexity; output: life reorganized around simplicity as new center after questioning.",
+      "alternative": null
+    },
+    {
+      "verb": "catalyse",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: unreacted molecular structure. Output: structure rebuilt through catalyzed reaction. The molecular organization transforms.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "catalyze",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: reaction at baseline rate; Output: same reaction with transformed kinetics; the process architecture is fundamentally reorganized.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "catholicise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with worldview. Output: person with worldview rebuilt around Catholic framework. Belief structure reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "center",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: structure with distributed emphasis. Output: structure reorganized around new focal point. Architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "center on",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: organization with existing center; Output: organization rebuilt around new center \u2014 restructures the whole system.",
+      "alternative": null
+    },
+    {
+      "verb": "centralise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: distributed structure. Output: structure reorganized around single central point.",
+      "alternative": null
+    },
+    {
+      "verb": "centralize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: distributed structure. Output: structure reorganized around single central point.",
+      "alternative": null
+    },
+    {
+      "verb": "centre",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: structure with off-center element. Output: structure reorganized with element at center. Architecture rebuilds around new focal point.",
+      "alternative": null
+    },
+    {
+      "verb": "change form",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with one form. Output: object with different form. The structural geometry rebuilds itself.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "change integrity",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: physical structure. Output: restructured physical makeup. The internal organization rebuilds itself.",
+      "alternative": null
+    },
+    {
+      "verb": "change shape",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with one form. Output: object with different form. The structural geometry rebuilds itself.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "christianise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with worldview. Output: person with worldview rebuilt around Christian framework. Belief structure reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "chronologise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unordered temporal elements; output: those elements reorganized into a temporal sequence structure.",
+      "alternative": null
+    },
+    {
+      "verb": "chronologize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unordered temporal elements; output: those elements reorganized into a temporal sequence structure.",
+      "alternative": null
+    },
+    {
+      "verb": "circularize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: structure with non-circular form. Output: same structure reorganized into circular geometry. Architecture rebuilt around circular center.",
+      "alternative": null
+    },
+    {
+      "verb": "civilise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: barbaric social structure. Output: structure reorganized into civilized patterns and institutions.",
+      "alternative": null
+    },
+    {
+      "verb": "civilize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: social structure, Output: reorganized structure around civilized norms (rebuilding architecture)",
+      "alternative": "DES"
+    },
+    {
+      "verb": "cobble",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: damaged structure. Output: structure rebuilt to functional form. The organization is restored through repair.",
+      "alternative": null
+    },
+    {
+      "verb": "codify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: scattered rules/laws. Output: organized code structure. Architecture rebuilds around systematic code.",
+      "alternative": null
+    },
+    {
+      "verb": "cold work",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: metal at room temperature. Output: shaped metal. The metal structure reorganizes without heating.",
+      "alternative": null
+    },
+    {
+      "verb": "coldwork",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: metal at room temperature. Output: shaped metal. The metal structure reorganizes without heating.",
+      "alternative": null
+    },
+    {
+      "verb": "collectivise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: individually-controlled enterprises; Output: structure rebuilt around collective control principle.",
+      "alternative": null
+    },
+    {
+      "verb": "collectivize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: individually-controlled enterprises; Output: structure rebuilt around collective control principle.",
+      "alternative": null
+    },
+    {
+      "verb": "collimate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: divergent rays/objects; Output: reorganized into parallel configuration; structure rebuilds around parallelism.",
+      "alternative": null
+    },
+    {
+      "verb": "come along",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: state at development level A. Output: state reorganized at higher development level. The structure evolves positively.",
+      "alternative": null
+    },
+    {
+      "verb": "commercialise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-commercial thing; Output: thing reorganized around commercial logic; structure rebuilds for market.",
+      "alternative": null
+    },
+    {
+      "verb": "commove",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing arrangement. Output: reorganized arrangement. The spatial structure rebuilds around new positions.",
+      "alternative": null
+    },
+    {
+      "verb": "complexify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: simple structure. Output: reorganized into more intricate architecture with increased internal relationships.",
+      "alternative": null
+    },
+    {
+      "verb": "concentrate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: distributed structure. Output: structure reorganized around central point. System architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "concentrate on",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: distributed attention; Output: attention reorganized with new intensive focus \u2014 rebuilds cognitive structure around target.",
+      "alternative": null
+    },
+    {
+      "verb": "configure",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unconfigured system. Output: system organized for specific purpose. The structure reorganizes around a new functional center.",
+      "alternative": null
+    },
+    {
+      "verb": "congeal",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: flowing substance. Output: substance with reorganized molecular structure (solid). Architecture changes.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "conquer",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing power structure. Output: structure reorganized with new dominant center; power relations rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "conventionalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: practice with original structure. Output: practice reorganized around conventional norms/patterns. Rebuilds the practice's architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "conventionalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: practice with original structure. Output: practice reorganized around conventional norms/patterns. Rebuilds the practice's architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "creolize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: pidgin language structure; output: creole language structure; the linguistic architecture rebuilds itself into full native language.",
+      "alternative": null
+    },
+    {
+      "verb": "crumple",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: structured form. Output: collapsed form with new disorganized structure. The architecture rebuilds into collapsed state.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "crystalise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: amorphous/vague form. Output: definite crystalline structure. The internal organization rebuilds into clear structure.",
+      "alternative": null
+    },
+    {
+      "verb": "crystalize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: amorphous/vague form. Output: definite crystalline structure. The internal organization rebuilds into clear structure.",
+      "alternative": null
+    },
+    {
+      "verb": "crystallise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: amorphous/vague form. Output: definite crystalline structure. The internal organization rebuilds into clear structure.",
+      "alternative": null
+    },
+    {
+      "verb": "curl up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body in extended configuration; Output: body reorganized into curled shape; the bodily structure rebuilds around a new geometric center.",
+      "alternative": null
+    },
+    {
+      "verb": "customise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: generic item. Output: item rebuilt to specific requirements. Structure reorganizes around user specs.",
+      "alternative": null
+    },
+    {
+      "verb": "customize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: generic item. Output: item rebuilt to specific requirements. Structure reorganizes around user specs.",
+      "alternative": null
+    },
+    {
+      "verb": "debauch",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person with moral structure; Output: person with moral structure degraded/reorganized around corruption; the ethical architecture rebuilds.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "decentralise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: centralized structure. Output: structure reorganized away from single center toward distribution.",
+      "alternative": null
+    },
+    {
+      "verb": "decentralize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: centralized structure; Output: restructured around multiple centers; the architecture rebuilds from single-center to multi-center organization.",
+      "alternative": null
+    },
+    {
+      "verb": "decimalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: system organized in non-decimal base. Output: system reorganized around base-10 structure. Rebuilds the mathematical architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "decimalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: system organized in non-decimal base. Output: system reorganized around base-10 structure. Rebuilds the mathematical architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "deconcentrate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: centralized structure. Output: structure reorganized away from single center toward distribution.",
+      "alternative": null
+    },
+    {
+      "verb": "dehumanise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: human-centered process. Output: process rebuilt as mechanical routine. Structure reorganizes around automation.",
+      "alternative": null
+    },
+    {
+      "verb": "dehumanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: human-centered process. Output: process rebuilt as mechanical routine. Structure reorganizes around automation.",
+      "alternative": null
+    },
+    {
+      "verb": "democratise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: nation with existing political structure; Output: nation with restructured governance around democratic principles; the architecture rebuilds itself",
+      "alternative": null
+    },
+    {
+      "verb": "democratize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: less democratic structure; Output: restructured around democratic principles; governance architecture fundamentally rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "deprave",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person with moral structure; Output: person with moral structure degraded/reorganized around corruption; the ethical architecture rebuilds.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "derange",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing with normal structure; output: thing with structure rebuilt into confusion/disorder; the organizing architecture is radically restructured.",
+      "alternative": null
+    },
+    {
+      "verb": "destalinise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: Stalinist structure; Output: structure reorganized to counteract Stalinist policies; rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "destalinize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: Stalinist structure; Output: structure rebuilt away from Stalinist organization; reverses prior restructuring.",
+      "alternative": null
+    },
+    {
+      "verb": "diagonalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: general matrix structure. Output: diagonal matrix structure. Mathematical transformation rebuilds organization.",
+      "alternative": null
+    },
+    {
+      "verb": "diagonalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: general matrix structure. Output: diagonal matrix structure. Mathematical transformation rebuilds organization.",
+      "alternative": null
+    },
+    {
+      "verb": "dilapidate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact structure. Output: decayed structure. The organization breaks down and rebuilds as ruin.",
+      "alternative": null
+    },
+    {
+      "verb": "diphthongise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: simple vowel structure; Output: restructured as diphthong; phonological architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "diphthongize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: simple vowel structure; Output: restructured as diphthong; phonological architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "disarrange",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: an existing arrangement; output: that arrangement disrupted and reorganized into disorder.",
+      "alternative": null
+    },
+    {
+      "verb": "disarray",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: things in ordered arrangement; output: things reorganized into disarrayed state; the organizational architecture is rebuilt into disorganization.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "dish",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: flat or convex form. Output: form restructured to concave shape. The geometry is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "dishevel",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: ordered arrangement. Output: arrangement reorganized into disarray. Structure rebuilt around disorder.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "disorder",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: things in ordered arrangement; output: things reorganized into disordered state; the organizational architecture is rebuilt into chaos.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "domesticate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: wild animal with instinctual structure; Output: restructured around human-compatible behaviors; behavioral architecture fundamentally rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "domesticise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: wild creature. Output: creature reorganized into docility. Structure rebuilt around tractability.",
+      "alternative": null
+    },
+    {
+      "verb": "domesticize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: wild animal. Output: animal reorganized around docile behavior. Structure rebuilt from wild to tame.",
+      "alternative": null
+    },
+    {
+      "verb": "dry-rot",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: sound wood. Output: rotted wood. The structural integrity reorganizes into decay.",
+      "alternative": null
+    },
+    {
+      "verb": "duplex",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: single-unit structure. Output: structure reorganized into duplex (two-unit) configuration. Architecture rebuilt around dual arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "embrangle",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: clear structure. Output: reorganized into confused, entangled architecture.",
+      "alternative": "SUP"
+    },
+    {
+      "verb": "europeanise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-European character structure. Output: structure reorganized according to European patterns.",
+      "alternative": null
+    },
+    {
+      "verb": "evert",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: structure with inside/outside orientation; Output: same structure with inverted topology; the architecture rebuilds around a flipped center.",
+      "alternative": null
+    },
+    {
+      "verb": "evolve",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing structure/organism. Output: structure reorganized with new adaptive features. Architecture rebuilds itself over time.",
+      "alternative": null
+    },
+    {
+      "verb": "face-harden",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: steel with uniform structure. Output: steel reorganized with hardened carbon-rich surface. The material architecture rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "face-lift",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: face with existing structure; output: face with reorganized tissue/appearance; the facial architecture is rebuilt around new aesthetic center.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "fall from grace",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: moral structure centered on good behavior. Output: structure reorganized around bad behavior as new center. Rebuilds behavioral architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "fecundate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: infertile/dormant system; Output: system reorganized for productivity; capacity structurally rebuilt.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "ferment",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: simple molecular structure; Output: reorganized molecular structure with different properties; the substance rebuilds itself through metabolic transformation.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "feudalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: country with one social structure. Output: country reorganized under feudal architecture. System rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "fictionalise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: factual account structure; output: fictional narrative structure; the content's architecture rebuilds from fact-based to fiction-based.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "fictionalize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: factual account structure; output: fictional narrative structure; the content's architecture rebuilds from fact-based to fiction-based.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "fine-tune",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: roughly adjusted system. Output: system reorganized with precision adjustments. Structure rebuilt at finer grain.",
+      "alternative": null
+    },
+    {
+      "verb": "firm up",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: loose arrangement. Output: tightly organized structure. Rebuilds arrangement around stability.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "focus on",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: attention structure with diffuse center; Output: attention reorganized around new focal point \u2014 rebuilds attentional architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "fold",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: flat structure. Output: folded structure with new geometric organization. The architecture reorganizes around fold lines.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "fold [protein]",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unfolded protein. Output: protein structure reorganizes into functional shape. Architecture rebuilds itself.",
+      "alternative": null
+    },
+    {
+      "verb": "fold up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: extended spatial structure. Output: structure reorganized into compact folded form. Rebuilds spatial architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "fossilise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organic remains. Output: mineralized structure reorganized as fossil. The substance rebuilds itself into stone.",
+      "alternative": null
+    },
+    {
+      "verb": "frenchify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-French character structure. Output: structure reorganized according to French patterns.",
+      "alternative": null
+    },
+    {
+      "verb": "furbish up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: broken structure. Output: structure rebuilt with replaced parts. The whole is reorganized by replacing components.",
+      "alternative": null
+    },
+    {
+      "verb": "furl",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: flat extended surface. Output: cylindrical rolled structure. The material's spatial organization rebuilds into new geometry.",
+      "alternative": null
+    },
+    {
+      "verb": "gangrene",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: living tissue structure. Output: necrotic tissue structure. The cellular organization fundamentally transforms to death state.",
+      "alternative": null
+    },
+    {
+      "verb": "gel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid state. Output: gel state. Restructures molecular organization from fluid to semi-solid.",
+      "alternative": null
+    },
+    {
+      "verb": "gentrify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: neighborhood with working-class structure. Output: neighborhood reorganized around middle-class values. The social architecture rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "gerrymander",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing district structure. Output: structure reorganized around partisan advantage. Rebuilds the spatial-political architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "get over",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unhealthy body structure. Output: body rebuilt to healthy functional state. The physiological organization is restored.",
+      "alternative": null
+    },
+    {
+      "verb": "get well",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: unhealthy body structure. Output: body rebuilt to healthy functional state. The physiological organization is restored.",
+      "alternative": null
+    },
+    {
+      "verb": "get worse",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: current health structure. Output: structure reorganized to more degraded state. The physiological architecture deteriorates.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "globalise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: local scope. Output: scope restructured around global scale. The organizational architecture changes from local to worldwide.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "globalize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: local scope. Output: scope restructured around global scale. The organizational architecture changes from local to worldwide.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "go bad",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: functioning system. Output: non-functioning system. The operational structure reorganizes into failure state.",
+      "alternative": null
+    },
+    {
+      "verb": "go to pot",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: functional structure. Output: ruined structure. The organization collapses and rebuilds into degraded form.",
+      "alternative": null
+    },
+    {
+      "verb": "go to the dogs",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: functional structure. Output: ruined structure. The organization degrades and reorganizes into failed state.",
+      "alternative": null
+    },
+    {
+      "verb": "gradate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: things in unordered or differently ordered arrangement. Output: things reorganized according to grade hierarchy. Structure rebuilt around grading principle.",
+      "alternative": null
+    },
+    {
+      "verb": "grow up",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with child-centered identity structure; Output: person reorganized around adult-centered identity; the self-structure rebuilds",
+      "alternative": null
+    },
+    {
+      "verb": "hot-work",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: heated metal. Output: metal shaped while hot. The metal structure reorganizes under heat and pressure.",
+      "alternative": null
+    },
+    {
+      "verb": "improve",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing state, output: reorganized state with better functional structure, rebuilds toward higher quality.",
+      "alternative": null
+    },
+    {
+      "verb": "incinerate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material object, output: ashes (complete structural transformation), rebuilds matter into fundamentally different form.",
+      "alternative": null
+    },
+    {
+      "verb": "indurate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: soft material structure. Output: hard material structure reorganized. The thing rebuilds around hardness.",
+      "alternative": null
+    },
+    {
+      "verb": "industrialise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: economy/area with pre-industrial structure. Output: economy/area rebuilt around industrial production. Structure reorganizes around manufacturing.",
+      "alternative": null
+    },
+    {
+      "verb": "industrialize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: economy/area with pre-industrial structure. Output: economy/area rebuilt around industrial production. Structure reorganizes around manufacturing.",
+      "alternative": null
+    },
+    {
+      "verb": "inspissate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thin consistency structure. Output: thick consistency structure reorganized. Material architecture changes.",
+      "alternative": null
+    },
+    {
+      "verb": "internationalise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: national-scale structure. Output: structure reorganized to operate across international boundaries.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "internationalize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: national-scale structure. Output: structure reorganized to operate across international boundaries.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "intussuscept",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: outward-facing structure. Output: inward-folded structure. The architecture rebuilds itself with inverted topology.",
+      "alternative": null
+    },
+    {
+      "verb": "invaginate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: outward-facing structure. Output: inward-folded structure. The architecture rebuilds itself with reversed topology.",
+      "alternative": null
+    },
+    {
+      "verb": "ionize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: neutral atoms, output: charged ions (structural electronic reorganization), rebuilds atomic structure.",
+      "alternative": null
+    },
+    {
+      "verb": "iron out",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: problematic structure. Output: reorganized structure with problems resolved. The arrangement is rebuilt.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "islamise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with worldview. Output: person with worldview rebuilt around Islamic framework. Belief structure reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "islamize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with worldview. Output: person with worldview rebuilt around Islamic framework. Belief structure reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "isomerise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: molecule with one structural arrangement. Output: same atoms reorganized into different isomeric configuration. Internal architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "isomerize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: molecule with one structural arrangement. Output: same atoms reorganized into different isomeric configuration. Internal architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "jell",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: liquid structure. Output: gel structure reorganized around solid-like properties. Structural transformation occurs.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "jumble",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: ordered structure. Output: structure reorganized around randomness. Rebuilds arrangement architecture, not just view.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "lateralize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: structure in centered position; Output: structure reorganized to one side; the spatial architecture rebuilds around a lateral axis.",
+      "alternative": null
+    },
+    {
+      "verb": "latinise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with worldview. Output: person with worldview rebuilt around Catholic framework. Belief structure reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "liberalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing policy structure. Output: structure reorganized around more liberal principles. Rebuilds the organizational architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "liberalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing policy structure. Output: structure reorganized around more liberal principles. Rebuilds the organizational architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "lifehack",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: existing activity structure. Output: that structure reorganized around efficiency. Rebuilds how tasks are architected.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "lignify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: non-woody tissue, output: wood structure, completely rebuilds cellular architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "line up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dispersed entities; Output: entities reorganized into linear structure; architecture rebuilds as queue.",
+      "alternative": null
+    },
+    {
+      "verb": "linearise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: non-linear structure; Output: structure reorganized into linear form; the internal architecture rebuilds into sequential order.",
+      "alternative": null
+    },
+    {
+      "verb": "linearize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: non-linear structure; Output: structure reorganized into linear form; the internal architecture rebuilds into sequential order.",
+      "alternative": null
+    },
+    {
+      "verb": "liquefy",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid structure, output: liquid state, phase change rebuilds molecular organization.",
+      "alternative": null
+    },
+    {
+      "verb": "look up",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: declining state/situation; output: situation restructured toward improvement; reorganizes trajectory (improvement sense).",
+      "alternative": "INS"
+    },
+    {
+      "verb": "lower oneself",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: self-concept structure with dignity. Output: structure reorganized around debased position. Rebuilds moral standing architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "luxate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object in proper position; Output: object displaced from structural position; relationship to position framework changes.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "make grow",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism at stage A. Output: organism reorganized through natural developmental differentiation. Structure rebuilds according to growth program.",
+      "alternative": null
+    },
+    {
+      "verb": "make over",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing thing in old form. Output: same thing rebuilt in altered form. Structure reorganized while retaining core identity.",
+      "alternative": null
+    },
+    {
+      "verb": "market",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: product/idea; Output: reorganized for commercial exchange; structure rebuilds around market logic.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "marshal",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: things in arbitrary arrangement; output: things reorganized into proper rank structure; the ordering architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "maturate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: younger organism structure. Output: older organism structure. The biological architecture reorganizes toward mature configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "mechanise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with organic/manual structure. Output: thing rebuilt around mechanical principles. Architecture reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "mechanize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: manual process, output: machine-based structure, rebuilds operational architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "mellow out",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: tense/rigid personality structure. Output: personality reorganized around relaxation/ease. The dispositional architecture rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "mend",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: damaged structure. Output: structure rebuilt to functional form. The organization of parts is restored.",
+      "alternative": null
+    },
+    {
+      "verb": "mercerise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: fabric with normal structure; Output: fabric with reorganized fiber structure (stronger, lustrous); the internal architecture is rebuilt.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "mercerize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: fabric with normal structure; Output: fabric with reorganized fiber structure (stronger, lustrous); the internal architecture is rebuilt.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "metamorphose",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity with one structure. Output: entity with fundamentally rebuilt structure. The whole architecture reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "mineralize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: metal element, output: ore compound structure, chemically rebuilds into mineral form.",
+      "alternative": null
+    },
+    {
+      "verb": "misalign",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: aligned or neutral objects; Output: objects reorganized into improper alignment; structure rebuilds incorrectly.",
+      "alternative": null
+    },
+    {
+      "verb": "mobilize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: peacetime organization, output: war-ready structure reorganized, rebuilds institutional architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "modernise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: technologically older structure. Output: structure rebuilt around newer technology. The organization evolves to advanced form.",
+      "alternative": null
+    },
+    {
+      "verb": "modernize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: outdated structure, output: technologically advanced architecture, rebuilds toward contemporary form.",
+      "alternative": null
+    },
+    {
+      "verb": "mongrelise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism with pure lineage structure. Output: organism restructured as hybrid/mongrel. Architecture of genetic identity rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "mongrelize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism with pure lineage structure. Output: organism restructured as hybrid/mongrel. Architecture of genetic identity rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "morph",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object in one shape; Output: object reorganized into different shape; structure continuously rebuilds form.",
+      "alternative": null
+    },
+    {
+      "verb": "motorise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: non-motorized vehicles. Output: units rebuilt with armored motor vehicles. Architecture reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "motorize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: non-motorized system, output: motor-equipped structure, rebuilds with engine integration.",
+      "alternative": null
+    },
+    {
+      "verb": "muss",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: ordered arrangement of hair/fabric. Output: arrangement reorganized into disordered state. Structure rebuilt around disorder.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "mutate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism with one genetic structure. Output: organism with altered genetic structure. The internal architecture rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "nationalise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: local/regional character structure. Output: structure reorganized to national scale and scope.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "neaten",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: disordered arrangement. Output: ordered arrangement. The structure is reorganized around principles of order.",
+      "alternative": null
+    },
+    {
+      "verb": "necrose",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: living tissue structure. Output: dead tissue structure. The cellular organization fundamentally transforms to death state.",
+      "alternative": null
+    },
+    {
+      "verb": "normalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: abnormal state; Output: state reorganized to normal configuration; structure rebuilds toward norm.",
+      "alternative": null
+    },
+    {
+      "verb": "normalize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: abnormal state/structure. Output: reorganized to match normal pattern. The structure rebuilds itself around normative center.",
+      "alternative": null
+    },
+    {
+      "verb": "novelise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: content in original structure; output: content rebuilt in novel form/style; the narrative architecture is reorganized.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "novelize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: content in original structure; output: content rebuilt in novel form/style; the narrative architecture is reorganized.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "occidentalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: culture with non-Western structure. Output: culture reorganized around Western values/practices. Rebuilds the cultural architecture, not just surface appearance.",
+      "alternative": null
+    },
+    {
+      "verb": "occidentalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: culture with non-Western structure. Output: culture reorganized around Western values/practices. Rebuilds the cultural architecture, not just surface appearance.",
+      "alternative": null
+    },
+    {
+      "verb": "opacify",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: transparent structure allowing light passage. Output: same structure reorganized to block light. Physical architecture of light-transmission rebuilt.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "operate on",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: body with pathology; output: body with restructured anatomy; internal architecture rebuilt.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "opsonize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: cells with normal phagocyte resistance. Output: cells reorganized/modified to be susceptible to phagocytes. Structural vulnerability rebuilt.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "optimise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing structure/process. Output: structure reorganized around efficiency as new center. Architecture rebuilt for optimality.",
+      "alternative": null
+    },
+    {
+      "verb": "optimize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing structure/process. Output: structure reorganized around efficiency as new center. Architecture rebuilt for optimality.",
+      "alternative": null
+    },
+    {
+      "verb": "order",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: disordered elements. Output: same elements reorganized around principle of order (structure rebuilt).",
+      "alternative": null
+    },
+    {
+      "verb": "orientalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: culture with non-Oriental structure. Output: culture reorganized around Oriental values/practices. Rebuilds the cultural architecture, not just surface appearance.",
+      "alternative": null
+    },
+    {
+      "verb": "orientalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: culture with non-Oriental structure. Output: culture reorganized around Oriental values/practices. Rebuilds the cultural architecture, not just surface appearance.",
+      "alternative": null
+    },
+    {
+      "verb": "ossify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: soft tissue structure. Output: bony structure. The material architecture fundamentally rebuilds itself.",
+      "alternative": null
+    },
+    {
+      "verb": "overhaul",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing structure. Output: structure rebuilt with new organization. Comprehensive reconstruction of the system architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "overspecialise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: broad capability structure. Output: narrow focused structure losing breadth. The competency architecture rebuilds around single axis.",
+      "alternative": null
+    },
+    {
+      "verb": "overspecialize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: broad capability structure. Output: narrow focused structure losing breadth. The competency architecture rebuilds around single axis.",
+      "alternative": null
+    },
+    {
+      "verb": "overthrow",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: power structure with leader A at center; output: power structure rebuilt with leader B at center; authority architecture reconstructed.",
+      "alternative": null
+    },
+    {
+      "verb": "ozonise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: O2 molecular structure. Output: O3 molecular structure with reorganized bonding. Atoms rebuilt into different configuration.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "ozonize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: O2 molecular structure. Output: O3 molecular structure with reorganized bonding. Atoms rebuilt into different configuration.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "perfect",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: imperfect structure. Output: reorganized toward complete/ideal form. The structure rebuilds toward completeness.",
+      "alternative": null
+    },
+    {
+      "verb": "permute",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: ordered sequence. Output: same elements reorganized in new order. Structure rebuilds itself around new arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "personalize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: generic item. Output: item rebuilt around personal identity. Structure reorganizes around individual center.",
+      "alternative": null
+    },
+    {
+      "verb": "pervert",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: moral structure; output: corrupted moral structure; the moral architecture is rebuilt around corruption.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "petrify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organic material structure. Output: stone structure. The material architecture fundamentally rebuilds into mineral form.",
+      "alternative": null
+    },
+    {
+      "verb": "polarise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: random vibration structure; Output: vibration reorganized into definite pattern; the internal organization rebuilds around alignment.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "polarize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: random vibration pattern. Output: organized definite pattern. The wave structure reorganizes around an axis.",
+      "alternative": "DES"
+    },
+    {
+      "verb": "pollard",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: normal tree structure. Output: restructured tree (topped, regrown differently). The tree's growth architecture is rebuilt.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "pupate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: larval body structure. Output: pupal body structure. The organism fundamentally reorganizes its architecture for metamorphosis.",
+      "alternative": null
+    },
+    {
+      "verb": "put right",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: incorrect state. Output: corrected state. The structure is reorganized to proper form.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "putrefy",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: intact organic structure. Output: decomposed structure. The molecular architecture breaks down and rebuilds into decay state.",
+      "alternative": null
+    },
+    {
+      "verb": "radicalize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with moderate outlook; output: person with restructured radical worldview; fundamental reorganization of belief structure.",
+      "alternative": null
+    },
+    {
+      "verb": "raise up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing arrangement. Output: reorganized arrangement. The spatial structure rebuilds around new positions.",
+      "alternative": null
+    },
+    {
+      "verb": "randomise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: an existing order; output: that order rebuilt into a random arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "randomize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: an existing order; output: that order rebuilt into a random arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "readapt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing structured for first adaptation. Output: thing restructured for second adaptation. Architecture rebuilds again.",
+      "alternative": null
+    },
+    {
+      "verb": "realign",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing alignment; Output: structure reorganized around new alignment principle; rebuilds spatial/conceptual arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "realine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing alignment; Output: structure reorganized around new alignment principle; rebuilds spatial arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "rearrange",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: elements in configuration A; Output: same elements in configuration B; the internal structure reorganizes around a new ordering principle.",
+      "alternative": null
+    },
+    {
+      "verb": "reassemble",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: disassembled parts. Output: reassembled structure. The structure rebuilds itself after having been taken apart.",
+      "alternative": null
+    },
+    {
+      "verb": "reattribute",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: property linked to source A. Output: property reorganized/relinked to source B. Attribution structure rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "reboot",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: running or corrupted OS state. Output: fresh initialized OS state. The system architecture rebuilds from initial conditions.",
+      "alternative": null
+    },
+    {
+      "verb": "rebuild",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: destroyed/dismantled structure. Output: structure reconstructed. The architecture rebuilds itself around same or new organizing principle.",
+      "alternative": null
+    },
+    {
+      "verb": "recast",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing model or form. Output: same content reorganized around new structure. Architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "recidivate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: reformed behavioral state. Output: prior criminal pattern returns. The behavioral structure reorganizes to earlier configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "recombine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing genetic structure; output: reorganized genetic structure; the architecture rebuilds itself around new combination.",
+      "alternative": null
+    },
+    {
+      "verb": "recondition",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: deteriorated structure. Output: structure rebuilt to improved state. The internal organization is reconstructed.",
+      "alternative": null
+    },
+    {
+      "verb": "reconstitute",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing structure; Output: structure rebuilt/reformed; the architecture is reconstructed, not just reframed.",
+      "alternative": null
+    },
+    {
+      "verb": "reconstruct",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: destroyed/old structure. Output: rebuilt structure around recovered/new plan. Architecture regenerates.",
+      "alternative": null
+    },
+    {
+      "verb": "rectify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: incorrect state. Output: state restructured around correct values. The architecture rebuilds toward correctness.",
+      "alternative": null
+    },
+    {
+      "verb": "recycle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: used material in linear flow. Output: used material reorganized into circular flow. Structure rebuilt around reuse principle.",
+      "alternative": null
+    },
+    {
+      "verb": "redecorate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: decorated space. Output: same space with reorganized decoration scheme. Structure rebuilds around new aesthetic.",
+      "alternative": null
+    },
+    {
+      "verb": "redesign",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing design. Output: design rebuilt with new structure. The design architecture is reorganized around new principles.",
+      "alternative": null
+    },
+    {
+      "verb": "redevelop",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: land with old use plan. Output: land reorganized around new use structure. The development architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "redispose",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: things in arrangement A; Output: same things rearranged as B; structure reorganized.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "redo",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing house part; output: rebuilt house part; the structure is reorganized/rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "redraw",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: existing drawing. Output: drawing reorganized with new structure. Lines/boundaries rebuilt.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "refashion",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing thing with old structure. Output: thing rebuilt with new organization. Structure reorganized around new principles.",
+      "alternative": null
+    },
+    {
+      "verb": "reforge",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing form. Output: new form cast/modeled anew. The structure rebuilds itself into different shape.",
+      "alternative": null
+    },
+    {
+      "verb": "reform",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing system structure. Output: system reorganized around new principles. The architecture rebuilds itself fundamentally.",
+      "alternative": null
+    },
+    {
+      "verb": "reformulate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing theory structure; output: restructured theory around new principles; the architecture rebuilds itself.",
+      "alternative": null
+    },
+    {
+      "verb": "regenerate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: weakened organism structure. Output: strengthened organism structure. The system reorganizes itself toward healthy configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "regress",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: developed state. Output: earlier developmental state. The structure reorganizes backward to prior configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "regroup",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing group structure; Output: rebuilt group structure around new organizing principle; the grouping architecture itself is reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "regularise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with irregular structure; output: thing reorganized into regular pattern; the structural architecture is rebuilt around regularity.",
+      "alternative": null
+    },
+    {
+      "verb": "regularize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: irregular structure. Output: regular structure. The pattern reorganizes around regularity principle.",
+      "alternative": null
+    },
+    {
+      "verb": "rehabilitate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with degraded political standing. Output: person with status/position rebuilt. Structural reorganization of social standing.",
+      "alternative": null
+    },
+    {
+      "verb": "rehear",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: existing trial structure. Output: trial structure rebuilt from beginning with new architecture.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "reinstate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person in diminished state; Output: person with previous structural position rebuilt; reorganizes status architecture",
+      "alternative": "INS"
+    },
+    {
+      "verb": "reinvent",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing thing with old structure. Output: thing rebuilt from ground up around new principles. Architecture reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "rejig",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: factory with existing organization; output: factory restructured around new operational center (architecture rebuilt).",
+      "alternative": "INS"
+    },
+    {
+      "verb": "relapse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: improved health state. Output: prior diseased state returns. The structure reverts to earlier pathological organization.",
+      "alternative": null
+    },
+    {
+      "verb": "remake",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing thing with old structure. Output: thing rebuilt with new organization. Structure reorganized around new principles.",
+      "alternative": null
+    },
+    {
+      "verb": "remilitarise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: demilitarized structure; Output: structure rebuilt around military organization; the institutional architecture is reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "remilitarize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: demilitarized structure; Output: structure rebuilt around military organization; the institutional architecture is reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "remodel",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing model/structure; output: reorganized model/structure; the architecture is rebuilt anew.",
+      "alternative": null
+    },
+    {
+      "verb": "renegociate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing agreement structure. Output: that structure rebuilt around new terms, reorganizing the relationship.",
+      "alternative": null
+    },
+    {
+      "verb": "renegotiate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing agreement structure. Output: that structure rebuilt around new terms, reorganizing the relationship.",
+      "alternative": null
+    },
+    {
+      "verb": "renew",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing in old form. Output: same thing rebuilt in new form. The structure reorganizes itself around a regenerated center.",
+      "alternative": null
+    },
+    {
+      "verb": "renormalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing normalization; Output: structure reorganized around new norm; rebuilds normative framework.",
+      "alternative": null
+    },
+    {
+      "verb": "renormalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing normalization; Output: structure reorganized around new norm; rebuilds normative framework.",
+      "alternative": null
+    },
+    {
+      "verb": "reorder",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: existing ordering structure; Output: rebuilt ordering around new sequence principle; the ordering architecture is reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "reorganise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing organizational structure; Output: structure rebuilt around new organizing principles.",
+      "alternative": null
+    },
+    {
+      "verb": "reorganize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: organization with structure A; Output: organization with structure B; the structural relationships are rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "reorient",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing orientation; Output: structure reorganized around new directional center; rebuilds spatial/conceptual facing.",
+      "alternative": null
+    },
+    {
+      "verb": "repair",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: broken structure. Output: structure rebuilt to functional state. System reorganized to proper configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "repent",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: existing self-orientation toward sin. Output: self reorganized around rejection of sin; moral structure rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "repoint",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: deteriorated brick joints. Output: joints rebuilt with new material. The structural connections between bricks are reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "reprocess",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: processed material in final state. Output: material with internal structure rebuilt through renewed processing cycle.",
+      "alternative": null
+    },
+    {
+      "verb": "rescale",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing calibrated to old scale. Output: thing reorganized to new scale. Structural recalibration.",
+      "alternative": null
+    },
+    {
+      "verb": "reshape",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with original form. Output: same object with reorganized structure. The architecture rebuilds itself.",
+      "alternative": null
+    },
+    {
+      "verb": "reshuffle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: an existing order; output: that order rebuilt into a new randomized arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "resize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with one size. Output: thing reorganized at different scale. Structure rebuilt at new dimension.",
+      "alternative": null
+    },
+    {
+      "verb": "restrengthen",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: weakened structure. Output: strong structure rebuilt. The organization is reconstructed.",
+      "alternative": null
+    },
+    {
+      "verb": "restructure",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing organization. Output: organization rebuilt with new architecture. The structure reorganizes itself around new center.",
+      "alternative": null
+    },
+    {
+      "verb": "retrace",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: fragmented memories. Output: memories reorganized into coherent sequence. Structure rebuilt by reassembly.",
+      "alternative": "SYN"
+    },
+    {
+      "verb": "retrain",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with old skill structure; output: person with reorganized skill structure; the capability architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "retread",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: old material/idea. Output: that material restructured into altered form. The organization rebuilds around new purpose.",
+      "alternative": null
+    },
+    {
+      "verb": "retrofit",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing structure without feature. Output: structure reorganized to accommodate new feature. The architecture is rebuilt to fit new components.",
+      "alternative": null
+    },
+    {
+      "verb": "retrogress",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: advanced state. Output: earlier less developed state. The structure reorganizes backward to prior organization.",
+      "alternative": null
+    },
+    {
+      "verb": "retrovert",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity in current state. Output: entity reorganized to previous state structure. Structure rebuilds to earlier form.",
+      "alternative": null
+    },
+    {
+      "verb": "retry",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: existing trial structure. Output: trial structure rebuilt from beginning with new organization.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "revise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: document with existing organization; output: document reorganized around new structure; architecture rebuilds",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "revolutionise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing system structure. Output: system rebuilt around radically new organizing principles. The architecture fundamentally reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "revolutionize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing system structure. Output: system rebuilt around radically new organizing principles. The architecture fundamentally reorganizes.",
+      "alternative": null
+    },
+    {
+      "verb": "revolve about",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: system with old organizing principle; Output: system restructured around new central axis \u2014 rebuilds relational architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "rework",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing work. Output: same work with reorganized structure. The thing rebuilds itself around new design.",
+      "alternative": null
+    },
+    {
+      "verb": "rewrite",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: text with existing structure; output: text reorganized with different internal architecture; structure rebuilds itself",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "ritualise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: practice with ordinary structure. Output: practice reorganized around ritual patterns (repetition, symbolism, formality). Rebuilds the practice's architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "ritualize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: practice with ordinary structure. Output: practice reorganized around ritual patterns (repetition, symbolism, formality). Rebuilds the practice's architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "scale up",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: operation at size N. Output: operation at size kN maintaining proportions. Structure rebuilds at new magnitude.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "secularise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: religious orientation. Output: secular orientation. The institutional or conceptual structure is rebuilt around non-religious principles.",
+      "alternative": null
+    },
+    {
+      "verb": "secularize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: religiously-structured institution; Output: same institution reorganized around secular center; architectural rebuild.",
+      "alternative": null
+    },
+    {
+      "verb": "see the light",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: old belief structure. Output: transformed understanding structure. The person's conceptual architecture reorganizes around new principles.",
+      "alternative": null
+    },
+    {
+      "verb": "semi-automatise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fully manual system. Output: system rebuilt as partially automatic. Structure reorganizes around partial automation.",
+      "alternative": null
+    },
+    {
+      "verb": "semi-automatize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fully manual system. Output: system rebuilt as partially automatic. Structure reorganizes around partial automation.",
+      "alternative": null
+    },
+    {
+      "verb": "senesce",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organism at younger age structure. Output: organism rebuilt with aging architecture. The biological structure reorganizes around age.",
+      "alternative": null
+    },
+    {
+      "verb": "serialise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unordered elements; output: those elements reorganized into a serial sequence.",
+      "alternative": null
+    },
+    {
+      "verb": "serialize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unordered elements; output: those elements reorganized into a serial sequence.",
+      "alternative": null
+    },
+    {
+      "verb": "service",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: degraded functional structure; Output: restored functional structure; system reorganized around fitness.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "shake up",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing organization. Output: structure rebuilt around new organizing principle.",
+      "alternative": null
+    },
+    {
+      "verb": "shape up",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: entity with existing state; output: entity reorganized around improved structure; rebuilds toward better configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "shoehorn",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: poorly-suited thing and purpose. Output: thing forcibly reorganized to fit purpose. Structure rebuilt despite mismatch.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "shrivel up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: hydrated tissue structure. Output: tissue reorganized around loss of moisture, fundamentally rebuilding its architecture through dehydration.",
+      "alternative": null
+    },
+    {
+      "verb": "skew",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object at neutral angle; Output: object reorganized at oblique angle; angular structure rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "snafu",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: functional structure. Output: reorganized into completely disordered, non-functional state.",
+      "alternative": null
+    },
+    {
+      "verb": "snap back",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: degraded state. Output: restored original structure. The system reorganizes itself back to prior healthy configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "snarl up",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: organized structure. Output: reorganized into tangled, disordered architecture through entanglements.",
+      "alternative": "SUP"
+    },
+    {
+      "verb": "solemnise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: event/thing with ordinary affective weight. Output: same thing reorganized to carry solemn/grave character. Emotional architecture rebuilt.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "solemnize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: event/thing with ordinary affective weight. Output: same thing reorganized to carry solemn/grave character. Emotional architecture rebuilt.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "sophisticate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: basic structure. Output: reorganized into more refined, complex architecture with enhanced qualities.",
+      "alternative": null
+    },
+    {
+      "verb": "sorcerise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: thing. Output: thing transformed completely by magic. Structure rebuilds into fundamentally different form.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "sorcerize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: thing. Output: thing transformed completely by magic. Structure rebuilds into fundamentally different form.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "sovietize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: independently-structured state; Output: state reorganized around Soviet control center; political architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "spatchcock",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: whole bird. Output: bird restructured (backbone removed, flattened) for cooking. The physical architecture is reorganized.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "speciate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: existing species structure. Output: reorganized into new species. The organism's fundamental biological architecture rebuilds around new adaptive centers.",
+      "alternative": null
+    },
+    {
+      "verb": "sphacelate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: living tissue structure. Output: necrotic tissue structure. The cellular organization fundamentally transforms to death state.",
+      "alternative": null
+    },
+    {
+      "verb": "splat",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: three-dimensional object; Output: object reorganized into flat configuration; structure rebuilds on impact.",
+      "alternative": null
+    },
+    {
+      "verb": "square away",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: things in disorganized state; output: things reorganized into proper order; the arrangement architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "squash",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with original shape. Output: same object with reorganized structure around compression. Shape architecture rebuilt.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "stalinise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing structure; Output: structure reorganized according to Stalin's policies; rebuilds architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "stalinize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: existing social structure; Output: structure rebuilt around Stalinist organizational principles.",
+      "alternative": null
+    },
+    {
+      "verb": "standardise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: variant instances; Output: instances reorganized around standard template; structure rebuilds to conform.",
+      "alternative": null
+    },
+    {
+      "verb": "standardize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: varied practices; Output: practices reorganized around standard norm as new center; systemic rebuild.",
+      "alternative": null
+    },
+    {
+      "verb": "straighten out",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: bent/crooked structure. Output: reorganized straight structure. The spatial architecture is rebuilt around a new linear axis.",
+      "alternative": null
+    },
+    {
+      "verb": "streamline",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: existing contour structure. Output: reorganized contour optimized for efficiency. Structure rebuilds around efficiency principle.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "structure",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unstructured elements. Output: elements reorganized into coherent architecture with defined relationships.",
+      "alternative": null
+    },
+    {
+      "verb": "subordinate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity with independent or equal status. Output: entity reorganized into dependent/subservient structural position. Hierarchical architecture rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "supinate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: hand/limb in one rotational orientation; Output: same limb with spatial orientation reorganized; the structure's frame of reference rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "supple",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: rigid/stiff material structure. Output: material reorganized to be pliant/flexible. Physical architecture of flexibility rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "symmetrise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: asymmetric structure. Output: structure rebuilt around symmetry axes. Reorganizes architecture around new center.",
+      "alternative": null
+    },
+    {
+      "verb": "symmetrize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: asymmetric structure. Output: structure rebuilt around symmetry axes. Reorganizes architecture around new center.",
+      "alternative": null
+    },
+    {
+      "verb": "systematise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unsystematic elements. Output: elements rebuilt into coherent system. Structure reorganizes around systemic principles.",
+      "alternative": null
+    },
+    {
+      "verb": "systematize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unsystematic elements. Output: elements rebuilt into coherent system. Structure reorganizes around systemic principles.",
+      "alternative": null
+    },
+    {
+      "verb": "systemise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unsystematic elements. Output: elements rebuilt into coherent system. Structure reorganizes around systemic principles.",
+      "alternative": null
+    },
+    {
+      "verb": "systemize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unsystematic elements. Output: elements rebuilt into coherent system. Structure reorganizes around systemic principles.",
+      "alternative": null
+    },
+    {
+      "verb": "tabularise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: data in non-tabular form. Output: same data reorganized into tabular structure. Architecture rebuilt around table format.",
+      "alternative": null
+    },
+    {
+      "verb": "tabularize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: data in non-tabular form. Output: same data reorganized into tabular structure. Architecture rebuilt around table format.",
+      "alternative": null
+    },
+    {
+      "verb": "tame",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: wild behavioral structure. Output: domesticated behavioral structure. The organism's response patterns are reorganized.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "teleport",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: entity at location A; Output: entity at location B via disassembly/reassembly; the entity's structural existence rebuilds at new coordinates.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "tenderise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tough meat structure. Output: reorganized molecular structure with tenderness. Rebuilds physical architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "tenderize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tough meat structure. Output: reorganized molecular structure with tenderness. Rebuilds physical architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "territorialise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unorganized space. Output: space restructured with territorial boundaries and hierarchies. The architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "territorialize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unorganized space. Output: space restructured with territorial boundaries and hierarchies. The architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "throw out of kilter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing in balanced configuration; output: thing with configuration rebuilt into imbalanced state; the structural equilibrium is reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "tidy",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: disordered arrangement. Output: ordered arrangement. The spatial structure of things is reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "tidy up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: things in disorganized arrangement; output: things reorganized into proper order; the spatial/organizational architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "tinker",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: broken or suboptimal structure. Output: structure with attempted reorganization. Trying implies restructuring attempts.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "topicalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sentence with standard structure. Output: sentence reorganized with fronted element as new center. Architecture rebuilt around topic.",
+      "alternative": null
+    },
+    {
+      "verb": "tousle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: ordered hair arrangement. Output: disordered hair arrangement. The structural organization is disrupted and rebuilt chaotically.",
+      "alternative": null
+    },
+    {
+      "verb": "tramp down",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with one structure (raised/volumetric). Output: same object restructured (flattened). The physical architecture changes.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "transcend",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: entity within old frame/standard; Output: entity reorganized beyond that frame; what changed: structure rebuilt transcending original limits",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "transfigure",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity with nature/appearance. Output: entity completely reorganized in nature/appearance. Structure rebuilds itself entirely.",
+      "alternative": null
+    },
+    {
+      "verb": "transform",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with one structure. Output: thing with fundamentally different structure. The architecture reorganizes around new center.",
+      "alternative": null
+    },
+    {
+      "verb": "translocate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: chromosome segment at position A; Output: same segment at new position B; structural architecture reorganized.",
+      "alternative": null
+    },
+    {
+      "verb": "transmigrate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: soul in body A. Output: soul in body B (reborn). The soul's embodiment structure is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "transmogrify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity with existing nature/structure. Output: same entity with fundamentally rebuilt nature. The core architecture reorganizes completely.",
+      "alternative": null
+    },
+    {
+      "verb": "transmute",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: element with one nature. Output: element with altered fundamental nature. The essential structure rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "transubstantiate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: entity with one nature. Output: same entity with completely reorganized nature/substance. The fundamental structure rebuilds.",
+      "alternative": null
+    },
+    {
+      "verb": "tread down",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object with one structure (raised/volumetric). Output: same object restructured (flattened). The physical architecture changes.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "trouble-shoot",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: malfunctioning system structure. Output: system restructured to eliminate problem. The organization is rebuilt to functional state.",
+      "alternative": null
+    },
+    {
+      "verb": "troubleshoot",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: malfunctioning system structure. Output: system restructured to eliminate problem. The organization is rebuilt to functional state.",
+      "alternative": null
+    },
+    {
+      "verb": "true",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object out of true; Output: object reorganized to geometric ideal (level/square/balanced); structure rebuilds to standard.",
+      "alternative": null
+    },
+    {
+      "verb": "true up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object out of true; Output: object reorganized to geometric ideal; structure rebuilds to precision standard.",
+      "alternative": null
+    },
+    {
+      "verb": "tune",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: misaligned system. Output: system reorganized around optimal functioning. Structure rebuilt for harmony.",
+      "alternative": null
+    },
+    {
+      "verb": "tune up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: suboptimal system. Output: system reorganized for better functioning. Internal structure rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "turn around",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: failing situation; output: dramatically improved situation; the entire structure reorganizes around success.",
+      "alternative": null
+    },
+    {
+      "verb": "turn the tables",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: circumstances with one power structure. Output: circumstances with inverted power structure. The relational architecture rebuilds around reversed positions.",
+      "alternative": null
+    },
+    {
+      "verb": "turn the tide",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: circumstances trending one way. Output: circumstances trending opposite way. The momentum structure rebuilds around a new direction.",
+      "alternative": null
+    },
+    {
+      "verb": "unfurl",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: furled/compact structure. Output: unfurled/extended structure. The spatial organization is rebuilt from compact to extended.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "uniformise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: varied structure. Output: reorganized into homogeneous structure. Rebuilds differences into sameness.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "uniformize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: varied structure. Output: reorganized into homogeneous structure. Rebuilds differences into sameness.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "unroll",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: rolled/wound structure. Output: unrolled/flat structure. The geometric organization is reversed and rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "untune",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: tuned system. Output: system reorganized into disharmony. Structure rebuilt around misalignment.",
+      "alternative": null
+    },
+    {
+      "verb": "update",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: outdated structure. Output: restructured modern form. The thing is rebuilt around contemporary standards.",
+      "alternative": null
+    },
+    {
+      "verb": "upraise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dead organism. Output: living organism. The biological structure fundamentally reorganizes from death to life state.",
+      "alternative": null
+    },
+    {
+      "verb": "urbanise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: area with rural/agricultural structure. Output: area rebuilt as urban/industrial infrastructure. Structure reorganizes around city/industry center.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "urbanize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: rural/non-urban structure. Output: urban structure. The spatial and social organization is fundamentally rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "utilize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: investment trust structure. Output: unit trust structure. The legal/organizational architecture rebuilds into new form.",
+      "alternative": null
+    },
+    {
+      "verb": "vaporise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid or solid structure. Output: gas structure, complete reorganization of molecular arrangement.",
+      "alternative": null
+    },
+    {
+      "verb": "vesiculate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid/dense tissue structure. Output: structure reorganized into vesicular form with air cells. Architecture rebuilt around cellular pattern.",
+      "alternative": null
+    },
+    {
+      "verb": "vulcanise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw rubber structure. Output: cross-linked molecular structure. Chemical transformation rebuilds architecture.",
+      "alternative": null
+    },
+    {
+      "verb": "vulcanize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw rubber structure. Output: cross-linked vulcanized structure. The molecular architecture is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "warp",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: straight/regular shape. Output: bent/distorted shape. The geometric structure is reorganized under stress.",
+      "alternative": null
+    },
+    {
+      "verb": "westernise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: culture with non-Western structure. Output: culture reorganized around Western values/practices. Rebuilds the cultural architecture, not just surface appearance.",
+      "alternative": null
+    },
+    {
+      "verb": "westernize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-Western cultural structure. Output: Western-oriented cultural structure. The social/cultural organization is rebuilt.",
+      "alternative": null
+    },
+    {
+      "verb": "work on",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: material in one state. Output: material shaped/improved. The material's form reorganizes through progressive modification.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "zero in",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: uncalibrated gun. Output: gun reorganized around accurate zero. Structure rebuilt through test firing.",
+      "alternative": "DES"
+    }
+  ]
+}

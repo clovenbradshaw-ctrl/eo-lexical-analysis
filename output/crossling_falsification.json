@@ -1,0 +1,58 @@
+{
+  "test_A_classifier_bias": {
+    "corr_obscurity_ins": 0.5298397038207305,
+    "corr_samplesize_ins": -0.4197157811219035
+  },
+  "test_C_random_framework": {
+    "n_trials": 10000,
+    "universal_gradient_count": 1371,
+    "almost_universal_25": 5188
+  },
+  "test_E_ins_alt_tradeoff": {
+    "ins_alt_mean": 59.5709795753262,
+    "ins_alt_std": 6.490361364875261
+  },
+  "test_H_variance": {
+    "NUL": {
+      "mean": 7.291810356172694,
+      "std": 2.8073793316384137
+    },
+    "DES": {
+      "mean": 8.061921321008453,
+      "std": 4.431542721292339
+    },
+    "INS": {
+      "mean": 43.36555607944955,
+      "std": 7.393757067482316
+    },
+    "SEG": {
+      "mean": 6.637596050037404,
+      "std": 2.935003215591845
+    },
+    "CON": {
+      "mean": 13.886767716841975,
+      "std": 3.771842937101112
+    },
+    "SYN": {
+      "mean": 2.5485210509611393,
+      "std": 0.8511087425365979
+    },
+    "ALT": {
+      "mean": 16.205423495876673,
+      "std": 4.298732753594336
+    },
+    "SUP": {
+      "mean": 0.50853013967799,
+      "std": 0.40619788181890526
+    },
+    "REC": {
+      "mean": 1.4938737899741403,
+      "std": 0.6499127837554938
+    }
+  },
+  "test_I_partition": {
+    "eo_rank": 175,
+    "total_partitions": 280,
+    "eo_consistency": 23
+  }
+}

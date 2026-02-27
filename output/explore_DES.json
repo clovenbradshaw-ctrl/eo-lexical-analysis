@@ -1,0 +1,3947 @@
+{
+  "operator": "DES",
+  "symbol": "\u22a1",
+  "total_verbs": 448,
+  "scales": {
+    "informational": 251,
+    "social": 148,
+    "psychological": 37,
+    "physical": 12
+  },
+  "confidence": {
+    "high": 380,
+    "medium": 68
+  },
+  "borders": {
+    "INS": 46,
+    "CON": 9,
+    "ALT": 8,
+    "SEG": 3,
+    "REC": 3,
+    "NUL": 1
+  },
+  "subclusters": [
+    {
+      "id": 0,
+      "size": 104,
+      "dominant_scale": "social",
+      "scales": {
+        "social": 73,
+        "informational": 27,
+        "psychological": 4
+      },
+      "core_verbs": [
+        "designate",
+        "elect",
+        "ordain",
+        "reelect",
+        "nominate",
+        "captain",
+        "star",
+        "judge",
+        "dub",
+        "anoint"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "designate",
+          "scale": "social",
+          "reason": "Input: unnamed thing, Output: thing with assigned role/identity, Change: category/label assigned",
+          "confidence": "high"
+        },
+        {
+          "verb": "okay",
+          "scale": "social",
+          "reason": "Input: thing without sanctioned status. Output: thing designated as acceptable. Approval label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "ordain",
+          "scale": "social",
+          "reason": "Input: person without religious role, Output: person with clergy designation, Change: sacred category/status assigned",
+          "confidence": "high"
+        },
+        {
+          "verb": "predestine",
+          "scale": "informational",
+          "reason": "Input: undetermined future; output: future designated with specific outcome beforehand; assigns fate category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "licence",
+          "scale": "social",
+          "reason": "Input: entity without official permission status; Output: entity designated as authorized; formal permission category assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fate",
+          "scale": "informational",
+          "reason": "Input: undesignated future; Output: future with assigned destiny; categorizes what something will become.",
+          "confidence": "high"
+        },
+        {
+          "verb": "consecrate",
+          "scale": "social",
+          "reason": "Input: person without clerical status; Output: person designated to clerical post; sacred role assigned",
+          "confidence": "high"
+        },
+        {
+          "verb": "adjudge",
+          "scale": "social",
+          "reason": "Input: thing without declared status; Output: thing with official declaration of what it is; assigns category through judgment.",
+          "confidence": "high"
+        },
+        {
+          "verb": "recognise",
+          "scale": "social",
+          "reason": "Input: entity without credential status. Output: entity with credential status. A formal designation is assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "foreordain",
+          "scale": "informational",
+          "reason": "Input: undetermined future; output: future designated with specific outcome beforehand; assigns fate category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "knight",
+          "scale": "social",
+          "reason": "Input: person without knight status. Output: person designated as knight. New title/category assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "preordain",
+          "scale": "informational",
+          "reason": "Input: undetermined future; output: future designated with specific outcome beforehand; assigns fate category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "baptise",
+          "scale": "social",
+          "reason": "Input: person without religious identity. Output: person designated as member of faith. Assigns religious category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "privilege",
+          "scale": "social",
+          "reason": "Input: entity without privilege status; Output: entity designated as privileged; special status category assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "license",
+          "scale": "social",
+          "reason": "Input: entity without official permission status; Output: entity designated as authorized; formal permission category assigned.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": 67,
+      "dominant_scale": "social",
+      "scales": {
+        "social": 36,
+        "informational": 28,
+        "psychological": 3
+      },
+      "core_verbs": [
+        "deify",
+        "canonize",
+        "catholicize",
+        "christianize",
+        "commercialize",
+        "naturalize",
+        "weaponize",
+        "sensualize",
+        "carnalize",
+        "individuate"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "officialize",
+          "scale": "social",
+          "reason": "Input: thing without official status. Output: thing with official category assigned. Designates type/identity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "officialise",
+          "scale": "social",
+          "reason": "Input: thing without official status. Output: thing with official category assigned. Designates type/identity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "legalize",
+          "scale": "social",
+          "reason": "Input: action without legal status. Output: action designated as legal. Assigns legality category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "demonise",
+          "scale": "informational",
+          "reason": "Input: untyped person/thing. Output: person/thing typed as demon. A demonic category is assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "criminalize",
+          "scale": "social",
+          "reason": "Input: person without criminal category. Output: person designated as criminal. Assigns criminal identity label.",
+          "confidence": "high"
+        },
+        {
+          "verb": "formalize",
+          "scale": "social",
+          "reason": "Input: informal arrangement. Output: arrangement designated as official/formal. Assigns formal status category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "formalise",
+          "scale": "social",
+          "reason": "Input: informal arrangement. Output: arrangement designated as official/formal. Assigns formal status category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "demonize",
+          "scale": "informational",
+          "reason": "Input: untyped person/thing. Output: person/thing typed as demon. A demonic category is assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "lexicalise",
+          "scale": "informational",
+          "reason": "Input: concept without word status. Output: concept with word/lexicon status. Assigns linguistic category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "diabolise",
+          "scale": "informational",
+          "reason": "Input: untyped person/thing. Output: person/thing typed as diabolical. A diabolical category is assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "singularise",
+          "scale": "informational",
+          "reason": "Input: thing without singular designation; output: thing marked as singular; a category/identity is assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "lexicalize",
+          "scale": "informational",
+          "reason": "Input: concept without word status. Output: concept with word/lexicon status. Assigns linguistic category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sexualise",
+          "scale": "psychological",
+          "reason": "Input: thing without sexual attribution; Output: thing designated as sexual; assigns category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sexualize",
+          "scale": "psychological",
+          "reason": "Input: untyped or neutral thing; Output: same thing now designated as sexual; assigns sexual category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "naturalize",
+          "scale": "social",
+          "reason": "Input: person without citizen status. Output: person with citizen category assigned. Assigns a new legal identity/type.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 18,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 17,
+        "social": 1
+      },
+      "core_verbs": [
+        "behoove",
+        "should",
+        "ought to",
+        "have to",
+        "be supposed to",
+        "may",
+        "might",
+        "must",
+        "would",
+        "could"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "got to",
+          "scale": "informational",
+          "reason": "Input: action without modal status, Output: action designated as necessary \u2014 assigns obligation category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "gotta",
+          "scale": "informational",
+          "reason": "Input: action without modal status, Output: action designated as necessary \u2014 assigns obligation category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "ought to",
+          "scale": "informational",
+          "reason": "Input: action without obligation status. Output: action designated as obligatory. Duty label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "have to",
+          "scale": "informational",
+          "reason": "Input: action without necessity status. Output: action designated as required. Necessity label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "shall",
+          "scale": "informational",
+          "reason": "Input: action without modal status, Output: action designated as required/future \u2014 assigns obligation category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "must",
+          "scale": "informational",
+          "reason": "Input: situation without necessity typing. Output: situation typed as necessary/required. The modal status is designated.",
+          "confidence": "high"
+        },
+        {
+          "verb": "hafta",
+          "scale": "informational",
+          "reason": "Input: action without modal status, Output: action designated as necessary \u2014 assigns obligation category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "should",
+          "scale": "informational",
+          "reason": "Input: action without normative status. Output: action designated as obligatory/desirable. Normative label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "oughta",
+          "scale": "informational",
+          "reason": "Input: action without modal status, Output: action designated as obligatory \u2014 assigns duty category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "had better",
+          "scale": "informational",
+          "reason": "Input: action without modal status, Output: action designated as required/advisable \u2014 assigns obligation category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "be supposed to",
+          "scale": "social",
+          "reason": "Input: action without obligation status. Output: action marked as expected/required. Assigns normative category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "be supposed (to)",
+          "scale": "informational",
+          "reason": "Input: action without expectation status, Output: action designated as expected/required \u2014 assigns normative category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "could",
+          "scale": "informational",
+          "reason": "Input: action without modality. Output: action designated as possible. The action is categorized as within capability.",
+          "confidence": "high"
+        },
+        {
+          "verb": "would",
+          "scale": "informational",
+          "reason": "Input: situation without conditional/habitual typing. Output: situation typed as conditional/likely. The modal status is designated.",
+          "confidence": "high"
+        },
+        {
+          "verb": "may",
+          "scale": "informational",
+          "reason": "Input: situation without likelihood typing. Output: situation typed as possible. The modal status is designated.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "size": 211,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 150,
+        "social": 26,
+        "psychological": 23,
+        "physical": 12
+      },
+      "core_verbs": [
+        "include",
+        "matter",
+        "name",
+        "understand",
+        "assess",
+        "evaluate",
+        "review",
+        "differ",
+        "label",
+        "zipcode"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "style",
+          "scale": "informational",
+          "reason": "Input: unnamed thing. Output: thing with identifying term. Category or label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "define",
+          "scale": "informational",
+          "reason": "Input: thing without explicit definition; Output: thing with definitional boundary drawn; assigns essential nature",
+          "confidence": "high"
+        },
+        {
+          "verb": "identify",
+          "scale": "informational",
+          "reason": "Input: thing without identified status; Output: thing designated as equivalent to known category; assigns identity",
+          "confidence": "high"
+        },
+        {
+          "verb": "characterise",
+          "scale": "informational",
+          "reason": "Input: thing untyped; Output: thing designated as having certain characteristic; assigns definitional property.",
+          "confidence": "high"
+        },
+        {
+          "verb": "differentiate",
+          "scale": "informational",
+          "reason": "Input: undifferentiated things. Output: things with distinct type markers. Each thing gets a category label making it different.",
+          "confidence": "high"
+        },
+        {
+          "verb": "determine",
+          "scale": "informational",
+          "reason": "Input: undecided matter. Output: that matter now has definite status. A boundary is drawn around what is decided.",
+          "confidence": "high"
+        },
+        {
+          "verb": "specify",
+          "scale": "informational",
+          "reason": "Input: vague or general thing. Output: thing with clear definition. Boundary drawn around what it IS.",
+          "confidence": "high"
+        },
+        {
+          "verb": "pin down",
+          "scale": "informational",
+          "reason": "Input: something vague or undefined. Output: that thing with a clear definition/boundary. Assigns what something IS.",
+          "confidence": "high"
+        },
+        {
+          "verb": "number",
+          "scale": "informational",
+          "reason": "Input: things without numerical labels. Output: things with numbers assigned. Numerical identity designated.",
+          "confidence": "high"
+        },
+        {
+          "verb": "distinguish",
+          "scale": "informational",
+          "reason": "Input: undifferentiated things. Output: things with marked differences. Assigns categorical boundaries that define what each thing IS relative to others.",
+          "confidence": "high"
+        },
+        {
+          "verb": "take form",
+          "scale": "physical",
+          "reason": "Input: undifferentiated thing. Output: that thing with distinctive identity/category established.",
+          "confidence": "high"
+        },
+        {
+          "verb": "characterize",
+          "scale": "informational",
+          "reason": "Input: thing without explicit characteristic label; Output: thing with characteristic assigned; designates defining quality",
+          "confidence": "high"
+        },
+        {
+          "verb": "narrow down",
+          "scale": "informational",
+          "reason": "Input: vague concept. Output: concept with precise definitional boundaries. Clear categorical identity assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "take to be",
+          "scale": "psychological",
+          "reason": "Input: thing untyped; Output: thing assigned category/type; designates what something is considered to be.",
+          "confidence": "high"
+        },
+        {
+          "verb": "stand out",
+          "scale": "informational",
+          "reason": "Input: thing unmarked; Output: thing marked as distinctive; assigns salience/special status.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 48,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 29,
+        "social": 12,
+        "psychological": 7
+      },
+      "core_verbs": [
+        "affirm",
+        "reaffirm",
+        "believe",
+        "certify",
+        "hold",
+        "repute",
+        "recognize",
+        "deem",
+        "prove",
+        "approve"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "affirm",
+          "scale": "informational",
+          "reason": "Input: statement with undeclared truth status. Output: statement now designated as true by speaker, categorical epistemic label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "verify",
+          "scale": "informational",
+          "reason": "Input: statement with unknown truth value. Output: statement designated as true. Assigns truth-status type.",
+          "confidence": "high"
+        },
+        {
+          "verb": "validate",
+          "scale": "informational",
+          "reason": "Input: unvalidated claim; Output: claim typed as valid; assigns truth-status category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "accept",
+          "scale": "psychological",
+          "reason": "Input: proposition with uncertain status, Output: proposition with 'true' designation by agent, Change: truth-value assigned",
+          "confidence": "medium"
+        },
+        {
+          "verb": "believe",
+          "scale": "informational",
+          "reason": "Input: proposition without truth-status. Output: proposition typed as true-for-believer. The verb assigns epistemic status to content.",
+          "confidence": "high"
+        },
+        {
+          "verb": "approve",
+          "scale": "social",
+          "reason": "Input: action or entity with uncertain status. Output: same thing now typed as 'sanctioned/permitted'. Assignment of legitimacy category.",
+          "confidence": "high"
+        },
+        {
+          "verb": "attest",
+          "scale": "informational",
+          "reason": "Input: claim without verification status. Output: claim designated as verified. Verification label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "approbate",
+          "scale": "informational",
+          "reason": "Input: documents unvalidated; Output: documents with 'valid' status assigned; assigns category of legitimacy.",
+          "confidence": "high"
+        },
+        {
+          "verb": "predicate",
+          "scale": "informational",
+          "reason": "Input: subject without stated attribute; output: subject with affirmed quality; an attribute is assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "hold",
+          "scale": "informational",
+          "reason": "Input: thing without declared status. Output: thing declared to be X. State typed/categorized.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sustain",
+          "scale": "informational",
+          "reason": "Input: claim/objection with uncertain validity. Output: claim formally designated as valid. A formal status is assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "recognize",
+          "scale": "social",
+          "reason": "Input: entity without credential status. Output: entity with official designation. Grants formal categorization/legitimacy.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reaffirm",
+          "scale": "informational",
+          "reason": "Input: previously affirmed statement. Output: statement re-designated as true, categorical label reasserted.",
+          "confidence": "high"
+        },
+        {
+          "verb": "legitimate",
+          "scale": "social",
+          "reason": "Input: thing with uncertain status. Output: thing designated as legitimate/just. Assignment of categorical status.",
+          "confidence": "high"
+        },
+        {
+          "verb": "deserve",
+          "scale": "informational",
+          "reason": "Input: entity without deservingness label. Output: entity designated as meriting something. Worthiness status assigned.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "boundary_verbs_from_other_ops": [
+    {
+      "verb": "describe",
+      "operator": "INS",
+      "similarity": 0.6935266848751057,
+      "scale": "informational",
+      "reason": "Input: world without description; Output: world with descriptive observations added; new informational content appears"
+    },
+    {
+      "verb": "do",
+      "operator": "INS",
+      "similarity": 0.6413754557619847,
+      "scale": "physical",
+      "reason": "Input: world without action/arrangement; output: world with action/arrangement event; adds doing phenomenon."
+    },
+    {
+      "verb": "desire",
+      "operator": "INS",
+      "similarity": 0.639207016584611,
+      "scale": "psychological",
+      "reason": "Input: experiencer without this wanting state. Output: experiencer with desire state present. New psychological state arises."
+    },
+    {
+      "verb": "depersonalise",
+      "operator": "ALT",
+      "similarity": 0.639048966459955,
+      "scale": "informational",
+      "reason": "Input: person viewed as subject. Output: same person viewed/framed as object. The frame shifts from personal to impersonal."
+    },
+    {
+      "verb": "indue",
+      "operator": "INS",
+      "similarity": 0.6344638190409531,
+      "scale": "social",
+      "reason": "Input: entity without qualities. Output: entity with new qualities present. New attributes arise."
+    },
+    {
+      "verb": "figure",
+      "operator": "INS",
+      "similarity": 0.6332643168584337,
+      "scale": "psychological",
+      "reason": "Input: state without judgment; output: state with new judgment present; a new cognitive assessment appears in the thinker's mind."
+    },
+    {
+      "verb": "derogate",
+      "operator": "ALT",
+      "similarity": 0.6280414804583345,
+      "scale": "informational",
+      "reason": "Input: thing viewed as serious. Output: same thing reframed as less serious. The evaluative frame shifts downward."
+    },
+    {
+      "verb": "idealise",
+      "operator": "INS",
+      "similarity": 0.6277984733176274,
+      "scale": "psychological",
+      "reason": "Input: thing as is; output: idealized conception arises; new mental construct appears."
+    },
+    {
+      "verb": "detail",
+      "operator": "INS",
+      "similarity": 0.6276994757636797,
+      "scale": "informational",
+      "reason": "Input: basic information. Output: information with additional specifics. New details appear."
+    },
+    {
+      "verb": "design",
+      "operator": "INS",
+      "similarity": 0.6271582342215714,
+      "scale": "informational",
+      "reason": "Input: no design. Output: design plan exists. New blueprint or pattern created."
+    },
+    {
+      "verb": "devote",
+      "operator": "CON",
+      "similarity": 0.6261171062178424,
+      "scale": "social",
+      "reason": "Input: resource + purpose unlinked. Output: persistent allocation link between resource and purpose. Constructs assignment relationship."
+    },
+    {
+      "verb": "depersonalize",
+      "operator": "ALT",
+      "similarity": 0.6259767506372383,
+      "scale": "informational",
+      "reason": "Input: person viewed as subject. Output: same person viewed/framed as object. The frame shifts from personal to impersonal."
+    },
+    {
+      "verb": "endue",
+      "operator": "INS",
+      "similarity": 0.6254734289257778,
+      "scale": "social",
+      "reason": "Input: entity without qualities. Output: entity with new qualities present. New attributes arise."
+    },
+    {
+      "verb": "discern",
+      "operator": "INS",
+      "similarity": 0.6254168394947249,
+      "scale": "psychological",
+      "reason": "Input: undifferentiated sensory field. Output: field with discriminated observation. A new distinguished perception appears."
+    },
+    {
+      "verb": "set forth",
+      "operator": "INS",
+      "similarity": 0.6252777271056686,
+      "scale": "informational",
+      "reason": "Input: unstated proposition; output: proposition articulated; new claim appears in discourse"
+    },
+    {
+      "verb": "deck out",
+      "operator": "INS",
+      "similarity": 0.6214550802177128,
+      "scale": "physical",
+      "reason": "Input: person in everyday clothes. Output: person in special appealing clothes. Creates attractive dressed state."
+    },
+    {
+      "verb": "discover",
+      "operator": "INS",
+      "similarity": 0.6191856347332236,
+      "scale": "informational",
+      "reason": "Input: unknown thing. Output: unknown thing plus awareness of it. A new observation/knowledge state appears."
+    },
+    {
+      "verb": "contradistinguish",
+      "operator": "SEG",
+      "similarity": 0.6186562375254472,
+      "scale": "informational",
+      "reason": "Input: undifferentiated set; Output: parts distinguished by contrasting qualities; boundary drawn between things via their differences."
+    },
+    {
+      "verb": "deputize",
+      "operator": "INS",
+      "similarity": 0.6173706843381693,
+      "scale": "social",
+      "reason": "Input: normal role state. Output: new substitution behavior appears. Acting-as event enters world."
+    },
+    {
+      "verb": "deputise",
+      "operator": "INS",
+      "similarity": 0.6158573515003838,
+      "scale": "social",
+      "reason": "Input: normal role state. Output: new substitution behavior appears. Acting-as event enters world."
+    }
+  ],
+  "peripheral_verbs": [
+    {
+      "verb": "might",
+      "similarity": 0.5324615647611439,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: situation without likelihood typing. Output: situation typed as possibly likely. The modal status is designated."
+    },
+    {
+      "verb": "reconvict",
+      "similarity": 0.5327273130726595,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: person; output: person newly designated as guilty again; the guilty label is reassigned."
+    },
+    {
+      "verb": "greenlight",
+      "similarity": 0.5481590322882293,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: project without approval status. Output: project designated as approved. Approval label assigned."
+    },
+    {
+      "verb": "par",
+      "similarity": 0.5611128910657475,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: hole play completed; Output: score typed/labeled as 'par'; assigns categorical value to performance."
+    },
+    {
+      "verb": "would",
+      "similarity": 0.5721984930623507,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: situation without conditional/habitual typing. Output: situation typed as conditional/likely. The modal status is designated."
+    },
+    {
+      "verb": "bioassay",
+      "similarity": 0.5726110431945837,
+      "alternative": "INS",
+      "scale": "informational",
+      "reason": "Input: substance unassessed; Output: substance with biological properties determined; assigns empirical category."
+    },
+    {
+      "verb": "pip",
+      "similarity": 0.5766279724947846,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: competitor with unknown status. Output: competitor marked as thoroughly defeated. What changed: a status label was assigned."
+    },
+    {
+      "verb": "had better",
+      "similarity": 0.5809550996276968,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: action without modal status, Output: action designated as required/advisable \u2014 assigns obligation category."
+    },
+    {
+      "verb": "jinx",
+      "similarity": 0.5816775477246963,
+      "alternative": "",
+      "scale": "informational",
+      "reason": "Input: undertaking with unmarked fate; output: undertaking designated as 'doomed to failure'; assigns categorical outcome."
+    },
+    {
+      "verb": "premier",
+      "similarity": 0.5844632253056175,
+      "alternative": "INS",
+      "scale": "social",
+      "reason": "Input: work without 'premiered' status. Output: work designated as premiered. Status marker assigned."
+    }
+  ],
+  "all_verbs": [
+    {
+      "verb": "accentuate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: element unmarked; Output: element designated as important/salient.",
+      "alternative": null
+    },
+    {
+      "verb": "accept",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: proposition with uncertain status, Output: proposition with 'true' designation by agent, Change: truth-value assigned",
+      "alternative": "INS"
+    },
+    {
+      "verb": "accredit",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without credential status. Output: entity designated as credentialed. Official status label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "adjudge",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing without declared status; Output: thing with official declaration of what it is; assigns category through judgment.",
+      "alternative": null
+    },
+    {
+      "verb": "adjudicate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: dispute without definitive resolution. Output: dispute with authoritative determination. The outcome is definitively typed/declared.",
+      "alternative": null
+    },
+    {
+      "verb": "admeasure",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: share with unknown quantity; Output: share with determined quantity designation; assigns quantitative category.",
+      "alternative": null
+    },
+    {
+      "verb": "affirm",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: statement with undeclared truth status. Output: statement now designated as true by speaker, categorical epistemic label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "ambition",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: unspecified future goal. Output: that goal now designated as one's ambition, typed as target.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "amount",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without category. Output: thing designated as being-of-a-certain-magnitude. Quantitative identity assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "animise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing without animate typing. Output: thing typed as lifelike. An animate category is assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "animize",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing without animate typing. Output: thing typed as lifelike. An animate category is assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "anoint",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without chosen status; Output: person designated as chosen; special status assigned",
+      "alternative": null
+    },
+    {
+      "verb": "antecede",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event without temporal position. Output: event marked as earlier/prior in sequence. Assigns temporal identity.",
+      "alternative": null
+    },
+    {
+      "verb": "antedate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with temporal position unspecified; output: thing designated as earlier in time; a temporal label is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "apotheose",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: mortal/ordinary entity; Output: entity assigned 'divine/glorified' type; designates as deity.",
+      "alternative": null
+    },
+    {
+      "verb": "apotheosise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: mortal/ordinary entity; Output: entity assigned 'divine/glorified' type; designates as deity.",
+      "alternative": null
+    },
+    {
+      "verb": "apotheosize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: mortal/ordinary entity; Output: entity assigned 'divine/glorified' type; designates as deity.",
+      "alternative": null
+    },
+    {
+      "verb": "appraise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: something unvalued; Output: that thing with assigned value/worth; assigns categorical value judgment",
+      "alternative": null
+    },
+    {
+      "verb": "approbate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: documents unvalidated; Output: documents with 'valid' status assigned; assigns category of legitimacy.",
+      "alternative": null
+    },
+    {
+      "verb": "approve",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action or entity with uncertain status. Output: same thing now typed as 'sanctioned/permitted'. Assignment of legitimacy category.",
+      "alternative": null
+    },
+    {
+      "verb": "arraign",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without formal charge. Output: person designated as formally accused. Legal status of arraignment assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "assess",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: property without determined value, Output: property with assigned value designation, Change: value category assigned",
+      "alternative": null
+    },
+    {
+      "verb": "attaint",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without attainder status. Output: person with attainder label. A legal category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "attest",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim without verification status. Output: claim designated as verified. Verification label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "attorn",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without designated landlord. Output: person with new landlord designation. A formal recognition assigns identity.",
+      "alternative": null
+    },
+    {
+      "verb": "augur",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign without meaning; Output: sign designated as augury; assigns omen type.",
+      "alternative": null
+    },
+    {
+      "verb": "auspicate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: signs without meaning assigned. Output: signs designated as indicating something. Assigns interpretive identity.",
+      "alternative": null
+    },
+    {
+      "verb": "authenticate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unknown authenticity status; Output: thing designated as authentic; assigns authenticity category/identity.",
+      "alternative": null
+    },
+    {
+      "verb": "authorize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action without authorization status. Output: action designated as permitted. Permission label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "backdate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with current effective date. Output: thing with earlier effective date assigned. Temporal designation changes.",
+      "alternative": null
+    },
+    {
+      "verb": "backstop",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person without role; Output: person designated as backstop; role identity assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "badge",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without identifier; Output: person with badge marking role/identity; the verb assigns categorical membership.",
+      "alternative": null
+    },
+    {
+      "verb": "baptise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without religious identity. Output: person designated as member of faith. Assigns religious category.",
+      "alternative": null
+    },
+    {
+      "verb": "baptize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without baptismal identity; Output: person with Christian name and status; religious identity assigned",
+      "alternative": null
+    },
+    {
+      "verb": "bar mitzvah",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: boy without adult Jewish status. Output: boy designated as adult member. Assigns new identity category.",
+      "alternative": null
+    },
+    {
+      "verb": "baronetise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without baronet status. Output: person with baronet category assigned. What-they-are defined/typed.",
+      "alternative": null
+    },
+    {
+      "verb": "baronetize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without baronet status. Output: person with baronet category assigned. What-they-are defined/typed.",
+      "alternative": null
+    },
+    {
+      "verb": "bastardise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: child without illegitimacy status; Output: child with 'illegitimate' label; assigns a category.",
+      "alternative": null
+    },
+    {
+      "verb": "bastardize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: child without illegitimacy status; Output: child with 'illegitimate' label; assigns a category.",
+      "alternative": null
+    },
+    {
+      "verb": "bat mitzvah",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: girl without adult Jewish status. Output: girl designated as adult member. Assigns new identity category.",
+      "alternative": null
+    },
+    {
+      "verb": "be",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without price designation. Output: thing with price value assigned. The thing is designated as having a specific value.",
+      "alternative": null
+    },
+    {
+      "verb": "be after",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: unmarked intention; output: intention designated toward specific action; assigns goal category.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "be supposed (to)",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without expectation status, Output: action designated as expected/required \u2014 assigns normative category.",
+      "alternative": null
+    },
+    {
+      "verb": "be supposed to",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action without obligation status. Output: action marked as expected/required. Assigns normative category.",
+      "alternative": null
+    },
+    {
+      "verb": "be well",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: person in unspecified health state. Output: person classified as 'healthy'. A state is named/identified.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "beat",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: competitive field; Output: one party designated as superior\u2014status category assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "becalm",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: unstable state; Output: state now typed as 'steady'; it acquires a stable identity.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "behoove",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without obligation status. Output: action designated as necessary or appropriate \u2014 normative typing.",
+      "alternative": null
+    },
+    {
+      "verb": "believe",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: proposition without truth-status. Output: proposition typed as true-for-believer. The verb assigns epistemic status to content.",
+      "alternative": null
+    },
+    {
+      "verb": "belong",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unstated membership; Output: thing with membership status declared; assigns category identity.",
+      "alternative": null
+    },
+    {
+      "verb": "bespeak",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without identified meaning; Output: thing identified as signal/symptom; assigns interpretive category.",
+      "alternative": null
+    },
+    {
+      "verb": "betoken",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without signification; Output: thing designated as sign; assigns indicator status.",
+      "alternative": null
+    },
+    {
+      "verb": "bioassay",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: substance unassessed; Output: substance with biological properties determined; assigns empirical category.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "bode",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign unclassified; Output: sign classified as omen; assigns indicator category.",
+      "alternative": null
+    },
+    {
+      "verb": "bracket",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: ungrouped items; Output: items assigned to categories/groups; assigns categorical identity to things.",
+      "alternative": null
+    },
+    {
+      "verb": "brand",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without stigma label; Output: entity marked as infamous; category of disgrace assigned",
+      "alternative": null
+    },
+    {
+      "verb": "brandmark",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked object; Output: object with brand/identity marker; the verb assigns categorical identity/ownership.",
+      "alternative": null
+    },
+    {
+      "verb": "brevet",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with old rank. Output: person with new brevet rank assigned. Identity/status changes.",
+      "alternative": null
+    },
+    {
+      "verb": "calibrate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: instrument with unknown measure; Output: instrument with assigned/known caliber; assigns measurement identity",
+      "alternative": null
+    },
+    {
+      "verb": "call to order",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: informal gathering; Output: gathering designated as formally open/in session.",
+      "alternative": null
+    },
+    {
+      "verb": "canonise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without sacred status; Output: person with 'sacred' category; assigns sanctified identity.",
+      "alternative": null
+    },
+    {
+      "verb": "canonize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without sainthood status. Output: person designated as saint. New category identity assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "captain",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person on team; Output: person now designated as captain; role identity assigned",
+      "alternative": null
+    },
+    {
+      "verb": "carnalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: phenomenon without specified origin. Output: phenomenon designated as originating in sensation. Assigns categorical source/type.",
+      "alternative": null
+    },
+    {
+      "verb": "carry weight",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: unmarked influence status; output: designated as 'having influence at X degree'; assigns categorical power level.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "cast",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: actors without roles. Output: actors assigned specific role identities. Selection designates who-is-what.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "catch some z's",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in unspecified state; output: person categorized as asleep; state labeled/typed.",
+      "alternative": null
+    },
+    {
+      "verb": "categorise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: uncategorized thing; Output: thing with category assignment; assigns what type something is.",
+      "alternative": null
+    },
+    {
+      "verb": "categorize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped thing, Output: thing assigned to a category (definitional boundary drawn)",
+      "alternative": null
+    },
+    {
+      "verb": "catholicize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without Catholic identity, Output: person designated as Catholic (identity assignment)",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "certify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person/thing without official status. Output: same with certified status label. Identity assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "characterise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing untyped; Output: thing designated as having certain characteristic; assigns definitional property.",
+      "alternative": null
+    },
+    {
+      "verb": "characterize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without explicit characteristic label; Output: thing with characteristic assigned; designates defining quality",
+      "alternative": null
+    },
+    {
+      "verb": "check",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: king in untyped state; output: king now designated as 'in check'; the state receives a specific game-status label.",
+      "alternative": null
+    },
+    {
+      "verb": "checkmate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: king in vulnerable state; Output: king designated as inescapably attacked, game-ending status assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "choose",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: multiple options without selection status. Output: one option designated as chosen/selected.",
+      "alternative": null
+    },
+    {
+      "verb": "choreograph",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: movements without defined structure; output: movements now designated with specific planned structure; the movements receive definitional organization.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "christen",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without Christian name; Output: person with baptismal name assigned; religious identity given",
+      "alternative": null
+    },
+    {
+      "verb": "christianize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without Christian identity, Output: person designated as Christian (identity assignment)",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "circumscribe",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unbounded thing. Output: thing with definitional boundary drawn around it. The limits are designated.",
+      "alternative": null
+    },
+    {
+      "verb": "claim",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: an idea without ownership; Output: that idea marked as belonging to someone; a definitional boundary of ownership is drawn.",
+      "alternative": null
+    },
+    {
+      "verb": "class",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unclassified items; Output: items assigned to categories; assigns type/class identity to things",
+      "alternative": null
+    },
+    {
+      "verb": "classify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without class designation; Output: thing with class/kind assigned; assigns categorical identity",
+      "alternative": null
+    },
+    {
+      "verb": "come after",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without successor designation. Output: entity designated as 'successor of X'. Labels temporal/sequential identity.",
+      "alternative": null
+    },
+    {
+      "verb": "come before",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity unlabeled in sequence. Output: entity designated as 'predecessor of X'. Assigns sequential category.",
+      "alternative": null
+    },
+    {
+      "verb": "come of age",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without adult status; Output: person with adult status designated; a new categorical identity assigned",
+      "alternative": null
+    },
+    {
+      "verb": "come on heels",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: two events without temporal typing. Output: second event designated as 'immediately following' first. Assigns temporal proximity category.",
+      "alternative": null
+    },
+    {
+      "verb": "commercialize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: untyped activity, Output: activity designated as commercial (category assignment)",
+      "alternative": null
+    },
+    {
+      "verb": "communalise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: property with individual ownership type; Output: property redesignated as communal; ownership category changes.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "communalize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: property with individual ownership type; Output: property redesignated as communal; ownership category changes.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "complete",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: pass in progress. Output: pass marked as finished/complete. State is typed as 'done'.",
+      "alternative": null
+    },
+    {
+      "verb": "conclude",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: activity with state untyped; output: activity now typed as 'closed'; coming to close marks definitional boundary.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "confute",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim with unknown truth value; Output: claim designated as false; assigns truth-value category.",
+      "alternative": null
+    },
+    {
+      "verb": "consecrate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without clerical status; Output: person designated to clerical post; sacred role assigned",
+      "alternative": null
+    },
+    {
+      "verb": "consist",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unknown composition; Output: thing with composition identified/named; defines what something IS made of.",
+      "alternative": null
+    },
+    {
+      "verb": "constitute",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: things without categorical identity. Output: things designated as forming/being a category \u2014 compositional typing.",
+      "alternative": null
+    },
+    {
+      "verb": "contraindicate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: treatment with unclear status; output: treatment marked as inadvisable; a category/judgment is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "convict",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: accused person (untyped status). Output: person with 'guilty' designation. The verb assigns a legal category/identity.",
+      "alternative": null
+    },
+    {
+      "verb": "cost",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unpriced item; Output: item with designated price value\u2014price category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "could",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without modality. Output: action designated as possible. The action is categorized as within capability.",
+      "alternative": null
+    },
+    {
+      "verb": "count",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without category membership. Output: thing designated as member of set/category. Identity assigned through inclusion.",
+      "alternative": null
+    },
+    {
+      "verb": "count off",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: untyped people in formation; Output: people with assigned numbers/positions; each gets identity label",
+      "alternative": "INS"
+    },
+    {
+      "verb": "count on",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked probability; output: event designated as 'probable'; assigns likelihood category.",
+      "alternative": null
+    },
+    {
+      "verb": "count out",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: competitor with undetermined status; Output: competitor designated as 'loser'; a categorical identity is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "criminalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action without illegal status. Output: action designated as illegal. Assigns illegality category.",
+      "alternative": null
+    },
+    {
+      "verb": "criminalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without criminal category. Output: person designated as criminal. Assigns criminal identity label.",
+      "alternative": null
+    },
+    {
+      "verb": "crystallize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: vague/undefined thing, Output: thing with definite form designated (clarity boundary drawn)",
+      "alternative": null
+    },
+    {
+      "verb": "date stamp",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked item; Output: item designated with date; assigns temporal identity.",
+      "alternative": null
+    },
+    {
+      "verb": "date-mark",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked item; Output: item designated with date and place; assigns temporal-spatial identity.",
+      "alternative": null
+    },
+    {
+      "verb": "dateline",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked item; Output: item designated with date and place; assigns temporal-spatial identity.",
+      "alternative": null
+    },
+    {
+      "verb": "datemark",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked item; Output: item designated with date and place; assigns temporal-spatial identity.",
+      "alternative": null
+    },
+    {
+      "verb": "debut",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: performer without debut status. Output: performer marked as 'debuted'. Identity/status designation assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "decide",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person with undecided state. Output: person with choice designated. A commitment/label assigned to future action.",
+      "alternative": null
+    },
+    {
+      "verb": "deem",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: entity without judgment. Output: entity designated as having certain quality. Assigns categorical assessment.",
+      "alternative": null
+    },
+    {
+      "verb": "define",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without explicit definition; Output: thing with definitional boundary drawn; assigns essential nature",
+      "alternative": null
+    },
+    {
+      "verb": "deify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without god-status. Output: entity now designated as god or godlike, categorical identity assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "delimit",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unclear essential quality; Output: thing with defined essential quality; establishes what something fundamentally is.",
+      "alternative": null
+    },
+    {
+      "verb": "delimitate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unclear essential quality; Output: thing with defined essential quality; establishes what something fundamentally is.",
+      "alternative": null
+    },
+    {
+      "verb": "demonise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped person/thing. Output: person/thing typed as demon. A demonic category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "demonize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped person/thing. Output: person/thing typed as demon. A demonic category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "denominate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without specific name. Output: entity with assigned name or title. Assigns designation.",
+      "alternative": null
+    },
+    {
+      "verb": "denote",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign without designated meaning. Output: sign with designated meaning. The semantic identity is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "deserve",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without deservingness label. Output: entity designated as meriting something. Worthiness status assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "designate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unnamed thing, Output: thing with assigned role/identity, Change: category/label assigned",
+      "alternative": null
+    },
+    {
+      "verb": "destine",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked future purpose; output: thing designated for specific purpose/outcome; assigns destiny category.",
+      "alternative": null
+    },
+    {
+      "verb": "determine",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undecided matter. Output: that matter now has definite status. A boundary is drawn around what is decided.",
+      "alternative": null
+    },
+    {
+      "verb": "detransitivise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: transitive verb; Output: verb re-typed as 'intransitive'; it acquires a new grammatical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "detransitivize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: transitive verb; Output: verb re-typed as 'intransitive'; it acquires a new grammatical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "devilise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped person/thing. Output: person/thing typed as devil. A devilish category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "devilize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped person/thing. Output: person/thing typed as devil. A devilish category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "diabolise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped person/thing. Output: person/thing typed as diabolical. A diabolical category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "diabolize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped person/thing. Output: person/thing typed as diabolical. A diabolical category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "diagnose",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: symptoms without label. Output: condition with diagnostic category. Type/identity assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "differ",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped difference status. Output: things marked as 'different'. Assigns identity of non-sameness.",
+      "alternative": null
+    },
+    {
+      "verb": "differentiate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated things. Output: things with distinct type markers. Each thing gets a category label making it different.",
+      "alternative": null
+    },
+    {
+      "verb": "disapprove",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action untyped. Output: action designated as bad/wrong. Judgment category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "disprove",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: statement with presumed or claimed truth. Output: statement designated as false. Assigns falsity type.",
+      "alternative": null
+    },
+    {
+      "verb": "disqualify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: candidate with unspecified fitness. Output: candidate designated as unfit. Assigned disqualified status.",
+      "alternative": null
+    },
+    {
+      "verb": "distinguish",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated things. Output: things with marked differences. Assigns categorical boundaries that define what each thing IS relative to others.",
+      "alternative": null
+    },
+    {
+      "verb": "dogmatise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: statement without dogma status. Output: statement designated as dogma. Assigns authoritative category.",
+      "alternative": null
+    },
+    {
+      "verb": "dogmatize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: statement without dogma status. Output: statement designated as dogma. Assigns authoritative category.",
+      "alternative": null
+    },
+    {
+      "verb": "doom",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undesignated future; Output: future with assigned (negative) destiny; categorizes what something will become.",
+      "alternative": null
+    },
+    {
+      "verb": "draw a line",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: undefined boundary of acceptability. Output: boundary marked/defined as limit. A definitional boundary is designated.",
+      "alternative": null
+    },
+    {
+      "verb": "draw the line",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: undefined boundary of acceptability. Output: boundary marked/defined as limit. A definitional boundary is designated.",
+      "alternative": null
+    },
+    {
+      "verb": "dub",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without nickname; Output: person with nickname assigned; identity label is given",
+      "alternative": null
+    },
+    {
+      "verb": "elect",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without office status, Output: person with official role designation, Change: social category assigned",
+      "alternative": null
+    },
+    {
+      "verb": "ennoble",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without noble status. Output: person with noble category assigned. What-they-are defined/typed.",
+      "alternative": null
+    },
+    {
+      "verb": "enshrine",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: thing without sacred status. Output: thing designated as sacred. Sacred category assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "entitle",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without title; Output: thing with title assigned; assigns a name/identity.",
+      "alternative": null
+    },
+    {
+      "verb": "epitomise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: instance without clear type. Output: instance now marked as exemplar/representative of a category. Assigns categorical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "epitomize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: instance without clear type. Output: instance now marked as exemplar/representative of a category. Assigns categorical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "equal",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without identity relation to another. Output: entity designated as identical/equivalent. Assigns identity type.",
+      "alternative": null
+    },
+    {
+      "verb": "equate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: two expressions; Output: those expressions typed as 'equivalent'; they acquire the identity of being parallel.",
+      "alternative": null
+    },
+    {
+      "verb": "estimate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unknown quantity; Output: quantity with probable value assigned; assigns value category under uncertainty",
+      "alternative": null
+    },
+    {
+      "verb": "evaluate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without determined quality, Output: entity with assigned quality/worth designation, Change: evaluative category assigned",
+      "alternative": null
+    },
+    {
+      "verb": "excel",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with unrecognized skill; Output: person marked as superior in domain; what changed: person gets typed/categorized as distinguished",
+      "alternative": null
+    },
+    {
+      "verb": "face",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: entity without specified orientation. Output: entity with defined oppositional relationship. The spatial/relational type is designated.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "falsify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim with undetermined truth value. Output: claim now designated as false. The status is labeled.",
+      "alternative": null
+    },
+    {
+      "verb": "fate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undesignated future; Output: future with assigned destiny; categorizes what something will become.",
+      "alternative": null
+    },
+    {
+      "verb": "fault",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: blame unassigned. Output: blame assigned to entity. The entity is now designated as responsible.",
+      "alternative": null
+    },
+    {
+      "verb": "favour",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: unranked options; Output: options with one designated as preferred; assigns preferential status.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "fetishize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: ordinary object. Output: object designated as fetish. Assigns special status/category.",
+      "alternative": null
+    },
+    {
+      "verb": "filiate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with unmarked paternity; output: person designated with specific father identity; assigns categorical relationship type.",
+      "alternative": null
+    },
+    {
+      "verb": "find oneself",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: self with unclear identity/definition. Output: self with accepted, defined identity. One defines/recognizes what one IS.",
+      "alternative": null
+    },
+    {
+      "verb": "finger",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without accusation. Output: person designated as perpetrator. Identity as accused assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "forebode",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: observation uninterpreted; Output: observation designated as prediction; assigns omen meaning.",
+      "alternative": null
+    },
+    {
+      "verb": "foredoom",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: person/thing without doom designation; output: person/thing designated as doomed in advance; a fate-category is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "forego",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: two events in time. Output: one event designated as temporally prior. Assigns temporal ordering type.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "foreordain",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undetermined future; output: future designated with specific outcome beforehand; assigns fate category.",
+      "alternative": null
+    },
+    {
+      "verb": "foreshadow",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: event untyped; Output: event typed as foreshadowing; assigns omen status.",
+      "alternative": null
+    },
+    {
+      "verb": "foretoken",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign uninterpreted; Output: sign designated as token of future; assigns omen status.",
+      "alternative": null
+    },
+    {
+      "verb": "formalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: informal arrangement. Output: arrangement designated as official/formal. Assigns formal status category.",
+      "alternative": null
+    },
+    {
+      "verb": "formalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: informal arrangement. Output: arrangement designated as official/formal. Assigns formal status category.",
+      "alternative": null
+    },
+    {
+      "verb": "franchise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without franchise status; Output: entity designated as franchisee; franchise category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "fullback",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: player without position; Output: player designated as fullback; position identity assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "gear",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unspecified level/character. Output: level/character designated. Assigned specific setting.",
+      "alternative": null
+    },
+    {
+      "verb": "get a handle",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: unclear/ungraspable situation. Output: situation with conceptual frame/understanding assigned. Gives the problem a category/identity.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "got to",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without modal status, Output: action designated as necessary \u2014 assigns obligation category.",
+      "alternative": null
+    },
+    {
+      "verb": "gotta",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without modal status, Output: action designated as necessary \u2014 assigns obligation category.",
+      "alternative": null
+    },
+    {
+      "verb": "grade",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unranked item. Output: item with assigned rank/rating. Category/label applied.",
+      "alternative": null
+    },
+    {
+      "verb": "graduate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without degree status; output: person now typed as 'degree holder'; conferring assigns categorical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "greenlight",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: project without approval status. Output: project designated as approved. Approval label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "had better",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without modal status, Output: action designated as required/advisable \u2014 assigns obligation category.",
+      "alternative": null
+    },
+    {
+      "verb": "hafta",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without modal status, Output: action designated as necessary \u2014 assigns obligation category.",
+      "alternative": null
+    },
+    {
+      "verb": "hail",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person without origin label. Output: person identified as native of place. Origin category assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "hallow",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unconsecrated person/object. Output: same thing now typed as holy. A sacred designation is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "have in mind",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: unspecified referent; Output: that referent is now designated as what the speaker intends; designates the intended meaning.",
+      "alternative": null
+    },
+    {
+      "verb": "have to",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without necessity status. Output: action designated as required. Necessity label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "hold",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without declared status. Output: thing declared to be X. State typed/categorized.",
+      "alternative": null
+    },
+    {
+      "verb": "homologise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: structures; Output: structures typed as 'homologous'; they acquire the identity of corresponding.",
+      "alternative": null
+    },
+    {
+      "verb": "homologize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: structures; Output: structures typed as 'homologous'; they acquire the identity of corresponding.",
+      "alternative": null
+    },
+    {
+      "verb": "hypostatise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: conceptual entity; Output: entity assigned 'real existence' type; designates as having concrete being.",
+      "alternative": null
+    },
+    {
+      "verb": "hypostatize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: conceptual entity; Output: entity assigned 'real existence' type; designates as having concrete being.",
+      "alternative": null
+    },
+    {
+      "verb": "identify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without identified status; Output: thing designated as equivalent to known category; assigns identity",
+      "alternative": null
+    },
+    {
+      "verb": "identity",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: untyped entity. Output: entity with identity designation. A definitional boundary drawn.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "illegalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action without illegal status. Output: action designated as illegal. Assigns illegality category.",
+      "alternative": null
+    },
+    {
+      "verb": "illegalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action without illegal status. Output: action designated as illegal. Assigns illegality category.",
+      "alternative": null
+    },
+    {
+      "verb": "import",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without explicit meaning; output: thing typed/labeled with significance; assigns what something signifies.",
+      "alternative": null
+    },
+    {
+      "verb": "include",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without part-status. Output: entity typed as part-of-whole. The verb assigns membership category to the entity.",
+      "alternative": null
+    },
+    {
+      "verb": "individuate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: generic/undifferentiated thing. Output: thing with individual character/identity. A unique identity is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "initialise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: variable without type/value. Output: variable with designated initial value. Assigns what the variable IS initially.",
+      "alternative": null
+    },
+    {
+      "verb": "initialize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: variable without type/value. Output: variable with designated initial value. Assigns what the variable IS initially.",
+      "alternative": null
+    },
+    {
+      "verb": "instrument",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: legal document without designated recipient; output: document typed as addressed to specific party; recipient identity assigned",
+      "alternative": null
+    },
+    {
+      "verb": "intend",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: action without purpose designation. Output: action with assigned purpose. The thing is given its role/meaning.",
+      "alternative": null
+    },
+    {
+      "verb": "intransitivise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: verb of unknown transitivity; Output: verb typed as 'intransitive'; it acquires a grammatical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "intransitivize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: verb of unknown transitivity; Output: verb typed as 'intransitive'; it acquires a grammatical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "invalidate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim with unclear status; Output: claim typed as invalid; assigns invalidity label.",
+      "alternative": null
+    },
+    {
+      "verb": "jinx",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undertaking with unmarked fate; output: undertaking designated as 'doomed to failure'; assigns categorical outcome.",
+      "alternative": null
+    },
+    {
+      "verb": "judge",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: case without verdict. Output: case with judgment category. Definitive status assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "key out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unidentified specimen; output: specimen assigned to a taxonomic category/identity through keying process.",
+      "alternative": null
+    },
+    {
+      "verb": "keynote",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked musical piece. Output: piece designated with keynote. Assigned tonal center.",
+      "alternative": null
+    },
+    {
+      "verb": "knight",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without knight status. Output: person designated as knight. New title/category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "knock back",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: item without price designation. Output: item with cost value assigned. Labels the thing with its price.",
+      "alternative": null
+    },
+    {
+      "verb": "know",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: unfamiliar thing; Output: thing recognized as familiar type; assigns familiarity status/identity",
+      "alternative": "INS"
+    },
+    {
+      "verb": "know apart",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: two things perceived as potentially same; output: each assigned distinct identity by recognizing difference.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "label",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without judgment; Output: thing + categorical judgment; a definitional identity or classification is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "legalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action without legal status. Output: action designated as legal. Assigns legality category.",
+      "alternative": null
+    },
+    {
+      "verb": "legitimate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with uncertain status. Output: thing designated as legitimate/just. Assignment of categorical status.",
+      "alternative": null
+    },
+    {
+      "verb": "lexicalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: concept without word status. Output: concept with word/lexicon status. Assigns linguistic category.",
+      "alternative": null
+    },
+    {
+      "verb": "lexicalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: concept without word status. Output: concept with word/lexicon status. Assigns linguistic category.",
+      "alternative": null
+    },
+    {
+      "verb": "librate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: object with unknown weight. Output: object with determined weight value. Weight property is typed/assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "licence",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without official permission status; Output: entity designated as authorized; formal permission category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "license",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without official permission status; Output: entity designated as authorized; formal permission category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "lionise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without high-importance status. Output: person assigned high social importance category. What-they-are socially defined.",
+      "alternative": null
+    },
+    {
+      "verb": "lionize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without high-importance status. Output: person assigned high social importance category. What-they-are socially defined.",
+      "alternative": null
+    },
+    {
+      "verb": "localise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unknown location; output: same thing with location identified/typed; location designation assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "localize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unknown location; output: same thing with location identified/typed; location designation assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "locate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without designated position. Output: thing with assigned location identity \u2014 spatial typing.",
+      "alternative": null
+    },
+    {
+      "verb": "log z's",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person in unspecified state; output: person categorized as asleep; state labeled/typed.",
+      "alternative": null
+    },
+    {
+      "verb": "look on",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing untyped; Output: thing assigned category/type; designates what something is considered to be.",
+      "alternative": null
+    },
+    {
+      "verb": "look upon",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing untyped; Output: thing assigned category/type; designates what something is considered to be.",
+      "alternative": null
+    },
+    {
+      "verb": "lord",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without lord status. Output: person with lord category assigned. What-they-are defined/typed.",
+      "alternative": null
+    },
+    {
+      "verb": "major",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: student without designated field; output: student with principal field designated; the academic identity/focus is labeled.",
+      "alternative": null
+    },
+    {
+      "verb": "make out",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: unclear thing. Output: thing with established identity or meaning. Assigns categorical understanding to ambiguous input.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "make out to be",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without assigned characterization. Output: thing categorized as X. A classificatory label is applied.",
+      "alternative": null
+    },
+    {
+      "verb": "make up one's mind",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: undecided state; output: state now designated as 'decided' with specific choice identified; assigns definitive status.",
+      "alternative": null
+    },
+    {
+      "verb": "mandate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: optional action; Output: action designated as mandatory; assigns category of obligation.",
+      "alternative": null
+    },
+    {
+      "verb": "mark off",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated space. Output: space with boundaries designated/delimited. Definitional boundaries are established.",
+      "alternative": null
+    },
+    {
+      "verb": "mark out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated space. Output: space with boundaries designated/delimited. Definitional boundaries are established.",
+      "alternative": null
+    },
+    {
+      "verb": "martyr",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person dying. Output: person's death designated as martyrdom. Death gets new categorical meaning.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "matter",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: something existing. Output: that thing marked as significant/important. Assigns categorical status of 'having weight/import'.",
+      "alternative": null
+    },
+    {
+      "verb": "may",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: situation without likelihood typing. Output: situation typed as possible. The modal status is designated.",
+      "alternative": null
+    },
+    {
+      "verb": "measure",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with dimensions. Output: object with dimensions typed/quantified. The verb assigns what the dimension IS.",
+      "alternative": null
+    },
+    {
+      "verb": "measure up",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: entity with unknown adequacy. Output: entity typed as adequate/meeting-standard. Assigns qualification status.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "merit",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without worthiness label. Output: entity designated as deserving. Worthiness status assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "might",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: situation without likelihood typing. Output: situation typed as possibly likely. The modal status is designated.",
+      "alternative": null
+    },
+    {
+      "verb": "miscall",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing unnamed or correctly named. Output: thing with incorrect name assigned. Still designates, just wrongly.",
+      "alternative": null
+    },
+    {
+      "verb": "misname",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing unnamed or correctly named. Output: thing with incorrect name assigned. Still designates, just wrongly.",
+      "alternative": null
+    },
+    {
+      "verb": "miter",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: bishop without title; Output: bishop designated with miter/office; a formal category/status is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "monetise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: currency without legal tender status. Output: currency designated as legal tender. Assigns official money category.",
+      "alternative": null
+    },
+    {
+      "verb": "monetize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: currency without legal tender status. Output: currency designated as legal tender. Assigns official money category.",
+      "alternative": null
+    },
+    {
+      "verb": "must",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: situation without necessity typing. Output: situation typed as necessary/required. The modal status is designated.",
+      "alternative": null
+    },
+    {
+      "verb": "nail down",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: vague/undefined thing. Output: clearly defined thing. Definitional boundary is drawn.",
+      "alternative": null
+    },
+    {
+      "verb": "name",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unnamed entity, Output: entity with assigned name/label, Change: definitional identity assigned",
+      "alternative": null
+    },
+    {
+      "verb": "narrow",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unclear or broad concept. Output: clearly defined boundaries. Assigns definitional boundaries to what something is.",
+      "alternative": null
+    },
+    {
+      "verb": "narrow down",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: vague concept. Output: concept with precise definitional boundaries. Clear categorical identity assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "naturalise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: non-citizen. Output: person designated as citizen. Assigned citizenship category.",
+      "alternative": null
+    },
+    {
+      "verb": "naturalize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without citizen status. Output: person with citizen category assigned. Assigns a new legal identity/type.",
+      "alternative": null
+    },
+    {
+      "verb": "neighbor",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing without spatial relationship. Output: thing typed as neighbor. Identity as adjacent is designated.",
+      "alternative": null
+    },
+    {
+      "verb": "nickname",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without nickname; Output: person with informal name assigned; alternative identity label given",
+      "alternative": null
+    },
+    {
+      "verb": "nominate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without candidate status, Output: person designated as candidate, Change: category assigned (nominee)",
+      "alternative": null
+    },
+    {
+      "verb": "nose out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unidentified thing. Output: thing with identified nature/category through olfactory detection. Recognition assigns what something IS.",
+      "alternative": null
+    },
+    {
+      "verb": "notarise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unauthenticated document; Output: document with 'notarized/authentic' status; assigns official category.",
+      "alternative": null
+    },
+    {
+      "verb": "notarize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unauthenticated document; Output: document with 'notarized/authentic' status; assigns official category.",
+      "alternative": null
+    },
+    {
+      "verb": "number",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: things without numerical labels. Output: things with numbers assigned. Numerical identity designated.",
+      "alternative": null
+    },
+    {
+      "verb": "numerate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: quantity without number; output: quantity assigned specific numerical value; count designates what amount is.",
+      "alternative": null
+    },
+    {
+      "verb": "officialise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing without official status. Output: thing with official category assigned. Designates type/identity.",
+      "alternative": null
+    },
+    {
+      "verb": "officialize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing without official status. Output: thing with official category assigned. Designates type/identity.",
+      "alternative": null
+    },
+    {
+      "verb": "okay",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing without sanctioned status. Output: thing designated as acceptable. Approval label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "opt",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: alternatives without selection status. Output: one alternative designated as selected. Assigns chosen status.",
+      "alternative": null
+    },
+    {
+      "verb": "ordain",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without religious role, Output: person with clergy designation, Change: sacred category/status assigned",
+      "alternative": null
+    },
+    {
+      "verb": "orient",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thing with unspecified direction. Output: thing designated with orientation. Assigned directional position.",
+      "alternative": null
+    },
+    {
+      "verb": "orientate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: position as unknown. Output: position with reference assignment. A spatial relationship is defined.",
+      "alternative": null
+    },
+    {
+      "verb": "ought to",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without obligation status. Output: action designated as obligatory. Duty label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "oughta",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without modal status, Output: action designated as obligatory \u2014 assigns duty category.",
+      "alternative": null
+    },
+    {
+      "verb": "outbalance",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: two things in balance comparison; Output: one designated as outweighing other; marks dominance.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "outclass",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: thing with perceived equal or higher class; Output: thing revealed/designated as lower class; assigns comparative status category.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "outlaw",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: act without legal status. Output: act designated as illegal. New categorical judgment assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "outmatch",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: two compared entities; Output: one categorized as superior; what changed: superiority relation becomes defined",
+      "alternative": "INS"
+    },
+    {
+      "verb": "outnumber",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: two quantities; Output: one identified as larger; what changed: numerical superiority gets typed/marked",
+      "alternative": null
+    },
+    {
+      "verb": "outweigh",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: two weights; Output: one categorized as heavier; what changed: weight superiority gets typed",
+      "alternative": null
+    },
+    {
+      "verb": "overprice",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: item without price; Output: item assigned high price value; category/value assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "overvalue",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unmarked value; output: thing typed/designated as 'high value' (incorrectly); assigns a categorical assessment.",
+      "alternative": null
+    },
+    {
+      "verb": "paginate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: pages without numbers. Output: pages with assigned numbers. Pages get labels/identities.",
+      "alternative": null
+    },
+    {
+      "verb": "par",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: hole play completed; Output: score typed/labeled as 'par'; assigns categorical value to performance.",
+      "alternative": null
+    },
+    {
+      "verb": "parallel",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: two things with unspecified spatial relationship. Output: those things now identified as having parallel relationship. Designates a geometric category.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "pauper",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without poverty designation. Output: person designated as pauper. New social category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "peg",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without category; Output: person assigned to position category; definitionally places in a categorical slot",
+      "alternative": null
+    },
+    {
+      "verb": "peg down",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: something vague or undefined. Output: that thing with a clear definition/boundary. Assigns categorical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "pigeonhole",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unclassified thing. Output: thing assigned to category compartment. A type label is attached.",
+      "alternative": null
+    },
+    {
+      "verb": "pin down",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: something vague or undefined. Output: that thing with a clear definition/boundary. Assigns what something IS.",
+      "alternative": null
+    },
+    {
+      "verb": "pinpoint",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with vague location; Output: thing with exact location designation; assigns precise spatial category.",
+      "alternative": null
+    },
+    {
+      "verb": "pip",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: competitor with unknown status. Output: competitor marked as thoroughly defeated. What changed: a status label was assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "pluralise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked or singular word; Output: word designated as plural; morpheme assigns plural category.",
+      "alternative": null
+    },
+    {
+      "verb": "pluralize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked or singular word; Output: word designated as plural; morpheme assigns plural category.",
+      "alternative": null
+    },
+    {
+      "verb": "politicise",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: thing untyped as political; output: thing categorized as political; assigns political identity/category.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "politicize",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: thing untyped as political; output: thing categorized as political; assigns political identity/category.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "portend",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign without interpretation; Output: sign typed as omen of future; assigns meaning category.",
+      "alternative": null
+    },
+    {
+      "verb": "postulate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: an unasserted proposition. Output: that proposition designated as an axiom/assumption. Assigns categorical status.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "predate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: two events untyped temporally. Output: one event designated as 'earlier than' other. Assigns temporal-ordering category.",
+      "alternative": null
+    },
+    {
+      "verb": "predestinate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undetermined future; output: future designated by divine will with specific outcome; assigns fate category.",
+      "alternative": null
+    },
+    {
+      "verb": "predestine",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undetermined future; output: future designated with specific outcome beforehand; assigns fate category.",
+      "alternative": null
+    },
+    {
+      "verb": "predicate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: subject without stated attribute; output: subject with affirmed quality; an attribute is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "predominate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity in field; Output: entity marked as dominant; what changed: commanding position gets designated",
+      "alternative": null
+    },
+    {
+      "verb": "preexist",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing without temporal designation. Output: thing marked as existing-before. Temporal priority is designated.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "prefigure",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign without interpretation; Output: sign designated as prefiguration; assigns omen category.",
+      "alternative": null
+    },
+    {
+      "verb": "prejudge",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: unjudged thing. Output: thing with premature judgment assigned. A categorization is assigned without adequate basis.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "premier",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: work without 'premiered' status. Output: work designated as premiered. Status marker assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "premiere",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: work without 'premiered' status. Output: work designated as premiered. Status marker assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "premiss",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: something without status. Output: that thing designated as preexisting/given. Assigns foundational status.",
+      "alternative": null
+    },
+    {
+      "verb": "preordain",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undetermined future; output: future designated with specific outcome beforehand; assigns fate category.",
+      "alternative": null
+    },
+    {
+      "verb": "preponderate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: items in comparison; Output: one designated as heavier/dominant; assigns superiority status.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "presage",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign untyped; Output: sign typed as presaging event; assigns omen category.",
+      "alternative": null
+    },
+    {
+      "verb": "prevail",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: competing entities; Output: one marked as superior/victorious; what changed: winning status gets designated",
+      "alternative": "INS"
+    },
+    {
+      "verb": "price",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unpriced item; Output: item with price label; assigns monetary identity/category",
+      "alternative": null
+    },
+    {
+      "verb": "prioritise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without priority designation; Output: thing designated with priority level; assigns importance category/rank.",
+      "alternative": null
+    },
+    {
+      "verb": "prioritize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: item without priority designation; Output: item labeled/typed with priority level.",
+      "alternative": null
+    },
+    {
+      "verb": "prise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: unvalued entity, Output: entity designated as highly valued \u2014 assigns worth category.",
+      "alternative": null
+    },
+    {
+      "verb": "privilege",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without privilege status; Output: entity designated as privileged; special status category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "probate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: document with unestablished legal status. Output: document with designated legal validity. Assigns legal status category to document.",
+      "alternative": null
+    },
+    {
+      "verb": "prove",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: will as document. Output: same will now officially designated as valid/probated. Assigns legal status.",
+      "alternative": null
+    },
+    {
+      "verb": "purport",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked intention; output: intention designated/claimed as specific purpose; assigns stated goal category.",
+      "alternative": null
+    },
+    {
+      "verb": "purpose",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: action without defined intent; Output: action with purpose assigned; definitional boundary of intention is drawn.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "put (at)",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: quantity without estimate. Output: quantity with estimated value assigned. Designates a numeric category.",
+      "alternative": null
+    },
+    {
+      "verb": "quantify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unquantified property; Output: property with quantifier type applied; assigns numerical/quantitative category to the thing.",
+      "alternative": null
+    },
+    {
+      "verb": "quarterback",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: player without position; Output: player designated as quarterback; position identity assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "queen",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without queen status. Output: same person now designated as queen. Identity/category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "range",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unranked items. Output: items with assigned rank/rating. Identity/position designated.",
+      "alternative": null
+    },
+    {
+      "verb": "rank",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing without position in hierarchy. Output: thing with rank label. Ordinal category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "rate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: entity without value assignment. Output: entity with value designation. Assigns categorical worth/ranking.",
+      "alternative": null
+    },
+    {
+      "verb": "ratify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: agreement has provisional status. Output: agreement has 'officially approved' status. Assigns formal designation of validity.",
+      "alternative": null
+    },
+    {
+      "verb": "reaffirm",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: previously affirmed statement. Output: statement re-designated as true, categorical label reasserted.",
+      "alternative": null
+    },
+    {
+      "verb": "rebut",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim with unknown truth value; Output: claim designated as false/incorrect; assigns truth-value category.",
+      "alternative": null
+    },
+    {
+      "verb": "recognise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without credential status. Output: entity with credential status. A formal designation is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "recognize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without credential status. Output: entity with official designation. Grants formal categorization/legitimacy.",
+      "alternative": null
+    },
+    {
+      "verb": "reconsecrate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: desecrated person/object. Output: same thing re-typed as consecrated. Sacred designation restored.",
+      "alternative": null
+    },
+    {
+      "verb": "reconvict",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person; output: person newly designated as guilty again; the guilty label is reassigned.",
+      "alternative": null
+    },
+    {
+      "verb": "redefine",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with old definition. Output: same thing with new definitional boundary. The category assignment changes.",
+      "alternative": null
+    },
+    {
+      "verb": "redetermine",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with old determination; output: thing with new determination; the identity/classification is reassigned.",
+      "alternative": null
+    },
+    {
+      "verb": "reelect",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with expired term, Output: person with renewed official designation, Change: role/category reassigned",
+      "alternative": null
+    },
+    {
+      "verb": "referee",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: work with uncertain quality status. Output: work with professional judgment/evaluation assigned. The verb assigns a categorization or assessment.",
+      "alternative": null
+    },
+    {
+      "verb": "refute",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim with uncertain truth value. Output: claim designated as false. Truth-status label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "regard",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: thing without evaluative category. Output: thing assigned regard-type (esteem/contempt). Category applied.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "regard as",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing untyped; Output: thing assigned category/type; designates what something is considered to be.",
+      "alternative": null
+    },
+    {
+      "verb": "reify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: abstract concept; Output: concept assigned 'real/concrete' type; designates ontological category.",
+      "alternative": null
+    },
+    {
+      "verb": "relegate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unclassified thing; Output: thing assigned to class/kind; designates categorical membership.",
+      "alternative": null
+    },
+    {
+      "verb": "rename",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with old name; Output: thing with new name assigned; assigns new category identity.",
+      "alternative": null
+    },
+    {
+      "verb": "represent",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing without representational status; Output: thing designated as standing-for something; assigns symbolic identity",
+      "alternative": "CON"
+    },
+    {
+      "verb": "reprobate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: soul unclassified; Output: soul with 'damned' status assigned; assigns eternal category.",
+      "alternative": null
+    },
+    {
+      "verb": "repute",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: entity without reputational label. Output: entity designated as having certain standing. Assigns a social category/identity.",
+      "alternative": null
+    },
+    {
+      "verb": "resemble",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing without similarity marked. Output: thing designated as similar to another. Likeness relationship identified.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "reset",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: device with non-zero value. Output: device designated as zero. Assigned zero state.",
+      "alternative": null
+    },
+    {
+      "verb": "review",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: work without critical assessment, Output: work with assigned appraisal/judgment, Change: evaluative designation created",
+      "alternative": null
+    },
+    {
+      "verb": "revolve around",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: subject without identified center. Output: subject with specified center. The center/focus is designated as primary.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "rival",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: two entities without equivalence relation. Output: entities designated as equals in quality. Types the relationship as equivalent.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "route",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unrouted thing. Output: thing assigned specific path designation. Path identity specified.",
+      "alternative": null
+    },
+    {
+      "verb": "rule in",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: item with uncertain status. Output: item with included/excluded designation. Category membership determined.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "saint",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without sacred designation; Output: person labeled as sacred; assigns holy status.",
+      "alternative": null
+    },
+    {
+      "verb": "sanction",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action or entity with uncertain status. Output: same thing now typed as 'authorized/permitted'. Assignment of legitimacy category.",
+      "alternative": null
+    },
+    {
+      "verb": "sanction [allow]",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: action without official approval. Output: action designated as officially permitted. Authorization label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "scent out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unidentified thing. Output: thing with identified nature/category through olfactory detection. Recognition assigns what something IS.",
+      "alternative": null
+    },
+    {
+      "verb": "scrap",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing with current status; Output: same thing designated as scrap/refuse; assigns waste category.",
+      "alternative": null
+    },
+    {
+      "verb": "seat",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: space with unspecified capacity. Output: space with explicit capacity designation. Capacity property named.",
+      "alternative": null
+    },
+    {
+      "verb": "secern",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others.",
+      "alternative": null
+    },
+    {
+      "verb": "secernate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others.",
+      "alternative": null
+    },
+    {
+      "verb": "secure",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: uncertain outcome. Output: that outcome designated as certain/assured.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "select",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: undifferentiated set of alternatives; Output: one alternative marked as 'chosen'; designates selection status",
+      "alternative": null
+    },
+    {
+      "verb": "sell short",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: thing with unknown valuation. Output: thing assigned lower-than-actual value designation. Undervaluation marked.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "send up",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without sentence. Output: person assigned imprisonment designation. Sentencing identity applied.",
+      "alternative": null
+    },
+    {
+      "verb": "sensualize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: phenomenon without specified origin. Output: phenomenon designated as originating in sensation. Assigns categorical source/type.",
+      "alternative": null
+    },
+    {
+      "verb": "sentence",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: convicted person without sentence. Output: person assigned legal judgment designation. Punishment category assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "separate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked things. Output: things marked as different. The verb assigns categorical distinction.",
+      "alternative": null
+    },
+    {
+      "verb": "sequence",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: unsequenced items; Output: items with sequence positions assigned; designates order identity for each item.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "set in",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: emerging condition; Output: condition now typed as 'established'; it gains the identity of being fixed.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "set store",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing without assigned value; output: thing typed/labeled with importance; designates what something is worth.",
+      "alternative": null
+    },
+    {
+      "verb": "settle on",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: option without designation. Output: that option now designated as chosen. Assigns identity as 'the choice.'",
+      "alternative": null
+    },
+    {
+      "verb": "severalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others.",
+      "alternative": null
+    },
+    {
+      "verb": "severalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others.",
+      "alternative": null
+    },
+    {
+      "verb": "sexualise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing without sexual attribution; Output: thing designated as sexual; assigns category.",
+      "alternative": null
+    },
+    {
+      "verb": "sexualize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: untyped or neutral thing; Output: same thing now designated as sexual; assigns sexual category.",
+      "alternative": null
+    },
+    {
+      "verb": "shall",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without modal status, Output: action designated as required/future \u2014 assigns obligation category.",
+      "alternative": null
+    },
+    {
+      "verb": "shoot for",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: unmarked ambition; output: ambition designated toward lofty goal; assigns aspirational target category.",
+      "alternative": null
+    },
+    {
+      "verb": "shortlist",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: candidate without shortlist status; Output: candidate designated as shortlisted; assigns membership in a special category.",
+      "alternative": null
+    },
+    {
+      "verb": "should",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: action without normative status. Output: action designated as obligatory/desirable. Normative label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "signify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: sign without meaning assignment. Output: sign designated as denoting specific meaning. Semantic identity assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "singularise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without singular designation; output: thing marked as singular; a category/identity is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "singularize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without singular designation; output: thing marked as singular; a category/identity is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "site",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without designated location; output: thing with location label/assignment (category/identity assigned).",
+      "alternative": null
+    },
+    {
+      "verb": "sleep",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: space with unspecified capacity. Output: space with explicit sleeping capacity designation. Capacity property named.",
+      "alternative": null
+    },
+    {
+      "verb": "sleep in",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person + workplace; output: person categorized as live-in worker; residential status typed.",
+      "alternative": null
+    },
+    {
+      "verb": "sniff out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unidentified thing. Output: thing with identified nature/category through olfactory detection. Recognition assigns what something IS.",
+      "alternative": null
+    },
+    {
+      "verb": "source",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without origin designation; Output: thing with origin specified; assigns origin identity/label.",
+      "alternative": null
+    },
+    {
+      "verb": "specialise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unspecified statement. Output: statement with specific designation. Marks what something specifically IS about.",
+      "alternative": null
+    },
+    {
+      "verb": "specialize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unspecified statement. Output: statement with specific designation. Marks what something specifically IS about.",
+      "alternative": null
+    },
+    {
+      "verb": "specify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: vague or general thing. Output: thing with clear definition. Boundary drawn around what it IS.",
+      "alternative": null
+    },
+    {
+      "verb": "stalemate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: game in unknown state; Output: game designated as stalemated; specific terminal condition assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "stand out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing unmarked; Output: thing marked as distinctive; assigns salience/special status.",
+      "alternative": null
+    },
+    {
+      "verb": "star",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: performer without star designation. Output: performer with star status assigned. The verb assigns a category/role identity.",
+      "alternative": null
+    },
+    {
+      "verb": "steady down",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: unstable lifestyle; Output: lifestyle now typed as 'settled'; the state acquires a settled identity.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "stereotype",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: person without stereotype label. Output: person assigned to mental category. A definitional boundary is drawn.",
+      "alternative": null
+    },
+    {
+      "verb": "stigmatise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unmarked entity. Output: entity with stigma label/mark. Assigns a negative identifying category or mark.",
+      "alternative": null
+    },
+    {
+      "verb": "stooge",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person without role designation; output: person identified/typed as 'stooge'; assigns role identity.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "style",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unnamed thing. Output: thing with identifying term. Category or label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "subscribe",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: person without belief. Output: person with belief categorized as theirs. The person designates a proposition as their belief.",
+      "alternative": null
+    },
+    {
+      "verb": "sum",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: detailed content; Output: that content designated/typed as a summary of something else; assigns a definitional relationship.",
+      "alternative": null
+    },
+    {
+      "verb": "superannuate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: thing untyped as obsolete; output: thing categorized as obsolete; assigns obsolescence status.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "superordinate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: thing without rank designation; Output: thing designated as superior; assigns a hierarchical identity/type.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "surpass",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person with unrecognized superiority; Output: person marked as exceeding standard; what changed: superior status gets designated",
+      "alternative": null
+    },
+    {
+      "verb": "sustain",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim/objection with uncertain validity. Output: claim formally designated as valid. A formal status is assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "taboo",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: thing without sacred-forbidden status. Output: same thing now designated as both sacred and forbidden.",
+      "alternative": null
+    },
+    {
+      "verb": "take after",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: person without similarity marked. Output: person designated as resembling relative. Likeness identity assigned.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "take for",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing untyped; Output: thing assigned category/type as conviction; designates what something is held to be.",
+      "alternative": null
+    },
+    {
+      "verb": "take for granted",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: proposition untyped. Output: proposition designated as assumed-true. It gets the status 'granted/accepted'.",
+      "alternative": null
+    },
+    {
+      "verb": "take form",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: undifferentiated thing. Output: that thing with distinctive identity/category established.",
+      "alternative": null
+    },
+    {
+      "verb": "take in",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: person with true belief. Output: person designated as fooled. Assigned deceived status.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "take root",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: transient state; Output: state now typed as 'settled' or 'established'; the identity shifts from temporary to permanent.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "take the cake",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unranked entity; Output: entity designated as first/worst; assigns categorical status of 'most extreme'.",
+      "alternative": null
+    },
+    {
+      "verb": "take the veil",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without nun identity. Output: same person now categorized/typed as nun (definitional boundary drawn).",
+      "alternative": null
+    },
+    {
+      "verb": "take to be",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing untyped; Output: thing assigned category/type; designates what something is considered to be.",
+      "alternative": null
+    },
+    {
+      "verb": "term",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without formal term; Output: thing designated with formal term; definitional label assigned",
+      "alternative": null
+    },
+    {
+      "verb": "think the world of",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: entity unvalued; Output: entity assigned 'highly esteemed' category; designates extreme value.",
+      "alternative": null
+    },
+    {
+      "verb": "tie up",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: task with state untyped; output: task now typed as 'finished'; finishing last row designates completion.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "time",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untimed event. Output: event assigned temporal value. Designated with specific time.",
+      "alternative": null
+    },
+    {
+      "verb": "title",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: work or person without title. Output: work or person with assigned title. Assigns name/designation.",
+      "alternative": null
+    },
+    {
+      "verb": "trademark",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: unnamed/unprotected mark. Output: that mark now has legal category status as 'registered trademark'. Assigns official identity.",
+      "alternative": null
+    },
+    {
+      "verb": "transitivise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: verb of unknown transitivity; Output: verb typed as 'transitive'; it acquires a grammatical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "transitivize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: verb of unknown transitivity; Output: verb typed as 'transitive'; it acquires a grammatical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "treat",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: person without treatment role. Output: person categorized as patient receiving care. Status assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "triumph",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: entity in contest. Output: entity designated as superior. Status/identity assigned through proof.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "typecast",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: untyped entity. Output: entity identified as belonging to specific type. Category assignment occurs.",
+      "alternative": null
+    },
+    {
+      "verb": "typify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing without symbolic type. Output: thing designated as representative of category. Assigns categorical identity.",
+      "alternative": null
+    },
+    {
+      "verb": "underprice",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: item without price; Output: item assigned low price value; category/value assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "understand",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: phenomenon without interpreted category, Output: phenomenon with meaning/category assigned by cognizer, Change: conceptual type assigned",
+      "alternative": null
+    },
+    {
+      "verb": "unfit",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: thing with unspecified suitability. Output: thing designated as unsuitable. Assigned unfit category.",
+      "alternative": null
+    },
+    {
+      "verb": "usher in",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: event without precursor marked. Output: thing designated as signal/precursor of coming event. Sign-status assigned.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "validate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unvalidated claim; Output: claim typed as valid; assigns truth-status category.",
+      "alternative": null
+    },
+    {
+      "verb": "valuate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: unassessed thing; Output: thing with value/quality category assigned; assigns what something is worth.",
+      "alternative": null
+    },
+    {
+      "verb": "verify",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: statement with unknown truth value. Output: statement designated as true. Assigns truth-status type.",
+      "alternative": null
+    },
+    {
+      "verb": "view as",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: thing untyped; Output: thing assigned category/type as conviction; designates what something is held to be.",
+      "alternative": null
+    },
+    {
+      "verb": "vote in",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: person without elected status. Output: person designated as elected official. Assigns categorical identity through voting.",
+      "alternative": null
+    },
+    {
+      "verb": "warrant",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: claim without justification status. Output: claim designated as justified. Adequacy label assigned.",
+      "alternative": null
+    },
+    {
+      "verb": "weaponize",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: object without weapon designation. Output: same object designated/categorized as weapon.",
+      "alternative": null
+    },
+    {
+      "verb": "weigh",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: object with weight. Output: object with weight value assigned. The verb types/quantifies what the weight IS.",
+      "alternative": null
+    },
+    {
+      "verb": "will",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: something without decree status. Output: that thing designated as willed/ordained by authority.",
+      "alternative": null
+    },
+    {
+      "verb": "would",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: situation without conditional/habitual typing. Output: situation typed as conditional/likely. The modal status is designated.",
+      "alternative": null
+    },
+    {
+      "verb": "wrap up",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: task with state untyped; output: task now typed as 'complete'; finishing designates completion status.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "zero",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: instrument with arbitrary reference. Output: instrument designated with zero point. Assigned zero value.",
+      "alternative": null
+    },
+    {
+      "verb": "zipcode",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: location without postal identifier. Output: location with zipcode designation. Category assigned.",
+      "alternative": null
+    }
+  ]
+}

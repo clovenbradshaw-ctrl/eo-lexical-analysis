@@ -1,0 +1,4113 @@
+{
+  "operators": [
+    {
+      "operator": "NUL",
+      "symbol": "\u2205",
+      "total_verbs": 1467,
+      "territory": {
+        "core": 1297,
+        "settled": 169,
+        "contested": 1,
+        "foreign": 0
+      },
+      "margin_stats": {
+        "mean": 0.1571802878271932,
+        "median": 0.1583400382762108,
+        "std": 0.047402860640244474,
+        "min": 0.0006112904847921374,
+        "max": 0.29549389689622496,
+        "pct_positive": 100.0
+      },
+      "prototypes": [
+        {
+          "verb": "get rid of",
+          "self_sim": 0.8550949054981368,
+          "margin": 0.29549389689622496,
+          "scale": "physical",
+          "reason": "Input: state with something present. Output: state with that thing absent. A gap is created where something was.",
+          "confidence": "high"
+        },
+        {
+          "verb": "eliminate",
+          "self_sim": 0.8432644698549026,
+          "margin": 0.28173942001702423,
+          "scale": "physical",
+          "reason": "Input: existing thing. Output: that thing absent. Makes something void.",
+          "confidence": "high"
+        },
+        {
+          "verb": "rid of",
+          "self_sim": 0.8406571648922028,
+          "margin": 0.2844239104138937,
+          "scale": "physical",
+          "reason": "Input: state with unwanted thing present; Output: state with that thing absent; makes absence explicit by removing something.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cut out",
+          "self_sim": 0.8265211263190241,
+          "margin": 0.2566072527207842,
+          "scale": "physical",
+          "reason": "Input: operating process. Output: process absent, stopped. Gap where operation was.",
+          "confidence": "high"
+        },
+        {
+          "verb": "do away with",
+          "self_sim": 0.816631393024797,
+          "margin": 0.25303214063071144,
+          "scale": "physical",
+          "reason": "Input: thing present; Output: thing eliminated/absent; makes removal explicit.",
+          "confidence": "high"
+        },
+        {
+          "verb": "clear out",
+          "self_sim": 0.8150489715611198,
+          "margin": 0.27238206284151767,
+          "scale": "physical",
+          "reason": "Input: space with occupants; Output: empty space; occupants removed, absence established.",
+          "confidence": "high"
+        },
+        {
+          "verb": "clear away",
+          "self_sim": 0.8117863481472212,
+          "margin": 0.2669962472717866,
+          "scale": "physical",
+          "reason": "Input: visible field with object. Output: field with object absent from view. Visual presence removed.",
+          "confidence": "high"
+        },
+        {
+          "verb": "remove",
+          "self_sim": 0.8111611821081431,
+          "margin": 0.281730261217087,
+          "scale": "physical",
+          "reason": "Input: thing present in location. Output: thing's presence is void. Makes presence absent.",
+          "confidence": "high"
+        },
+        {
+          "verb": "go away",
+          "self_sim": 0.8054674603897362,
+          "margin": 0.27935598687493257,
+          "scale": "physical",
+          "reason": "Input: thing present at location; output: thing absent from location; a gap/void where presence was expected.",
+          "confidence": "high"
+        },
+        {
+          "verb": "clean out",
+          "self_sim": 0.8038045600360093,
+          "margin": 0.27199736907979544,
+          "scale": "physical",
+          "reason": "Input: container with contents; Output: empty container; contents removed, void created.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "intromit",
+          "self_sim": 0.623680734883751,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6230694443989588,
+          "margin": 0.0006112904847921374,
+          "scale": "physical",
+          "reason": "Input: person with entry barrier present. Output: same person with entry barrier made absent.",
+          "alternative": "SEG"
+        },
+        {
+          "verb": "conk",
+          "self_sim": 0.6441344692057791,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6233427893616343,
+          "margin": 0.02079167984414476,
+          "scale": "physical",
+          "reason": "Input: ongoing motion/operation. Output: same state with motion absent/stopped. Motion becomes absent.",
+          "alternative": null
+        },
+        {
+          "verb": "affranchise",
+          "self_sim": 0.5489585267780754,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5257560543317306,
+          "margin": 0.02320247244634488,
+          "scale": "social",
+          "reason": "Input: person with slavery/servitude expected. Output: bondage absent, freedom granted. Makes constraint void.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "abacinate",
+          "self_sim": 0.576676595329755,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5504101436391706,
+          "margin": 0.02626645169058439,
+          "scale": "physical",
+          "reason": "Input: person with vision capacity. Output: person with vision capacity absent. Sight becomes missing.",
+          "alternative": null
+        },
+        {
+          "verb": "condone",
+          "self_sim": 0.5923221775204595,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5649661362757126,
+          "margin": 0.027356041244746887,
+          "scale": "social",
+          "reason": "Input: expected censure; Output: same state with censure explicitly absent/withdrawn; moral objection voided.",
+          "alternative": null
+        },
+        {
+          "verb": "stow away",
+          "self_sim": 0.572319251500901,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5383118462162992,
+          "margin": 0.03400740528460178,
+          "scale": "social",
+          "reason": "Input: person as detectable passenger. Output: person's official presence absent. Detectability becomes void.",
+          "alternative": null
+        },
+        {
+          "verb": "lose sleep",
+          "self_sim": 0.5562028242677945,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5215628010033889,
+          "margin": 0.03464002326440563,
+          "scale": "physical",
+          "reason": "Input: expected rest state; Output: rest absent due to worry/concern.",
+          "alternative": null
+        },
+        {
+          "verb": "repatriate",
+          "self_sim": 0.5781822829905883,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5429710402446989,
+          "margin": 0.03521124274588938,
+          "scale": "social",
+          "reason": "Input: person with entry restriction present. Output: same person with entry restriction made absent.",
+          "alternative": "CON"
+        },
+        {
+          "verb": "desegregate",
+          "self_sim": 0.6776150520980919,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.6407880854214532,
+          "margin": 0.03682696667663876,
+          "scale": "social",
+          "reason": "Input: place with racial barriers; Output: same place with barriers absent; the segregation (a structural division) is removed/voided.",
+          "alternative": null
+        },
+        {
+          "verb": "placate",
+          "self_sim": 0.587442493951915,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.549952405693778,
+          "margin": 0.03749008825813693,
+          "scale": "psychological",
+          "reason": "Input: state with anger/displeasure present; Output: same state with anger removed; the gap is the absence of negative feeling.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "immunise",
+          "self_sim": 0.5613878591687675,
+          "nearest_other_op": "INS",
+          "other_sim": 0.523063466319569,
+          "margin": 0.03832439284919853,
+          "scale": "social",
+          "reason": "Input: person subject to prosecution; output: person with prosecution liability removed; gap in legal vulnerability created.",
+          "alternative": null
+        },
+        {
+          "verb": "achromatise",
+          "self_sim": 0.6379544114236546,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5966386872343239,
+          "margin": 0.041315724189330716,
+          "scale": "physical",
+          "reason": "Input: thing with color. Output: same thing with color now absent. Makes the expected presence of color into explicit absence.",
+          "alternative": null
+        },
+        {
+          "verb": "resect",
+          "self_sim": 0.6622273050822818,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6207987225791837,
+          "margin": 0.04142858250309811,
+          "scale": "physical",
+          "reason": "Input: organ/structure with part; Output: organ/structure without that part; a portion that was present becomes absent through surgical removal.",
+          "alternative": null
+        },
+        {
+          "verb": "pasteurise",
+          "self_sim": 0.5458045101726217,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.503606841291087,
+          "margin": 0.042197668881534645,
+          "scale": "physical",
+          "reason": "Input: food with harmful microorganisms. Output: food with those microorganisms now absent, killed.",
+          "alternative": null
+        },
+        {
+          "verb": "alibi",
+          "self_sim": 0.6008221531345436,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5578144873378328,
+          "margin": 0.04300766579671078,
+          "scale": "social",
+          "reason": "Input: state where guilt is present. Output: state where guilt is absent/negated via exoneration.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "spiritualise",
+          "self_sim": 0.6187601154039304,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5756567012210383,
+          "margin": 0.0431034141828921,
+          "scale": "psychological",
+          "reason": "Input: thing with worldly corruptions. Output: thing without corruptions. Corrupting influences are made absent.",
+          "alternative": null
+        },
+        {
+          "verb": "tergiversate",
+          "self_sim": 0.6304813764110353,
+          "nearest_other_op": "SUP",
+          "other_sim": 0.5871023724282594,
+          "margin": 0.04337900398277594,
+          "scale": "psychological",
+          "reason": "Input: held beliefs/allegiances; Output: beliefs explicitly absent; makes void in commitment visible.",
+          "alternative": null
+        },
+        {
+          "verb": "by-pass",
+          "self_sim": 0.5981582062443094,
+          "nearest_other_op": "INS",
+          "other_sim": 0.554552646884773,
+          "margin": 0.04360555935953636,
+          "scale": "physical",
+          "reason": "Input: state where engagement with obstacle expected. Output: state with that engagement absent; path around makes norm-gap visible.",
+          "alternative": "SEG"
+        },
+        {
+          "verb": "dethrone",
+          "self_sim": 0.6191596820904766,
+          "nearest_other_op": "DES",
+          "other_sim": 0.5749916799252113,
+          "margin": 0.044168002165265285,
+          "scale": "social",
+          "reason": "Input: monarch occupying throne-position; output: throne-position vacant; gap where authority-holder expected.",
+          "alternative": null
+        },
+        {
+          "verb": "macerate",
+          "self_sim": 0.6112454792698014,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5633824547584039,
+          "margin": 0.04786302451139757,
+          "scale": "physical",
+          "reason": "Input: thick/strong tissue, output: substance/strength depleted, makes structural integrity absent.",
+          "alternative": null
+        }
+      ],
+      "foreign_verbs": [],
+      "nearest_neighbors": [
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7512948604272888
+        },
+        {
+          "operator": "ALT",
+          "centroid_similarity": 0.7399366157823426
+        },
+        {
+          "operator": "SEG",
+          "centroid_similarity": 0.6908051564480051
+        },
+        {
+          "operator": "DES",
+          "centroid_similarity": 0.6782023338453205
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "absent",
+            1142
+          ],
+          [
+            "void",
+            337
+          ],
+          [
+            "made",
+            326
+          ],
+          [
+            "gap",
+            308
+          ],
+          [
+            "person",
+            288
+          ],
+          [
+            "expected",
+            282
+          ],
+          [
+            "makes",
+            274
+          ],
+          [
+            "where",
+            272
+          ],
+          [
+            "absence",
+            241
+          ],
+          [
+            "removed",
+            237
+          ],
+          [
+            "becomes",
+            223
+          ],
+          [
+            "explicit",
+            222
+          ],
+          [
+            "present",
+            221
+          ],
+          [
+            "thing",
+            216
+          ],
+          [
+            "entity",
+            145
+          ],
+          [
+            "was",
+            134
+          ],
+          [
+            "missing",
+            125
+          ],
+          [
+            "now",
+            108
+          ],
+          [
+            "surface",
+            101
+          ],
+          [
+            "created",
+            98
+          ]
+        ],
+        "sample_input_patterns": [
+          "target expected to be reached",
+          "state with thirst/pain present",
+          "ongoing process",
+          "experiencer with courage present",
+          "experiencer with expectations/hopes",
+          "person with hostility present",
+          "experiencer with composure present",
+          "experiencer with composure present"
+        ],
+        "sample_output_patterns": [
+          "same state with contact/success made explicit as absent, gap marked",
+          "same state with thirst/pain made absent",
+          "same context with process now absent (ceased)",
+          "experiencer with courage now absent",
+          "experiencer with those expectations now unmet/absent",
+          "person with hostility now absent (won over)",
+          "experiencer with composure now lost/absent",
+          "experiencer with composure now absent/lost"
+        ]
+      },
+      "scales": {
+        "physical": 842,
+        "social": 344,
+        "psychological": 147,
+        "informational": 134
+      }
+    },
+    {
+      "operator": "DES",
+      "symbol": "\u22a1",
+      "total_verbs": 448,
+      "territory": {
+        "core": 363,
+        "settled": 83,
+        "contested": 1,
+        "foreign": 1
+      },
+      "margin_stats": {
+        "mean": 0.1399122540533249,
+        "median": 0.13913085206152304,
+        "std": 0.047325760777916476,
+        "min": -0.06242162726626854,
+        "max": 0.2533731065181283,
+        "pct_positive": 99.77678571428571
+      },
+      "prototypes": [
+        {
+          "verb": "style",
+          "self_sim": 0.84451863740419,
+          "margin": 0.2533731065181283,
+          "scale": "informational",
+          "reason": "Input: unnamed thing. Output: thing with identifying term. Category or label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "define",
+          "self_sim": 0.8279356636313768,
+          "margin": 0.22833332576248866,
+          "scale": "informational",
+          "reason": "Input: thing without explicit definition; Output: thing with definitional boundary drawn; assigns essential nature",
+          "confidence": "high"
+        },
+        {
+          "verb": "designate",
+          "self_sim": 0.8269064065965679,
+          "margin": 0.2526021989159726,
+          "scale": "social",
+          "reason": "Input: unnamed thing, Output: thing with assigned role/identity, Change: category/label assigned",
+          "confidence": "high"
+        },
+        {
+          "verb": "okay",
+          "self_sim": 0.8055498138859403,
+          "margin": 0.23389105110219544,
+          "scale": "social",
+          "reason": "Input: thing without sanctioned status. Output: thing designated as acceptable. Approval label assigned.",
+          "confidence": "high"
+        },
+        {
+          "verb": "characterise",
+          "self_sim": 0.7964082097466325,
+          "margin": 0.20746118876232367,
+          "scale": "informational",
+          "reason": "Input: thing untyped; Output: thing designated as having certain characteristic; assigns definitional property.",
+          "confidence": "high"
+        },
+        {
+          "verb": "identify",
+          "self_sim": 0.7958937874592314,
+          "margin": 0.2078759397030573,
+          "scale": "informational",
+          "reason": "Input: thing without identified status; Output: thing designated as equivalent to known category; assigns identity",
+          "confidence": "high"
+        },
+        {
+          "verb": "take to be",
+          "self_sim": 0.7821007454911006,
+          "margin": 0.21221774230150214,
+          "scale": "psychological",
+          "reason": "Input: thing untyped; Output: thing assigned category/type; designates what something is considered to be.",
+          "confidence": "high"
+        },
+        {
+          "verb": "determine",
+          "self_sim": 0.7802109469086793,
+          "margin": 0.22814404977884317,
+          "scale": "informational",
+          "reason": "Input: undecided matter. Output: that matter now has definite status. A boundary is drawn around what is decided.",
+          "confidence": "high"
+        },
+        {
+          "verb": "characterize",
+          "self_sim": 0.7788592474260372,
+          "margin": 0.22219809380151923,
+          "scale": "informational",
+          "reason": "Input: thing without explicit characteristic label; Output: thing with characteristic assigned; designates defining quality",
+          "confidence": "high"
+        },
+        {
+          "verb": "number",
+          "self_sim": 0.7760227512362325,
+          "margin": 0.2162414456879872,
+          "scale": "informational",
+          "reason": "Input: things without numerical labels. Output: things with numbers assigned. Numerical identity designated.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "choreograph",
+          "self_sim": 0.6054613576805249,
+          "nearest_other_op": "REC",
+          "other_sim": 0.596520051151257,
+          "margin": 0.008941306529267945,
+          "scale": "informational",
+          "reason": "Input: movements without defined structure; output: movements now designated with specific planned structure; the movements receive definitional organization.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "secernate",
+          "self_sim": 0.6984570943578803,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.6709784012192822,
+          "margin": 0.027478693138598076,
+          "scale": "informational",
+          "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others.",
+          "alternative": null
+        },
+        {
+          "verb": "jinx",
+          "self_sim": 0.5816775477246963,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5480588697986879,
+          "margin": 0.03361867792600837,
+          "scale": "informational",
+          "reason": "Input: undertaking with unmarked fate; output: undertaking designated as 'doomed to failure'; assigns categorical outcome.",
+          "alternative": null
+        },
+        {
+          "verb": "animize",
+          "self_sim": 0.6127913939377653,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5787274643127964,
+          "margin": 0.03406392962496885,
+          "scale": "informational",
+          "reason": "Input: thing without animate typing. Output: thing typed as lifelike. An animate category is assigned.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "secern",
+          "self_sim": 0.6784902221153069,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.6444056579278402,
+          "margin": 0.03408456418746664,
+          "scale": "informational",
+          "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others.",
+          "alternative": null
+        },
+        {
+          "verb": "include",
+          "self_sim": 0.6304234780450105,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5935549845017849,
+          "margin": 0.03686849354322563,
+          "scale": "informational",
+          "reason": "Input: entity without part-status. Output: entity typed as part-of-whole. The verb assigns membership category to the entity.",
+          "alternative": null
+        },
+        {
+          "verb": "take in",
+          "self_sim": 0.6682310572366111,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6249468156143978,
+          "margin": 0.04328424162221334,
+          "scale": "psychological",
+          "reason": "Input: person with true belief. Output: person designated as fooled. Assigned deceived status.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "communalise",
+          "self_sim": 0.5931390189784632,
+          "nearest_other_op": "REC",
+          "other_sim": 0.547999379636217,
+          "margin": 0.045139639342246185,
+          "scale": "social",
+          "reason": "Input: property with individual ownership type; Output: property redesignated as communal; ownership category changes.",
+          "alternative": "REC"
+        },
+        {
+          "verb": "communalize",
+          "self_sim": 0.6066596193689517,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5613760915081223,
+          "margin": 0.04528352786082945,
+          "scale": "social",
+          "reason": "Input: property with individual ownership type; Output: property redesignated as communal; ownership category changes.",
+          "alternative": "REC"
+        },
+        {
+          "verb": "animise",
+          "self_sim": 0.61367553612239,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5678477468175742,
+          "margin": 0.04582778930481579,
+          "scale": "informational",
+          "reason": "Input: thing without animate typing. Output: thing typed as lifelike. An animate category is assigned.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "come on heels",
+          "self_sim": 0.5884560523343808,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5425702620390402,
+          "margin": 0.04588579029534057,
+          "scale": "informational",
+          "reason": "Input: two events without temporal typing. Output: second event designated as 'immediately following' first. Assigns temporal proximity category.",
+          "alternative": null
+        },
+        {
+          "verb": "homologise",
+          "self_sim": 0.6363944335339796,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5890101968569728,
+          "margin": 0.047384236677006863,
+          "scale": "informational",
+          "reason": "Input: structures; Output: structures typed as 'homologous'; they acquire the identity of corresponding.",
+          "alternative": null
+        },
+        {
+          "verb": "confute",
+          "self_sim": 0.5899901839410773,
+          "nearest_other_op": "SUP",
+          "other_sim": 0.5385226062037377,
+          "margin": 0.051467577737339565,
+          "scale": "informational",
+          "reason": "Input: claim with unknown truth value; Output: claim designated as false; assigns truth-value category.",
+          "alternative": null
+        },
+        {
+          "verb": "becalm",
+          "self_sim": 0.6265742989156406,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.574879762897126,
+          "margin": 0.0516945360185147,
+          "scale": "physical",
+          "reason": "Input: unstable state; Output: state now typed as 'steady'; it acquires a stable identity.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "intransitivize",
+          "self_sim": 0.6343545374666338,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5825705371641656,
+          "margin": 0.051784000302468214,
+          "scale": "informational",
+          "reason": "Input: verb of unknown transitivity; Output: verb typed as 'intransitive'; it acquires a grammatical identity.",
+          "alternative": null
+        },
+        {
+          "verb": "filiate",
+          "self_sim": 0.6267061022294355,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5741469142714678,
+          "margin": 0.05255918795796766,
+          "scale": "social",
+          "reason": "Input: person with unmarked paternity; output: person designated with specific father identity; assigns categorical relationship type.",
+          "alternative": null
+        },
+        {
+          "verb": "reelect",
+          "self_sim": 0.6112472704516356,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5581485482286219,
+          "margin": 0.053098722223013706,
+          "scale": "social",
+          "reason": "Input: person with expired term, Output: person with renewed official designation, Change: role/category reassigned",
+          "alternative": null
+        },
+        {
+          "verb": "politicize",
+          "self_sim": 0.6340442658789404,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5783409661947239,
+          "margin": 0.0557032996842165,
+          "scale": "social",
+          "reason": "Input: thing untyped as political; output: thing categorized as political; assigns political identity/category.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "severalize",
+          "self_sim": 0.7250809935868985,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.6684618883132492,
+          "margin": 0.05661910527364933,
+          "scale": "informational",
+          "reason": "Input: unmarked thing; output: thing with a distinguishing mark/category that sets it apart from others.",
+          "alternative": null
+        },
+        {
+          "verb": "stooge",
+          "self_sim": 0.6110695906897664,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5540851073064288,
+          "margin": 0.056984483383337614,
+          "scale": "social",
+          "reason": "Input: person without role designation; output: person identified/typed as 'stooge'; assigns role identity.",
+          "alternative": "INS"
+        }
+      ],
+      "foreign_verbs": [
+        {
+          "verb": "reconvict",
+          "self_sim": 0.5327273130726595,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5951489403389281,
+          "margin": -0.06242162726626854,
+          "scale": "social",
+          "reason": "Input: person; output: person newly designated as guilty again; the guilty label is reassigned."
+        }
+      ],
+      "nearest_neighbors": [
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7685290122492159
+        },
+        {
+          "operator": "ALT",
+          "centroid_similarity": 0.7564343987358301
+        },
+        {
+          "operator": "CON",
+          "centroid_similarity": 0.7416551476165486
+        },
+        {
+          "operator": "SEG",
+          "centroid_similarity": 0.707122130036735
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "thing",
+            194
+          ],
+          [
+            "designated",
+            178
+          ],
+          [
+            "without",
+            175
+          ],
+          [
+            "assigned",
+            174
+          ],
+          [
+            "category",
+            168
+          ],
+          [
+            "assigns",
+            148
+          ],
+          [
+            "status",
+            147
+          ],
+          [
+            "person",
+            126
+          ],
+          [
+            "identity",
+            101
+          ],
+          [
+            "entity",
+            69
+          ],
+          [
+            "typed",
+            57
+          ],
+          [
+            "action",
+            48
+          ],
+          [
+            "label",
+            46
+          ],
+          [
+            "designation",
+            45
+          ],
+          [
+            "what",
+            45
+          ],
+          [
+            "value",
+            41
+          ],
+          [
+            "categorical",
+            35
+          ],
+          [
+            "type",
+            35
+          ],
+          [
+            "something",
+            31
+          ],
+          [
+            "untyped",
+            25
+          ]
+        ],
+        "sample_input_patterns": [
+          "entity without god-status",
+          "statement with undeclared truth status",
+          "previously affirmed statement",
+          "proposition without truth-status",
+          "entity without part-status",
+          "something existing",
+          "unnamed thing,",
+          "person without office status,"
+        ],
+        "sample_output_patterns": [
+          "entity now designated as god or godlike, categorical identity assigned",
+          "statement now designated as true by speaker, categorical epistemic label assigned",
+          "statement re-designated as true, categorical label reasserted",
+          "proposition typed as true-for-believer",
+          "entity typed as part-of-whole",
+          "that thing marked as significant/important",
+          "thing with assigned role/identity,",
+          "person with official role designation,"
+        ]
+      },
+      "scales": {
+        "informational": 251,
+        "social": 148,
+        "psychological": 37,
+        "physical": 12
+      }
+    },
+    {
+      "operator": "INS",
+      "symbol": "\u25b3",
+      "total_verbs": 7528,
+      "territory": {
+        "core": 4288,
+        "settled": 3033,
+        "contested": 173,
+        "foreign": 34
+      },
+      "margin_stats": {
+        "mean": 0.10372398032578752,
+        "median": 0.10710358716031781,
+        "std": 0.03917003922455377,
+        "min": -0.12154655665018277,
+        "max": 0.22007743426807547,
+        "pct_positive": 98.8575982996812
+      },
+      "prototypes": [
+        {
+          "verb": "change state",
+          "self_sim": 0.7869653830388644,
+          "margin": 0.15965277404930422,
+          "scale": "physical",
+          "reason": "Input: existing state. Output: new state appears. The verb instantiates a transformed condition.",
+          "confidence": "high"
+        },
+        {
+          "verb": "act on",
+          "self_sim": 0.7768003961249905,
+          "margin": 0.1331095330196127,
+          "scale": "social",
+          "reason": "Input: information/decision exists. Output: new action/behavior appears in response. New phenomenon entering the world.",
+          "confidence": "high"
+        },
+        {
+          "verb": "go in",
+          "self_sim": 0.7700729096685407,
+          "margin": 0.20031174969315535,
+          "scale": "physical",
+          "reason": "Input: person outside; Output: person + entering movement; the entry action is a new phenomenon appearing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "step forward",
+          "self_sim": 0.7641616360135556,
+          "margin": 0.1746964123893302,
+          "scale": "physical",
+          "reason": "Input: person in background. Output: person visible/prominent with action taken. Forward movement and visibility arise as new observable state.",
+          "confidence": "high"
+        },
+        {
+          "verb": "come on",
+          "self_sim": 0.7596753058142753,
+          "margin": 0.16370342885159217,
+          "scale": "physical",
+          "reason": "Input: position A. Output: position closer to target. A movement trajectory appears.",
+          "confidence": "high"
+        },
+        {
+          "verb": "step up",
+          "self_sim": 0.7575192589041166,
+          "margin": 0.17114091941235798,
+          "scale": "physical",
+          "reason": "Input: lower intensity. Output: higher intensity present. New level of magnitude appears.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "rear",
+          "self_sim": 0.7567640852324831,
+          "margin": 0.11040219850918387,
+          "scale": "physical",
+          "reason": "Input: lowered/horizontal state. Output: raised/vertical state. New upright configuration appears.",
+          "confidence": "high"
+        },
+        {
+          "verb": "go on",
+          "self_sim": 0.7564037958801691,
+          "margin": 0.1729536815154452,
+          "scale": "informational",
+          "reason": "Input: world without event. Output: world with event occurring. New event comes to pass.",
+          "confidence": "high"
+        },
+        {
+          "verb": "call up",
+          "self_sim": 0.7552524458504319,
+          "margin": 0.1512360746400967,
+          "scale": "informational",
+          "reason": "Input: world as is. Output: world with item brought into consideration; making something present for attention.",
+          "confidence": "high"
+        },
+        {
+          "verb": "act involuntarily",
+          "self_sim": 0.7550407738944294,
+          "margin": 0.18240438657594038,
+          "scale": "physical",
+          "reason": "Input: current state. Output: uncontrolled action event manifesting. New involuntary behavior appearing.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "opalize",
+          "self_sim": 0.5944770815641568,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5945715280548898,
+          "margin": -9.444649073298006e-05,
+          "scale": "physical",
+          "reason": "Input: non-opalescent material; output: material + opalescent quality; new optical property appears.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "nuke",
+          "self_sim": 0.591661560102156,
+          "nearest_other_op": "NUL",
+          "other_sim": 0.5922171869413874,
+          "margin": -0.0005556268392313823,
+          "scale": "physical",
+          "reason": "Input: target area. Output: target with atomic explosion occurring. Bombing event instantiated.",
+          "alternative": null
+        },
+        {
+          "verb": "alcoholise",
+          "self_sim": 0.5840015754471556,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.583422222917793,
+          "margin": 0.0005793525293625867,
+          "scale": "physical",
+          "reason": "Input: substance. Output: substance + alcohol. Alcohol appears in or on the substance.",
+          "alternative": null
+        },
+        {
+          "verb": "motley",
+          "self_sim": 0.5662182969157468,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5656039028930123,
+          "margin": 0.0006143940227344435,
+          "scale": "physical",
+          "reason": "Input: uniform thing. Output: thing with varied colors/patterns added. Multiple new color properties appear.",
+          "alternative": "SEG"
+        },
+        {
+          "verb": "meet",
+          "self_sim": 0.6604907527371837,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6598428781871521,
+          "margin": 0.0006478745500315686,
+          "scale": "physical",
+          "reason": "Input: dispersed entities; Output: co-location event appears; creates convergence phenomenon.",
+          "alternative": null
+        },
+        {
+          "verb": "commend",
+          "self_sim": 0.5402015575422849,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5394158667508663,
+          "margin": 0.0007856907914186584,
+          "scale": "social",
+          "reason": "Input: person/thing to evaluate; Output: world with expression of respect/approval appearing; positive judgment instantiated.",
+          "alternative": "CON"
+        },
+        {
+          "verb": "company",
+          "self_sim": 0.6334573460492315,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6343634082340637,
+          "margin": -0.0009060621848321349,
+          "scale": "social",
+          "reason": "Input: person alone. Output: person with companionship activity/state now occurring. New co-presence phenomenon appears.",
+          "alternative": "CON"
+        },
+        {
+          "verb": "polychromise",
+          "self_sim": 0.5114626118991374,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5123754887385643,
+          "margin": -0.0009128768394268683,
+          "scale": "physical",
+          "reason": "Input: thing without multiple colors. Output: thing with many colors added. Multiple color properties appear.",
+          "alternative": null
+        },
+        {
+          "verb": "coordinate",
+          "self_sim": 0.6333412653718421,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6321894804744671,
+          "margin": 0.0011517848973749967,
+          "scale": "social",
+          "reason": "Input: uncoordinated state. Output: coordinated activity/state appears and continues.",
+          "alternative": "CON"
+        },
+        {
+          "verb": "rarify",
+          "self_sim": 0.5924626653502607,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5911650504604216,
+          "margin": 0.0012976148898391493,
+          "scale": "informational",
+          "reason": "Input: basic structure. Output: structure with new intricacy/richness added. Additional complexity appears.",
+          "alternative": null
+        },
+        {
+          "verb": "redress",
+          "self_sim": 0.5801320939875503,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5816134149809078,
+          "margin": -0.0014813209933575155,
+          "scale": "social",
+          "reason": "Input: situation with harm; Output: situation with reparation action added; new compensatory act appears.",
+          "alternative": "NUL"
+        },
+        {
+          "verb": "design",
+          "self_sim": 0.6286892014218701,
+          "nearest_other_op": "DES",
+          "other_sim": 0.6271582342215709,
+          "margin": 0.0015309672002992158,
+          "scale": "informational",
+          "reason": "Input: no design. Output: design plan exists. New blueprint or pattern created.",
+          "alternative": null
+        },
+        {
+          "verb": "re-create",
+          "self_sim": 0.6707819589678821,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6691799436720579,
+          "margin": 0.0016020152958241551,
+          "scale": "physical",
+          "reason": "Input: world without thing; Output: world with thing newly created; brings new instance into existence.",
+          "alternative": null
+        },
+        {
+          "verb": "reacquaint",
+          "self_sim": 0.6348014010453784,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6331676979445717,
+          "margin": 0.0016337031008066827,
+          "scale": "psychological",
+          "reason": "Input: person lacking recent familiarity; output: person with renewed familiarity state; a new experiential state appears in the person.",
+          "alternative": null
+        },
+        {
+          "verb": "sublimate",
+          "self_sim": 0.6344378661673795,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.6327399648757854,
+          "margin": 0.0016979012915940839,
+          "scale": "informational",
+          "reason": "Input: thing with current refinement level. Output: thing with enhanced subtle qualities now present.",
+          "alternative": "REC"
+        },
+        {
+          "verb": "denature",
+          "self_sim": 0.5756614979114594,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5737605086649695,
+          "margin": 0.0019009892464898481,
+          "scale": "physical",
+          "reason": "Input: drinkable alcohol. Output: alcohol with additive. Instantiates new chemical property (bitterness/toxicity).",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "squabble",
+          "self_sim": 0.5621691864683998,
+          "nearest_other_op": "SUP",
+          "other_sim": 0.5601025064289539,
+          "margin": 0.0020666800394458784,
+          "scale": "social",
+          "reason": "Input: actors without argument. Output: actors engaged in petty argument. New argumentative event appears.",
+          "alternative": null
+        },
+        {
+          "verb": "recrudesce",
+          "self_sim": 0.6484003267122216,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6506286588645213,
+          "margin": -0.0022283321522996724,
+          "scale": "physical",
+          "reason": "Input: healed/closed state. Output: raw/open state appears. A new condition (rawness/openness) emerges.",
+          "alternative": "SEG"
+        },
+        {
+          "verb": "ream",
+          "self_sim": 0.5668453970288804,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5690921944167359,
+          "margin": -0.0022467973878554925,
+          "scale": "physical",
+          "reason": "Input: hole of size X. Output: hole of size X+delta. Enlargement creates new volume/space.",
+          "alternative": null
+        },
+        {
+          "verb": "edulcorate",
+          "self_sim": 0.5543100442780473,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5519474099761661,
+          "margin": 0.002362634301881217,
+          "scale": "physical",
+          "reason": "Input: less sweet thing; output: sweeter thing; increased sweetness appears as a new quality.",
+          "alternative": null
+        }
+      ],
+      "foreign_verbs": [
+        {
+          "verb": "consort",
+          "self_sim": 0.6114232523440748,
+          "nearest_other_op": "CON",
+          "other_sim": 0.7329698089942576,
+          "margin": -0.12154655665018277,
+          "scale": "social",
+          "reason": "Input: separate entities; Output: joint movement or association appears\u2014co-movement as a new event, not persistent structural link."
+        },
+        {
+          "verb": "cooccur",
+          "self_sim": 0.5598614436258162,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6291371580334857,
+          "margin": -0.06927571440766944,
+          "scale": "informational",
+          "reason": "Input: separate events; Output: events happening simultaneously; creates co-temporal presence, not persistent link."
+        },
+        {
+          "verb": "recreate",
+          "self_sim": 0.6464112638070213,
+          "nearest_other_op": "REC",
+          "other_sim": 0.7025962343570867,
+          "margin": -0.05618497055006544,
+          "scale": "informational",
+          "reason": "Input: destroyed or absent thing. Output: renewed version exists. New instantiation of previous form."
+        },
+        {
+          "verb": "conduct",
+          "self_sim": 0.5975211400283598,
+          "nearest_other_op": "CON",
+          "other_sim": 0.646981066625979,
+          "margin": -0.04945992659761922,
+          "scale": "physical",
+          "reason": "Input: person A and person B at separate locations. Output: guided movement event occurs where A leads B somewhere, creating a transient guiding action rather than persistent link."
+        },
+        {
+          "verb": "harmonize",
+          "self_sim": 0.6160789592216322,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6648724145733995,
+          "margin": -0.04879345535176727,
+          "scale": "physical",
+          "reason": "Input: elements existing separately; output: those elements now co-occurring in compatible way; this is an event of compatibility arising, not a persistent structural link being built."
+        },
+        {
+          "verb": "associate",
+          "self_sim": 0.5917719615824575,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6399302750943165,
+          "margin": -0.04815831351185906,
+          "scale": "social",
+          "reason": "Input: situation without co-presence. Output: co-presence event exists. Temporary interaction appears, not persistent link."
+        },
+        {
+          "verb": "recurve",
+          "self_sim": 0.6071182544256708,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6533477262189396,
+          "margin": -0.04622947179326875,
+          "scale": "physical",
+          "reason": "Input: straight or differently curved object; Output: object curved back or down; a recurved shape appears."
+        },
+        {
+          "verb": "confabulate",
+          "self_sim": 0.5705792576685812,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6136356894462691,
+          "margin": -0.04305643177768792,
+          "scale": "social",
+          "reason": "Input: conversational context; Output: conference discussion appears\u2014new communicative event instantiated."
+        },
+        {
+          "verb": "congregate",
+          "self_sim": 0.5903090170412053,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6317858155396872,
+          "margin": -0.04147679849848185,
+          "scale": "social",
+          "reason": "Input: people dispersed. Output: gathering present. New assembly of people appears together."
+        },
+        {
+          "verb": "recoup",
+          "self_sim": 0.6084412260556522,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6494831218584554,
+          "margin": -0.04104189580280315,
+          "scale": "social",
+          "reason": "Input: deficit state; Output: recovered state; new resources or compensation appear to restore balance."
+        }
+      ],
+      "nearest_neighbors": [
+        {
+          "operator": "CON",
+          "centroid_similarity": 0.7894298649499698
+        },
+        {
+          "operator": "ALT",
+          "centroid_similarity": 0.7891265174481643
+        },
+        {
+          "operator": "SYN",
+          "centroid_similarity": 0.7785946407977159
+        },
+        {
+          "operator": "DES",
+          "centroid_similarity": 0.7685290122492159
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "appears",
+            3838
+          ],
+          [
+            "world",
+            1713
+          ],
+          [
+            "event",
+            1632
+          ],
+          [
+            "person",
+            1523
+          ],
+          [
+            "without",
+            1446
+          ],
+          [
+            "present",
+            971
+          ],
+          [
+            "at",
+            771
+          ],
+          [
+            "surface",
+            722
+          ],
+          [
+            "action",
+            654
+          ],
+          [
+            "object",
+            624
+          ],
+          [
+            "arises",
+            563
+          ],
+          [
+            "appear",
+            561
+          ],
+          [
+            "phenomenon",
+            529
+          ],
+          [
+            "instantiated",
+            513
+          ],
+          [
+            "movement",
+            502
+          ],
+          [
+            "thing",
+            498
+          ],
+          [
+            "motion",
+            489
+          ],
+          [
+            "occurring",
+            477
+          ],
+          [
+            "experiencer",
+            469
+          ],
+          [
+            "added",
+            424
+          ]
+        ],
+        "sample_input_patterns": [
+          "two entities in separate locations",
+          "two entities separate",
+          "unguided entity",
+          "flock and person",
+          "entity with current direction",
+          "experiencer without admiration state",
+          "experiencer in neutral state",
+          "thing with lower value"
+        ],
+        "sample_output_patterns": [
+          "two entities co-present in space as a transient event, no persistent structural link created",
+          "accompanying movement event occurs, a new phenomenon (the escorting action) enters the world without building persistent structure",
+          "guiding action as new event appears, a transient helping phenomenon rather than structural transformation",
+          "tending behavior appears as ongoing activity event, not a structural link being built",
+          "directing action appears as new control event, embodied action arising",
+          "admiration feeling arises in experiencer, new psychological state appearing",
+          "intense love feeling arises in experiencer, new emotional state instantiated",
+          "value increase appears as new property state, thing gains additional worth"
+        ]
+      },
+      "scales": {
+        "physical": 4501,
+        "social": 1267,
+        "psychological": 917,
+        "informational": 843
+      }
+    },
+    {
+      "operator": "SEG",
+      "symbol": "\uff5c",
+      "total_verbs": 555,
+      "territory": {
+        "core": 470,
+        "settled": 82,
+        "contested": 2,
+        "foreign": 1
+      },
+      "margin_stats": {
+        "mean": 0.15256546451278002,
+        "median": 0.148081237265554,
+        "std": 0.05142920349352008,
+        "min": -0.033130932472131724,
+        "max": 0.3086066995832377,
+        "pct_positive": 99.81981981981983
+      },
+      "prototypes": [
+        {
+          "verb": "split up",
+          "self_sim": 0.8763751318583315,
+          "margin": 0.27278420346687793,
+          "scale": "physical",
+          "reason": "Input: whole. Output: that whole divided into parts or portions. Partitioning transformation.",
+          "confidence": "high"
+        },
+        {
+          "verb": "segment",
+          "self_sim": 0.8731527364917565,
+          "margin": 0.30795542671860754,
+          "scale": "physical",
+          "reason": "Input: whole. Output: multiple parts. Boundaries drawn through to create divisions.",
+          "confidence": "high"
+        },
+        {
+          "verb": "section",
+          "self_sim": 0.8729871810976526,
+          "margin": 0.3086066995832377,
+          "scale": "physical",
+          "reason": "Input: whole. Output: parts separated by boundaries. Thing partitioned into segments.",
+          "confidence": "high"
+        },
+        {
+          "verb": "segregate",
+          "self_sim": 0.8418575036288313,
+          "margin": 0.2636193193772114,
+          "scale": "physical",
+          "reason": "Input: integrated whole. Output: separated parts. Partitions a mass by drawing boundaries and creating distinct subsets.",
+          "confidence": "high"
+        },
+        {
+          "verb": "snap off",
+          "self_sim": 0.8401758115999258,
+          "margin": 0.2651743914394007,
+          "scale": "physical",
+          "reason": "Input: whole object; output: parts separated by breaking, boundary drawn through whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cut away",
+          "self_sim": 0.8395805729544328,
+          "margin": 0.27081200937001204,
+          "scale": "physical",
+          "reason": "Input: whole object. Output: object divided into remaining-part and removed-part. Creates partition.",
+          "confidence": "high"
+        },
+        {
+          "verb": "separate off",
+          "self_sim": 0.8369496321240165,
+          "margin": 0.26274372442741367,
+          "scale": "physical",
+          "reason": "Input: unified space. Output: space partitioned by divider into separate areas. Boundary drawn through space.",
+          "confidence": "high"
+        },
+        {
+          "verb": "take apart",
+          "self_sim": 0.8301207832866311,
+          "margin": 0.22391763967891642,
+          "scale": "physical",
+          "reason": "Input: assembled whole; Output: component parts separated; divides assembly into pieces.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sever",
+          "self_sim": 0.8276837178865677,
+          "margin": 0.2787234027798827,
+          "scale": "physical",
+          "reason": "Input: connected whole. Output: separated parts. A boundary is drawn through something, dividing it.",
+          "confidence": "high"
+        },
+        {
+          "verb": "dissever",
+          "self_sim": 0.8250149765583128,
+          "margin": 0.2275734993238998,
+          "scale": "physical",
+          "reason": "Input: unified whole. Output: separated parts. Draws boundary through whole, creating division.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "keep in",
+          "self_sim": 0.6055750274286875,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5904817631525925,
+          "margin": 0.01509326427609503,
+          "scale": "physical",
+          "reason": "Input: person with full spatial access. Output: person's location partitioned into allowed (indoors) and forbidden (outdoors).",
+          "alternative": null
+        },
+        {
+          "verb": "transaminate",
+          "self_sim": 0.5852661506248724,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5688611313373113,
+          "margin": 0.016405019287561107,
+          "scale": "physical",
+          "reason": "Input: amino group in one compound. Output: amino group separated and transferred to another compound. Partition from original, though followed by connection.",
+          "alternative": "CON"
+        },
+        {
+          "verb": "coinsure",
+          "self_sim": 0.5238256385792756,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5007210838846259,
+          "margin": 0.02310455469464967,
+          "scale": "social",
+          "reason": "Input: insurance risk as whole. Output: risk divided among multiple insurers. The coverage is partitioned.",
+          "alternative": null
+        },
+        {
+          "verb": "coop in",
+          "self_sim": 0.5843551921070737,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6174861245792054,
+          "margin": -0.033130932472131724,
+          "scale": "physical",
+          "reason": "Input: entity with freedom of movement; Output: entity with movement restricted to bounded space; creates spatial partition separating inside from outside.",
+          "alternative": null
+        },
+        {
+          "verb": "subsume",
+          "self_sim": 0.6685850447103485,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6258233093105414,
+          "margin": 0.0427617353998071,
+          "scale": "informational",
+          "reason": "Input: undifferentiated set; Output: subset relation identified within whole; draws boundary marking part-of relationship.",
+          "alternative": "CON"
+        },
+        {
+          "verb": "collate",
+          "self_sim": 0.5868160958808275,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5439629685307001,
+          "margin": 0.04285312735012736,
+          "scale": "informational",
+          "reason": "Input: texts as wholes. Output: texts partitioned into comparable units. Draws analytical boundaries through content.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "trounce",
+          "self_sim": 0.5957853329048117,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5522743167885575,
+          "margin": 0.043511016116254186,
+          "scale": "social",
+          "reason": "Input: contest with undetermined outcome. Output: contest sharply partitioned into dominant victor and defeated opponent \u2014 extreme division.",
+          "alternative": null
+        },
+        {
+          "verb": "constrain",
+          "self_sim": 0.6565398479925011,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6100661584853366,
+          "margin": 0.04647368950716446,
+          "scale": "informational",
+          "reason": "Input: full range of possibilities. Output: limited subset. Boundary imposed that partitions possible from impossible.",
+          "alternative": null
+        },
+        {
+          "verb": "deaminate",
+          "self_sim": 0.5786120406168673,
+          "nearest_other_op": "NUL",
+          "other_sim": 0.5320631377166807,
+          "margin": 0.04654890290018665,
+          "scale": "physical",
+          "reason": "Input: amino compound (whole); Output: compound with amino radical removed (parts separated).",
+          "alternative": null
+        },
+        {
+          "verb": "trample",
+          "self_sim": 0.6732917009780346,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6250685473094177,
+          "margin": 0.04822315366861685,
+          "scale": "physical",
+          "reason": "Input: raised/intact object. Output: object flattened (structural integrity broken). The object is divided from its original form.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "demob",
+          "self_sim": 0.5859244791242972,
+          "nearest_other_op": "DES",
+          "other_sim": 0.5363646888493778,
+          "margin": 0.04955979027491941,
+          "scale": "social",
+          "reason": "Input: person integrated in military; Output: person separated from military structure; link to service severed.",
+          "alternative": null
+        },
+        {
+          "verb": "deaminize",
+          "self_sim": 0.5626549431339136,
+          "nearest_other_op": "NUL",
+          "other_sim": 0.5119421328389313,
+          "margin": 0.05071281029498231,
+          "scale": "physical",
+          "reason": "Input: amino compound with amino radical attached. Output: compound with amino radical separated/removed. A chemical partition removing a part from a whole.",
+          "alternative": null
+        },
+        {
+          "verb": "avert",
+          "self_sim": 0.6136833459156095,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5580766466471424,
+          "margin": 0.055606699268467064,
+          "scale": "psychological",
+          "reason": "Input: attention unified toward object. Output: attention separated/divided away from object.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "plagiarize",
+          "self_sim": 0.5532815693849817,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.49649293769278485,
+          "margin": 0.05678863169219689,
+          "scale": "informational",
+          "reason": "Input: content with attribution link; Output: content separated from original author; boundary drawn between work and creator.",
+          "alternative": "NUL"
+        },
+        {
+          "verb": "repossess",
+          "self_sim": 0.6357310509021353,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5773218123968193,
+          "margin": 0.058409238505315986,
+          "scale": "social",
+          "reason": "Input: property with current holder; Output: property separated from holder, returned to original owner; boundary drawn through reclamation.",
+          "alternative": null
+        },
+        {
+          "verb": "unreel",
+          "self_sim": 0.6600194188785219,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5977587189687666,
+          "margin": 0.062260699909755246,
+          "scale": "physical",
+          "reason": "Input: wound/integrated mass on reel. Output: separated, extended strand. The whole is partitioned into linear parts.",
+          "alternative": null
+        },
+        {
+          "verb": "ionise",
+          "self_sim": 0.6234812075869809,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5604624082614095,
+          "margin": 0.06301879932557142,
+          "scale": "physical",
+          "reason": "Input: neutral molecule. Output: separated ions (cation and anion). The whole molecule is partitioned into charged parts.",
+          "alternative": null
+        },
+        {
+          "verb": "demodulate",
+          "self_sim": 0.6097288902208429,
+          "nearest_other_op": "DES",
+          "other_sim": 0.545143892927605,
+          "margin": 0.06458499729323786,
+          "scale": "informational",
+          "reason": "Input: modulated signal containing information; Output: information separated from carrier wave; partitions signal from information.",
+          "alternative": null
+        },
+        {
+          "verb": "proofread",
+          "self_sim": 0.5675839063793808,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5015449554627618,
+          "margin": 0.06603895091661904,
+          "scale": "informational",
+          "reason": "Input: complete text; output: errors filtered/identified; boundaries drawn around problematic elements.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "upend",
+          "self_sim": 0.6248543426722013,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5572323541412215,
+          "margin": 0.06762198853097978,
+          "scale": "social",
+          "reason": "Input: hierarchical contest. Output: hierarchy inverted, separating previous top from bottom \u2014 partition through power structure.",
+          "alternative": "REC"
+        }
+      ],
+      "foreign_verbs": [
+        {
+          "verb": "coop in",
+          "self_sim": 0.5843551921070737,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6174861245792054,
+          "margin": -0.033130932472131724,
+          "scale": "physical",
+          "reason": "Input: entity with freedom of movement; Output: entity with movement restricted to bounded space; creates spatial partition separating inside from outside."
+        }
+      ],
+      "nearest_neighbors": [
+        {
+          "operator": "SYN",
+          "centroid_similarity": 0.7506003207940776
+        },
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7471067807701796
+        },
+        {
+          "operator": "DES",
+          "centroid_similarity": 0.707122130036735
+        },
+        {
+          "operator": "CON",
+          "centroid_similarity": 0.7067422554102206
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "whole",
+            303
+          ],
+          [
+            "into",
+            277
+          ],
+          [
+            "parts",
+            220
+          ],
+          [
+            "separated",
+            216
+          ],
+          [
+            "through",
+            179
+          ],
+          [
+            "boundary",
+            177
+          ],
+          [
+            "drawn",
+            147
+          ],
+          [
+            "partitioned",
+            108
+          ],
+          [
+            "divided",
+            98
+          ],
+          [
+            "object",
+            89
+          ],
+          [
+            "material",
+            78
+          ],
+          [
+            "by",
+            75
+          ],
+          [
+            "partitions",
+            71
+          ],
+          [
+            "divides",
+            59
+          ],
+          [
+            "surface",
+            54
+          ],
+          [
+            "body",
+            49
+          ],
+          [
+            "partitioning",
+            45
+          ],
+          [
+            "space",
+            45
+          ],
+          [
+            "partition",
+            43
+          ],
+          [
+            "unified",
+            43
+          ]
+        ],
+        "sample_input_patterns": [
+          "ordered/coherent state",
+          "coherent emotional state",
+          "whole object",
+          "whole object",
+          "contained whole",
+          "whole plant with stem",
+          "complex whole,",
+          "nails as whole growth"
+        ],
+        "sample_output_patterns": [
+          "that state divided into disordered parts",
+          "that state fragmented into confused parts",
+          "pieces",
+          "parts separated by boundary drawn through it",
+          "container breached, contents dispersed into parts",
+          "plant body and separated stem",
+          "identified constituent parts/aspects,",
+          "nails trimmed into shaped parts"
+        ]
+      },
+      "scales": {
+        "physical": 402,
+        "social": 77,
+        "informational": 68,
+        "psychological": 8
+      }
+    },
+    {
+      "operator": "CON",
+      "symbol": "\u22c8",
+      "total_verbs": 745,
+      "territory": {
+        "core": 457,
+        "settled": 268,
+        "contested": 18,
+        "foreign": 2
+      },
+      "margin_stats": {
+        "mean": 0.11288346947906636,
+        "median": 0.11369109642775266,
+        "std": 0.04488819081968511,
+        "min": -0.041636699262847854,
+        "max": 0.22862619999905098,
+        "pct_positive": 98.65771812080537
+      },
+      "prototypes": [
+        {
+          "verb": "hang on",
+          "self_sim": 0.8219489481717377,
+          "margin": 0.21000573796135646,
+          "scale": "physical",
+          "reason": "Input: two unattached things. Output: things attached with persistent link. Structural connection built.",
+          "confidence": "high"
+        },
+        {
+          "verb": "link up",
+          "self_sim": 0.80488182310562,
+          "margin": 0.15192940554024525,
+          "scale": "informational",
+          "reason": "Input: two unconnected logical/causal entities. Output: those entities with a persistent conceptual link. A structural connection is built.",
+          "confidence": "high"
+        },
+        {
+          "verb": "interconnect",
+          "self_sim": 0.8045165151343958,
+          "margin": 0.12736957319818187,
+          "scale": "physical",
+          "reason": "Input: separate entities. Output: entities with persistent interconnection links. Multiple structural connections built.",
+          "confidence": "high"
+        },
+        {
+          "verb": "couple",
+          "self_sim": 0.8013253836268313,
+          "margin": 0.1973402616765776,
+          "scale": "physical",
+          "reason": "Input: two unlinked entities. Output: entities with persistent structural link. A connection is built.",
+          "confidence": "high"
+        },
+        {
+          "verb": "belong to",
+          "self_sim": 0.8010963744273059,
+          "margin": 0.1754888333532627,
+          "scale": "social",
+          "reason": "Input: thing and whole unlinked; output: persistent structural part-whole relationship established.",
+          "confidence": "high"
+        },
+        {
+          "verb": "couple on",
+          "self_sim": 0.7971839832858718,
+          "margin": 0.1765782281351802,
+          "scale": "physical",
+          "reason": "Input: two unlinked entities; output: entities with persistent structural coupling link.",
+          "confidence": "high"
+        },
+        {
+          "verb": "interlink",
+          "self_sim": 0.7943905122166552,
+          "margin": 0.12201573419695144,
+          "scale": "physical",
+          "reason": "Input: separate entities. Output: entities with persistent interlinks. Structural connections built between parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "introduce",
+          "self_sim": 0.7930864995462679,
+          "margin": 0.17048222642956623,
+          "scale": "social",
+          "reason": "Input: two unconnected entities; output: those entities with social link established; a persistent relationship structure is built between previously unlinked parties.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tie in",
+          "self_sim": 0.7903986184389612,
+          "margin": 0.14921497087455704,
+          "scale": "informational",
+          "reason": "Input: unlinked logical/causal elements; output: elements with persistent logical connection built; creates structural relationship.",
+          "confidence": "high"
+        },
+        {
+          "verb": "hold on",
+          "self_sim": 0.7898913484594923,
+          "margin": 0.20540434499267424,
+          "scale": "physical",
+          "reason": "Input: thing and holder separate. Output: persistent grip linking them. Structural connection maintained.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "synchronize",
+          "self_sim": 0.695635816083376,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6968619488868663,
+          "margin": -0.0012261328034902652,
+          "scale": "physical",
+          "reason": "Input: multiple processes unlinked temporally. Output: processes with persistent temporal alignment link. Structural timing relationship built.",
+          "alternative": null
+        },
+        {
+          "verb": "reassign",
+          "self_sim": 0.6559027720506686,
+          "nearest_other_op": "REC",
+          "other_sim": 0.657466860159185,
+          "margin": -0.0015640881085163816,
+          "scale": "social",
+          "reason": "Input: person linked to old position. Output: person linked to new position. New structural connection built.",
+          "alternative": "REC"
+        },
+        {
+          "verb": "rehouse",
+          "self_sim": 0.6437138324876843,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6402714453701412,
+          "margin": 0.0034423871175430776,
+          "scale": "social",
+          "reason": "Input: person with old housing link. Output: person with new housing link. Builds new structural connection between person and different dwelling.",
+          "alternative": null
+        },
+        {
+          "verb": "reallot",
+          "self_sim": 0.5869162535234005,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5903849544860962,
+          "margin": -0.003468700962695692,
+          "scale": "social",
+          "reason": "Input: things with old allocation links. Output: same things with new allocation links. Persistent structural reassignment.",
+          "alternative": null
+        },
+        {
+          "verb": "resew",
+          "self_sim": 0.5906768767961377,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5945251493927541,
+          "margin": -0.0038482725966164644,
+          "scale": "physical",
+          "reason": "Input: separated or damaged fabric pieces. Output: pieces reconnected with persistent thread link. Rebuilding a connection.",
+          "alternative": null
+        },
+        {
+          "verb": "skyjack",
+          "self_sim": 0.5199900586163188,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5154131272036961,
+          "margin": 0.004576931412622609,
+          "scale": "social",
+          "reason": "Input: hijacker and aircraft unlinked. Output: hijacker controls aircraft. Persistent coercive control relationship constructed.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "predetermine",
+          "self_sim": 0.6138607536965002,
+          "nearest_other_op": "DES",
+          "other_sim": 0.6075387687675706,
+          "margin": 0.006321984928929547,
+          "scale": "psychological",
+          "reason": "Input: unbiased state; Output: state with persistent bias link installed; a structural constraint is built into future decisions.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "reave",
+          "self_sim": 0.5717754517701383,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5806731131684313,
+          "margin": -0.008897661398292955,
+          "scale": "social",
+          "reason": "Input: goods belong to victim; Output: goods now linked to thief; ownership relationship reconstructed.",
+          "alternative": null
+        },
+        {
+          "verb": "reseal",
+          "self_sim": 0.5932310412519306,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5790656715785825,
+          "margin": 0.014165369673348138,
+          "scale": "physical",
+          "reason": "Input: opened container with broken seal; Output: container with new seal linking edges; persistent closure connection rebuilt.",
+          "alternative": null
+        },
+        {
+          "verb": "synchronise",
+          "self_sim": 0.6850528826259626,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6993241776068087,
+          "margin": -0.014271294980846005,
+          "scale": "physical",
+          "reason": "Input: multiple processes unlinked temporally. Output: processes with persistent temporal alignment link. Structural timing relationship built.",
+          "alternative": null
+        },
+        {
+          "verb": "refinance",
+          "self_sim": 0.6319830065288603,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6170564586678997,
+          "margin": 0.014926547860960593,
+          "scale": "social",
+          "reason": "Input: old financing relationship; Output: new financing relationship constructed to replace old one.",
+          "alternative": "REC"
+        },
+        {
+          "verb": "chemisorb",
+          "self_sim": 0.5672569727566057,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5521096541657219,
+          "margin": 0.015147318590883807,
+          "scale": "physical",
+          "reason": "Input: surface + substance; Output: surface with chemically bonded substance; a persistent chemical link is built.",
+          "alternative": null
+        },
+        {
+          "verb": "harmonise",
+          "self_sim": 0.6960955746634563,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6806284076808808,
+          "margin": 0.015467166982575442,
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: elements with harmonic relationship. Persistent structural link of compatibility built.",
+          "alternative": null
+        },
+        {
+          "verb": "retick",
+          "self_sim": 0.5776956071874804,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5952855123538963,
+          "margin": -0.017589905166415898,
+          "scale": "physical",
+          "reason": "Input: unsewn or previously sewn material. Output: material with new/renewed sewn connections. Creates links.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "dip solder",
+          "self_sim": 0.5777056585098139,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5599589828993188,
+          "margin": 0.017746675610495144,
+          "scale": "physical",
+          "reason": "Input: separate components; Output: components with persistent solder joint; a structural link is built.",
+          "alternative": null
+        },
+        {
+          "verb": "braze",
+          "self_sim": 0.60587796436679,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5871560272863459,
+          "margin": 0.018721937080444118,
+          "scale": "physical",
+          "reason": "Input: separate parts; Output: parts with persistent hard solder joint; a structural link is built.",
+          "alternative": null
+        },
+        {
+          "verb": "reallocate",
+          "self_sim": 0.6603896043095333,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6797100880067184,
+          "margin": -0.019320483697185087,
+          "scale": "social",
+          "reason": "Input: resources with old allocation links. Output: new allocation links built. Persistent structural reassignment.",
+          "alternative": null
+        },
+        {
+          "verb": "enfilade",
+          "self_sim": 0.5584676869737681,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5388279574563977,
+          "margin": 0.019639729517370474,
+          "scale": "physical",
+          "reason": "Input: position and target axis; Output: geometric alignment established allowing lengthwise fire \u2014 creates persistent tactical relationship.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "reapportion",
+          "self_sim": 0.5902934962181755,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6130667702052085,
+          "margin": -0.022773273987032994,
+          "scale": "social",
+          "reason": "Input: resources with old apportionment links. Output: new apportionment links constructed. Structural reassignment.",
+          "alternative": null
+        },
+        {
+          "verb": "indwell",
+          "self_sim": 0.6239350885988134,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6006121050375076,
+          "margin": 0.0233229835613058,
+          "scale": "psychological",
+          "reason": "Input: spirit/force and container unlinked. Output: persistent inhabitation relationship \u2014 inner presence structurally linked to outer form.",
+          "alternative": "INS"
+        }
+      ],
+      "foreign_verbs": [
+        {
+          "verb": "rededicate",
+          "self_sim": 0.5738161288857644,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6154528281486122,
+          "margin": -0.041636699262847854,
+          "scale": "social",
+          "reason": "Input: thing with lapsed dedication. Output: thing with renewed dedication link to purpose (rebuilding existing link type)."
+        },
+        {
+          "verb": "reapportion",
+          "self_sim": 0.5902934962181755,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6130667702052085,
+          "margin": -0.022773273987032994,
+          "scale": "social",
+          "reason": "Input: resources with old apportionment links. Output: new apportionment links constructed. Structural reassignment."
+        },
+        {
+          "verb": "reallocate",
+          "self_sim": 0.6603896043095333,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6797100880067184,
+          "margin": -0.019320483697185087,
+          "scale": "social",
+          "reason": "Input: resources with old allocation links. Output: new allocation links built. Persistent structural reassignment."
+        },
+        {
+          "verb": "retick",
+          "self_sim": 0.5776956071874804,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5952855123538963,
+          "margin": -0.017589905166415898,
+          "scale": "physical",
+          "reason": "Input: unsewn or previously sewn material. Output: material with new/renewed sewn connections. Creates links."
+        },
+        {
+          "verb": "synchronise",
+          "self_sim": 0.6850528826259626,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6993241776068087,
+          "margin": -0.014271294980846005,
+          "scale": "physical",
+          "reason": "Input: multiple processes unlinked temporally. Output: processes with persistent temporal alignment link. Structural timing relationship built."
+        },
+        {
+          "verb": "reave",
+          "self_sim": 0.5717754517701383,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5806731131684313,
+          "margin": -0.008897661398292955,
+          "scale": "social",
+          "reason": "Input: goods belong to victim; Output: goods now linked to thief; ownership relationship reconstructed."
+        },
+        {
+          "verb": "resew",
+          "self_sim": 0.5906768767961377,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5945251493927541,
+          "margin": -0.0038482725966164644,
+          "scale": "physical",
+          "reason": "Input: separated or damaged fabric pieces. Output: pieces reconnected with persistent thread link. Rebuilding a connection."
+        },
+        {
+          "verb": "reallot",
+          "self_sim": 0.5869162535234005,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5903849544860962,
+          "margin": -0.003468700962695692,
+          "scale": "social",
+          "reason": "Input: things with old allocation links. Output: same things with new allocation links. Persistent structural reassignment."
+        },
+        {
+          "verb": "reassign",
+          "self_sim": 0.6559027720506686,
+          "nearest_other_op": "REC",
+          "other_sim": 0.657466860159185,
+          "margin": -0.0015640881085163816,
+          "scale": "social",
+          "reason": "Input: person linked to old position. Output: person linked to new position. New structural connection built."
+        },
+        {
+          "verb": "synchronize",
+          "self_sim": 0.695635816083376,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6968619488868663,
+          "margin": -0.0012261328034902652,
+          "scale": "physical",
+          "reason": "Input: multiple processes unlinked temporally. Output: processes with persistent temporal alignment link. Structural timing relationship built."
+        }
+      ],
+      "nearest_neighbors": [
+        {
+          "operator": "SYN",
+          "centroid_similarity": 0.7996789932587489
+        },
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7894298649499698
+        },
+        {
+          "operator": "REC",
+          "centroid_similarity": 0.7460342399373738
+        },
+        {
+          "operator": "DES",
+          "centroid_similarity": 0.7416551476165486
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "persistent",
+            518
+          ],
+          [
+            "link",
+            360
+          ],
+          [
+            "structural",
+            302
+          ],
+          [
+            "relationship",
+            268
+          ],
+          [
+            "unlinked",
+            260
+          ],
+          [
+            "built",
+            253
+          ],
+          [
+            "person",
+            169
+          ],
+          [
+            "connection",
+            149
+          ],
+          [
+            "two",
+            134
+          ],
+          [
+            "separate",
+            122
+          ],
+          [
+            "established",
+            114
+          ],
+          [
+            "entities",
+            109
+          ],
+          [
+            "between",
+            94
+          ],
+          [
+            "linked",
+            84
+          ],
+          [
+            "created",
+            79
+          ],
+          [
+            "structurally",
+            72
+          ],
+          [
+            "thing",
+            57
+          ],
+          [
+            "people",
+            55
+          ],
+          [
+            "creates",
+            53
+          ],
+          [
+            "without",
+            48
+          ]
+        ],
+        "sample_input_patterns": [
+          "two entities (adopter, adoptee) unlinked",
+          "two unlinked entities",
+          "two unmarried people",
+          "separate strands",
+          "two unlinked entities",
+          "separate individuals",
+          "unaffiliated entities",
+          "separate entities"
+        ],
+        "sample_output_patterns": [
+          "entities with persistent family-relation link",
+          "entities with persistent structural link",
+          "married couple with persistent bond",
+          "strands with persistent twisted connections",
+          "entities with persistent pair relationship",
+          "individuals with persistent team membership links",
+          "entities with persistent affiliation link",
+          "entities with persistent confederation links"
+        ]
+      },
+      "scales": {
+        "social": 372,
+        "physical": 232,
+        "informational": 121,
+        "psychological": 20
+      }
+    },
+    {
+      "operator": "SYN",
+      "symbol": "\u2228",
+      "total_verbs": 284,
+      "territory": {
+        "core": 192,
+        "settled": 90,
+        "contested": 2,
+        "foreign": 0
+      },
+      "margin_stats": {
+        "mean": 0.12132082430489978,
+        "median": 0.12075537441077117,
+        "std": 0.04372108164022443,
+        "min": -0.010412848977326972,
+        "max": 0.2739254741853927,
+        "pct_positive": 99.64788732394366
+      },
+      "prototypes": [
+        {
+          "verb": "put together",
+          "self_sim": 0.8390485496660225,
+          "margin": 0.2028423251584187,
+          "scale": "physical",
+          "reason": "Input: separate components; Output: unified assembly transcending parts; components merged into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "synthesize",
+          "self_sim": 0.8302586347462542,
+          "margin": 0.2739254741853927,
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: unified synthesis exists. Components merged into transcendent whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "synthesise",
+          "self_sim": 0.8288551023500498,
+          "margin": 0.2434986847018269,
+          "scale": "physical",
+          "reason": "Input: multiple components; output: unified product transcending parts; combines elements into emergent whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "meld",
+          "self_sim": 0.8270551912685563,
+          "margin": 0.2419460975797868,
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: unified whole transcending parts. Elements synthesized into new integrated entity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "combine",
+          "self_sim": 0.8242670154930967,
+          "margin": 0.2016084209553375,
+          "scale": "physical",
+          "reason": "Input: separate things. Output: unified whole. Multiple elements synthesized into one.",
+          "confidence": "high"
+        },
+        {
+          "verb": "come together",
+          "self_sim": 0.8200762333890705,
+          "margin": 0.17881836431088538,
+          "scale": "physical",
+          "reason": "Input: separate entities. Output: unified convergence transcending parts. Entities synthesized into single configuration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "syncretise",
+          "self_sim": 0.8197524798119142,
+          "margin": 0.20082121416581644,
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: fused unified whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fit together",
+          "self_sim": 0.8127007327527953,
+          "margin": 0.13742797429233333,
+          "scale": "physical",
+          "reason": "Input: separate parts; Output: assembled structure; parts merged into coherent whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "compound",
+          "self_sim": 0.8111998343650288,
+          "margin": 0.1683015537484609,
+          "scale": "physical",
+          "reason": "Input: separate ingredients; Output: unified compound transcending parts; combines into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "syncretize",
+          "self_sim": 0.8074445757368626,
+          "margin": 0.20176182545039756,
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: fused unified whole transcending original parts.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "resolve",
+          "self_sim": 0.6000472706722788,
+          "nearest_other_op": "SUP",
+          "other_sim": 0.596422459278185,
+          "margin": 0.003624811394093763,
+          "scale": "psychological",
+          "reason": "Input: multiple conflicting options, Output: unified decision state \u2014 merges possibilities into choice.",
+          "alternative": null
+        },
+        {
+          "verb": "meet half-way",
+          "self_sim": 0.5933509571819919,
+          "nearest_other_op": "SUP",
+          "other_sim": 0.6037638061593189,
+          "margin": -0.010412848977326972,
+          "scale": "social",
+          "reason": "Input: two opposing positions; Output: a single compromise position that transcends both; a new unified stance emerges from conflicting ones.",
+          "alternative": null
+        },
+        {
+          "verb": "malt",
+          "self_sim": 0.6614264027919399,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.6368591144329101,
+          "margin": 0.02456728835902977,
+          "scale": "physical",
+          "reason": "Input: grain; output: malt (transformed whole); grain transforms into new substance transcending original form.",
+          "alternative": null
+        },
+        {
+          "verb": "propitiate",
+          "self_sim": 0.5812734555485612,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5430174016238409,
+          "margin": 0.03825605392472031,
+          "scale": "social",
+          "reason": "Input: conflict state between parties. Output: reconciled state merging hostility into peace.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "constringe",
+          "self_sim": 0.7145438971186813,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6754128116814531,
+          "margin": 0.03913108543722821,
+          "scale": "physical",
+          "reason": "Input: loose parts, Output: tight unified whole (binding together)",
+          "alternative": "NUL"
+        },
+        {
+          "verb": "rig up",
+          "self_sim": 0.6362257561844293,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5954567785170615,
+          "margin": 0.04076897766736787,
+          "scale": "physical",
+          "reason": "Input: components/materials. Output: temporary constructed assembly. Parts combine into makeshift whole.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "incase",
+          "self_sim": 0.6661144365517467,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6235905560276354,
+          "margin": 0.04252388052411138,
+          "scale": "physical",
+          "reason": "Input: object and case as separate; Output: object-in-case as unified protective whole; combining into new integrated unit.",
+          "alternative": "CON"
+        },
+        {
+          "verb": "replace",
+          "self_sim": 0.6476560318917794,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6034500618913117,
+          "margin": 0.044205970000467776,
+          "scale": "physical",
+          "reason": "Input: old thing + new thing; Output: new thing merged into old thing's role; what changed: new occupies old's functional position",
+          "alternative": "INS"
+        },
+        {
+          "verb": "recapitulate",
+          "self_sim": 0.6733831168604867,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6291612300610758,
+          "margin": 0.04422188679941086,
+          "scale": "informational",
+          "reason": "Input: distributed points made earlier. Output: unified brief whole combining those elements. Creates condensed synthesis.",
+          "alternative": null
+        },
+        {
+          "verb": "enlace",
+          "self_sim": 0.6748229761196132,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6294812937638956,
+          "margin": 0.04534168235571756,
+          "scale": "physical",
+          "reason": "Input: separate strands. Output: twisted/wound together whole. Multiple strands merge into unified structure.",
+          "alternative": null
+        },
+        {
+          "verb": "cancel",
+          "self_sim": 0.6407907671604581,
+          "nearest_other_op": "NUL",
+          "other_sim": 0.5912827681439499,
+          "margin": 0.049507999016508264,
+          "scale": "social",
+          "reason": "Input: debt and payment separate. Output: they neutralize each other into balance. Opposing forces merge into resolution.",
+          "alternative": "NUL"
+        },
+        {
+          "verb": "recap",
+          "self_sim": 0.66633236293801,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6167356884268329,
+          "margin": 0.04959667451117711,
+          "scale": "informational",
+          "reason": "Input: multiple prior statements. Output: new unified brief summary. Many become one condensed whole.",
+          "alternative": null
+        },
+        {
+          "verb": "compromise",
+          "self_sim": 0.6674310934773171,
+          "nearest_other_op": "SUP",
+          "other_sim": 0.6177863947791566,
+          "margin": 0.04964469869816046,
+          "scale": "social",
+          "reason": "Input: conflicting positions; Output: new unified agreement incorporating concessions from both\u2014positions fused into transcendent whole.",
+          "alternative": null
+        },
+        {
+          "verb": "coddle",
+          "self_sim": 0.5950517575843541,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5432767548986659,
+          "margin": 0.05177500268568824,
+          "scale": "physical",
+          "reason": "Input: raw food. Output: gently cooked food. Heat gently fuses into new state.",
+          "alternative": null
+        },
+        {
+          "verb": "cooper",
+          "self_sim": 0.6166396943674997,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5633440338218956,
+          "margin": 0.053295660545604084,
+          "scale": "physical",
+          "reason": "Input: staves, hoops, materials. Output: barrel or cask. Parts combine into functional container.",
+          "alternative": null
+        },
+        {
+          "verb": "pickle",
+          "self_sim": 0.5251929164905973,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.46923512100077425,
+          "margin": 0.05595779548982305,
+          "scale": "physical",
+          "reason": "Input: food + liquid. Output: single preserved whole where food and preservative fuse into transformed substance.",
+          "alternative": null
+        },
+        {
+          "verb": "grit",
+          "self_sim": 0.6179960337938566,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.5600425506823397,
+          "margin": 0.057953483111516935,
+          "scale": "physical",
+          "reason": "Input: separated teeth. Output: teeth clenched into unified tight configuration.",
+          "alternative": null
+        },
+        {
+          "verb": "coffin",
+          "self_sim": 0.6470685091576301,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5885859550679173,
+          "margin": 0.05848255408971281,
+          "scale": "physical",
+          "reason": "Input: body and coffin separate; Output: body-in-coffin as unified burial unit; parts combine into ceremonial whole.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "tat",
+          "self_sim": 0.5845782318258578,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5253670269821389,
+          "margin": 0.05921120484371889,
+          "scale": "physical",
+          "reason": "Input: thread. Output: unified lace pattern. Knotting/looping combines thread into delicate whole.",
+          "alternative": null
+        },
+        {
+          "verb": "ingrain",
+          "self_sim": 0.6807434865069565,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6212838800702514,
+          "margin": 0.059459606436705115,
+          "scale": "psychological",
+          "reason": "Input: separate elements (knowledge + person). Output: fused whole where knowledge becomes part of person. Elements merge deeply.",
+          "alternative": null
+        }
+      ],
+      "foreign_verbs": [
+        {
+          "verb": "meet half-way",
+          "self_sim": 0.5933509571819919,
+          "nearest_other_op": "SUP",
+          "other_sim": 0.6037638061593189,
+          "margin": -0.010412848977326972,
+          "scale": "social",
+          "reason": "Input: two opposing positions; Output: a single compromise position that transcends both; a new unified stance emerges from conflicting ones."
+        }
+      ],
+      "nearest_neighbors": [
+        {
+          "operator": "CON",
+          "centroid_similarity": 0.7996789932587489
+        },
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7785946407977159
+        },
+        {
+          "operator": "REC",
+          "centroid_similarity": 0.7641046612560137
+        },
+        {
+          "operator": "ALT",
+          "centroid_similarity": 0.7572040867888198
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "into",
+            197
+          ],
+          [
+            "whole",
+            186
+          ],
+          [
+            "unified",
+            159
+          ],
+          [
+            "separate",
+            111
+          ],
+          [
+            "parts",
+            96
+          ],
+          [
+            "multiple",
+            92
+          ],
+          [
+            "elements",
+            52
+          ],
+          [
+            "merge",
+            43
+          ],
+          [
+            "transcending",
+            37
+          ],
+          [
+            "components",
+            31
+          ],
+          [
+            "single",
+            30
+          ],
+          [
+            "one",
+            30
+          ],
+          [
+            "combined",
+            28
+          ],
+          [
+            "substance",
+            28
+          ],
+          [
+            "integrated",
+            26
+          ],
+          [
+            "fused",
+            25
+          ],
+          [
+            "combine",
+            24
+          ],
+          [
+            "merged",
+            24
+          ],
+          [
+            "transcends",
+            23
+          ],
+          [
+            "many",
+            23
+          ]
+        ],
+        "sample_input_patterns": [
+          "separate parts",
+          "separate entities",
+          "separate elements",
+          "multiple entities",
+          "separate things",
+          "separate numbers",
+          "separate entities",
+          "multiple separate things"
+        ],
+        "sample_output_patterns": [
+          "unified whole",
+          "unified whole",
+          "fused whole",
+          "unified whole",
+          "combined whole",
+          "single sum value",
+          "unified whole",
+          "single integrated whole"
+        ]
+      },
+      "scales": {
+        "physical": 182,
+        "informational": 54,
+        "social": 37,
+        "psychological": 11
+      }
+    },
+    {
+      "operator": "ALT",
+      "symbol": "\u223f",
+      "total_verbs": 474,
+      "territory": {
+        "core": 346,
+        "settled": 123,
+        "contested": 3,
+        "foreign": 2
+      },
+      "margin_stats": {
+        "mean": 0.12351373693777584,
+        "median": 0.1265913997876862,
+        "std": 0.03621622833929504,
+        "min": -0.03172611042222595,
+        "max": 0.21799794138619744,
+        "pct_positive": 99.57805907172997
+      },
+      "prototypes": [
+        {
+          "verb": "re-explain",
+          "self_sim": 0.8020318463788496,
+          "margin": 0.21799794138619744,
+          "scale": "informational",
+          "reason": "Input: thing with one explanatory frame. Output: same thing with different explanatory frame. Lens changes.",
+          "confidence": "high"
+        },
+        {
+          "verb": "exaggerate",
+          "self_sim": 0.7787958116786355,
+          "margin": 0.1913095633021552,
+          "scale": "informational",
+          "reason": "Input: thing + proportional frame. Output: same thing + excessive frame. Magnitude reinterpreted beyond truth.",
+          "confidence": "high"
+        },
+        {
+          "verb": "interpret",
+          "self_sim": 0.7739772064597135,
+          "margin": 0.15907396178205413,
+          "scale": "informational",
+          "reason": "Input: text in original frame. Output: same text with new understanding frame. Lens shifts on existing content.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alternate",
+          "self_sim": 0.7705518050268578,
+          "margin": 0.20500031185400358,
+          "scale": "informational",
+          "reason": "Input: activity in one mode. Output: same activity in different mode. The frame shifts between perspectives.",
+          "confidence": "high"
+        },
+        {
+          "verb": "change over",
+          "self_sim": 0.7652818892652822,
+          "margin": 0.15644097125250267,
+          "scale": "informational",
+          "reason": "Input: system in arrangement A. Output: system in arrangement B. Shifts operational frame.",
+          "confidence": "high"
+        },
+        {
+          "verb": "background",
+          "self_sim": 0.7639686728313715,
+          "margin": 0.18431994990564804,
+          "scale": "informational",
+          "reason": "Input: thing + prominent frame. Output: same thing + diminished frame. Shifts perceptual salience without changing the thing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reinterpret",
+          "self_sim": 0.7637463703507519,
+          "margin": 0.13403194769140414,
+          "scale": "informational",
+          "reason": "Input: thing with old interpretation; output: same thing with new interpretation; frame shifts without changing thing.",
+          "confidence": "high"
+        },
+        {
+          "verb": "flip over",
+          "self_sim": 0.7510429449426149,
+          "margin": 0.16518402665544707,
+          "scale": "physical",
+          "reason": "Input: object + original orientation. Output: same object + inverted orientation. The spatial frame reverses.",
+          "confidence": "high"
+        },
+        {
+          "verb": "change intensity",
+          "self_sim": 0.7501061213517736,
+          "margin": 0.12230745651765329,
+          "scale": "physical",
+          "reason": "Input: phenomenon at intensity X; output: same phenomenon at intensity Y; the magnitude frame shifts while the thing remains.",
+          "confidence": "high"
+        },
+        {
+          "verb": "misuse",
+          "self_sim": 0.7481738635439206,
+          "margin": 0.16241332181782564,
+          "scale": "informational",
+          "reason": "Input: thing with inherent purpose; output: same thing viewed/used with different purpose; the functional frame shifts.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "reclaim",
+          "self_sim": 0.647894217167717,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6452254168272755,
+          "margin": 0.0026688003404414795,
+          "scale": "informational",
+          "reason": "Input: waste material; Output: same material reframed as resource; perspective shift from discarded to valuable.",
+          "alternative": null
+        },
+        {
+          "verb": "convince",
+          "self_sim": 0.6283097546385852,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6181741663482654,
+          "margin": 0.010135588290319797,
+          "scale": "informational",
+          "reason": "Input: person holding frame X. Output: same person now holding frame Y (truth realization). Frame shift from one belief state to another.",
+          "alternative": null
+        },
+        {
+          "verb": "reclassify",
+          "self_sim": 0.6635510355637201,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6477045559431435,
+          "margin": 0.015846479620576615,
+          "scale": "informational",
+          "reason": "Input: thing with old category assignment; Output: same thing with new category assignment; the thing hasn't changed, only its categorical frame.",
+          "alternative": null
+        },
+        {
+          "verb": "conform to",
+          "self_sim": 0.6471304679143176,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6245402628586618,
+          "margin": 0.022590205055655788,
+          "scale": "social",
+          "reason": "Input: thing + non-conforming frame. Output: same thing + conforming frame. The thing aligns with the standard lens.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "recode",
+          "self_sim": 0.6748584786480918,
+          "nearest_other_op": "REC",
+          "other_sim": 0.7003533901161021,
+          "margin": -0.025494911468010306,
+          "scale": "informational",
+          "reason": "Input: information in one code; output: same information in a different code, shifting the representational frame.",
+          "alternative": null
+        },
+        {
+          "verb": "segue",
+          "self_sim": 0.5981837810070885,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.6299098914293144,
+          "margin": -0.03172611042222595,
+          "scale": "informational",
+          "reason": "Input: topic A frame; Output: topic B frame; smooth reframing without disruption.",
+          "alternative": null
+        },
+        {
+          "verb": "cone",
+          "self_sim": 0.6837707560002783,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6462394144899355,
+          "margin": 0.037531341510342764,
+          "scale": "physical",
+          "reason": "Input: thing with one shape; Output: same thing now cone-shaped; the geometric frame reorganizes without new material.",
+          "alternative": null
+        },
+        {
+          "verb": "carnify",
+          "self_sim": 0.6115059013496575,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5739205230153316,
+          "margin": 0.03758537833432596,
+          "scale": "physical",
+          "reason": "Input: tissue with one structure. Output: same tissue reorganized as muscle/flesh. The tissue transforms its type while remaining tissue.",
+          "alternative": "REC"
+        },
+        {
+          "verb": "derate",
+          "self_sim": 0.6108893485035265,
+          "nearest_other_op": "DES",
+          "other_sim": 0.5633940942541023,
+          "margin": 0.047495254249424246,
+          "scale": "informational",
+          "reason": "Input: apparatus + high rating; output: same apparatus + lower rating; the rated capacity (frame) changes, not the physical object.",
+          "alternative": null
+        },
+        {
+          "verb": "reharmonise",
+          "self_sim": 0.6736745349638912,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6259611891751611,
+          "margin": 0.0477133457887301,
+          "scale": "informational",
+          "reason": "Input: melody with existing harmony; output: same melody with different harmony; harmonic frame changes.",
+          "alternative": null
+        },
+        {
+          "verb": "reharmonize",
+          "self_sim": 0.6739368116625793,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6250615387601544,
+          "margin": 0.04887527290242499,
+          "scale": "informational",
+          "reason": "Input: melody with existing harmony; output: same melody with different harmony; harmonic frame changes.",
+          "alternative": null
+        },
+        {
+          "verb": "chondrify",
+          "self_sim": 0.6020543294499707,
+          "nearest_other_op": "REC",
+          "other_sim": 0.5519677927132471,
+          "margin": 0.050086536736723586,
+          "scale": "physical",
+          "reason": "Input: tissue with one structure. Output: same tissue reorganized as cartilage. The tissue transforms its type.",
+          "alternative": "REC"
+        },
+        {
+          "verb": "reconvert",
+          "self_sim": 0.6683048356449665,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6178904896297281,
+          "margin": 0.05041434601523831,
+          "scale": "informational",
+          "reason": "Input: thing in converted frame; output: thing in original frame; the lens shifts back to original perspective reversibly.",
+          "alternative": null
+        },
+        {
+          "verb": "promote",
+          "self_sim": 0.656507567784574,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6044526511259041,
+          "margin": 0.0520549166586699,
+          "scale": "social",
+          "reason": "Input: entity at position X, Output: same entity viewed/positioned at higher X, Change: frame shifts (higher status/position)",
+          "alternative": "REC"
+        },
+        {
+          "verb": "confound",
+          "self_sim": 0.652451538871565,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5996701128469946,
+          "margin": 0.05278142602457048,
+          "scale": "informational",
+          "reason": "Input: thing A seen as A, thing B seen as B. Output: A seen as B (frame shifted). Misidentification is reframing without structural change.",
+          "alternative": null
+        },
+        {
+          "verb": "reconsider",
+          "self_sim": 0.6711560202798281,
+          "nearest_other_op": "REC",
+          "other_sim": 0.6176608637762022,
+          "margin": 0.05349515650362591,
+          "scale": "psychological",
+          "reason": "Input: decision/view under original frame; output: same decision viewed through new evaluative lens, potentially reversing judgment.",
+          "alternative": null
+        },
+        {
+          "verb": "bulldoze",
+          "self_sim": 0.6364100030884523,
+          "nearest_other_op": "NUL",
+          "other_sim": 0.5820743908769508,
+          "margin": 0.054335612211501516,
+          "scale": "physical",
+          "reason": "Input: rough/elevated terrain; Output: same terrain now flat; the spatial frame/configuration changes but no new thing appears.",
+          "alternative": null
+        },
+        {
+          "verb": "capsize",
+          "self_sim": 0.6608697271475696,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6048894189221949,
+          "margin": 0.0559803082253747,
+          "scale": "physical",
+          "reason": "Input: upright vessel, Output: overturned vessel \u2014 same thing, different orientation/frame",
+          "alternative": null
+        },
+        {
+          "verb": "demote",
+          "self_sim": 0.6723175400410997,
+          "nearest_other_op": "DES",
+          "other_sim": 0.6128497843464695,
+          "margin": 0.05946775569463014,
+          "scale": "social",
+          "reason": "Input: person in high-rank position. Output: same person now viewed/framed as low-rank. The person doesn't change, the hierarchical frame shifts.",
+          "alternative": null
+        },
+        {
+          "verb": "what become (of)",
+          "self_sim": 0.6430304251403689,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5808239663327641,
+          "margin": 0.06220645880760478,
+          "scale": "informational",
+          "reason": "Input: past state known. Output: current state queried under new temporal frame. Shifts frame from past to present inquiry.",
+          "alternative": "REC"
+        }
+      ],
+      "foreign_verbs": [
+        {
+          "verb": "segue",
+          "self_sim": 0.5981837810070885,
+          "nearest_other_op": "SEG",
+          "other_sim": 0.6299098914293144,
+          "margin": -0.03172611042222595,
+          "scale": "informational",
+          "reason": "Input: topic A frame; Output: topic B frame; smooth reframing without disruption."
+        },
+        {
+          "verb": "recode",
+          "self_sim": 0.6748584786480918,
+          "nearest_other_op": "REC",
+          "other_sim": 0.7003533901161021,
+          "margin": -0.025494911468010306,
+          "scale": "informational",
+          "reason": "Input: information in one code; output: same information in a different code, shifting the representational frame."
+        }
+      ],
+      "nearest_neighbors": [
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7891265174481643
+        },
+        {
+          "operator": "REC",
+          "centroid_similarity": 0.7626846017828559
+        },
+        {
+          "operator": "SYN",
+          "centroid_similarity": 0.7572040867888198
+        },
+        {
+          "operator": "DES",
+          "centroid_similarity": 0.7564343987358301
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "frame",
+            441
+          ],
+          [
+            "thing",
+            208
+          ],
+          [
+            "shifts",
+            191
+          ],
+          [
+            "substance",
+            64
+          ],
+          [
+            "person",
+            61
+          ],
+          [
+            "content",
+            55
+          ],
+          [
+            "lens",
+            48
+          ],
+          [
+            "event",
+            44
+          ],
+          [
+            "changes",
+            41
+          ],
+          [
+            "one",
+            40
+          ],
+          [
+            "without",
+            40
+          ],
+          [
+            "reframed",
+            39
+          ],
+          [
+            "material",
+            39
+          ],
+          [
+            "form",
+            38
+          ],
+          [
+            "through",
+            38
+          ],
+          [
+            "viewed",
+            37
+          ],
+          [
+            "perspective",
+            32
+          ],
+          [
+            "structure",
+            31
+          ],
+          [
+            "interpretive",
+            29
+          ],
+          [
+            "text",
+            28
+          ]
+        ],
+        "sample_input_patterns": [
+          "activity in one mode",
+          "entities in positions a and b",
+          "thing a seen as a, thing b seen as b",
+          "person holding frame x",
+          "attention on original object",
+          "trajectory toward original target",
+          "unrealistic frame",
+          "service at tier x,"
+        ],
+        "sample_output_patterns": [
+          "same activity in different mode",
+          "same entities in positions b and a",
+          "a seen as b (frame shifted)",
+          "same person now holding frame y (truth realization)",
+          "attention reframed toward different object",
+          "trajectory reframed toward new target",
+          "realistic frame",
+          "same service viewed/accessed at tier x+1,"
+        ]
+      },
+      "scales": {
+        "informational": 229,
+        "physical": 123,
+        "social": 71,
+        "psychological": 51
+      }
+    },
+    {
+      "operator": "SUP",
+      "symbol": "\u2295",
+      "total_verbs": 19,
+      "territory": {
+        "core": 19,
+        "settled": 0,
+        "contested": 0,
+        "foreign": 0
+      },
+      "margin_stats": {
+        "mean": 0.2146223499976439,
+        "median": 0.22343508524414557,
+        "std": 0.0424328842464568,
+        "min": 0.14458223262516123,
+        "max": 0.27521387141137643,
+        "pct_positive": 100.0
+      },
+      "prototypes": [
+        {
+          "verb": "go back and forth",
+          "self_sim": 0.8449578294889624,
+          "margin": 0.2546191554278687,
+          "scale": "psychological",
+          "reason": "Input: resolved position. Output: state oscillating between incompatible positions. The verb maintains contradictory values coexisting.",
+          "confidence": "high"
+        },
+        {
+          "verb": "conflict",
+          "self_sim": 0.8333558406815322,
+          "margin": 0.23536669173271507,
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: incompatible values coexist. The verb creates condition where opposing things are simultaneously present.",
+          "confidence": "high"
+        },
+        {
+          "verb": "waver",
+          "self_sim": 0.822638838147009,
+          "margin": 0.2726649274375855,
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: state where incompatible choices coexist. Holds contradiction between options.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "contradict",
+          "self_sim": 0.8176462566236912,
+          "margin": 0.27521387141137643,
+          "scale": "informational",
+          "reason": "Input: resolved claim. Output: incompatible claims held together. Creates state where opposing values coexist.",
+          "confidence": "high"
+        },
+        {
+          "verb": "fly in the face of",
+          "self_sim": 0.8141505197651606,
+          "margin": 0.25244320270290954,
+          "scale": "informational",
+          "reason": "Input: resolved state. Output: state where contradictory positions coexist; actively maintaining incompatibility between two things.",
+          "confidence": "high"
+        },
+        {
+          "verb": "straddle",
+          "self_sim": 0.8089843606110467,
+          "margin": 0.2678542024617503,
+          "scale": "psychological",
+          "reason": "Input: resolved position, Output: unresolved state holding incompatible positions simultaneously, Change: contradiction maintained",
+          "confidence": "high"
+        },
+        {
+          "verb": "vacillate",
+          "self_sim": 0.8085752154087651,
+          "margin": 0.2336226843142888,
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: state where incompatible options are held together. Creates oscillation between contradictions.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "fluctuate",
+          "self_sim": 0.8068444677140665,
+          "margin": 0.21448812584851495,
+          "scale": "physical",
+          "reason": "Input: stable state. Output: state holding multiple incompatible values simultaneously. Contradiction maintained.",
+          "confidence": "high"
+        },
+        {
+          "verb": "discord",
+          "self_sim": 0.7784162742205893,
+          "margin": 0.17398116505563932,
+          "scale": "informational",
+          "reason": "Input: entities expected to align; output: entities holding incompatible states simultaneously, contradiction made explicit.",
+          "confidence": "high"
+        },
+        {
+          "verb": "disaccord",
+          "self_sim": 0.7775835858769333,
+          "margin": 0.22343508524414557,
+          "scale": "informational",
+          "reason": "Input: entities in comparison. Output: entities in state of incompatibility/contradiction. Difference-holding condition created.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "two-time",
+          "self_sim": 0.6865024096718947,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5419201770467335,
+          "margin": 0.14458223262516123,
+          "scale": "social",
+          "reason": "Input: person in one relationship; Output: person simultaneously in two incompatible exclusive relationships; contradictory commitments coexist.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "fly in the teeth of",
+          "self_sim": 0.6874811132589946,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5426206013889173,
+          "margin": 0.1448605118700773,
+          "scale": "social",
+          "reason": "Input: expectation of compliance; Output: action that contradicts that expectation \u2014 creates a state where opposing forces coexist.",
+          "alternative": null
+        },
+        {
+          "verb": "higgle",
+          "self_sim": 0.6595877503924528,
+          "nearest_other_op": "INS",
+          "other_sim": 0.504599116515906,
+          "margin": 0.1549886338765467,
+          "scale": "social",
+          "reason": "Input: single price expectation. Output: multiple incompatible valuations held simultaneously during negotiation. Contradiction state maintained.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "haunt",
+          "self_sim": 0.7050064286276396,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5391587624571851,
+          "margin": 0.16584766617045454,
+          "scale": "psychological",
+          "reason": "Input: resolved state (present or absent). Output: unresolved state where presence and absence coexist, ghost-like persistence. Contradiction maintained.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "discord",
+          "self_sim": 0.7784162742205893,
+          "nearest_other_op": "CON",
+          "other_sim": 0.60443510916495,
+          "margin": 0.17398116505563932,
+          "scale": "informational",
+          "reason": "Input: entities expected to align; output: entities holding incompatible states simultaneously, contradiction made explicit.",
+          "alternative": null
+        },
+        {
+          "verb": "equivocate",
+          "self_sim": 0.7445133363729584,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5583288048652164,
+          "margin": 0.18618453150774195,
+          "scale": "informational",
+          "reason": "Input: clear position. Output: contradictory statements coexisting. Multiple incompatible meanings held simultaneously.",
+          "alternative": null
+        },
+        {
+          "verb": "muddle",
+          "self_sim": 0.757576214067836,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5702443170869596,
+          "margin": 0.1873318969808765,
+          "scale": "psychological",
+          "reason": "Input: clear distinctions. Output: state where incompatible interpretations coexist. Contradiction created.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "contravene",
+          "self_sim": 0.7727722078730658,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5638176141906837,
+          "margin": 0.20895459368238212,
+          "scale": "informational",
+          "reason": "Input: resolved claim. Output: state where contradictory claim coexists; denial creates holding of incompatibles.",
+          "alternative": null
+        },
+        {
+          "verb": "fluctuate",
+          "self_sim": 0.8068444677140665,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5923563418655515,
+          "margin": 0.21448812584851495,
+          "scale": "physical",
+          "reason": "Input: stable state. Output: state holding multiple incompatible values simultaneously. Contradiction maintained.",
+          "alternative": null
+        },
+        {
+          "verb": "disaccord",
+          "self_sim": 0.7775835858769333,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5541485006327878,
+          "margin": 0.22343508524414557,
+          "scale": "informational",
+          "reason": "Input: entities in comparison. Output: entities in state of incompatibility/contradiction. Difference-holding condition created.",
+          "alternative": null
+        },
+        {
+          "verb": "doubt",
+          "self_sim": 0.7584738055007532,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5259430684880879,
+          "margin": 0.23253073701266525,
+          "scale": "psychological",
+          "reason": "Input: resolved belief state. Output: unresolved state where belief and disbelief coexist. Contradiction held simultaneously.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "vacillate",
+          "self_sim": 0.8085752154087651,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5749525310944763,
+          "margin": 0.2336226843142888,
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: state where incompatible options are held together. Creates oscillation between contradictions.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "conflict",
+          "self_sim": 0.8333558406815322,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5979891489488172,
+          "margin": 0.23536669173271507,
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: incompatible values coexist. The verb creates condition where opposing things are simultaneously present.",
+          "alternative": null
+        },
+        {
+          "verb": "waffle",
+          "self_sim": 0.7709189016441602,
+          "nearest_other_op": "INS",
+          "other_sim": 0.522064167051626,
+          "margin": 0.24885473459253427,
+          "scale": "psychological",
+          "reason": "Input: decision state. Output: state holding multiple incompatible positions simultaneously. The verb creates unresolved contradiction.",
+          "alternative": null
+        },
+        {
+          "verb": "fly in the face of",
+          "self_sim": 0.8141505197651606,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5617073170622511,
+          "margin": 0.25244320270290954,
+          "scale": "informational",
+          "reason": "Input: resolved state. Output: state where contradictory positions coexist; actively maintaining incompatibility between two things.",
+          "alternative": null
+        },
+        {
+          "verb": "go back and forth",
+          "self_sim": 0.8449578294889624,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5903386740610936,
+          "margin": 0.2546191554278687,
+          "scale": "psychological",
+          "reason": "Input: resolved position. Output: state oscillating between incompatible positions. The verb maintains contradictory values coexisting.",
+          "alternative": null
+        },
+        {
+          "verb": "straddle",
+          "self_sim": 0.8089843606110467,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5411301581492964,
+          "margin": 0.2678542024617503,
+          "scale": "psychological",
+          "reason": "Input: resolved position, Output: unresolved state holding incompatible positions simultaneously, Change: contradiction maintained",
+          "alternative": null
+        },
+        {
+          "verb": "waver",
+          "self_sim": 0.822638838147009,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5499739107094235,
+          "margin": 0.2726649274375855,
+          "scale": "psychological",
+          "reason": "Input: resolved state. Output: state where incompatible choices coexist. Holds contradiction between options.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "contradict",
+          "self_sim": 0.8176462566236912,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5424323852123147,
+          "margin": 0.27521387141137643,
+          "scale": "informational",
+          "reason": "Input: resolved claim. Output: incompatible claims held together. Creates state where opposing values coexist.",
+          "alternative": null
+        }
+      ],
+      "foreign_verbs": [],
+      "nearest_neighbors": [
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7048765463517438
+        },
+        {
+          "operator": "CON",
+          "centroid_similarity": 0.6802553964166339
+        },
+        {
+          "operator": "SYN",
+          "centroid_similarity": 0.6523597168893406
+        },
+        {
+          "operator": "ALT",
+          "centroid_similarity": 0.65034802520104
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "incompatible",
+            8
+          ],
+          [
+            "resolved",
+            6
+          ],
+          [
+            "holding",
+            6
+          ],
+          [
+            "simultaneously",
+            6
+          ],
+          [
+            "contradiction",
+            5
+          ],
+          [
+            "creates",
+            5
+          ],
+          [
+            "where",
+            5
+          ],
+          [
+            "positions",
+            4
+          ],
+          [
+            "values",
+            4
+          ],
+          [
+            "coexist",
+            4
+          ],
+          [
+            "contradictory",
+            4
+          ],
+          [
+            "entities",
+            4
+          ],
+          [
+            "position",
+            3
+          ],
+          [
+            "opposing",
+            3
+          ],
+          [
+            "multiple",
+            3
+          ],
+          [
+            "claim",
+            3
+          ],
+          [
+            "unresolved",
+            2
+          ],
+          [
+            "maintained",
+            2
+          ],
+          [
+            "condition",
+            2
+          ],
+          [
+            "things",
+            2
+          ]
+        ],
+        "sample_input_patterns": [
+          "resolved position,",
+          "resolved state",
+          "stable state",
+          "clear position",
+          "resolved state",
+          "resolved claim",
+          "resolved claim",
+          "decision state"
+        ],
+        "sample_output_patterns": [
+          "unresolved state holding incompatible positions simultaneously,",
+          "incompatible values coexist",
+          "state holding multiple incompatible values simultaneously",
+          "contradictory statements coexisting",
+          "state where contradictory positions coexist",
+          "state where contradictory claim coexists",
+          "incompatible claims held together",
+          "state holding multiple incompatible positions simultaneously"
+        ]
+      },
+      "scales": {
+        "psychological": 9,
+        "informational": 6,
+        "social": 3,
+        "physical": 1
+      }
+    },
+    {
+      "operator": "REC",
+      "symbol": "\u27f3",
+      "total_verbs": 413,
+      "territory": {
+        "core": 347,
+        "settled": 65,
+        "contested": 1,
+        "foreign": 0
+      },
+      "margin_stats": {
+        "mean": 0.14485791537317866,
+        "median": 0.1420154745404535,
+        "std": 0.048563148237079606,
+        "min": 0.015549054162320552,
+        "max": 0.27545818294242763,
+        "pct_positive": 100.0
+      },
+      "prototypes": [
+        {
+          "verb": "reorganize",
+          "self_sim": 0.8378734643160082,
+          "margin": 0.2712285031450804,
+          "scale": "social",
+          "reason": "Input: organization with structure A; Output: organization with structure B; the structural relationships are rebuilt.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reorganise",
+          "self_sim": 0.8377762989254813,
+          "margin": 0.27545818294242763,
+          "scale": "social",
+          "reason": "Input: existing organizational structure; Output: structure rebuilt around new organizing principles.",
+          "confidence": "high"
+        },
+        {
+          "verb": "raise up",
+          "self_sim": 0.8333460725370199,
+          "margin": 0.2303367545493813,
+          "scale": "physical",
+          "reason": "Input: existing arrangement. Output: reorganized arrangement. The spatial structure rebuilds around new positions.",
+          "confidence": "high"
+        },
+        {
+          "verb": "transform",
+          "self_sim": 0.8316883079017331,
+          "margin": 0.18386900151242014,
+          "scale": "physical",
+          "reason": "Input: thing with one structure. Output: thing with fundamentally different structure. The architecture reorganizes around new center.",
+          "confidence": "high"
+        },
+        {
+          "verb": "update",
+          "self_sim": 0.8303652689474987,
+          "margin": 0.22937578734329467,
+          "scale": "informational",
+          "reason": "Input: outdated structure. Output: restructured modern form. The thing is rebuilt around contemporary standards.",
+          "confidence": "high"
+        },
+        {
+          "verb": "refashion",
+          "self_sim": 0.8298725288343869,
+          "margin": 0.23369666020166724,
+          "scale": "physical",
+          "reason": "Input: existing thing with old structure. Output: thing rebuilt with new organization. Structure reorganized around new principles.",
+          "confidence": "high"
+        },
+        {
+          "verb": "restructure",
+          "self_sim": 0.821065237202417,
+          "margin": 0.2752338826306906,
+          "scale": "social",
+          "reason": "Input: existing organization. Output: organization rebuilt with new architecture. The structure reorganizes itself around new center.",
+          "confidence": "high"
+        },
+        {
+          "verb": "straighten out",
+          "self_sim": 0.8195075798418786,
+          "margin": 0.2357939782131161,
+          "scale": "physical",
+          "reason": "Input: bent/crooked structure. Output: reorganized straight structure. The spatial architecture is rebuilt around a new linear axis.",
+          "confidence": "high"
+        },
+        {
+          "verb": "rearrange",
+          "self_sim": 0.8156238225144352,
+          "margin": 0.24331859400736278,
+          "scale": "physical",
+          "reason": "Input: elements in configuration A; Output: same elements in configuration B; the internal structure reorganizes around a new ordering principle.",
+          "confidence": "high"
+        },
+        {
+          "verb": "reinvent",
+          "self_sim": 0.8136554600954125,
+          "margin": 0.21550599171418972,
+          "scale": "informational",
+          "reason": "Input: existing thing with old structure. Output: thing rebuilt from ground up around new principles. Architecture reorganized.",
+          "confidence": "high"
+        }
+      ],
+      "horizon_verbs": [
+        {
+          "verb": "solemnise",
+          "self_sim": 0.6165332490860704,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.6009841949237499,
+          "margin": 0.015549054162320552,
+          "scale": "social",
+          "reason": "Input: event/thing with ordinary affective weight. Output: same thing reorganized to carry solemn/grave character. Emotional architecture rebuilt.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "solemnize",
+          "self_sim": 0.6058152929102028,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5826477734012852,
+          "margin": 0.0231675195089176,
+          "scale": "social",
+          "reason": "Input: event/thing with ordinary affective weight. Output: same thing reorganized to carry solemn/grave character. Emotional architecture rebuilt.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "animalize",
+          "self_sim": 0.6527909557539283,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.6226265034022249,
+          "margin": 0.030164452351703397,
+          "scale": "psychological",
+          "reason": "Input: human with empathic structure; output: human with brutal/unfeeling structure; the psychological architecture is rebuilt around brutality.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "inspissate",
+          "self_sim": 0.6342622258667444,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6012881635307992,
+          "margin": 0.03297406233594524,
+          "scale": "physical",
+          "reason": "Input: thin consistency structure. Output: thick consistency structure reorganized. Material architecture changes.",
+          "alternative": null
+        },
+        {
+          "verb": "animalise",
+          "self_sim": 0.6759219380339203,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.6407082389458231,
+          "margin": 0.03521369908809724,
+          "scale": "psychological",
+          "reason": "Input: human with empathic structure; output: human with brutal/unfeeling structure; the psychological architecture is rebuilt around brutality.",
+          "alternative": "ALT"
+        },
+        {
+          "verb": "conquer",
+          "self_sim": 0.6720798831157702,
+          "nearest_other_op": "CON",
+          "other_sim": 0.6329039041622517,
+          "margin": 0.03917597895351843,
+          "scale": "social",
+          "reason": "Input: existing power structure. Output: structure reorganized with new dominant center; power relations rebuilt.",
+          "alternative": null
+        },
+        {
+          "verb": "agenize",
+          "self_sim": 0.5154904212241367,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.46705904394648107,
+          "margin": 0.04843137727765562,
+          "scale": "physical",
+          "reason": "Input: fresh flour structure. Output: aged/bleached flour with altered molecular structure. Chemical process rebuilds substance.",
+          "alternative": null
+        },
+        {
+          "verb": "intussuscept",
+          "self_sim": 0.6769411008740593,
+          "nearest_other_op": "INS",
+          "other_sim": 0.6284789863199776,
+          "margin": 0.04846211455408178,
+          "scale": "physical",
+          "reason": "Input: outward-facing structure. Output: inward-folded structure. The architecture rebuilds itself with inverted topology.",
+          "alternative": null
+        },
+        {
+          "verb": "shoehorn",
+          "self_sim": 0.5560325871715865,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5058159739160926,
+          "margin": 0.05021661325549398,
+          "scale": "physical",
+          "reason": "Input: poorly-suited thing and purpose. Output: thing forcibly reorganized to fit purpose. Structure rebuilt despite mismatch.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "luxate",
+          "self_sim": 0.6402659025888455,
+          "nearest_other_op": "INS",
+          "other_sim": 0.5896765637406384,
+          "margin": 0.050589338848207155,
+          "scale": "physical",
+          "reason": "Input: object in proper position; Output: object displaced from structural position; relationship to position framework changes.",
+          "alternative": "NUL"
+        },
+        {
+          "verb": "attune",
+          "self_sim": 0.6720470750856089,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.621314304307652,
+          "margin": 0.050732770777956904,
+          "scale": "physical",
+          "reason": "Input: unharmonized elements. Output: elements reorganized into harmony. Structure rebuilt around resonance.",
+          "alternative": null
+        },
+        {
+          "verb": "concentrate on",
+          "self_sim": 0.6494638672135866,
+          "nearest_other_op": "CON",
+          "other_sim": 0.5985782699035785,
+          "margin": 0.05088559731000808,
+          "scale": "psychological",
+          "reason": "Input: distributed attention; Output: attention reorganized with new intensive focus \u2014 rebuilds cognitive structure around target.",
+          "alternative": null
+        },
+        {
+          "verb": "debauch",
+          "self_sim": 0.5981685605864402,
+          "nearest_other_op": "DES",
+          "other_sim": 0.544983316357599,
+          "margin": 0.05318524422884119,
+          "scale": "psychological",
+          "reason": "Input: person with moral structure; Output: person with moral structure degraded/reorganized around corruption; the ethical architecture rebuilds.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "collimate",
+          "self_sim": 0.6396428856162828,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.5856300330619438,
+          "margin": 0.054012852554338964,
+          "scale": "physical",
+          "reason": "Input: divergent rays/objects; Output: reorganized into parallel configuration; structure rebuilds around parallelism.",
+          "alternative": null
+        },
+        {
+          "verb": "agenise",
+          "self_sim": 0.5194170364173349,
+          "nearest_other_op": "SYN",
+          "other_sim": 0.4630507379925559,
+          "margin": 0.05636629842477903,
+          "scale": "physical",
+          "reason": "Input: fresh flour structure. Output: aged/bleached flour with altered molecular structure. Chemical process rebuilds substance.",
+          "alternative": null
+        },
+        {
+          "verb": "lower oneself",
+          "self_sim": 0.5985050191950214,
+          "nearest_other_op": "DES",
+          "other_sim": 0.5412104155019766,
+          "margin": 0.05729460369304484,
+          "scale": "psychological",
+          "reason": "Input: self-concept structure with dignity. Output: structure reorganized around debased position. Rebuilds moral standing architecture.",
+          "alternative": null
+        },
+        {
+          "verb": "air-slake",
+          "self_sim": 0.621558565518326,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5591014691113285,
+          "margin": 0.06245709640699748,
+          "scale": "physical",
+          "reason": "Input: original chemical structure. Output: altered structure (carbonate). The molecular organization rebuilds through air exposure.",
+          "alternative": null
+        },
+        {
+          "verb": "transubstantiate",
+          "self_sim": 0.6944651209910022,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.631405755760301,
+          "margin": 0.06305936523070121,
+          "scale": "physical",
+          "reason": "Input: entity with one nature. Output: same entity with completely reorganized nature/substance. The fundamental structure rebuilds.",
+          "alternative": null
+        },
+        {
+          "verb": "pervert",
+          "self_sim": 0.6033600300195096,
+          "nearest_other_op": "INS",
+          "other_sim": 0.539966704335389,
+          "margin": 0.0633933256841206,
+          "scale": "psychological",
+          "reason": "Input: moral structure; output: corrupted moral structure; the moral architecture is rebuilt around corruption.",
+          "alternative": "INS"
+        },
+        {
+          "verb": "topicalize",
+          "self_sim": 0.625417428410347,
+          "nearest_other_op": "ALT",
+          "other_sim": 0.5582809096087702,
+          "margin": 0.06713651880157678,
+          "scale": "informational",
+          "reason": "Input: sentence with standard structure. Output: sentence reorganized with fronted element as new center. Architecture rebuilt around topic.",
+          "alternative": null
+        }
+      ],
+      "foreign_verbs": [],
+      "nearest_neighbors": [
+        {
+          "operator": "SYN",
+          "centroid_similarity": 0.7641046612560137
+        },
+        {
+          "operator": "ALT",
+          "centroid_similarity": 0.7626846017828559
+        },
+        {
+          "operator": "INS",
+          "centroid_similarity": 0.7527238181198836
+        },
+        {
+          "operator": "CON",
+          "centroid_similarity": 0.7460342399373738
+        }
+      ],
+      "empirical_definition": {
+        "top_transformation_words": [
+          [
+            "structure",
+            405
+          ],
+          [
+            "reorganized",
+            168
+          ],
+          [
+            "around",
+            155
+          ],
+          [
+            "architecture",
+            136
+          ],
+          [
+            "rebuilt",
+            134
+          ],
+          [
+            "rebuilds",
+            129
+          ],
+          [
+            "into",
+            69
+          ],
+          [
+            "reorganizes",
+            55
+          ],
+          [
+            "existing",
+            53
+          ],
+          [
+            "organization",
+            48
+          ],
+          [
+            "system",
+            47
+          ],
+          [
+            "thing",
+            37
+          ],
+          [
+            "form",
+            36
+          ],
+          [
+            "center",
+            33
+          ],
+          [
+            "elements",
+            27
+          ],
+          [
+            "restructured",
+            27
+          ],
+          [
+            "itself",
+            26
+          ],
+          [
+            "non",
+            26
+          ],
+          [
+            "arrangement",
+            26
+          ],
+          [
+            "organism",
+            25
+          ]
+        ],
+        "sample_input_patterns": [
+          "existing structure/organism",
+          "elements in one configuration",
+          "existing model or form",
+          "elements in configuration a",
+          "existing structure",
+          "organization with structure a",
+          "structure with distributed emphasis",
+          "distributed structure"
+        ],
+        "sample_output_patterns": [
+          "structure reorganized with new adaptive features",
+          "same elements reorganized around aesthetic principle",
+          "same content reorganized around new structure",
+          "same elements in configuration b",
+          "structure rebuilt/reformed",
+          "organization with structure b",
+          "structure reorganized around new focal point",
+          "structure reorganized around central point"
+        ]
+      },
+      "scales": {
+        "physical": 216,
+        "social": 87,
+        "informational": 70,
+        "psychological": 40
+      }
+    }
+  ]
+}

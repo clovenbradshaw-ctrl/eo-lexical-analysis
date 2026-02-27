@@ -1,0 +1,19 @@
+{
+  "distribution": {
+    "NUL": 1467,
+    "DES": 448,
+    "INS": 7528,
+    "SEG": 555,
+    "CON": 745,
+    "SYN": 284,
+    "ALT": 474,
+    "SUP": 19,
+    "REC": 413
+  },
+  "total": 11933,
+  "confidence_summary": {
+    "high": 10598,
+    "medium": 1334,
+    "low": 1
+  }
+}

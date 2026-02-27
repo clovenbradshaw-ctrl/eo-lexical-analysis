@@ -1,0 +1,36 @@
+{
+  "results": {
+    "Scale (phys/soc/psych/info)": {
+      "k": 4,
+      "z_score": -721.6954483800234
+    },
+    "EO triads": {
+      "k": 3,
+      "z_score": -454.626701797821
+    },
+    "WordNet lexicographer": {
+      "k": 15,
+      "z_score": -380.32626170833237
+    },
+    "Morphological (prefix)": {
+      "k": 15,
+      "z_score": -193.9178684601575
+    },
+    "Operator\u00d7Scale": {
+      "k": 31,
+      "z_score": -125.65882364761598
+    },
+    "EO operators": {
+      "k": 9,
+      "z_score": -79.04120827196056
+    },
+    "Random baseline (mean of 20)": {
+      "k": 9,
+      "z_score": -0.2114248560020398
+    }
+  },
+  "eo_vs_wordnet": {
+    "ari": 0.0026664951524474853,
+    "nmi": 0.06783428861542835
+  }
+}

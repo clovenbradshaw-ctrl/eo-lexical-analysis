@@ -1,0 +1,1305 @@
+# The 27 Cells: Position × Triad × Referent
+
+Each verb is listed with its EO operator in brackets.
+
+
+## Differentiate × Existence × FIGURE (71 verbs)
+
+- abandon [NUL]
+- abolish [NUL]
+- assassinate [NUL]
+- avoid [NUL]
+- bar [NUL]
+- blackline [NUL]
+- block [NUL]
+- cancel [NUL]
+- censor [NUL]
+- clean [NUL]
+- clear [NUL]
+- clog [NUL]
+- collapse [NUL]
+- consume [NUL] — use up completely
+- counter [NUL]
+- curb [NUL]
+- defy [NUL]
+- delete [NUL]
+- deny [NUL]
+- destroy [NUL]
+- deter [NUL]
+- die [NUL]
+- disappear [NUL]
+- disenfranchise [NUL]
+- dismiss [NUL]
+- disregard [NUL]
+- dissolve [NUL]
+- drop [NUL]
+- eliminate [NUL] — remove completely
+- end [NUL]
+- evacuate [NUL] — empty of occupants
+- expire [NUL]
+- fail [NUL]
+- finish [NUL]
+- flop [NUL]
+- foil [NUL]
+- forbid [NUL]
+- forget [NUL]
+- forgive [NUL]
+- hide [NUL]
+- ignore [NUL]
+- interrupt [NUL]
+- kill [NUL]
+- lose [NUL]
+- miss [NUL]
+- murder [NUL]
+- neglect [NUL] — fail to care for
+- overlook [NUL]
+- pause [NUL]
+- prevent [NUL]
+- reduce [NUL]
+- refuse [NUL]
+- renege [NUL]
+- repress [NUL] — suppress or restrain
+- rinse [NUL]
+- ruin [NUL]
+- skip [NUL]
+- spay [NUL]
+- spoil [NUL]
+- stifle [NUL]
+- stop [NUL]
+- strip [NUL]
+- suppress [NUL]
+- surrender [NUL]
+- terminate [NUL]
+- thwart [NUL]
+- undermine [NUL]
+- unlock [NUL]
+- unreport [NUL]
+- veto [NUL] — reject or forbid
+- waste [NUL]
+
+
+## Differentiate × Existence × PATTERN (2 verbs)
+
+- disappoint [NUL]
+- resist [NUL]
+
+
+## Differentiate × Existence × GROUND (8 verbs)
+
+- absent [NUL]
+- abstain [NUL]
+- cease [NUL]
+- falter [NUL]
+- lack [NUL] — be without
+- slack [NUL] — become loose or less active
+- starve [NUL] — lack food, waste away
+- vanish [NUL] — disappear completely
+
+
+## Differentiate × Structure × FIGURE (66 verbs)
+
+- analyze [SEG]
+- boot [SEG]
+- box [SEG]
+- break [SEG]
+- bust [SEG]
+- bypass [SEG]
+- chew [SEG]
+- confiscate [SEG]
+- crack [SEG] — break or split
+- crush [SEG] — compress and break
+- cut [SEG]
+- damage [SEG] — harm or break something
+- depart [SEG]
+- desert [SEG]
+- detonate [SEG]
+- disperse [SEG]
+- displace [SEG] — move from position
+- disrupt [SEG]
+- dissent [SEG]
+- distribute [SEG]
+- divide [SEG]
+- dust [SEG] — remove dust from
+- escape [SEG]
+- exclude [SEG]
+- expel [SEG]
+- explode [SEG]
+- filter [SEG]
+- fire [SEG] — dismiss from job
+- flee [SEG]
+- hack [SEG] — cut or break into
+- harm [SEG]
+- injure [SEG] — harm physically
+- intercept [SEG]
+- isolate [SEG]
+- leave [SEG]
+- marginalize [SEG]
+- maul [SEG] — tear apart violently
+- mutilate [SEG]
+- outsource [SEG]
+- penetrate [SEG]
+- pick [SEG]
+- quit [SEG]
+- raid [SEG]
+- reap [SEG] — harvest crops
+- reject [SEG]
+- release [SEG]
+- remove [SEG]
+- restrict [SEG]
+- rip [SEG]
+- scrape [SEG] — remove by abrasion
+- screen [SEG]
+- seize [SEG]
+- separate [SEG]
+- share [SEG]
+- shed [SEG]
+- shell [SEG]
+- single [SEG]
+- spill [SEG]
+- split [SEG]
+- stab [SEG] — pierce with sharp object
+- steal [SEG]
+- tear [SEG]
+- uncover [SEG]
+- unload [SEG]
+- violate [SEG]
+- vomit [SEG] — expel stomach contents
+
+
+## Differentiate × Structure × PATTERN (6 verbs)
+
+- allocate [SEG] — distribute portions
+- branch [SEG]
+- derive [SEG]
+- differ [SEG]
+- distinguish [SEG]
+- sort [SEG]
+
+
+## Differentiate × Structure × GROUND (2 verbs)
+
+- bleed [SEG] — lose blood
+- spread [SEG] — extend outward
+
+
+## Differentiate × Interpretation × FIGURE (159 verbs)
+
+- adjust [ALT]
+- aggravate [ALT]
+- aim [ALT]
+- alert [ALT]
+- alter [ALT]
+- amaze [ALT]
+- amend [ALT]
+- amplify [ALT]
+- articulate [ALT]
+- become [ALT]
+- befuddle [ALT]
+- bend [ALT]
+- blur [ALT]
+- boil [ALT]
+- brainwash [ALT] — change someone's beliefs through manipulation
+- bring [ALT]
+- burn [ALT] — transform by fire
+- can [ALT]
+- case [ALT]
+- change [ALT]
+- clarify [ALT]
+- close [ALT]
+- color [ALT]
+- complete [ALT]
+- confuse [ALT]
+- contract [ALT]
+- convert [ALT]
+- convince [ALT] — change belief state
+- cook [ALT]
+- correct [ALT]
+- cure [ALT] — restore to health
+- customize [ALT]
+- deceive [ALT] — mislead
+- decide [ALT]
+- decline [ALT] — refuse or decrease
+- defeat [ALT] — overcome opponent
+- delay [ALT]
+- detail [ALT]
+- digest [ALT]
+- discourage [ALT]
+- distort [ALT]
+- double [ALT]
+- downgrade [ALT] — reduce in rank
+- dress [ALT]
+- dry [ALT]
+- educate [ALT]
+- embarrass [ALT]
+- enhance [ALT]
+- enter [ALT]
+- exacerbate [ALT]
+- expand [ALT]
+- explain [ALT]
+- extend [ALT]
+- extradite [ALT]
+- fall [ALT]
+- favour [ALT]
+- fix [ALT]
+- flesh [ALT]
+- flip [ALT]
+- focus [ALT]
+- fold [ALT]
+- fool [ALT]
+- format [ALT]
+- freak [ALT]
+- freeze [ALT]
+- fry [ALT]
+- gear [ALT] — adjust or prepare for
+- graduate [ALT] — change status upon completion
+- grill [ALT]
+- groom [ALT]
+- guide [ALT]
+- heat [ALT]
+- heighten [ALT]
+- improve [ALT]
+- increase [ALT]
+- interpret [ALT]
+- learn [ALT]
+- lift [ALT]
+- liquefy [ALT] — make liquid
+- manipulate [ALT]
+- melt [ALT] — change to liquid
+- minimize [ALT]
+- mitigate [ALT]
+- modify [ALT]
+- mollify [ALT]
+- move [ALT]
+- narrow [ALT] — become or make more restricted
+- open [ALT]
+- overcharge [ALT]
+- pacify [ALT]
+- personalize [ALT]
+- pollute [ALT] — contaminate
+- postpone [ALT]
+- prepare [ALT]
+- preserve [ALT]
+- prize [ALT]
+- process [ALT]
+- progress [ALT] — move forward or develop
+- promote [ALT] — advance in status
+- raise [ALT]
+- ramp [ALT]
+- realize [ALT]
+- reassure [ALT]
+- render [ALT]
+- replace [ALT]
+- reschedule [ALT]
+- rescue [ALT]
+- resolve [ALT] — settle or decide
+- retire [ALT]
+- return [ALT]
+- revalue [ALT]
+- reveal [ALT]
+- revise [ALT]
+- rig [ALT]
+- save [ALT]
+- scare [ALT]
+- set [ALT]
+- settle [ALT]
+- shape [ALT]
+- shift [ALT] — change position
+- shrink [ALT]
+- shut [ALT]
+- skyrocket [ALT]
+- slow [ALT]
+- smuggle [ALT]
+- solve [ALT]
+- speed [ALT]
+- spend [ALT]
+- squeeze [ALT]
+- straighten [ALT] — make straight
+- strengthen [ALT]
+- stretch [ALT]
+- style [ALT]
+- subdue [ALT]
+- submerge [ALT] — put underwater
+- succumb [ALT]
+- suspend [ALT]
+- switch [ALT] — change between options
+- tame [ALT]
+- thaw [ALT]
+- tighten [ALT]
+- train [ALT]
+- transfer [ALT]
+- translate [ALT]
+- transmit [ALT]
+- transport [ALT]
+- turn [ALT]
+- twist [ALT] — turn or rotate
+- underscore [ALT]
+- up [ALT]
+- update [ALT]
+- upgrade [ALT]
+- wake [ALT]
+- wash [ALT]
+- weaken [ALT]
+- weaponize [ALT] — convert into a weapon
+- win [ALT]
+- wind [ALT]
+- withdraw [ALT]
+
+
+## Differentiate × Interpretation × PATTERN (18 verbs)
+
+- accommodate [ALT]
+- adapt [ALT]
+- affect [ALT]
+- appreciate [ALT]
+- compel [ALT]
+- even [ALT]
+- exceed [ALT]
+- excel [ALT]
+- influence [ALT]
+- persuade [ALT]
+- range [ALT]
+- regard [ALT]
+- regulate [ALT]
+- resort [ALT] — turn to as option
+- satisfy [ALT]
+- surpass [ALT] — exceed or go beyond
+- symbolize [ALT]
+- vary [ALT]
+
+
+## Differentiate × Interpretation × GROUND (30 verbs)
+
+- calm [ALT]
+- care [ALT]
+- chill [ALT]
+- condition [ALT]
+- contaminate [ALT]
+- continue [ALT]
+- cool [ALT]
+- deteriorate [ALT]
+- enable [ALT] — make possible
+- endanger [ALT]
+- facilitate [ALT]
+- hibernate [ALT]
+- lean [ALT] — incline at an angle
+- mature [ALT] — become fully developed
+- mess [ALT]
+- nurture [ALT]
+- pale [ALT]
+- relax [ALT]
+- remain [ALT]
+- rest [ALT]
+- rot [ALT]
+- rust [ALT]
+- scent [ALT]
+- sit [ALT]
+- soak [ALT]
+- stand [ALT]
+- stay [ALT]
+- understand [ALT]
+- wait [ALT]
+- warm [ALT]
+
+
+## Relate × Existence × FIGURE (58 verbs)
+
+- accept [DES]
+- accuse [DES]
+- acknowledge [DES]
+- affirm [DES]
+- allege [DES] — claim without proof
+- approve [DES]
+- assign [DES]
+- ban [DES]
+- bill [DES]
+- blame [DES]
+- bless [DES]
+- call [DES]
+- choose [DES]
+- conclude [DES]
+- condemn [DES]
+- confirm [DES]
+- consent [DES]
+- convict [DES]
+- count [DES]
+- credit [DES]
+- declare [DES]
+- define [DES]
+- designate [DES]
+- detect [DES]
+- determine [DES]
+- diagnose [DES]
+- elect [DES]
+- endorse [DES]
+- estimate [DES]
+- finalize [DES] — complete or make final
+- finger [DES] — identify or point out
+- identify [DES]
+- label [DES]
+- license [DES]
+- locate [DES]
+- mark [DES]
+- measure [DES]
+- name [DES]
+- nominate [DES]
+- opt [DES]
+- picture [DES] — imagine or visualize
+- prescribe [DES]
+- price [DES]
+- prohibit [DES]
+- prove [DES]
+- redline [DES]
+- register [DES]
+- reserve [DES]
+- schedule [DES]
+- select [DES]
+- specify [DES]
+- spot [DES]
+- target [DES] — designate as objective
+- title [DES]
+- top [DES]
+- tout [DES] — promote or praise
+- trademark [DES]
+- verify [DES]
+
+
+## Relate × Existence × PATTERN (27 verbs)
+
+- account [DES]
+- assess [DES]
+- characterize [DES]
+- consist [DES] — be composed of
+- cost [DES]
+- deem [DES] — consider or judge
+- denote [DES] — indicate or designate
+- deserve [DES] — be worthy of
+- equal [DES]
+- evaluate [DES]
+- favor [DES] — prefer or support
+- indicate [DES]
+- judge [DES]
+- justify [DES]
+- limit [DES]
+- mean [DES]
+- prefer [DES]
+- purport [DES]
+- qualify [DES]
+- rank [DES]
+- rate [DES]
+- recognize [DES]
+- require [DES]
+- size [DES]
+- specialize [DES]
+- suspect [DES]
+- value [DES] — assign worth
+
+
+## Relate × Existence × GROUND (11 verbs)
+
+- allow [DES]
+- assume [DES]
+- authorize [DES]
+- be [DES]
+- ensure [DES]
+- intend [DES]
+- matter [DES]
+- permit [DES]
+- seem [DES]
+- suppose [DES]
+- warrant [DES]
+
+
+## Relate × Structure × FIGURE (112 verbs)
+
+- access [CON]
+- acquire [CON]
+- address [CON]
+- adopt [CON]
+- apply [CON]
+- appropriate [CON] — take something for oneself
+- arm [CON]
+- arrest [CON]
+- assist [CON]
+- assure [CON]
+- attach [CON]
+- attain [CON] — achieve or reach
+- award [CON]
+- back [CON]
+- board [CON]
+- book [CON]
+- broker [CON]
+- buy [CON]
+- capture [CON] — take possession
+- catch [CON]
+- commit [CON]
+- confine [CON] — restrict within bounds
+- conquer [CON] — defeat and control
+- consult [CON]
+- contact [CON]
+- control [CON]
+- date [CON]
+- deliver [CON]
+- detain [CON] — hold in custody
+- donate [CON]
+- embed [CON] — fix firmly into something
+- employ [CON] — hire for work
+- enclose [CON] — surround or contain
+- envelop [CON]
+- equip [CON]
+- feed [CON]
+- finance [CON]
+- fund [CON]
+- give [CON]
+- grab [CON]
+- grant [CON] — give officially
+- grasp [CON]
+- grip [CON]
+- guarantee [CON]
+- hand [CON]
+- hang [CON]
+- help [CON]
+- hire [CON]
+- hook [CON]
+- impose [CON]
+- imprison [CON]
+- invest [CON]
+- jam [CON] — pack tightly or block
+- join [CON]
+- kidnap [CON]
+- lace [CON]
+- land [CON]
+- lash [CON]
+- line [CON] — arrange in row or cover inside
+- listen [CON]
+- load [CON]
+- lock [CON]
+- manage [CON]
+- marry [CON]
+- mate [CON]
+- meet [CON]
+- mount [CON]
+- nail [CON]
+- obtain [CON] — acquire possession
+- park [CON]
+- paste [CON]
+- pay [CON]
+- pin [CON]
+- pledge [CON]
+- promise [CON]
+- prop [CON]
+- protect [CON]
+- provide [CON]
+- purchase [CON]
+- put [CON]
+- reach [CON]
+- receive [CON]
+- recommend [CON]
+- recruit [CON]
+- reimburse [CON] — pay back
+- rent [CON]
+- restrain [CON]
+- retake [CON]
+- retrieve [CON] — get back
+- reward [CON] — give something in return for good behavior
+- screw [CON]
+- seal [CON]
+- seat [CON]
+- secure [CON]
+- see [CON]
+- sell [CON]
+- send [CON]
+- show [CON]
+- staff [CON]
+- stick [CON]
+- string [CON]
+- subscribe [CON]
+- take [CON]
+- tell [CON]
+- thank [CON]
+- tie [CON]
+- touch [CON]
+- tow [CON]
+- trap [CON] — catch and confine
+- use [CON]
+- wear [CON]
+- wrap [CON]
+
+
+## Relate × Structure × PATTERN (60 verbs)
+
+- accompany [CON]
+- accord [CON]
+- adhere [CON]
+- agree [CON]
+- ally [CON]
+- associate [CON]
+- attract [CON]
+- attribute [CON]
+- base [CON]
+- belong [CON]
+- coincide [CON] — occur at same time
+- collaborate [CON]
+- communicate [CON]
+- compare [CON]
+- comply [CON]
+- concern [CON]
+- concur [CON]
+- connect [CON]
+- contain [CON]
+- cooperate [CON]
+- couple [CON]
+- cover [CON]
+- depend [CON]
+- devote [CON]
+- dominate [CON]
+- encircle [CON]
+- engage [CON]
+- face [CON]
+- fit [CON]
+- follow [CON]
+- frequent [CON]
+- govern [CON]
+- implicate [CON]
+- imply [CON]
+- include [CON]
+- involve [CON]
+- link [CON] — connect
+- match [CON]
+- neighbor [CON]
+- neighbour [CON]
+- obligate [CON] — bind by duty
+- owe [CON]
+- own [CON]
+- pair [CON]
+- participate [CON]
+- pertain [CON]
+- possess [CON]
+- precede [CON]
+- refer [CON]
+- reference [CON]
+- relate [CON]
+- rely [CON]
+- represent [CON]
+- span [CON] — extend across
+- sponsor [CON]
+- suit [CON]
+- support [CON]
+- surround [CON]
+- sympathize [CON]
+- trust [CON]
+
+
+## Relate × Structure × GROUND (13 verbs)
+
+- believe [CON]
+- have [CON]
+- hold [CON]
+- house [CON]
+- keep [CON]
+- know [CON]
+- like [CON]
+- love [CON]
+- need [CON]
+- occupy [CON]
+- root [CON]
+- shelter [CON]
+- want [CON]
+
+
+## Relate × Interpretation × FIGURE (3 verbs)
+
+- hedge [SUP]
+- hesitate [SUP]
+- yield [SUP]
+
+
+## Relate × Interpretation × PATTERN (3 verbs)
+
+- conflict [SUP]
+- contradict [SUP]
+- disagree [SUP]
+
+
+## Relate × Interpretation × GROUND (6 verbs)
+
+- doubt [SUP]
+- idk [SUP] — I don't know
+- pend [SUP]
+- pretend [SUP]
+- tolerate [SUP]
+- wonder [SUP]
+
+
+## Generate × Existence × FIGURE (406 verbs)
+
+- abuse [INS]
+- accomplish [INS]
+- achieve [INS]
+- act [INS]
+- admit [INS]
+- advance [INS]
+- advertise [INS]
+- advise [INS]
+- announce [INS]
+- answer [INS]
+- apologize [INS]
+- appear [INS]
+- approach [INS]
+- argue [INS]
+- arise [INS]
+- array [INS] — arrange in order
+- arrive [INS]
+- ask [INS]
+- assert [INS]
+- attack [INS]
+- attempt [INS]
+- attend [INS]
+- bang [INS]
+- battle [INS] — fight
+- beat [INS]
+- beg [INS] — ask desperately
+- begin [INS]
+- bet [INS]
+- bid [INS]
+- bite [INS]
+- blog [INS]
+- bloom [INS]
+- blow [INS]
+- boast [INS]
+- bomb [INS]
+- boob [INS]
+- bother [INS]
+- breed [INS]
+- brief [INS]
+- browse [INS]
+- budge [INS]
+- build [INS]
+- bump [INS]
+- burrow [INS]
+- calculate [INS]
+- carry [INS]
+- cast [INS]
+- cater [INS]
+- cc [INS]
+- challenge [INS]
+- chant [INS]
+- charge [INS]
+- chase [INS]
+- chat [INS]
+- check [INS]
+- circle [INS]
+- cite [INS]
+- claim [INS]
+- clash [INS]
+- click [INS]
+- climb [INS] — ascend
+- come [INS]
+- command [INS]
+- commence [INS]
+- comment [INS]
+- complain [INS]
+- conduct [INS] — carry out
+- conference [INS] — hold a meeting
+- confess [INS]
+- contemplate [INS]
+- copy [INS]
+- crash [INS]
+- crawl [INS]
+- create [INS]
+- creep [INS] — move slowly
+- criticize [INS]
+- cross [INS] — traverse
+- cry [INS]
+- dance [INS]
+- deal [INS]
+- decorate [INS]
+- defend [INS]
+- demand [INS]
+- demonstrate [INS]
+- depict [INS]
+- deposit [INS]
+- describe [INS]
+- design [INS]
+- dial [INS]
+- dig [INS]
+- dine [INS] — eat a meal
+- dip [INS]
+- direct [INS]
+- disclose [INS]
+- discover [INS]
+- discuss [INS]
+- dispatch [INS]
+- do [INS]
+- document [INS]
+- download [INS]
+- draft [INS]
+- drag [INS]
+- draw [INS] — create marks/lines
+- dream [INS] — have dreams
+- drink [INS]
+- drive [INS]
+- dump [INS] — drop or unload
+- e-mail [INS]
+- earn [INS]
+- effect [INS] — cause to happen
+- email [INS]
+- emit [INS]
+- encourage [INS]
+- establish [INS]
+- examine [INS]
+- execute [INS]
+- exhibit [INS]
+- exploit [INS]
+- explore [INS]
+- expose [INS]
+- express [INS]
+- fax [INS]
+- feature [INS]
+- fight [INS]
+- figure [INS]
+- file [INS]
+- fill [INS]
+- film [INS] — record on camera
+- find [INS]
+- flicker [INS]
+- fly [INS]
+- force [INS]
+- forecast [INS]
+- foresee [INS]
+- forward [INS]
+- foster [INS]
+- found [INS]
+- frighten [INS] — cause fear
+- fuck [INS]
+- fuel [INS]
+- fulfil [INS]
+- further [INS]
+- gain [INS]
+- game [INS] — play games
+- gaze [INS]
+- generate [INS]
+- get [INS]
+- giggle [INS]
+- go [INS]
+- google [INS]
+- graze [INS] — feed on grass
+- greet [INS] — acknowledge arrival
+- guess [INS]
+- handle [INS]
+- happen [INS]
+- harass [INS]
+- hassle [INS]
+- hatch [INS]
+- haul [INS]
+- head [INS]
+- hear [INS]
+- highlight [INS]
+- hiss [INS]
+- hit [INS]
+- hop [INS]
+- host [INS]
+- hunt [INS]
+- hurl [INS]
+- hurry [INS] — move quickly
+- hurt [INS]
+- imagine [INS]
+- immigrate [INS]
+- imperil [INS] — put in danger
+- implement [INS]
+- import [INS] — bring in from outside
+- impress [INS]
+- incite [INS]
+- incur [INS]
+- induce [INS]
+- inform [INS]
+- initial [INS] — mark with initials
+- initiate [INS] — begin something
+- inquire [INS]
+- insert [INS]
+- insist [INS]
+- inspire [INS]
+- install [INS]
+- instigate [INS]
+- instruct [INS]
+- insult [INS]
+- interview [INS]
+- introduce [INS]
+- invade [INS] — enter forcefully
+- invent [INS]
+- investigate [INS]
+- invite [INS]
+- invoice [INS]
+- invoke [INS]
+- issue [INS]
+- joke [INS]
+- jump [INS]
+- kick [INS] — strike with foot
+- kid [INS]
+- kiss [INS]
+- knock [INS]
+- laugh [INS]
+- launch [INS]
+- lay [INS]
+- lead [INS]
+- leak [INS]
+- lick [INS]
+- list [INS]
+- log [INS]
+- look [INS]
+- lope [INS]
+- mail [INS]
+- make [INS]
+- manufacture [INS]
+- mention [INS]
+- meow [INS] — make cat sound
+- migrate [INS]
+- negotiate [INS]
+- note [INS]
+- notice [INS]
+- notify [INS]
+- object [INS] — express disagreement
+- observe [INS]
+- offend [INS]
+- offer [INS]
+- officiate [INS] — perform official duties
+- operate [INS]
+- order [INS]
+- originate [INS]
+- overcome [INS]
+- paint [INS]
+- party [INS]
+- pass [INS]
+- pee [INS]
+- perceive [INS]
+- perform [INS]
+- pester [INS]
+- pet [INS]
+- phone [INS]
+- picket [INS]
+- place [INS]
+- plan [INS]
+- plant [INS] — put in ground to grow
+- play [INS]
+- plunge [INS] — dive or thrust
+- point [INS]
+- pop [INS]
+- pose [INS]
+- post [INS]
+- pound [INS]
+- pour [INS]
+- practice [INS]
+- praise [INS]
+- pray [INS]
+- preach [INS]
+- prearrange [INS] — arrange in advance
+- predict [INS] — forecast future
+- present [INS]
+- press [INS]
+- pressure [INS]
+- print [INS]
+- proceed [INS]
+- proclaim [INS]
+- produce [INS]
+- project [INS] — extend outward
+- prompt [INS]
+- propose [INS]
+- protest [INS]
+- provoke [INS] — incite reaction
+- publish [INS]
+- puff [INS]
+- pull [INS]
+- pump [INS]
+- punish [INS]
+- pursue [INS]
+- push [INS]
+- question [INS]
+- quote [INS]
+- rack [INS]
+- re-read [INS] — read again
+- read [INS]
+- realise [INS] — British spelling of realize
+- recall [INS]
+- record [INS] — create documentation
+- reestablish [INS]
+- reintroduce [INS]
+- remind [INS]
+- reply [INS]
+- report [INS]
+- reproduce [INS]
+- request [INS]
+- research [INS]
+- respond [INS]
+- retaliate [INS] — strike back
+- review [INS]
+- revive [INS]
+- ride [INS]
+- ridicule [INS] — mock or make fun of
+- ring [INS]
+- rise [INS]
+- risk [INS]
+- rock [INS]
+- roll [INS]
+- rub [INS]
+- rumor [INS]
+- run [INS]
+- rush [INS] — move quickly
+- sail [INS]
+- say [INS]
+- score [INS]
+- scratch [INS]
+- scream [INS]
+- scroll [INS] — move through text
+- scrub [INS]
+- search [INS]
+- seek [INS]
+- sense [INS]
+- serve [INS]
+- shake [INS]
+- ship [INS]
+- shoot [INS]
+- shop [INS] — purchase goods
+- shout [INS]
+- sign [INS]
+- signal [INS]
+- sing [INS]
+- sink [INS]
+- ski [INS]
+- slide [INS]
+- smell [INS]
+- smile [INS]
+- smoke [INS]
+- sneak [INS]
+- sniff [INS]
+- solicit [INS] — ask for or request
+- sound [INS]
+- sow [INS]
+- spawn [INS]
+- speak [INS]
+- spell [INS]
+- spray [INS]
+- stage [INS]
+- stamp [INS] — make an impression or mark
+- start [INS]
+- state [INS]
+- step [INS]
+- store [INS]
+- stress [INS]
+- strike [INS]
+- struggle [INS] — make forceful effort
+- study [INS]
+- submit [INS]
+- suck [INS]
+- sue [INS]
+- suggest [INS]
+- supply [INS]
+- surprise [INS] — cause unexpected reaction
+- swear [INS]
+- talk [INS]
+- taste [INS]
+- teach [INS]
+- test [INS]
+- testify [INS]
+- text [INS]
+- threaten [INS]
+- throw [INS]
+- tick [INS]
+- torture [INS]
+- toss [INS]
+- tour [INS]
+- trace [INS]
+- track [INS]
+- trade [INS]
+- travel [INS]
+- treat [INS]
+- trigger [INS]
+- trip [INS] — stumble or travel
+- trot [INS]
+- try [INS]
+- twinkle [INS]
+- type [INS]
+- undertake [INS]
+- upload [INS]
+- urge [INS]
+- venture [INS]
+- view [INS]
+- visit [INS]
+- visualize [INS]
+- voice [INS]
+- volunteer [INS]
+- vote [INS]
+- wag [INS]
+- walk [INS]
+- warn [INS]
+- watch [INS]
+- welcome [INS]
+- wield [INS]
+- wish [INS]
+- work [INS]
+- write [INS]
+- yahoo! [INS]
+- yell [INS]
+
+
+## Generate × Existence × PATTERN (25 verbs)
+
+- administer [INS]
+- aid [INS]
+- benefit [INS]
+- cause [INS]
+- circulate [INS]
+- compete [INS] — engage in contest
+- flirt [INS]
+- hate [INS]
+- interfere [INS]
+- model [INS]
+- monitor [INS] — observe systematically
+- oppose [INS]
+- outperform [INS]
+- oversee [INS]
+- proliferate [INS]
+- react [INS]
+- reflect [INS]
+- repeat [INS]
+- respect [INS]
+- result [INS]
+- rule [INS] — govern
+- stem [INS]
+- succeed [INS]
+- tend [INS]
+- utilize [INS]
+
+
+## Generate × Existence × GROUND (57 verbs)
+
+- afford [INS]
+- anticipate [INS]
+- aspire [INS] — have ambitions
+- await [INS]
+- bask [INS] — lie in warmth
+- bear [INS]
+- beware [INS]
+- breathe [INS]
+- camp [INS]
+- consider [INS]
+- crave [INS]
+- desire [INS]
+- dislike [INS]
+- drool [INS]
+- emerge [INS]
+- enjoy [INS]
+- exist [INS]
+- expect [INS]
+- experience [INS]
+- fear [INS] — experience fear
+- feel [INS]
+- float [INS]
+- flood [INS]
+- flourish [INS] — grow vigorously
+- flow [INS]
+- function [INS]
+- glow [INS] — emit light
+- hope [INS]
+- hum [INS]
+- incubate [INS]
+- intrigue [INS]
+- last [INS]
+- let [INS]
+- lie [INS]
+- live [INS]
+- loom [INS]
+- maintain [INS]
+- mind [INS]
+- occur [INS]
+- panic [INS]
+- populate [INS]
+- rage [INS]
+- regret [INS]
+- remember [INS]
+- reside [INS]
+- sleep [INS]
+- steam [INS]
+- stink [INS] — emit bad smell
+- storm [INS]
+- suffer [INS]
+- survive [INS]
+- teethe [INS]
+- think [INS]
+- thrive [INS]
+- vacation [INS]
+- wander [INS] — walk aimlessly
+- worry [INS]
+
+
+## Generate × Structure × FIGURE (24 verbs)
+
+- absorb [SYN]
+- accumulate [SYN]
+- add [SYN]
+- assemble [SYN]
+- bake [SYN]
+- blend [SYN]
+- collect [SYN] — gather together
+- combine [SYN]
+- compile [SYN]
+- compose [SYN]
+- compound [SYN]
+- concentrate [SYN]
+- contribute [SYN]
+- eat [SYN]
+- form [SYN]
+- gather [SYN]
+- incorporate [SYN]
+- merge [SYN]
+- mix [SYN]
+- pack [SYN]
+- rally [SYN]
+- stir [SYN]
+- summarise [SYN]
+- summarize [SYN]
+
+
+## Generate × Structure × PATTERN (7 verbs)
+
+- compensate [SYN]
+- comprise [SYN]
+- compromise [SYN]
+- constitute [SYN]
+- coordinate [SYN]
+- reconcile [SYN]
+- total [SYN] — add up to
+
+
+## Generate × Structure × GROUND (0 verbs)
+
+*(empty)*
+
+
+## Generate × Interpretation × FIGURE (13 verbs)
+
+- deploy [REC] — position strategically
+- develop [REC]
+- grow [REC]
+- heal [REC] — restore to health
+- morph [REC]
+- rebuild [REC] — build again
+- reconsider [REC]
+- recover [REC]
+- recreate [REC]
+- renew [REC]
+- reopen [REC] — open again
+- repair [REC]
+- restore [REC]
+
+
+## Generate × Interpretation × PATTERN (5 verbs)
+
+- arrange [REC] — organize systematically
+- centralize [REC]
+- organize [REC]
+- prioritise [REC]
+- structure [REC]
+
+
+## Generate × Interpretation × GROUND (0 verbs)
+
+*(empty)*

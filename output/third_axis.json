@@ -1,0 +1,19 @@
+{
+  "n_verbs": 1192,
+  "distribution": {
+    "GROUND": 127,
+    "FIGURE": 912,
+    "PATTERN": 153
+  },
+  "z_positions": -91.90827178955078,
+  "z_triads": -70.11749267578125,
+  "z_referent": -46.644569396972656,
+  "z_random": 0.004287684336304665,
+  "ari_referent_operators": 0.04676153639157012,
+  "ari_referent_triads": 0.04442297076333372,
+  "ari_referent_positions": 0.0517290161506479,
+  "nmi_referent_operators": 0.05323713576149179,
+  "nmi_referent_triads": 0.028973875341944694,
+  "nmi_referent_positions": 0.04606637770536463,
+  "z_27_cells": -16.920948028564453
+}

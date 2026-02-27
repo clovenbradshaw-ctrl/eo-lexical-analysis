@@ -1,0 +1,649 @@
+{
+  "n_languages": 28,
+  "languages": {
+    "Ancient_Greek": {
+      "family": "IE-Hellenic",
+      "era": "ancient",
+      "region": "Mediterranean",
+      "morph_type": "fusional",
+      "n_classified": 2352,
+      "op_pcts": {
+        "NUL": 5.059523809523809,
+        "DES": 5.442176870748299,
+        "INS": 50.042517006802726,
+        "SEG": 8.20578231292517,
+        "CON": 12.414965986394558,
+        "SYN": 2.5510204081632653,
+        "ALT": 14.625850340136054,
+        "SUP": 0.6377551020408163,
+        "REC": 1.0204081632653061
+      },
+      "triad_pcts": {
+        "Existence": 60.544217687074834,
+        "Structure": 23.171768707482993,
+        "Interpretation": 16.284013605442176
+      }
+    },
+    "Arabic": {
+      "family": "Afro-Asiatic",
+      "era": "modern",
+      "region": "Middle East",
+      "morph_type": "fusional",
+      "n_classified": 1048,
+      "op_pcts": {
+        "NUL": 7.15648854961832,
+        "DES": 8.68320610687023,
+        "INS": 34.82824427480916,
+        "SEG": 6.202290076335878,
+        "CON": 18.51145038167939,
+        "SYN": 3.0534351145038165,
+        "ALT": 17.84351145038168,
+        "SUP": 1.049618320610687,
+        "REC": 2.6717557251908395
+      },
+      "triad_pcts": {
+        "Existence": 50.66793893129771,
+        "Structure": 27.767175572519083,
+        "Interpretation": 21.564885496183205
+      }
+    },
+    "Basque": {
+      "family": "Isolate",
+      "era": "modern",
+      "region": "Western Europe",
+      "morph_type": "agglutinative",
+      "n_classified": 667,
+      "op_pcts": {
+        "NUL": 8.995502248875562,
+        "DES": 8.695652173913043,
+        "INS": 35.98200899550225,
+        "SEG": 5.847076461769116,
+        "CON": 9.89505247376312,
+        "SYN": 2.998500749625187,
+        "ALT": 25.63718140929535,
+        "SUP": 0.0,
+        "REC": 1.9490254872563717
+      },
+      "triad_pcts": {
+        "Existence": 53.673163418290855,
+        "Structure": 18.740629685157423,
+        "Interpretation": 27.586206896551722
+      }
+    },
+    "Classical_Chinese": {
+      "family": "Sino-Tibetan",
+      "era": "ancient",
+      "region": "East Asia",
+      "morph_type": "isolating",
+      "n_classified": 2632,
+      "op_pcts": {
+        "NUL": 6.155015197568389,
+        "DES": 9.992401215805472,
+        "INS": 38.639817629179326,
+        "SEG": 5.547112462006079,
+        "CON": 13.297872340425531,
+        "SYN": 2.8875379939209727,
+        "ALT": 22.530395136778115,
+        "SUP": 0.3799392097264438,
+        "REC": 0.5699088145896657
+      },
+      "triad_pcts": {
+        "Existence": 54.78723404255319,
+        "Structure": 21.732522796352583,
+        "Interpretation": 23.480243161094226
+      }
+    },
+    "Coptic": {
+      "family": "Afro-Asiatic",
+      "era": "ancient",
+      "region": "North Africa",
+      "morph_type": "agglutinative",
+      "n_classified": 440,
+      "op_pcts": {
+        "NUL": 5.227272727272727,
+        "DES": 10.0,
+        "INS": 52.27272727272727,
+        "SEG": 7.045454545454545,
+        "CON": 9.772727272727273,
+        "SYN": 1.1363636363636365,
+        "ALT": 11.59090909090909,
+        "SUP": 0.45454545454545453,
+        "REC": 2.5
+      },
+      "triad_pcts": {
+        "Existence": 67.5,
+        "Structure": 17.954545454545453,
+        "Interpretation": 14.545454545454545
+      }
+    },
+    "English": {
+      "family": "IE-Germanic",
+      "era": "modern",
+      "region": "Global North",
+      "morph_type": "fusional",
+      "n_classified": 1194,
+      "op_pcts": {
+        "NUL": 6.78391959798995,
+        "DES": 8.040201005025125,
+        "INS": 41.038525963149084,
+        "SEG": 6.197654941373535,
+        "CON": 15.494137353433835,
+        "SYN": 2.5963149078726966,
+        "ALT": 17.33668341708543,
+        "SUP": 1.0050251256281406,
+        "REC": 1.507537688442211
+      },
+      "triad_pcts": {
+        "Existence": 55.86264656616416,
+        "Structure": 24.288107202680067,
+        "Interpretation": 19.84924623115578
+      }
+    },
+    "Finnish": {
+      "family": "Uralic",
+      "era": "modern",
+      "region": "Global North",
+      "morph_type": "agglutinative",
+      "n_classified": 1421,
+      "op_pcts": {
+        "NUL": 7.459535538353272,
+        "DES": 6.33356790992259,
+        "INS": 42.57565095003519,
+        "SEG": 5.629838142153413,
+        "CON": 8.796622097114708,
+        "SYN": 2.251935256861365,
+        "ALT": 24.841660802251937,
+        "SUP": 0.422237860661506,
+        "REC": 1.688951442646024
+      },
+      "triad_pcts": {
+        "Existence": 56.368754398311054,
+        "Structure": 16.678395496129486,
+        "Interpretation": 26.952850105559467
+      }
+    },
+    "French": {
+      "family": "IE-Romance",
+      "era": "modern",
+      "region": "Global North",
+      "morph_type": "fusional",
+      "n_classified": 1489,
+      "op_pcts": {
+        "NUL": 8.394895903290799,
+        "DES": 8.797850906648758,
+        "INS": 35.661517797179314,
+        "SEG": 5.97716588314305,
+        "CON": 14.439220953660175,
+        "SYN": 3.895231699126931,
+        "ALT": 19.744795164539962,
+        "SUP": 0.33579583613163194,
+        "REC": 2.7535258562793823
+      },
+      "triad_pcts": {
+        "Existence": 52.85426460711887,
+        "Structure": 24.311618535930155,
+        "Interpretation": 22.834116856950978
+      }
+    },
+    "German": {
+      "family": "IE-Germanic",
+      "era": "modern",
+      "region": "Global North",
+      "morph_type": "fusional",
+      "n_classified": 1436,
+      "op_pcts": {
+        "NUL": 7.729805013927576,
+        "DES": 11.002785515320335,
+        "INS": 35.863509749303624,
+        "SEG": 6.267409470752089,
+        "CON": 18.454038997214482,
+        "SYN": 2.9247910863509747,
+        "ALT": 15.459610027855152,
+        "SUP": 0.2785515320334262,
+        "REC": 2.01949860724234
+      },
+      "triad_pcts": {
+        "Existence": 54.59610027855153,
+        "Structure": 27.646239554317546,
+        "Interpretation": 17.75766016713092
+      }
+    },
+    "Gothic": {
+      "family": "IE-Germanic",
+      "era": "ancient",
+      "region": "Northern Europe",
+      "morph_type": "fusional",
+      "n_classified": 673,
+      "op_pcts": {
+        "NUL": 8.469539375928678,
+        "DES": 6.983655274888559,
+        "INS": 46.50817236255572,
+        "SEG": 12.63001485884101,
+        "CON": 10.698365527488855,
+        "SYN": 3.4175334323922733,
+        "ALT": 9.658246656760774,
+        "SUP": 0.44576523031203563,
+        "REC": 1.188707280832095
+      },
+      "triad_pcts": {
+        "Existence": 61.96136701337296,
+        "Structure": 26.745913818722137,
+        "Interpretation": 11.292719167904904
+      }
+    },
+    "Hindi": {
+      "family": "IE-Indo-Aryan",
+      "era": "modern",
+      "region": "South Asia",
+      "morph_type": "fusional",
+      "n_classified": 424,
+      "op_pcts": {
+        "NUL": 10.849056603773585,
+        "DES": 5.660377358490567,
+        "INS": 41.9811320754717,
+        "SEG": 9.90566037735849,
+        "CON": 9.669811320754718,
+        "SYN": 2.358490566037736,
+        "ALT": 17.452830188679243,
+        "SUP": 0.2358490566037736,
+        "REC": 1.8867924528301887
+      },
+      "triad_pcts": {
+        "Existence": 58.49056603773585,
+        "Structure": 21.933962264150946,
+        "Interpretation": 19.575471698113205
+      }
+    },
+    "Indonesian": {
+      "family": "Austronesian",
+      "era": "modern",
+      "region": "Southeast Asia",
+      "morph_type": "agglutinative",
+      "n_classified": 885,
+      "op_pcts": {
+        "NUL": 5.536723163841808,
+        "DES": 12.54237288135593,
+        "INS": 38.30508474576271,
+        "SEG": 4.858757062146893,
+        "CON": 18.757062146892657,
+        "SYN": 2.824858757062147,
+        "ALT": 15.932203389830507,
+        "SUP": 0.11299435028248588,
+        "REC": 1.1299435028248588
+      },
+      "triad_pcts": {
+        "Existence": 56.38418079096045,
+        "Structure": 26.440677966101696,
+        "Interpretation": 17.17514124293785
+      }
+    },
+    "Japanese": {
+      "family": "Japonic",
+      "era": "modern",
+      "region": "East Asia",
+      "morph_type": "agglutinative",
+      "n_classified": 1522,
+      "op_pcts": {
+        "NUL": 7.1616294349540075,
+        "DES": 6.3731931668856765,
+        "INS": 39.68462549277267,
+        "SEG": 5.387647831800263,
+        "CON": 18.988173455978973,
+        "SYN": 3.7450722733245727,
+        "ALT": 16.4257555847569,
+        "SUP": 0.8541392904073587,
+        "REC": 1.3797634691195795
+      },
+      "triad_pcts": {
+        "Existence": 53.21944809461235,
+        "Structure": 28.12089356110381,
+        "Interpretation": 18.659658344283837
+      }
+    },
+    "Korean": {
+      "family": "Koreanic",
+      "era": "modern",
+      "region": "East Asia",
+      "morph_type": "agglutinative",
+      "n_classified": 2950,
+      "op_pcts": {
+        "NUL": 5.322033898305085,
+        "DES": 26.98305084745763,
+        "INS": 36.40677966101695,
+        "SEG": 2.5762711864406778,
+        "CON": 14.542372881355933,
+        "SYN": 2.2033898305084745,
+        "ALT": 9.796610169491524,
+        "SUP": 0.7796610169491526,
+        "REC": 1.3898305084745761
+      },
+      "triad_pcts": {
+        "Existence": 68.71186440677967,
+        "Structure": 19.322033898305087,
+        "Interpretation": 11.966101694915253
+      }
+    },
+    "Latin": {
+      "family": "IE-Italic",
+      "era": "ancient",
+      "region": "Mediterranean",
+      "morph_type": "fusional",
+      "n_classified": 770,
+      "op_pcts": {
+        "NUL": 10.38961038961039,
+        "DES": 7.142857142857142,
+        "INS": 40.129870129870135,
+        "SEG": 8.181818181818182,
+        "CON": 12.987012987012985,
+        "SYN": 3.3766233766233764,
+        "ALT": 15.974025974025974,
+        "SUP": 0.2597402597402597,
+        "REC": 1.5584415584415585
+      },
+      "triad_pcts": {
+        "Existence": 57.66233766233766,
+        "Structure": 24.545454545454543,
+        "Interpretation": 17.79220779220779
+      }
+    },
+    "Naija": {
+      "family": "Creole-English",
+      "era": "modern",
+      "region": "West Africa",
+      "morph_type": "isolating",
+      "n_classified": 566,
+      "op_pcts": {
+        "NUL": 6.007067137809187,
+        "DES": 9.540636042402827,
+        "INS": 47.70318021201413,
+        "SEG": 4.593639575971731,
+        "CON": 11.837455830388691,
+        "SYN": 2.8268551236749118,
+        "ALT": 15.371024734982333,
+        "SUP": 0.17667844522968199,
+        "REC": 1.9434628975265018
+      },
+      "triad_pcts": {
+        "Existence": 63.25088339222614,
+        "Structure": 19.257950530035334,
+        "Interpretation": 17.491166077738516
+      }
+    },
+    "Old_Church_Slavonic": {
+      "family": "IE-Slavic",
+      "era": "ancient",
+      "region": "Eastern Europe",
+      "morph_type": "fusional",
+      "n_classified": 1780,
+      "op_pcts": {
+        "NUL": 8.258426966292134,
+        "DES": 3.5955056179775284,
+        "INS": 38.82022471910113,
+        "SEG": 11.573033707865168,
+        "CON": 12.921348314606742,
+        "SYN": 2.4719101123595504,
+        "ALT": 20.393258426966295,
+        "SUP": 0.39325842696629215,
+        "REC": 1.5730337078651686
+      },
+      "triad_pcts": {
+        "Existence": 50.67415730337079,
+        "Structure": 26.966292134831463,
+        "Interpretation": 22.359550561797754
+      }
+    },
+    "Old_East_Slavic": {
+      "family": "IE-Slavic",
+      "era": "medieval",
+      "region": "Eastern Europe",
+      "morph_type": "fusional",
+      "n_classified": 2335,
+      "op_pcts": {
+        "NUL": 7.580299785867238,
+        "DES": 4.967880085653105,
+        "INS": 36.53104925053533,
+        "SEG": 12.548179871520343,
+        "CON": 16.18843683083512,
+        "SYN": 2.6124197002141325,
+        "ALT": 18.115631691648822,
+        "SUP": 0.4282655246252677,
+        "REC": 1.0278372591006424
+      },
+      "triad_pcts": {
+        "Existence": 49.07922912205568,
+        "Structure": 31.349036402569595,
+        "Interpretation": 19.571734475374733
+      }
+    },
+    "Persian": {
+      "family": "IE-Iranian",
+      "era": "modern",
+      "region": "West Asia",
+      "morph_type": "fusional",
+      "n_classified": 293,
+      "op_pcts": {
+        "NUL": 6.143344709897611,
+        "DES": 7.167235494880546,
+        "INS": 52.218430034129696,
+        "SEG": 10.580204778156997,
+        "CON": 8.532423208191126,
+        "SYN": 2.7303754266211606,
+        "ALT": 11.262798634812286,
+        "SUP": 0.0,
+        "REC": 1.3651877133105803
+      },
+      "triad_pcts": {
+        "Existence": 65.52901023890786,
+        "Structure": 21.843003412969285,
+        "Interpretation": 12.627986348122867
+      }
+    },
+    "Russian": {
+      "family": "IE-Slavic",
+      "era": "modern",
+      "region": "Global North",
+      "morph_type": "fusional",
+      "n_classified": 2908,
+      "op_pcts": {
+        "NUL": 7.8404401650618984,
+        "DES": 6.774415405777166,
+        "INS": 37.551581843191194,
+        "SEG": 8.253094910591471,
+        "CON": 14.614855570839064,
+        "SYN": 3.782668500687758,
+        "ALT": 19.119669876203577,
+        "SUP": 0.4470426409903714,
+        "REC": 1.6162310866574967
+      },
+      "triad_pcts": {
+        "Existence": 52.166437414030256,
+        "Structure": 26.650618982118292,
+        "Interpretation": 21.182943603851445
+      }
+    },
+    "Sanskrit": {
+      "family": "IE-Indo-Aryan",
+      "era": "ancient",
+      "region": "South Asia",
+      "morph_type": "fusional",
+      "n_classified": 1869,
+      "op_pcts": {
+        "NUL": 5.350454788657036,
+        "DES": 5.564472980203317,
+        "INS": 48.582129481005886,
+        "SEG": 9.416800428036384,
+        "CON": 15.676832530765115,
+        "SYN": 1.4446227929373996,
+        "ALT": 12.252541466024612,
+        "SUP": 0.26752273943285176,
+        "REC": 1.4446227929373996
+      },
+      "triad_pcts": {
+        "Existence": 59.49705724986624,
+        "Structure": 26.538255751738898,
+        "Interpretation": 13.964686998394862
+      }
+    },
+    "Tagalog": {
+      "family": "Austronesian",
+      "era": "modern",
+      "region": "Southeast Asia",
+      "morph_type": "agglutinative",
+      "n_classified": 50,
+      "op_pcts": {
+        "NUL": 18.0,
+        "DES": 2.0,
+        "INS": 50.0,
+        "SEG": 0.0,
+        "CON": 14.000000000000002,
+        "SYN": 2.0,
+        "ALT": 12.0,
+        "SUP": 2.0,
+        "REC": 0.0
+      },
+      "triad_pcts": {
+        "Existence": 70.0,
+        "Structure": 16.0,
+        "Interpretation": 14.0
+      }
+    },
+    "Tamil": {
+      "family": "Dravidian",
+      "era": "modern",
+      "region": "South Asia",
+      "morph_type": "agglutinative",
+      "n_classified": 176,
+      "op_pcts": {
+        "NUL": 9.659090909090908,
+        "DES": 8.522727272727272,
+        "INS": 42.04545454545455,
+        "SEG": 2.272727272727273,
+        "CON": 18.181818181818183,
+        "SYN": 1.7045454545454544,
+        "ALT": 15.909090909090908,
+        "SUP": 0.5681818181818182,
+        "REC": 1.1363636363636365
+      },
+      "triad_pcts": {
+        "Existence": 60.22727272727273,
+        "Structure": 22.15909090909091,
+        "Interpretation": 17.613636363636363
+      }
+    },
+    "Turkish": {
+      "family": "Turkic",
+      "era": "modern",
+      "region": "West Asia",
+      "morph_type": "agglutinative",
+      "n_classified": 864,
+      "op_pcts": {
+        "NUL": 7.291666666666667,
+        "DES": 9.027777777777777,
+        "INS": 37.73148148148148,
+        "SEG": 5.439814814814815,
+        "CON": 14.23611111111111,
+        "SYN": 2.199074074074074,
+        "ALT": 22.22222222222222,
+        "SUP": 0.3472222222222222,
+        "REC": 1.5046296296296295
+      },
+      "triad_pcts": {
+        "Existence": 54.050925925925924,
+        "Structure": 21.875,
+        "Interpretation": 24.074074074074073
+      }
+    },
+    "Uyghur": {
+      "family": "Turkic",
+      "era": "modern",
+      "region": "Central Asia",
+      "morph_type": "agglutinative",
+      "n_classified": 239,
+      "op_pcts": {
+        "NUL": 5.439330543933055,
+        "DES": 1.2552301255230125,
+        "INS": 61.92468619246861,
+        "SEG": 5.02092050209205,
+        "CON": 7.112970711297072,
+        "SYN": 2.092050209205021,
+        "ALT": 17.154811715481173,
+        "SUP": 0.0,
+        "REC": 0.0
+      },
+      "triad_pcts": {
+        "Existence": 68.61924686192468,
+        "Structure": 14.225941422594143,
+        "Interpretation": 17.154811715481173
+      }
+    },
+    "Vietnamese": {
+      "family": "Austroasiatic",
+      "era": "modern",
+      "region": "Southeast Asia",
+      "morph_type": "isolating",
+      "n_classified": 1027,
+      "op_pcts": {
+        "NUL": 6.0370009737098345,
+        "DES": 5.8422590068159685,
+        "INS": 48.58812074001948,
+        "SEG": 5.939629990262902,
+        "CON": 14.703018500486856,
+        "SYN": 3.700097370983447,
+        "ALT": 12.560856864654331,
+        "SUP": 0.7789678675754625,
+        "REC": 1.8500486854917235
+      },
+      "triad_pcts": {
+        "Existence": 60.46738072054528,
+        "Structure": 24.342745861733206,
+        "Interpretation": 15.189873417721518
+      }
+    },
+    "Wolof": {
+      "family": "Niger-Congo",
+      "era": "modern",
+      "region": "West Africa",
+      "morph_type": "agglutinative",
+      "n_classified": 693,
+      "op_pcts": {
+        "NUL": 1.5873015873015872,
+        "DES": 8.802308802308803,
+        "INS": 61.904761904761905,
+        "SEG": 4.040404040404041,
+        "CON": 10.533910533910534,
+        "SYN": 0.1443001443001443,
+        "ALT": 11.11111111111111,
+        "SUP": 0.8658008658008658,
+        "REC": 1.0101010101010102
+      },
+      "triad_pcts": {
+        "Existence": 72.2943722943723,
+        "Structure": 14.718614718614718,
+        "Interpretation": 12.987012987012987
+      }
+    },
+    "Yoruba": {
+      "family": "Niger-Congo",
+      "era": "modern",
+      "region": "West Africa",
+      "morph_type": "isolating",
+      "n_classified": 140,
+      "op_pcts": {
+        "NUL": 4.285714285714286,
+        "DES": 10.0,
+        "INS": 40.714285714285715,
+        "SEG": 5.714285714285714,
+        "CON": 23.57142857142857,
+        "SYN": 1.4285714285714286,
+        "ALT": 11.428571428571429,
+        "SUP": 0.7142857142857143,
+        "REC": 2.142857142857143
+      },
+      "triad_pcts": {
+        "Existence": 55.0,
+        "Structure": 30.71428571428571,
+        "Interpretation": 14.285714285714286
+      }
+    }
+  }
+}

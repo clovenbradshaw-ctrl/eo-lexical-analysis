@@ -1,0 +1,245 @@
+{
+  "Ancient_Greek": {
+    "family": "IE-Hellenic",
+    "era": "ancient",
+    "n_verbs": 1898,
+    "z_all": -26.119596481323242,
+    "z_no_ins": -25.94658660888672,
+    "z_triad": -60.666908264160156,
+    "random_z": -0.037492077238857745
+  },
+  "Arabic": {
+    "family": "Afro-Asiatic",
+    "era": "modern",
+    "n_verbs": 1048,
+    "z_all": -30.236722946166992,
+    "z_no_ins": -28.44145393371582,
+    "z_triad": -53.727638244628906,
+    "random_z": -0.2627477213740349
+  },
+  "Basque": {
+    "family": "Isolate",
+    "era": "modern",
+    "n_verbs": 666,
+    "z_all": -12.989991188049316,
+    "z_no_ins": -12.238846778869629,
+    "z_triad": -20.471900939941406,
+    "random_z": 0.09010623609647155
+  },
+  "Classical_Chinese": {
+    "family": "Sino-Tibetan",
+    "era": "ancient",
+    "n_verbs": 2599,
+    "z_all": -21.61825180053711,
+    "z_no_ins": -21.126169204711914,
+    "z_triad": -109.88761138916016,
+    "random_z": 0.23417263962328433
+  },
+  "Coptic": {
+    "family": "Afro-Asiatic",
+    "era": "ancient",
+    "n_verbs": 410,
+    "z_all": -2.3692235946655273,
+    "z_no_ins": -2.3267641067504883,
+    "z_triad": -5.643763542175293,
+    "random_z": -0.17418181323446333
+  },
+  "English": {
+    "family": "IE-Germanic",
+    "era": "modern",
+    "n_verbs": 1194,
+    "z_all": -40.52116394042969,
+    "z_no_ins": -39.19293975830078,
+    "z_triad": -66.07039642333984,
+    "random_z": -0.07149842623621225
+  },
+  "Finnish": {
+    "family": "Uralic",
+    "era": "modern",
+    "n_verbs": 1168,
+    "z_all": -28.131027221679688,
+    "z_no_ins": -25.824556350708008,
+    "z_triad": -71.00035858154297,
+    "random_z": -0.03884956510737538
+  },
+  "French": {
+    "family": "IE-Romance",
+    "era": "modern",
+    "n_verbs": 1489,
+    "z_all": -30.638790130615234,
+    "z_no_ins": -26.89577865600586,
+    "z_triad": -86.2335205078125,
+    "random_z": -0.030768010299652815
+  },
+  "German": {
+    "family": "IE-Germanic",
+    "era": "modern",
+    "n_verbs": 1430,
+    "z_all": -19.65703010559082,
+    "z_no_ins": -18.995407104492188,
+    "z_triad": -74.82344055175781,
+    "random_z": -0.40908621326088906
+  },
+  "Gothic": {
+    "family": "IE-Germanic",
+    "era": "ancient",
+    "n_verbs": 673,
+    "z_all": -3.2581417560577393,
+    "z_no_ins": -3.7779462337493896,
+    "z_triad": -7.766910552978516,
+    "random_z": -0.02998252771794796
+  },
+  "Hindi": {
+    "family": "IE-Indo-Aryan",
+    "era": "modern",
+    "n_verbs": 423,
+    "z_all": -5.768113136291504,
+    "z_no_ins": -5.736263275146484,
+    "z_triad": -17.68996810913086,
+    "random_z": 0.221419977536425
+  },
+  "Indonesian": {
+    "family": "Austronesian",
+    "era": "modern",
+    "n_verbs": 885,
+    "z_all": -6.72960090637207,
+    "z_no_ins": -6.063977241516113,
+    "z_triad": -42.97259521484375,
+    "random_z": -0.1568278070539236
+  },
+  "Japanese": {
+    "family": "Japonic",
+    "era": "modern",
+    "n_verbs": 1522,
+    "z_all": -49.359310150146484,
+    "z_no_ins": -44.86362838745117,
+    "z_triad": -93.67338562011719,
+    "random_z": -0.010634912736713886
+  },
+  "Korean": {
+    "family": "Koreanic",
+    "era": "modern",
+    "n_verbs": 2749,
+    "z_all": -78.00127410888672,
+    "z_no_ins": -82.12251281738281,
+    "z_triad": -111.89097595214844,
+    "random_z": -0.07675617225468159
+  },
+  "Latin": {
+    "family": "IE-Italic",
+    "era": "ancient",
+    "n_verbs": 770,
+    "z_all": -7.9581098556518555,
+    "z_no_ins": -7.290719032287598,
+    "z_triad": -25.262569427490234,
+    "random_z": 0.22358949929475785
+  },
+  "Naija": {
+    "family": "Creole-English",
+    "era": "modern",
+    "n_verbs": 566,
+    "z_all": -6.1573638916015625,
+    "z_no_ins": -5.572653770446777,
+    "z_triad": -27.954607009887695,
+    "random_z": 0.3570427248814667
+  },
+  "Old_Church_Slavonic": {
+    "family": "IE-Slavic",
+    "era": "ancient",
+    "n_verbs": 1677,
+    "z_all": -14.179024696350098,
+    "z_no_ins": -12.885732650756836,
+    "z_triad": -53.396263122558594,
+    "random_z": -0.16226969063282012
+  },
+  "Old_East_Slavic": {
+    "family": "IE-Slavic",
+    "era": "medieval",
+    "n_verbs": 2333,
+    "z_all": -27.457178115844727,
+    "z_no_ins": -25.057024002075195,
+    "z_triad": -67.77070617675781,
+    "random_z": 0.39884608443826436
+  },
+  "Persian": {
+    "family": "IE-Iranian",
+    "era": "modern",
+    "n_verbs": 290,
+    "z_all": -10.14122200012207,
+    "z_no_ins": -10.294787406921387,
+    "z_triad": -15.8607816696167,
+    "random_z": -0.235085204616189
+  },
+  "Russian": {
+    "family": "IE-Slavic",
+    "era": "modern",
+    "n_verbs": 2906,
+    "z_all": -57.33745574951172,
+    "z_no_ins": -56.64103317260742,
+    "z_triad": -145.36285400390625,
+    "random_z": -0.2706102438271046
+  },
+  "Sanskrit": {
+    "family": "IE-Indo-Aryan",
+    "era": "ancient",
+    "n_verbs": 1869,
+    "z_all": -8.010367393493652,
+    "z_no_ins": -8.313389778137207,
+    "z_triad": -36.09318542480469,
+    "random_z": -0.03434094628319144
+  },
+  "Tagalog": {
+    "family": "Austronesian",
+    "era": "modern",
+    "n_verbs": 50,
+    "z_all": -2.002598762512207,
+    "z_no_ins": null,
+    "z_triad": -5.301105976104736,
+    "random_z": -0.165507715777494
+  },
+  "Tamil": {
+    "family": "Dravidian",
+    "era": "modern",
+    "n_verbs": 176,
+    "z_all": -1.6820460557937622,
+    "z_no_ins": -2.1324925422668457,
+    "z_triad": -4.363503932952881,
+    "random_z": -0.26128948479890823
+  },
+  "Turkish": {
+    "family": "Turkic",
+    "era": "modern",
+    "n_verbs": 852,
+    "z_all": -15.624340057373047,
+    "z_no_ins": -15.898771286010742,
+    "z_triad": -49.23882293701172,
+    "random_z": -0.1815343389287591
+  },
+  "Uyghur": {
+    "family": "Turkic",
+    "era": "modern",
+    "n_verbs": 239,
+    "z_all": -1.3128938674926758,
+    "z_no_ins": -0.811193585395813,
+    "z_triad": -4.291202068328857,
+    "random_z": 0.13861992284655572
+  },
+  "Vietnamese": {
+    "family": "Austroasiatic",
+    "era": "modern",
+    "n_verbs": 1027,
+    "z_all": -34.078643798828125,
+    "z_no_ins": -32.707061767578125,
+    "z_triad": -39.50460433959961,
+    "random_z": -0.061965461820364
+  },
+  "Wolof": {
+    "family": "Niger-Congo",
+    "era": "modern",
+    "n_verbs": 200,
+    "z_all": -0.2498106062412262,
+    "z_no_ins": -0.1790735423564911,
+    "z_triad": -3.666851043701172,
+    "random_z": -0.3011285848915577
+  }
+}

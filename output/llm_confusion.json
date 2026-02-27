@@ -1,0 +1,112 @@
+{
+  "confusion": {
+    "NUL": {
+      "INS": 79,
+      "SEG": 23,
+      "REC": 6,
+      "ALT": 7,
+      "SYN": 5,
+      "CON": 4,
+      "DES": 1
+    },
+    "DES": {
+      "INS": 46,
+      "CON": 9,
+      "ALT": 8,
+      "NUL": 1,
+      "SEG": 3,
+      "REC": 3
+    },
+    "INS": {
+      "CON": 215,
+      "NUL": 139,
+      "DES": 53,
+      "SUP": 11,
+      "SEG": 67,
+      "ALT": 120,
+      "SYN": 38,
+      "REC": 97
+    },
+    "SEG": {
+      "INS": 24,
+      "NUL": 21,
+      "CON": 5,
+      "REC": 7,
+      "ALT": 5,
+      "SYN": 2,
+      "DES": 1
+    },
+    "CON": {
+      "INS": 119,
+      "ALT": 2,
+      "REC": 6,
+      "DES": 16,
+      "SEG": 1,
+      "SYN": 1,
+      "NUL": 3
+    },
+    "SYN": {
+      "CON": 7,
+      "INS": 31,
+      "ALT": 2,
+      "NUL": 3,
+      "SEG": 1,
+      "REC": 2
+    },
+    "ALT": {
+      "INS": 21,
+      "REC": 62,
+      "NUL": 7,
+      "DES": 4,
+      "SYN": 2,
+      "CON": 1,
+      "SUP": 1
+    },
+    "SUP": {
+      "INS": 7
+    },
+    "REC": {
+      "INS": 40,
+      "ALT": 35,
+      "DES": 3,
+      "SEG": 4,
+      "NUL": 2,
+      "SUP": 2,
+      "SYN": 1
+    }
+  },
+  "symmetric_pairs": {
+    "CON-INS": 334,
+    "INS-NUL": 218,
+    "ALT-INS": 141,
+    "INS-REC": 137,
+    "DES-INS": 99,
+    "ALT-REC": 97,
+    "INS-SEG": 91,
+    "INS-SYN": 69,
+    "NUL-SEG": 44,
+    "CON-DES": 25,
+    "INS-SUP": 18,
+    "ALT-NUL": 14,
+    "ALT-DES": 12,
+    "REC-SEG": 11,
+    "NUL-REC": 8,
+    "NUL-SYN": 8,
+    "CON-SYN": 8,
+    "CON-NUL": 7,
+    "DES-REC": 6,
+    "CON-SEG": 6,
+    "CON-REC": 6,
+    "ALT-SEG": 5,
+    "DES-SEG": 4,
+    "ALT-SYN": 4,
+    "SEG-SYN": 3,
+    "ALT-CON": 3,
+    "REC-SYN": 3,
+    "DES-NUL": 2,
+    "REC-SUP": 2,
+    "ALT-SUP": 1
+  },
+  "intra_triad_confusion": 436,
+  "inter_triad_confusion": 950
+}

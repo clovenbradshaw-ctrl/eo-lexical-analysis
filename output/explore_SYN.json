@@ -1,0 +1,2796 @@
+{
+  "operator": "SYN",
+  "symbol": "\u2228",
+  "total_verbs": 284,
+  "scales": {
+    "physical": 182,
+    "informational": 54,
+    "social": 37,
+    "psychological": 11
+  },
+  "confidence": {
+    "high": 238,
+    "medium": 46
+  },
+  "borders": {
+    "INS": 31,
+    "CON": 7,
+    "NUL": 3,
+    "ALT": 2,
+    "REC": 2,
+    "SEG": 1
+  },
+  "subclusters": [
+    {
+      "id": 0,
+      "size": 25,
+      "dominant_scale": "social",
+      "scales": {
+        "social": 14,
+        "physical": 5,
+        "informational": 4,
+        "psychological": 2
+      },
+      "core_verbs": [
+        "compromise",
+        "meet half-way",
+        "make up",
+        "resolve",
+        "solve",
+        "complement",
+        "concert",
+        "square off",
+        "plea-bargain",
+        "give and take"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "concert",
+          "scale": "social",
+          "reason": "Input: multiple parties with different positions. Output: unified agreement merging those positions into one resolution.",
+          "confidence": "high"
+        },
+        {
+          "verb": "make up",
+          "scale": "social",
+          "reason": "Input: separated parties in conflict, Output: unified reconciled relationship \u2014 merges conflict into harmony.",
+          "confidence": "high"
+        },
+        {
+          "verb": "even off",
+          "scale": "physical",
+          "reason": "Input: uneven elements; Output: those elements merged into a balanced whole \u2014 creates equilibrium by combining disparities.",
+          "confidence": "high"
+        },
+        {
+          "verb": "compromise",
+          "scale": "social",
+          "reason": "Input: conflicting positions; Output: new unified agreement incorporating concessions from both\u2014positions fused into transcendent whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "square off",
+          "scale": "social",
+          "reason": "Input: open dispute with unresolved positions. Output: conclusive settlement merging positions into resolution.",
+          "confidence": "high"
+        },
+        {
+          "verb": "balance",
+          "scale": "physical",
+          "reason": "Input: unequal forces; Output: unified equilibrium state where opposing forces form stable whole.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "equilibrise",
+          "scale": "physical",
+          "reason": "Input: imbalanced components; Output: components synthesized into balanced state \u2014 creates unity from oppositions.",
+          "confidence": "high"
+        },
+        {
+          "verb": "equilibrize",
+          "scale": "physical",
+          "reason": "Input: imbalanced components; Output: components synthesized into balanced state \u2014 creates unity from oppositions.",
+          "confidence": "high"
+        },
+        {
+          "verb": "offset",
+          "scale": "informational",
+          "reason": "Input: deficit and compensating action. Output: balanced state where deficit and compensation merge into equilibrium. Multiple forces synthesize.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "hammer out",
+          "scale": "social",
+          "reason": "Input: disparate positions; Output: unified solution/agreement; vehement discussion synthesizes resolution from conflict.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "cancel",
+          "scale": "social",
+          "reason": "Input: debt and payment separate. Output: they neutralize each other into balance. Opposing forces merge into resolution.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "give and take",
+          "scale": "social",
+          "reason": "Input: separate negotiating positions; Output: merged agreement incorporating both parties' interests; synthesizes opposing demands into unified resolution.",
+          "confidence": "high"
+        },
+        {
+          "verb": "equalise",
+          "scale": "informational",
+          "reason": "Input: unequal scores; Output: unified equal score; disparate values merge into equivalence.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "meet half-way",
+          "scale": "social",
+          "reason": "Input: two opposing positions; Output: a single compromise position that transcends both; a new unified stance emerges from conflicting ones.",
+          "confidence": "high"
+        },
+        {
+          "verb": "get even",
+          "scale": "social",
+          "reason": "Input: imbalanced accounts (injury + no response). Output: balanced whole state where debt merges with payment. Synthesizes equilibrium.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": 36,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 36
+      },
+      "core_verbs": [
+        "braid",
+        "plait",
+        "crochet",
+        "fashion",
+        "sew",
+        "build",
+        "wreathe",
+        "knead",
+        "whip up",
+        "ruddle"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "tissue",
+          "scale": "physical",
+          "reason": "Input: separate strands. Output: unified cloth transcending individual threads. Weaving synthesizes new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "crochet",
+          "scale": "physical",
+          "reason": "Input: yarn thread. Output: fabric structure transcending linear thread. Looping fuses material into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "mat",
+          "scale": "physical",
+          "reason": "Input: separate strands; Output: confusing unified mass; combines parts into new indivisible whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sew",
+          "scale": "physical",
+          "reason": "Input: separate fabric pieces. Output: unified garment. Cloth pieces are combined and transformed into a new whole object.",
+          "confidence": "high"
+        },
+        {
+          "verb": "ball",
+          "scale": "physical",
+          "reason": "Input: loose/extended material. Output: unified spherical whole. Multiple parts combined into new integrated form.",
+          "confidence": "high"
+        },
+        {
+          "verb": "macrame",
+          "scale": "physical",
+          "reason": "Input: separate cords. Output: unified knotted pattern transcending individual strands. Parts fuse into artistic whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "inweave",
+          "scale": "physical",
+          "reason": "Input: separate threads. Output: unified woven fabric. Multiple threads merge into a new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "web",
+          "scale": "physical",
+          "reason": "Input: separate strands. Output: integrated web structure. Multiple threads combine into unified network whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "braid",
+          "scale": "physical",
+          "reason": "Input: separate strands of hair/ribbon. Output: integrated braid structure where strands are woven into new whole. Multiple parts become one composite.",
+          "confidence": "high"
+        },
+        {
+          "verb": "frame up",
+          "scale": "physical",
+          "reason": "Input: separate parts. Output: unified frame structure. Parts combine into structural whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tangle",
+          "scale": "physical",
+          "reason": "Input: separate strands. Output: interwoven complex whole. Strands merge into knotted unity.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "plait",
+          "scale": "physical",
+          "reason": "Input: separate strands of hair. Output: integrated plait/braid structure where strands are woven into new whole. Multiple parts become one composite.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cheese",
+          "scale": "physical",
+          "reason": "Input: loose thread/yarn. Output: organized mass on a cheese (spool). Multiple strands combined into unified form.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "darn",
+          "scale": "physical",
+          "reason": "Input: damaged fabric with hole + repair thread. Output: unified repaired fabric where hole and thread merge into whole. The repair transcends its parts.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "knead",
+          "scale": "physical",
+          "reason": "Input: dough with non-uniform regions. Output: unified homogeneous mass transcending local variations. Parts merge into consistent whole.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 62,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 60,
+        "informational": 2
+      },
+      "core_verbs": [
+        "bake",
+        "cook",
+        "cook up",
+        "formulate",
+        "barbecue",
+        "braise",
+        "broil",
+        "charbroil",
+        "charcoal-broil",
+        "coddle"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "carbonize",
+          "scale": "physical",
+          "reason": "Input: substance + carbon, Output: unified carbon compound (merging into new whole)",
+          "confidence": "high"
+        },
+        {
+          "verb": "caramelise",
+          "scale": "physical",
+          "reason": "Input: sugar molecules; output: caramel (new whole); multiple molecules fuse into substance transcending parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "carbonify",
+          "scale": "physical",
+          "reason": "Input: organic matter, Output: carbon-based substance (fusion into new whole)",
+          "confidence": "high"
+        },
+        {
+          "verb": "carbonise",
+          "scale": "physical",
+          "reason": "Input: substance + carbon as separate. Output: unified compound with carbon integrated.",
+          "confidence": "high"
+        },
+        {
+          "verb": "caramelize",
+          "scale": "physical",
+          "reason": "Input: sugar molecules, Output: caramel (new unified substance through chemical transformation)",
+          "confidence": "high"
+        },
+        {
+          "verb": "alchemize",
+          "scale": "physical",
+          "reason": "Input: base elements. Output: transmuted substance (new whole). Synthesis creates a fundamentally new compound.",
+          "confidence": "high"
+        },
+        {
+          "verb": "alchemise",
+          "scale": "physical",
+          "reason": "Input: base elements. Output: transmuted substance (new whole). Synthesis creates a fundamentally new compound.",
+          "confidence": "high"
+        },
+        {
+          "verb": "metabolize",
+          "scale": "physical",
+          "reason": "Input: nutrients and biological machinery. Output: new compounds synthesized from inputs. Many become one new substance.",
+          "confidence": "high"
+        },
+        {
+          "verb": "metabolise",
+          "scale": "physical",
+          "reason": "Input: nutrients and biological machinery. Output: new compounds synthesized from inputs. Many become one new substance.",
+          "confidence": "high"
+        },
+        {
+          "verb": "carburet",
+          "scale": "physical",
+          "reason": "Input: substance + carbon; Output: new carbon compound; multiple elements fuse into unified chemical whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "charcoal-broil",
+          "scale": "physical",
+          "reason": "Input: raw food. Output: charcoal-cooked food. Heat synthesizes into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "polymerise",
+          "scale": "physical",
+          "reason": "Input: many monomer molecules. Output: one polymer molecule transcending parts. Multiple units merge into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "compost",
+          "scale": "physical",
+          "reason": "Input: separate organic materials. Output: unified compost substance that transcends its inputs through decomposition. New integrated whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "cook",
+          "scale": "physical",
+          "reason": "Input: separate ingredients. Output: transformed dish transcending parts. Heat and mixing fuse into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "create from raw stuff",
+          "scale": "physical",
+          "reason": "Input: raw stuff (multiple components). Output: finished object that transcends its parts. Stuff combines into emergent whole.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "size": 21,
+      "dominant_scale": "informational",
+      "scales": {
+        "informational": 21
+      },
+      "core_verbs": [
+        "total",
+        "aggregate",
+        "tally",
+        "tally up",
+        "summarize",
+        "sum up",
+        "totalize",
+        "totalise",
+        "average",
+        "average out"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "total",
+          "scale": "informational",
+          "reason": "Input: separate numbers. Output: single sum value. Multiple values combine into transcendent whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "summate",
+          "scale": "informational",
+          "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tot up",
+          "scale": "informational",
+          "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+          "confidence": "high"
+        },
+        {
+          "verb": "add together",
+          "scale": "informational",
+          "reason": "Input: multiple numbers. Output: single sum. Many values combined into transcendent total.",
+          "confidence": "high"
+        },
+        {
+          "verb": "sum up",
+          "scale": "informational",
+          "reason": "Input: multiple separate pieces of information. Output: a unified summary that represents them as a whole. Creates a compressed representation that transcends individual parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tote up",
+          "scale": "informational",
+          "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tally",
+          "scale": "informational",
+          "reason": "Input: multiple items/values. Output: single sum. Multiple things combine into one aggregate result.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tot",
+          "scale": "informational",
+          "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+          "confidence": "high"
+        },
+        {
+          "verb": "summarize",
+          "scale": "informational",
+          "reason": "Input: multiple detailed elements. Output: unified condensed whole. Many parts merge into synthesized essence.",
+          "confidence": "high"
+        },
+        {
+          "verb": "totalize",
+          "scale": "informational",
+          "reason": "Input: parts or aspects; output: unified total whole; multiple elements combine into transcendent totality.",
+          "confidence": "high"
+        },
+        {
+          "verb": "tally up",
+          "scale": "informational",
+          "reason": "Input: multiple items/values. Output: single sum. Multiple things combine into one aggregate result.",
+          "confidence": "high"
+        },
+        {
+          "verb": "add up",
+          "scale": "informational",
+          "reason": "Input: multiple elements. Output: elements combined into emergent meaning or result. Parts synthesize into transcendent whole.",
+          "confidence": "medium"
+        },
+        {
+          "verb": "totalise",
+          "scale": "informational",
+          "reason": "Input: parts or aspects; output: unified total whole; multiple elements combine into transcendent totality.",
+          "confidence": "high"
+        },
+        {
+          "verb": "average out",
+          "scale": "informational",
+          "reason": "Input: multiple values. Output: single value representing the set. Many numbers combined into transcendent mean.",
+          "confidence": "high"
+        },
+        {
+          "verb": "aggregate",
+          "scale": "informational",
+          "reason": "Input: separate quantities. Output: total sum as unified whole. Many amounts become one aggregate number.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 140,
+      "dominant_scale": "physical",
+      "scales": {
+        "physical": 81,
+        "informational": 27,
+        "social": 23,
+        "psychological": 9
+      },
+      "core_verbs": [
+        "integrate",
+        "amalgamate",
+        "coalesce",
+        "consolidate",
+        "intermingle",
+        "unite",
+        "unify",
+        "compile",
+        "multiply",
+        "intermix"
+      ],
+      "nearest_to_centroid": [
+        {
+          "verb": "combine",
+          "scale": "physical",
+          "reason": "Input: separate things. Output: unified whole. Multiple elements synthesized into one.",
+          "confidence": "high"
+        },
+        {
+          "verb": "meld",
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: unified whole transcending parts. Elements synthesized into new integrated entity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "put together",
+          "scale": "physical",
+          "reason": "Input: separate components; Output: unified assembly transcending parts; components merged into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "come together",
+          "scale": "physical",
+          "reason": "Input: separate entities. Output: unified convergence transcending parts. Entities synthesized into single configuration.",
+          "confidence": "high"
+        },
+        {
+          "verb": "unite",
+          "scale": "social",
+          "reason": "Input: separate entities. Output: unified whole. Multiple things combine into transcendent entity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "syncretise",
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: fused unified whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "synthesize",
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: unified synthesis exists. Components merged into transcendent whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "consolidate",
+          "scale": "social",
+          "reason": "Input: multiple entities. Output: unified whole. Separate things unite into single entity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "intermingle",
+          "scale": "physical",
+          "reason": "Input: separate things. Output: combined whole. Elements mix into unified entity.",
+          "confidence": "high"
+        },
+        {
+          "verb": "band together",
+          "scale": "social",
+          "reason": "Input: separate individuals. Output: unified group transcending individuals. Members synthesized into collective whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "synthesise",
+          "scale": "physical",
+          "reason": "Input: multiple components; output: unified product transcending parts; combines elements into emergent whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "syncretize",
+          "scale": "informational",
+          "reason": "Input: separate elements. Output: fused unified whole transcending original parts.",
+          "confidence": "high"
+        },
+        {
+          "verb": "integrate",
+          "scale": "social",
+          "reason": "Input: separate parts. Output: unified whole. Parts merge into something that transcends them.",
+          "confidence": "high"
+        },
+        {
+          "verb": "compound",
+          "scale": "physical",
+          "reason": "Input: separate ingredients; Output: unified compound transcending parts; combines into new whole.",
+          "confidence": "high"
+        },
+        {
+          "verb": "conglomerate",
+          "scale": "physical",
+          "reason": "Input: separate entities. Output: conglomerate whole transcending parts. Entities merge into unified mass.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "boundary_verbs_from_other_ops": [
+    {
+      "verb": "bring together",
+      "operator": "CON",
+      "similarity": 0.7151134995436694,
+      "scale": "physical",
+      "reason": "Input: separate unlinked entities; Output: entities with persistent joining/link established; constructs structural connection."
+    },
+    {
+      "verb": "synchronise",
+      "operator": "CON",
+      "similarity": 0.6993241776068094,
+      "scale": "physical",
+      "reason": "Input: multiple processes unlinked temporally. Output: processes with persistent temporal alignment link. Structural timing relationship built."
+    },
+    {
+      "verb": "sync",
+      "operator": "CON",
+      "similarity": 0.6978179673949751,
+      "scale": "physical",
+      "reason": "Input: multiple things unlinked temporally/structurally. Output: things with persistent synchronization link. Alignment relationship built."
+    },
+    {
+      "verb": "synchronize",
+      "operator": "CON",
+      "similarity": 0.696861948886867,
+      "scale": "physical",
+      "reason": "Input: multiple processes unlinked temporally. Output: processes with persistent temporal alignment link. Structural timing relationship built."
+    },
+    {
+      "verb": "entwine",
+      "operator": "CON",
+      "similarity": 0.6946189467459705,
+      "scale": "physical",
+      "reason": "Input: separate strands. Output: strands with persistent intertwined links. Structural connections built."
+    },
+    {
+      "verb": "draw together",
+      "operator": "CON",
+      "similarity": 0.682735652413024,
+      "scale": "social",
+      "reason": "Input: people/entities without structural connection. Output: entities with persistent social link (shared cause/emotion). Builds lasting relationship."
+    },
+    {
+      "verb": "throw together",
+      "operator": "INS",
+      "similarity": 0.6818864438788004,
+      "scale": "physical",
+      "reason": "Input: ordered or separate items; Output: items in random configuration appearing; new arrangement instantiated without true synthesis."
+    },
+    {
+      "verb": "harmonise",
+      "operator": "CON",
+      "similarity": 0.6806284076808817,
+      "scale": "informational",
+      "reason": "Input: separate elements. Output: elements with harmonic relationship. Persistent structural link of compatibility built."
+    },
+    {
+      "verb": "sew together",
+      "operator": "CON",
+      "similarity": 0.6789603964754582,
+      "scale": "physical",
+      "reason": "Input: separate pieces of fabric. Output: pieces with persistent structural link via thread. The connection persists after sewing completes."
+    },
+    {
+      "verb": "pull together",
+      "operator": "INS",
+      "similarity": 0.6780159886240158,
+      "scale": "physical",
+      "reason": "Input: scattered items. Output: items collected in one place. A collection appears (adding to a set, not fusing)."
+    },
+    {
+      "verb": "complect",
+      "operator": "CON",
+      "similarity": 0.6775320859904765,
+      "scale": "physical",
+      "reason": "Input: separate strands/elements. Output: those elements with persistent interweaving links created."
+    },
+    {
+      "verb": "interconnect",
+      "operator": "CON",
+      "similarity": 0.6771469419362148,
+      "scale": "physical",
+      "reason": "Input: separate entities. Output: entities with persistent interconnection links. Multiple structural connections built."
+    },
+    {
+      "verb": "hang together",
+      "operator": "CON",
+      "similarity": 0.6749406076676463,
+      "scale": "informational",
+      "reason": "Input: separate elements. Output: those elements with persistent structural connection maintaining coherence."
+    },
+    {
+      "verb": "organise",
+      "operator": "CON",
+      "similarity": 0.6737961665905636,
+      "scale": "social",
+      "reason": "Input: separate workers. Output: workers with new persistent structural link as union members."
+    },
+    {
+      "verb": "interlink",
+      "operator": "CON",
+      "similarity": 0.6723747780197047,
+      "scale": "physical",
+      "reason": "Input: separate entities. Output: entities with persistent interlinks. Structural connections built between parts."
+    },
+    {
+      "verb": "harmonize",
+      "operator": "INS",
+      "similarity": 0.6648724145734002,
+      "scale": "physical",
+      "reason": "Input: elements existing separately; output: those elements now co-occurring in compatible way; this is an event of compatibility arising, not a persistent structural link being built."
+    },
+    {
+      "verb": "systematise",
+      "operator": "REC",
+      "similarity": 0.6644166139275087,
+      "scale": "informational",
+      "reason": "Input: unsystematic elements. Output: elements rebuilt into coherent system. Structure reorganizes around systemic principles."
+    },
+    {
+      "verb": "meet",
+      "operator": "INS",
+      "similarity": 0.6598428781871528,
+      "scale": "physical",
+      "reason": "Input: dispersed entities; Output: co-location event appears; creates convergence phenomenon."
+    },
+    {
+      "verb": "interweave",
+      "operator": "CON",
+      "similarity": 0.659745952102417,
+      "scale": "physical",
+      "reason": "Input: separate threads. Output: threads with persistent woven links. Structural connections built through weaving."
+    },
+    {
+      "verb": "systemise",
+      "operator": "REC",
+      "similarity": 0.6587374766868577,
+      "scale": "informational",
+      "reason": "Input: unsystematic elements. Output: elements rebuilt into coherent system. Structure reorganizes around systemic principles."
+    }
+  ],
+  "peripheral_verbs": [
+    {
+      "verb": "pickle",
+      "similarity": 0.5251929164905973,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: food + liquid. Output: single preserved whole where food and preservative fuse into transformed substance."
+    },
+    {
+      "verb": "caucus",
+      "similarity": 0.5589166972123334,
+      "alternative": "INS",
+      "scale": "social",
+      "reason": "Input: separate individuals; Output: unified deliberative body formed for political purpose."
+    },
+    {
+      "verb": "plea-bargain",
+      "similarity": 0.571756083291547,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: prosecution case and defense position as separate. Output: unified agreement merging plea and reduced charge."
+    },
+    {
+      "verb": "backcross",
+      "similarity": 0.5794192772726545,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: hybrid + parent. Output: new generation combining both. Two genetic sources fuse into new whole."
+    },
+    {
+      "verb": "propitiate",
+      "similarity": 0.5812734555485612,
+      "alternative": "ALT",
+      "scale": "social",
+      "reason": "Input: conflict state between parties. Output: reconciled state merging hostility into peace."
+    },
+    {
+      "verb": "horse-trade",
+      "similarity": 0.5814440943095385,
+      "alternative": "INS",
+      "scale": "social",
+      "reason": "Input: multiple competing offers and counteroffers. Output: unified deal merging give-and-take into agreement."
+    },
+    {
+      "verb": "tat",
+      "similarity": 0.5845782318258578,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: thread. Output: unified lace pattern. Knotting/looping combines thread into delicate whole."
+    },
+    {
+      "verb": "meet half-way",
+      "similarity": 0.5933509571819919,
+      "alternative": "",
+      "scale": "social",
+      "reason": "Input: two opposing positions; Output: a single compromise position that transcends both; a new unified stance emerges from conflicting ones."
+    },
+    {
+      "verb": "get even",
+      "similarity": 0.5949497529160579,
+      "alternative": "INS",
+      "scale": "social",
+      "reason": "Input: imbalanced accounts (injury + no response). Output: balanced whole state where debt merges with payment. Synthesizes equilibrium."
+    },
+    {
+      "verb": "coddle",
+      "similarity": 0.5950517575843541,
+      "alternative": "",
+      "scale": "physical",
+      "reason": "Input: raw food. Output: gently cooked food. Heat gently fuses into new state."
+    }
+  ],
+  "all_verbs": [
+    {
+      "verb": "absorb",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance and absorber separate. Output: substance merged into absorber as integrated whole. The two become one.",
+      "alternative": null
+    },
+    {
+      "verb": "add together",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple numbers. Output: single sum. Many values combined into transcendent total.",
+      "alternative": null
+    },
+    {
+      "verb": "add up",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: multiple elements. Output: elements combined into emergent meaning or result. Parts synthesize into transcendent whole.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "admix",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate substances; Output: blended mixture as unified whole; combines into new composite.",
+      "alternative": null
+    },
+    {
+      "verb": "agglomerate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: scattered particles; Output: unified cluster that functions as one mass; many become one whole.",
+      "alternative": null
+    },
+    {
+      "verb": "agglutinate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: multiple separate cells/bacteria. Output: merged clump transcending parts. Multiple become one aggregate.",
+      "alternative": null
+    },
+    {
+      "verb": "aggregate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate quantities. Output: total sum as unified whole. Many amounts become one aggregate number.",
+      "alternative": null
+    },
+    {
+      "verb": "aggroup",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate entities; Output: unified group; multiple things merge into cohesive whole.",
+      "alternative": null
+    },
+    {
+      "verb": "alchemise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: base elements. Output: transmuted substance (new whole). Synthesis creates a fundamentally new compound.",
+      "alternative": null
+    },
+    {
+      "verb": "alchemize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: base elements. Output: transmuted substance (new whole). Synthesis creates a fundamentally new compound.",
+      "alternative": null
+    },
+    {
+      "verb": "alloy",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate metals. Output: new unified material transcending components. Metals fuse into integrated whole.",
+      "alternative": null
+    },
+    {
+      "verb": "amalgamate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate entities. Output: unified whole. Multiple things fuse into transcendent entity.",
+      "alternative": null
+    },
+    {
+      "verb": "ancylose",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate mobile joint bones. Output: fused immobile single bone structure. Multiple parts merge into unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "ankylose",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate mobile joint bones. Output: fused immobile single bone structure. Multiple parts merge into unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "anthologise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate texts. Output: a compiled anthology as a new unified work. Multiple pieces are synthesized into a coherent collection.",
+      "alternative": null
+    },
+    {
+      "verb": "anthologize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate texts. Output: a compiled anthology as a new unified work. Multiple pieces are synthesized into a coherent collection.",
+      "alternative": null
+    },
+    {
+      "verb": "assimilate",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: distinct different things. Output: unified similar whole where differences are absorbed. Parts merge into coherent system.",
+      "alternative": null
+    },
+    {
+      "verb": "average",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple values. Output: single value representing the set. Many numbers combined into transcendent mean.",
+      "alternative": null
+    },
+    {
+      "verb": "average out",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple values. Output: single value representing the set. Many numbers combined into transcendent mean.",
+      "alternative": null
+    },
+    {
+      "verb": "backcross",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: hybrid + parent. Output: new generation combining both. Two genetic sources fuse into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "bake",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw ingredients. Output: transformed food transcending parts. Heat fuses components into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "balance",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: unequal forces; Output: unified equilibrium state where opposing forces form stable whole.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "bale",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: loose material. Output: material compressed into unified bale. Many pieces fuse into single cohesive unit.",
+      "alternative": null
+    },
+    {
+      "verb": "ball",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: loose/extended material. Output: unified spherical whole. Multiple parts combined into new integrated form.",
+      "alternative": null
+    },
+    {
+      "verb": "band together",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate individuals. Output: unified group transcending individuals. Members synthesized into collective whole.",
+      "alternative": null
+    },
+    {
+      "verb": "barbecue",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw ingredients. Output: cooked dish transcending parts. Heat transforms components into unified meal.",
+      "alternative": null
+    },
+    {
+      "verb": "batch",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: individual items. Output: items organized as unified batch. Items merge into coherent whole for processing.",
+      "alternative": null
+    },
+    {
+      "verb": "blend",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate elements. Output: unified combined substance. Parts merged into transcendent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "blend in",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: distinct thing + context. Output: thing merged into harmonious whole with context. Becomes unified ensemble.",
+      "alternative": null
+    },
+    {
+      "verb": "boil down",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: complex elements. Output: essential unified core. Multiple aspects condense into single essence.",
+      "alternative": null
+    },
+    {
+      "verb": "braid",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands of hair/ribbon. Output: integrated braid structure where strands are woven into new whole. Multiple parts become one composite.",
+      "alternative": null
+    },
+    {
+      "verb": "braise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw ingredients + liquid. Output: unified cooked dish. Combines and transforms into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "brew",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate ingredients. Output: unified beverage transcending parts. Multiple elements fuse into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "brigade",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate military units; Output: unified brigade; units merge into organized whole.",
+      "alternative": null
+    },
+    {
+      "verb": "broil",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw food. Output: cooked food transcending raw state. Heat fuses into new form.",
+      "alternative": null
+    },
+    {
+      "verb": "build",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: materials and components. Output: constructed structure. Parts are assembled and unified into a new functional whole.",
+      "alternative": null
+    },
+    {
+      "verb": "build in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate component and system; Output: component integrated as inseparable part of whole; merges into unified design.",
+      "alternative": null
+    },
+    {
+      "verb": "bunch",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate items. Output: items merged into unified bunch. Multiple things become cohesive whole.",
+      "alternative": null
+    },
+    {
+      "verb": "bunch up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: distributed items; Output: items clustered together as a bunch; multiple things combine into a unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "calender",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: rough material. Output: material pressed into unified smooth sheet.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "cancel",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: debt and payment separate. Output: they neutralize each other into balance. Opposing forces merge into resolution.",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "caramelise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: sugar molecules; output: caramel (new whole); multiple molecules fuse into substance transcending parts.",
+      "alternative": null
+    },
+    {
+      "verb": "caramelize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: sugar molecules, Output: caramel (new unified substance through chemical transformation)",
+      "alternative": null
+    },
+    {
+      "verb": "carbonify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organic matter, Output: carbon-based substance (fusion into new whole)",
+      "alternative": null
+    },
+    {
+      "verb": "carbonise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + carbon as separate. Output: unified compound with carbon integrated.",
+      "alternative": null
+    },
+    {
+      "verb": "carbonize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + carbon, Output: unified carbon compound (merging into new whole)",
+      "alternative": null
+    },
+    {
+      "verb": "carburet",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + carbon; Output: new carbon compound; multiple elements fuse into unified chemical whole.",
+      "alternative": null
+    },
+    {
+      "verb": "carburise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material + carbon separate. Output: unified compound with carbon integrated.",
+      "alternative": null
+    },
+    {
+      "verb": "carburize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material + carbon separate. Output: unified compound with carbon integrated.",
+      "alternative": null
+    },
+    {
+      "verb": "caseate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate milk components. Output: cheese as a unified whole that transcends its inputs. Transformation into new integrated substance.",
+      "alternative": null
+    },
+    {
+      "verb": "catalog",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: dispersed items/information; output: unified catalogue that combines these into coherent organized whole that transcends individual entries.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "catalogue",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: dispersed items/information; output: unified catalogue that combines these into coherent organized whole that transcends individual entries.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "caucus",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: separate individuals; Output: unified deliberative body formed for political purpose.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "char",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: organic material, Output: charcoal (new unified substance through combustion)",
+      "alternative": null
+    },
+    {
+      "verb": "charbroil",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw food. Output: cooked charred food. Heat transforms into unified new form.",
+      "alternative": null
+    },
+    {
+      "verb": "charcoal-broil",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw food. Output: charcoal-cooked food. Heat synthesizes into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cheese",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: loose thread/yarn. Output: organized mass on a cheese (spool). Multiple strands combined into unified form.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "chlorinate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: water + chlorine, Output: chlorinated water (fusion into treated whole)",
+      "alternative": null
+    },
+    {
+      "verb": "chunk",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate items; Output: combined whole without careful organization; things are merged into a single unit.",
+      "alternative": null
+    },
+    {
+      "verb": "citrate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: citric acid + other substance. Output: salt or ester (new chemical whole). Chemical synthesis creates a new compound.",
+      "alternative": null
+    },
+    {
+      "verb": "clew",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: loose thread/yarn. Output: unified ball. Multiple strands combined into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "clot",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: separate liquid particles. Output: unified solid mass formed from particles. Many become one.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "clue",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: loose thread/yarn. Output: unified ball. Multiple strands combined into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "co-educate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate male and female education streams. Output: unified educational context. Multiple groups merged into one.",
+      "alternative": null
+    },
+    {
+      "verb": "coact",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: separate organism actions. Output: coordinated unified action. Individual acts merge into collective behavior.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "coagulate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid particles, Output: solid/thickened mass (particles fuse into new whole)",
+      "alternative": null
+    },
+    {
+      "verb": "coalesce",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate elements. Output: fused whole. Parts grow together into new entity.",
+      "alternative": null
+    },
+    {
+      "verb": "cobble together",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate components. Output: a unified whole made hastily. Multiple parts are combined into a functioning entity.",
+      "alternative": null
+    },
+    {
+      "verb": "cobble up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate components. Output: a unified whole made hastily. Multiple parts are combined into a functioning entity.",
+      "alternative": null
+    },
+    {
+      "verb": "coddle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw food. Output: gently cooked food. Heat gently fuses into new state.",
+      "alternative": null
+    },
+    {
+      "verb": "coeducate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate male and female education streams. Output: unified educational context. Multiple groups merged into one.",
+      "alternative": null
+    },
+    {
+      "verb": "coffin",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: body and coffin separate; Output: body-in-coffin as unified burial unit; parts combine into ceremonial whole.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "cohere",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: disparate elements. Output: unified whole that transcends parts. Fuses components into integrated system.",
+      "alternative": null
+    },
+    {
+      "verb": "combine",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate things. Output: unified whole. Multiple elements synthesized into one.",
+      "alternative": null
+    },
+    {
+      "verb": "come together",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate entities. Output: unified convergence transcending parts. Entities synthesized into single configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "comfit",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate ingredients. Output: new integrated whole (comfit) that transcends parts. Materials merged into unified confection.",
+      "alternative": null
+    },
+    {
+      "verb": "commingle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: distinct elements. Output: blended mixture. Parts fused into inseparable whole.",
+      "alternative": null
+    },
+    {
+      "verb": "commix",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate things. Output: combined whole. Multiple elements merge into a unified mixture.",
+      "alternative": null
+    },
+    {
+      "verb": "compact",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dispersed material. Output: unified compressed mass. Parts fuse into denser whole.",
+      "alternative": null
+    },
+    {
+      "verb": "compile",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: scattered items. Output: unified collection transcending individual pieces. Gathering creates new coherent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "complement",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: incomplete parts. Output: completed whole where parts merge into perfection. Parts synthesize into completeness.",
+      "alternative": null
+    },
+    {
+      "verb": "compose",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: musical elements (notes, rhythms). Output: unified musical work exists. Parts fused into transcendent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "compost",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate organic materials. Output: unified compost substance that transcends its inputs through decomposition. New integrated whole.",
+      "alternative": null
+    },
+    {
+      "verb": "compound",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate ingredients; Output: unified compound transcending parts; combines into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "comprise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple parts. Output: whole that contains/integrates them \u2014 the collective forms unified entity.",
+      "alternative": null
+    },
+    {
+      "verb": "compromise",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: conflicting positions; Output: new unified agreement incorporating concessions from both\u2014positions fused into transcendent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "concatenate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: two separate strings. Output: one new unified string. Multiple elements become a single whole.",
+      "alternative": null
+    },
+    {
+      "verb": "concenter",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: dispersed ideas/emotions; Output: unified convergence; multiple elements merge into coherent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "concentre",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: dispersed ideas/emotions; Output: unified convergence; multiple elements merge into coherent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "concert",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: multiple parties with different positions. Output: unified agreement merging those positions into one resolution.",
+      "alternative": null
+    },
+    {
+      "verb": "concoct",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate ingredients or ideas. Output: devised mixture or plan exists. Elements combined into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "condense",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dispersed content/vapor, Output: concentrated whole/liquid (many become unified one)",
+      "alternative": null
+    },
+    {
+      "verb": "confection",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw ingredients. Output: new integrated whole (confection) that transcends parts. Ingredients fused into unified sweet.",
+      "alternative": null
+    },
+    {
+      "verb": "conflate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: distinct elements; Output: merged entity where distinctions blur; fuses into new unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "conglomerate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate entities. Output: conglomerate whole transcending parts. Entities merge into unified mass.",
+      "alternative": null
+    },
+    {
+      "verb": "conglutinate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate things. Output: fused whole. Multiple entities merge into unified adhesive mass.",
+      "alternative": null
+    },
+    {
+      "verb": "conjugate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate biological/chemical entities. Output: entities fused into new combined whole. Elements unite structurally.",
+      "alternative": null
+    },
+    {
+      "verb": "conserve",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food and sugar as separate ingredients. Output: new preserved whole that transcends parts through chemical transformation.",
+      "alternative": null
+    },
+    {
+      "verb": "consolidate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: multiple entities. Output: unified whole. Separate things unite into single entity.",
+      "alternative": null
+    },
+    {
+      "verb": "constellate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: scattered elements. Output: constellation/cluster (new whole). Multiple things merge into a unified pattern.",
+      "alternative": null
+    },
+    {
+      "verb": "constrict",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: dispersed space, Output: compressed unified space (pressing together creates tighter whole)",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "constringe",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: loose parts, Output: tight unified whole (binding together)",
+      "alternative": "NUL"
+    },
+    {
+      "verb": "construct",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: mental fragments. Output: coherent mental model exists. Parts assembled into unified understanding.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "consubstantiate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate substances. Output: unified substance transcending parts. Multiple things merge into single essence.",
+      "alternative": null
+    },
+    {
+      "verb": "convoke",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: scattered individuals; Output: assembled group as unified body; many become collective whole.",
+      "alternative": null
+    },
+    {
+      "verb": "convolute",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands; output: intertwined whole; multiple things merge into complex unified form.",
+      "alternative": null
+    },
+    {
+      "verb": "convolve",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands/elements. Output: twisted-together unified form. Multiple parts merge into intertwined whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cook",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate ingredients. Output: transformed dish transcending parts. Heat and mixing fuse into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cook up",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate ingredients or ideas. Output: new creation transcending inputs. Mixing synthesizes novel whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cooper",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: staves, hoops, materials. Output: barrel or cask. Parts combine into functional container.",
+      "alternative": null
+    },
+    {
+      "verb": "copolymerise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: multiple different monomers. Output: one copolymer transcending constituent types. Different molecules merge into unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "copolymerize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: multiple different monomers. Output: one copolymer transcending constituent types. Different molecules merge into unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "corral",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: scattered individuals. Output: gathered group as unified collection. What changed: many become one aggregate.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "craft",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw materials. Output: skillfully made object. Materials combine with technique into emergent artifact.",
+      "alternative": null
+    },
+    {
+      "verb": "cream",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: liquid components. Output: unified creamy texture. Parts fused into new textural whole.",
+      "alternative": null
+    },
+    {
+      "verb": "create from raw material",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw materials (multiple components). Output: finished object that transcends its parts. Materials combine into emergent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "create from raw stuff",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw stuff (multiple components). Output: finished object that transcends its parts. Stuff combines into emergent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cremate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: body matter, Output: ashes (transformation into unified new substance)",
+      "alternative": null
+    },
+    {
+      "verb": "crochet",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: yarn thread. Output: fabric structure transcending linear thread. Looping fuses material into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cross-fertilise",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: two separate genetic lines; output: hybrid offspring combining both; genetic material from distinct sources merges into new whole.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "cross-fertilize",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: two separate genetic lines; output: hybrid offspring combining both; genetic material from distinct sources merges into new whole.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "cross-pollinate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: pollen from one plant + receptive flower of another; output: genetic combination across plants; genetic material from distinct sources merges.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "crossbreed",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: two different varieties. Output: offspring combining both lineages. Multiple sources merge into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "cumulate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate items. Output: accumulated whole that transcends parts. Items merge into aggregate.",
+      "alternative": null
+    },
+    {
+      "verb": "darn",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: damaged fabric with hole + repair thread. Output: unified repaired fabric where hole and thread merge into whole. The repair transcends its parts.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "deep-fry",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw food + oil. Output: fried food transcending parts. Heat and fat synthesize new form.",
+      "alternative": null
+    },
+    {
+      "verb": "deglaze",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: pan with stuck particles + liquid separate; Output: unified sauce/mixture; dissolving and stirring combines into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "digest",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: dispersed information. Output: unified concise whole. Multiple parts combine into single condensed form.",
+      "alternative": null
+    },
+    {
+      "verb": "edit out",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: separate components; output: assembled whole; components combined into new unified work.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "emulsify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separated liquids; Output: unified emulsion that transcends parts; immiscible liquids merge into new stable whole.",
+      "alternative": null
+    },
+    {
+      "verb": "encase",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object and case as separate; Output: object-in-case as unified protective whole; combining into new integrated unit.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "enlace",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands. Output: twisted/wound together whole. Multiple strands merge into unified structure.",
+      "alternative": null
+    },
+    {
+      "verb": "equalise",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: unequal scores; Output: unified equal score; disparate values merge into equivalence.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "equilibrise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: imbalanced components; Output: components synthesized into balanced state \u2014 creates unity from oppositions.",
+      "alternative": null
+    },
+    {
+      "verb": "equilibrize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: imbalanced components; Output: components synthesized into balanced state \u2014 creates unity from oppositions.",
+      "alternative": null
+    },
+    {
+      "verb": "even off",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: uneven elements; Output: those elements merged into a balanced whole \u2014 creates equilibrium by combining disparities.",
+      "alternative": null
+    },
+    {
+      "verb": "fair",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: multiple surfaces; output: unified smooth blend transcending separate parts.",
+      "alternative": null
+    },
+    {
+      "verb": "fashion",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate components. Output: a unified functional object. Parts are combined and transformed into a new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "fit together",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate parts; Output: assembled structure; parts merged into coherent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "flocculate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dispersed particles. Output: aggregated fluffy/lumpy whole formed from particles combining.",
+      "alternative": null
+    },
+    {
+      "verb": "flux",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate elements. Output: unified mixture transcending parts. Multiple things become new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "foot up",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: column of numbers. Output: single total. Multiple values combined into transcendent sum.",
+      "alternative": null
+    },
+    {
+      "verb": "foregather",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: dispersed individuals; Output: unified gathering/assembly transcending individuals.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "forgather",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: dispersed individuals; Output: unified gathering/assembly transcending individuals.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "formulate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: ingredients or concepts. Output: a prepared compound or plan following a formula. Elements are combined into a prescribed whole.",
+      "alternative": null
+    },
+    {
+      "verb": "frame up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate parts. Output: unified frame structure. Parts combine into structural whole.",
+      "alternative": null
+    },
+    {
+      "verb": "french-fry",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw potato + oil. Output: french fries transcending raw state. Transforms into unified new form.",
+      "alternative": null
+    },
+    {
+      "verb": "fuse",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate elements. Output: unified fused entity. Parts merged into new transcendent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "gang",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate individuals; Output: unified group acting as organized whole; individuals merge into collective entity.",
+      "alternative": null
+    },
+    {
+      "verb": "gang up",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate individuals; Output: unified group acting as organized whole; individuals merge into collective entity.",
+      "alternative": null
+    },
+    {
+      "verb": "get even",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: imbalanced accounts (injury + no response). Output: balanced whole state where debt merges with payment. Synthesizes equilibrium.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "get together",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: separate people. Output: assembled group as new whole. Collection becomes unified gathering.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "give and take",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate negotiating positions; Output: merged agreement incorporating both parties' interests; synthesizes opposing demands into unified resolution.",
+      "alternative": null
+    },
+    {
+      "verb": "graft",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate plant parts. Output: unified living organism transcending original parts. Fuses into integrated biological whole.",
+      "alternative": null
+    },
+    {
+      "verb": "grit",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separated teeth. Output: teeth clenched into unified tight configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "haemagglutinate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dispersed red blood cells. Output: clumped aggregate. Many cells combine into clustered whole.",
+      "alternative": null
+    },
+    {
+      "verb": "hammer out",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: disparate positions; Output: unified solution/agreement; vehement discussion synthesizes resolution from conflict.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "hand-build",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: clay material. Output: pottery object made by hand. Material and technique combine into formed whole.",
+      "alternative": null
+    },
+    {
+      "verb": "handbuild",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: clay material. Output: pottery object made by hand. Material and technique combine into formed whole.",
+      "alternative": null
+    },
+    {
+      "verb": "handcraft",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: raw materials. Output: handmade object. Materials and manual skill combine into crafted whole.",
+      "alternative": null
+    },
+    {
+      "verb": "heap up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: scattered items. Output: unified pile/heap structure. Multiple items merge into a new whole configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "hemagglutinate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dispersed red blood cells. Output: clumped aggregate. Many cells combine into clustered whole.",
+      "alternative": null
+    },
+    {
+      "verb": "heterodyne",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: two separate frequency waves. Output: new frequency that transcends the inputs. Multiple signals merge into a new emergent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "horse-trade",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: multiple competing offers and counteroffers. Output: unified deal merging give-and-take into agreement.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "humify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: plant remains; output: humus (new unified substance); parts combine into new whole transcending components.",
+      "alternative": null
+    },
+    {
+      "verb": "hybridise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: two different varieties. Output: hybrid combining both. Multiple sources merge into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "hybridize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: two distinct genetic lines, output: new organism combining both, creates unified whole transcending parts.",
+      "alternative": null
+    },
+    {
+      "verb": "hydrate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: molecule and water separate; Output: hydrated compound as new unified structure; combines into new chemical whole.",
+      "alternative": null
+    },
+    {
+      "verb": "hydrogenate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: molecule + hydrogen, output: new molecular structure fusing both, chemical combination into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "imbricate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: separate elements; Output: elements overlapped into integrated pattern \u2014 merges into new structural whole.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "immingle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate things. Output: combined into one. Multiple elements merge into a unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "immix",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate elements. Output: new blended whole transcending parts. Elements fuse into unified mixture.",
+      "alternative": null
+    },
+    {
+      "verb": "incase",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: object and case as separate; Output: object-in-case as unified protective whole; combining into new integrated unit.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "incorporate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: separate elements. Output: unified entity (corporation or whole). Elements merge into transcendent whole.",
+      "alternative": "CON"
+    },
+    {
+      "verb": "ingrain",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: separate elements (knowledge + person). Output: fused whole where knowledge becomes part of person. Elements merge deeply.",
+      "alternative": null
+    },
+    {
+      "verb": "integrate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate parts. Output: unified whole. Parts merge into something that transcends them.",
+      "alternative": null
+    },
+    {
+      "verb": "interbreed",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: two different varieties. Output: offspring combining both. Multiple sources merge into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "interiorise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: external elements + self as separate. Output: fused whole where external becomes interior/personal. Merges into unified subjectivity.",
+      "alternative": null
+    },
+    {
+      "verb": "interiorize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: external elements + self as separate. Output: fused whole where external becomes interior/personal. Merges into unified subjectivity.",
+      "alternative": null
+    },
+    {
+      "verb": "intermingle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate things. Output: combined whole. Elements mix into unified entity.",
+      "alternative": null
+    },
+    {
+      "verb": "intermix",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate components; Output: unified mixture that transcends parts\u2014components fused into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "internalise",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: external knowledge + self as separate. Output: fused whole where knowledge becomes subjective/personal. Merges into unified self.",
+      "alternative": null
+    },
+    {
+      "verb": "internalize",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: external knowledge + self as separate. Output: fused whole where knowledge becomes subjective/personal. Merges into unified self.",
+      "alternative": null
+    },
+    {
+      "verb": "interpenetrate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: separate substances. Output: mutually diffused mixture. Two things merge by spreading through each other.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "inweave",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate threads. Output: unified woven fabric. Multiple threads merge into a new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "iodize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + iodine, output: combined iodized substance, chemical fusion into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "knead",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: dough with non-uniform regions. Output: unified homogeneous mass transcending local variations. Parts merge into consistent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "lysogenize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate viral and bacterial genomes; Output: fused into single genomic whole; entities merge into unified structure.",
+      "alternative": null
+    },
+    {
+      "verb": "macrame",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate cords. Output: unified knotted pattern transcending individual strands. Parts fuse into artistic whole.",
+      "alternative": null
+    },
+    {
+      "verb": "make up",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separated parties in conflict, Output: unified reconciled relationship \u2014 merges conflict into harmony.",
+      "alternative": null
+    },
+    {
+      "verb": "malt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: grain; output: malt (transformed whole); grain transforms into new substance transcending original form.",
+      "alternative": null
+    },
+    {
+      "verb": "mat",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands; Output: confusing unified mass; combines parts into new indivisible whole.",
+      "alternative": null
+    },
+    {
+      "verb": "meet half-way",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: two opposing positions; Output: a single compromise position that transcends both; a new unified stance emerges from conflicting ones.",
+      "alternative": null
+    },
+    {
+      "verb": "meld",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate elements. Output: unified whole transcending parts. Elements synthesized into new integrated entity.",
+      "alternative": null
+    },
+    {
+      "verb": "merge",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: multiple entities. Output: single combined entity. Parts synthesized into unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "metabolise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: nutrients and biological machinery. Output: new compounds synthesized from inputs. Many become one new substance.",
+      "alternative": null
+    },
+    {
+      "verb": "metabolize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: nutrients and biological machinery. Output: new compounds synthesized from inputs. Many become one new substance.",
+      "alternative": null
+    },
+    {
+      "verb": "mix",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate signals or substances; Output: unified combined signal/substance\u2014components fused into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "mix in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: base plus element. Output: blended unified mixture. Parts combine into integrated whole.",
+      "alternative": null
+    },
+    {
+      "verb": "mob",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate individuals. Output: compressed mass. Many become one tightly-packed whole.",
+      "alternative": null
+    },
+    {
+      "verb": "multiply",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: two separate numbers. Output: single product value. Mathematical fusion creates unified result.",
+      "alternative": null
+    },
+    {
+      "verb": "mummify",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: organic body. Output: preserved whole where decomposition processes are merged with preservation into stable artifact.",
+      "alternative": "REC"
+    },
+    {
+      "verb": "muster",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: dispersed people/things; Output: gathered unified assembly; parts become organized whole.",
+      "alternative": null
+    },
+    {
+      "verb": "nucleate",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: distributed matter. Output: nucleus formed as concentrated center from gathered material.",
+      "alternative": null
+    },
+    {
+      "verb": "offset",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: deficit and compensating action. Output: balanced state where deficit and compensation merge into equilibrium. Multiple forces synthesize.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "pack together",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: loose items. Output: items merged into compact unified mass.",
+      "alternative": null
+    },
+    {
+      "verb": "pickle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: food + liquid. Output: single preserved whole where food and preservative fuse into transformed substance.",
+      "alternative": null
+    },
+    {
+      "verb": "piece together",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: scattered pieces; Output: reconstructed whole; fragments merged into unified structure.",
+      "alternative": null
+    },
+    {
+      "verb": "plait",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands of hair. Output: integrated plait/braid structure where strands are woven into new whole. Multiple parts become one composite.",
+      "alternative": null
+    },
+    {
+      "verb": "plea-bargain",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: prosecution case and defense position as separate. Output: unified agreement merging plea and reduced charge.",
+      "alternative": null
+    },
+    {
+      "verb": "pleach",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate shoots. Output: interlaced unified structure. Multiple shoots merge into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "polymerise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: many monomer molecules. Output: one polymer molecule transcending parts. Multiple units merge into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "polymerize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: many monomer molecules. Output: one polymer chain that transcends parts. Multiple units fuse into emergent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "pool",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate funds. Output: unified common fund. Multiple resources merge into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "potentiate",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: drug A + drug B (separate effects). Output: combined effect exceeding sum of parts. Synergistic fusion creates new unified effect.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "precis",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple detailed elements. Output: unified condensed whole that transcends parts. Creates new artifact from many inputs.",
+      "alternative": null
+    },
+    {
+      "verb": "propitiate",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: conflict state between parties. Output: reconciled state merging hostility into peace.",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "pulp",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid material with distinct parts. Output: homogeneous pulp mass. What changed: many parts fused into undifferentiated whole.",
+      "alternative": null
+    },
+    {
+      "verb": "puree",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: solid food chunks. Output: unified smooth paste transcending parts. The chunks merge into a new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "put together",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate components; Output: unified assembly transcending parts; components merged into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "quilt",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: fabric layers and batting. Output: quilted textile. Layers stitched together into unified fabric structure.",
+      "alternative": null
+    },
+    {
+      "verb": "re-incorporate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separated elements; Output: elements merged again into unified whole; synthesizes anew.",
+      "alternative": null
+    },
+    {
+      "verb": "recap",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple prior statements. Output: new unified brief summary. Many become one condensed whole.",
+      "alternative": null
+    },
+    {
+      "verb": "recapitulate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: distributed points made earlier. Output: unified brief whole combining those elements. Creates condensed synthesis.",
+      "alternative": null
+    },
+    {
+      "verb": "reintegrate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separated parts (previously whole). Output: parts merged back into unified whole. Re-synthesis of prior unity.",
+      "alternative": null
+    },
+    {
+      "verb": "replace",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: old thing + new thing; Output: new thing merged into old thing's role; what changed: new occupies old's functional position",
+      "alternative": "INS"
+    },
+    {
+      "verb": "resolve",
+      "confidence": "high",
+      "scale": "psychological",
+      "reason": "Input: multiple conflicting options, Output: unified decision state \u2014 merges possibilities into choice.",
+      "alternative": null
+    },
+    {
+      "verb": "reunify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: multiple separated parts. Output: unified whole that transcends division. Merges parts into one.",
+      "alternative": null
+    },
+    {
+      "verb": "rig up",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: components/materials. Output: temporary constructed assembly. Parts combine into makeshift whole.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "roll (into)",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: material in one shape; Output: material transformed into new unified shape; multiple parts fuse into coherent whole form.",
+      "alternative": null
+    },
+    {
+      "verb": "roll up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate items. Output: unified bundle as new whole. Multiple things combine into single integrated form.",
+      "alternative": null
+    },
+    {
+      "verb": "ruddle",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands; output: interlaced whole (braid); multiple parts combine into unified structure.",
+      "alternative": null
+    },
+    {
+      "verb": "sandwich",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate bread and filling components. Output: unified sandwich whole. Multiple parts combined into integrated food item.",
+      "alternative": null
+    },
+    {
+      "verb": "saponify",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: ester + alkali; Output: soap as emergent chemical whole transcending inputs; chemical synthesis.",
+      "alternative": "SEG"
+    },
+    {
+      "verb": "set to music",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: text and musical elements separate; output: unified musical composition; text and music fused into new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "sew",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate fabric pieces. Output: unified garment. Cloth pieces are combined and transformed into a new whole object.",
+      "alternative": null
+    },
+    {
+      "verb": "silicify",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: organic material + silica; Output: silicified whole transcending inputs through mineral replacement; petrification synthesis.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "sinter",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: powdery particles. Output: coherent solid mass. Particles fuse into unified material structure.",
+      "alternative": null
+    },
+    {
+      "verb": "solder",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate metal pieces; Output: fused whole that transcends parts through metallurgical bonding; creates unified material.",
+      "alternative": null
+    },
+    {
+      "verb": "solve",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: problem components, Output: integrated solution \u2014 combines elements into resolution.",
+      "alternative": null
+    },
+    {
+      "verb": "square off",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: open dispute with unresolved positions. Output: conclusive settlement merging positions into resolution.",
+      "alternative": null
+    },
+    {
+      "verb": "straiten",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separated elements. Output: elements pressed into unified tighter configuration.",
+      "alternative": null
+    },
+    {
+      "verb": "substitute",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: original + substitute; Output: substitute merged into original's role; what changed: substitute becomes functional replacement",
+      "alternative": "ALT"
+    },
+    {
+      "verb": "sulfurette",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + sulfur separate. Output: combined sulfur compound. Multiple components fuse into a new chemical whole.",
+      "alternative": null
+    },
+    {
+      "verb": "sulphurette",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: substance + sulfur separate. Output: combined sulfur compound. Multiple components fuse into a new chemical whole.",
+      "alternative": null
+    },
+    {
+      "verb": "sum up",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple separate pieces of information. Output: a unified summary that represents them as a whole. Creates a compressed representation that transcends individual parts.",
+      "alternative": null
+    },
+    {
+      "verb": "summarize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple detailed elements. Output: unified condensed whole. Many parts merge into synthesized essence.",
+      "alternative": null
+    },
+    {
+      "verb": "summate",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+      "alternative": null
+    },
+    {
+      "verb": "syllogise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate premises; output: a conclusion that emerges from combining premises into logical whole that transcends individual statements.",
+      "alternative": null
+    },
+    {
+      "verb": "syllogize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate premises; output: a conclusion that emerges from combining premises into logical whole that transcends individual statements.",
+      "alternative": null
+    },
+    {
+      "verb": "symphonise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate musical parts. Output: unified harmonic whole that transcends parts. Multiple sounds merge into harmony.",
+      "alternative": null
+    },
+    {
+      "verb": "symphonize",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate musical parts. Output: unified harmonic whole that transcends parts. Multiple sounds merge into harmony.",
+      "alternative": null
+    },
+    {
+      "verb": "syncretise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate elements. Output: fused unified whole.",
+      "alternative": null
+    },
+    {
+      "verb": "syncretize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate elements. Output: fused unified whole transcending original parts.",
+      "alternative": null
+    },
+    {
+      "verb": "syndicate",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate entities. Output: merged into unified syndicate whole. Combined organization emerges.",
+      "alternative": null
+    },
+    {
+      "verb": "synthesise",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: multiple components; output: unified product transcending parts; combines elements into emergent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "synthesize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate elements. Output: unified synthesis exists. Components merged into transcendent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "tack together",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate components. Output: assembled whole. Components combine into unified object.",
+      "alternative": null
+    },
+    {
+      "verb": "tally",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple items/values. Output: single sum. Multiple things combine into one aggregate result.",
+      "alternative": null
+    },
+    {
+      "verb": "tally up",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple items/values. Output: single sum. Multiple things combine into one aggregate result.",
+      "alternative": null
+    },
+    {
+      "verb": "tangle",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: separate strands. Output: interwoven complex whole. Strands merge into knotted unity.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "tat",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: thread. Output: unified lace pattern. Knotting/looping combines thread into delicate whole.",
+      "alternative": null
+    },
+    {
+      "verb": "thrash out",
+      "confidence": "medium",
+      "scale": "social",
+      "reason": "Input: disparate positions; Output: unified solution/agreement; vehement discussion synthesizes resolution from conflict.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "tissue",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands. Output: unified cloth transcending individual threads. Weaving synthesizes new whole.",
+      "alternative": null
+    },
+    {
+      "verb": "tot",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+      "alternative": null
+    },
+    {
+      "verb": "tot up",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+      "alternative": null
+    },
+    {
+      "verb": "total",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: separate numbers. Output: single sum value. Multiple values combine into transcendent whole.",
+      "alternative": null
+    },
+    {
+      "verb": "totalise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: parts or aspects; output: unified total whole; multiple elements combine into transcendent totality.",
+      "alternative": null
+    },
+    {
+      "verb": "totalize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: parts or aspects; output: unified total whole; multiple elements combine into transcendent totality.",
+      "alternative": null
+    },
+    {
+      "verb": "tote up",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple numbers; Output: a single sum value; many values become one aggregate.",
+      "alternative": null
+    },
+    {
+      "verb": "triangulate",
+      "confidence": "medium",
+      "scale": "informational",
+      "reason": "Input: multiple angle measurements from different points; output: a synthesized single position/location that emerges from combining these measurements.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "unify",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: multiple separate things; output: single integrated whole; parts are combined and merged into transcendent unity.",
+      "alternative": null
+    },
+    {
+      "verb": "unite",
+      "confidence": "high",
+      "scale": "social",
+      "reason": "Input: separate entities. Output: unified whole. Multiple things combine into transcendent entity.",
+      "alternative": null
+    },
+    {
+      "verb": "unitise",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple parts. Output: single integrated unit, parts merged into whole.",
+      "alternative": null
+    },
+    {
+      "verb": "unitize",
+      "confidence": "high",
+      "scale": "informational",
+      "reason": "Input: multiple parts. Output: single integrated unit, parts merged into cohesive whole.",
+      "alternative": null
+    },
+    {
+      "verb": "vamp up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: old part + new part separate; Output: unified repaired whole combining both; parts merge into transcendent combination.",
+      "alternative": null
+    },
+    {
+      "verb": "vinify",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: juice components; Output: wine (transcendent whole); fermentation synthesizes new unified substance.",
+      "alternative": null
+    },
+    {
+      "verb": "web",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate strands. Output: integrated web structure. Multiple threads combine into unified network whole.",
+      "alternative": null
+    },
+    {
+      "verb": "weld",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate pieces. Output: fused whole transcending original pieces. Merges into unified material structure.",
+      "alternative": null
+    },
+    {
+      "verb": "whip up",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate ingredients. Output: a unified prepared dish. Multiple elements combined into a new culinary whole.",
+      "alternative": null
+    },
+    {
+      "verb": "whomp up",
+      "confidence": "medium",
+      "scale": "physical",
+      "reason": "Input: ingredients. Output: hastily prepared dish. Ingredients quickly combine into meal.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "work in",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: base material plus additive. Output: unified blended whole. Elements merge into integrated result.",
+      "alternative": null
+    },
+    {
+      "verb": "work through",
+      "confidence": "medium",
+      "scale": "psychological",
+      "reason": "Input: scattered thoughts/problems, Output: integrated understanding \u2014 combines processing into resolution.",
+      "alternative": "INS"
+    },
+    {
+      "verb": "wreathe",
+      "confidence": "high",
+      "scale": "physical",
+      "reason": "Input: separate flowers/branches. Output: unified wreath structure. Parts combine into integrated whole.",
+      "alternative": null
+    }
+  ]
+}

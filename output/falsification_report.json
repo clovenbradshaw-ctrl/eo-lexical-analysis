@@ -1,0 +1,17 @@
+{
+  "test_a_random_baseline": {
+    "eo_z_score": -79.04120827196073,
+    "random_taxonomy_z_mean": 0.06631867728301877,
+    "random_taxonomy_z_std": 0.7237013296643986,
+    "random_taxonomy_z_range": [
+      -0.9587237406944825,
+      1.4873883177179983
+    ],
+    "eo_vs_random_ratio": 790.4120827196073
+  },
+  "test_b_defectors": {
+    "n_defectors": 101,
+    "n_total": 11933,
+    "defection_rate": 0.00846392357328417
+  }
+}

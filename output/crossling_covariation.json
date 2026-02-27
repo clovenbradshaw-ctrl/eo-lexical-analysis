@@ -1,0 +1,11 @@
+{
+  "raw_within_triad_mean": -0.13249258054076585,
+  "raw_between_triad_mean": -0.042055107546574634,
+  "raw_p_value": 0.8067,
+  "clr_within_triad_mean": -0.17930143292132034,
+  "clr_between_triad_mean": -0.022903465196608738,
+  "clr_p_value": 0.8138,
+  "hierarchical_ari": 0.0,
+  "eo_partition_rank": 230,
+  "total_partitions": 280
+}
