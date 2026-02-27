@@ -1,1 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EO Lexical Analysis — Open Workbench</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   ROOT & RESET
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --bg: #08080d;
+  --bg-surface: #0e0f16;
+  --bg-card: #12131c;
+  --bg-hover: #191a26;
+  --border: #1e2030;
+  --border-subtle: #161828;
+  --text: #c8cdd8;
+  --text-dim: #5a6275;
+  --text-muted: #3a4055;
+  --white: #e8ecf4;
 
+  /* Existence triad — warm amber/gold */
+  --nul: #d4915c;
+  --des: #e8b84a;
+  --ins: #f0d060;
+
+  /* Structure triad — cool blue/teal */
+  --seg: #4a9ec8;
+  --con: #5bb8d4;
+  --syn: #6dd4c8;
+
+  /* Interpretation triad — shifting violet/magenta */
+  --alt: #a87ccf;
+  --sup: #cf7cb8;
+  --rec: #e07ca0;
+
+  --accent: #5ba0cf;
+  --accent-dim: #2d5878;
+
+  --mono: 'IBM Plex Mono', 'Menlo', monospace;
+  --serif: 'Source Serif 4', Georgia, serif;
+
+  --panel-radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--serif);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(8,8,13,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+}
+
+nav .nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  height: 48px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+nav .nav-inner::-webkit-scrollbar { display: none; }
+
+nav a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 0.4rem 0.65rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+  letter-spacing: 0.02em;
+}
+nav a:hover { color: var(--text); background: var(--bg-hover); }
+nav a.active { color: var(--white); background: var(--bg-card); }
+
+.nav-title {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--white);
+  margin-right: 1.5rem;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════════════════════════ */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 68px 2rem 4rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 64px;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.section-header .caveat {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+  max-width: 800px;
+  line-height: 1.55;
+}
+
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  padding: 1.5rem;
+}
+
+.panel + .panel { margin-top: 1rem; }
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO / ABOUT
+   ═══════════════════════════════════════════════════════════════ */
+.hero {
+  padding: 3rem 0 2rem;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-family: var(--mono);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.hero .invitation {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.stat-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+.stat-item span { color: var(--accent); font-weight: 500; }
+
+/* ═══════════════════════════════════════════════════════════════
+   OPERATOR OVERVIEW
+   ═══════════════════════════════════════════════════════════════ */
+.triads-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.triad-group {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  padding: 1.25rem;
+}
+
+.triad-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.triad-existence .triad-label { color: var(--des); }
+.triad-structure .triad-label { color: var(--con); }
+.triad-interpretation .triad-label { color: var(--alt); }
+
+.op-card {
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+}
+.op-card:last-child { margin-bottom: 0; }
+.op-card:hover { background: var(--bg-hover); }
+.op-card.active { background: var(--bg-hover); border-color: var(--border); }
+
+.op-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.op-symbol {
+  font-size: 1.1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.op-name {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.op-count {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-left: auto;
+}
+
+.op-def {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-left: 2.4rem;
+  line-height: 1.5;
+}
+
+.fusion-arrow {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  letter-spacing: 0.05em;
+}
+
+/* Operator detail panel */
+.op-detail {
+  margin-top: 1.5rem;
+}
+
+.op-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.detail-card h4 {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 0.6rem;
+}
+
+.detail-card .verb-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin: 0.15rem 0.15rem 0.15rem 0;
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+.detail-card .metric-line {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-card .metric-line .label { color: var(--text-dim); }
+
+/* ═══════════════════════════════════════════════════════════════
+   CONFUSION MATRIX
+   ═══════════════════════════════════════════════════════════════ */
+.confusion-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.heatmap-wrap {
+  position: relative;
+}
+
+#confusion-heatmap {
+  width: 100%;
+}
+
+.boundary-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  padding: 1.25rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.boundary-panel h4 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+}
+
+.boundary-verb {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.boundary-verb:last-child { border-bottom: none; }
+
+.boundary-verb .verb-name {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.boundary-verb .verb-op {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.4rem;
+}
+
+.boundary-verb .verb-reason {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   METRICS DASHBOARD
+   ═══════════════════════════════════════════════════════════════ */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.mode-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  padding: 1.25rem;
+}
+
+.mode-card h3 {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.15rem;
+}
+
+.mode-card .mode-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+.metric-row:last-child { border-bottom: none; }
+
+.metric-label {
+  color: var(--text-dim);
+  cursor: help;
+}
+
+.metric-value {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.metric-value.highlight { color: var(--accent); }
+
+.taxonomy-bar {
+  margin-top: 1.5rem;
+}
+
+.taxonomy-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.taxonomy-row .tax-name {
+  width: 180px;
+  color: var(--text-dim);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.taxonomy-row .tax-bar {
+  flex: 1;
+  height: 16px;
+  background: var(--bg-surface);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.taxonomy-row .tax-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease-out;
+}
+
+.taxonomy-row .tax-val {
+  width: 60px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EMBEDDING EXPLORER
+   ═══════════════════════════════════════════════════════════════ */
+.embed-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.embed-controls button {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--bg-surface);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.embed-controls button:hover { color: var(--text); border-color: var(--accent-dim); }
+.embed-controls button.active { color: var(--white); background: var(--bg-hover); border-color: var(--accent-dim); }
+
+#embed-plot {
+  width: 100%;
+  height: 600px;
+  border-radius: var(--panel-radius);
+}
+
+.embed-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-dim);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TRIAD FUSION
+   ═══════════════════════════════════════════════════════════════ */
+.fusion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.fusion-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  padding: 1.25rem;
+}
+
+.fusion-card h3 {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.fusion-eq {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--text);
+}
+
+.fusion-eq .op-sym {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.fusion-metric {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.5rem;
+}
+
+.fusion-metric span { color: var(--text); font-weight: 500; }
+
+#fusion-plot {
+  width: 100%;
+  height: 400px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VERB BROWSER
+   ═══════════════════════════════════════════════════════════════ */
+.verb-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.verb-controls input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  outline: none;
+}
+.verb-controls input:focus { border-color: var(--accent-dim); }
+.verb-controls input::placeholder { color: var(--text-muted); }
+
+.verb-controls select {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.verb-count {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+.verb-table-wrap {
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+}
+
+.verb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.verb-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.verb-table th {
+  background: var(--bg-card);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.verb-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.verb-table tr:hover td { background: var(--bg-hover); }
+
+.verb-table .col-verb {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.verb-table .col-op {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.verb-table .col-conf {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.verb-table .col-reason {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  max-width: 450px;
+  line-height: 1.45;
+}
+
+.verb-table .col-alt {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LOOKING FORWARD
+   ═══════════════════════════════════════════════════════════════ */
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.question-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  padding: 1.25rem;
+}
+
+.question-card h4 {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.question-card p {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════════ */
+footer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+footer a { color: var(--text-dim); text-decoration: none; }
+footer a:hover { color: var(--text); }
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITY
+   ═══════════════════════════════════════════════════════════════ */
+.op-color-nul { color: var(--nul); }
+.op-color-des { color: var(--des); }
+.op-color-ins { color: var(--ins); }
+.op-color-seg { color: var(--seg); }
+.op-color-con { color: var(--con); }
+.op-color-syn { color: var(--syn); }
+.op-color-alt { color: var(--alt); }
+.op-color-sup { color: var(--sup); }
+.op-color-rec { color: var(--rec); }
+
+.op-bg-nul { background: rgba(212,145,92,0.15); color: var(--nul); }
+.op-bg-des { background: rgba(232,184,74,0.15); color: var(--des); }
+.op-bg-ins { background: rgba(240,208,96,0.15); color: var(--ins); }
+.op-bg-seg { background: rgba(74,158,200,0.15); color: var(--seg); }
+.op-bg-con { background: rgba(91,184,212,0.15); color: var(--con); }
+.op-bg-syn { background: rgba(109,212,200,0.15); color: var(--syn); }
+.op-bg-alt { background: rgba(168,124,207,0.15); color: var(--alt); }
+.op-bg-sup { background: rgba(207,124,184,0.15); color: var(--sup); }
+.op-bg-rec { background: rgba(224,124,160,0.15); color: var(--rec); }
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  main { padding-left: 1rem; padding-right: 1rem; }
+  .triads-grid { grid-template-columns: 1fr; }
+  .confusion-container { grid-template-columns: 1fr; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .fusion-grid { grid-template-columns: 1fr; }
+  .questions-grid { grid-template-columns: 1fr; }
+  .op-detail-grid { grid-template-columns: 1fr; }
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-title">E.O.</span>
+    <a href="#about">About</a>
+    <a href="#operators">Operators</a>
+    <a href="#embeddings">Embeddings</a>
+    <a href="#confusion">Confusion</a>
+    <a href="#metrics">Metrics</a>
+    <a href="#fusion">Triads</a>
+    <a href="#verbs">Verbs</a>
+    <a href="#forward">Open Questions</a>
+  </div>
+</nav>
+
+<main>
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about">
+    <div class="hero">
+      <h1>Experiential Ontology<br>Lexical Analysis</h1>
+      <p class="subtitle">
+        An open workbench for examining a philosophical experiment: do nine formal operators — a proposed grammar of transformation types — have empirical reality in natural language?
+        ~12,000 English verb senses were classified, embedded, and measured. The data is here so you can audit it.
+      </p>
+      <p class="invitation">
+        These are preliminary explorations, not proven conclusions. The data is here so you can examine the methodology, audit the classifications, identify weaknesses, and propose better experiments. The strongest version of this framework is the one that survives serious attempts to break it.
+      </p>
+      <div class="stat-row">
+        <div class="stat-item"><span>11,933</span> verb senses classified</div>
+        <div class="stat-item"><span>9</span> operators in 3 triads</div>
+        <div class="stat-item"><span>3</span> embedding modes tested</div>
+        <div class="stat-item"><span>27</span> languages (crosslinguistic)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ OPERATORS ═══════════════ -->
+  <section id="operators">
+    <div class="section-header">
+      <h2>Operator Overview</h2>
+      <p class="caveat">Nine operators arranged in three triads, each following the generative pattern: operator&#x2081; + operator&#x2082; &#x2192; operator&#x2083;. Click any operator to explore its verb population, prototypes, and boundary cases.</p>
+    </div>
+    <div class="triads-grid" id="triads-grid">
+      <div class="loading">Loading operators...</div>
+    </div>
+    <div class="op-detail" id="op-detail" style="display:none;"></div>
+  </section>
+
+  <!-- ═══════════════ EMBEDDING EXPLORER ═══════════════ -->
+  <section id="embeddings">
+    <div class="section-header">
+      <h2>Embedding Explorer</h2>
+      <p class="caveat">3D PCA projection of verb definition embeddings (English, crosslinguistic corpus), colored by operator assignment. Unsupervised clustering found no alignment at k=9 — the structure only appears when the LLM classifies first. How much of this is the LLM imposing categories it was told about? The centroids (large markers) show where each operator's verbs cluster; the scatter shows individual verbs.</p>
+    </div>
+    <div class="panel">
+      <div class="embed-controls">
+        <button class="active" data-view="scatter">Scatter + Centroids</button>
+        <button data-view="centroids">Centroids only</button>
+        <button data-view="triads">By Triad</button>
+      </div>
+      <div id="embed-plot"></div>
+      <div class="embed-legend" id="embed-legend"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONFUSION MATRIX ═══════════════ -->
+  <section id="confusion">
+    <div class="section-header">
+      <h2>Confusion Matrix</h2>
+      <p class="caveat">Every operator's primary confusion is with INS. Is this because instantiation is genuinely the existential ground of the system, or because INS is a poorly-bounded catch-all that absorbs 63% of all verbs? Look at the actual verbs on each boundary and decide. Click any cell to see the verbs that live on that boundary.</p>
+    </div>
+    <div class="confusion-container">
+      <div class="heatmap-wrap">
+        <div id="confusion-heatmap"></div>
+      </div>
+      <div class="boundary-panel" id="boundary-panel">
+        <h4>Click a cell to see boundary verbs</h4>
+        <p style="font-size:0.78rem;color:var(--text-muted);">The heatmap shows how many verbs were classified as one operator but had another as their runner-up. Symmetric pairs combine both directions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ METRICS DASHBOARD ═══════════════ -->
+  <section id="metrics">
+    <div class="section-header">
+      <h2>Metrics Dashboard</h2>
+      <p class="caveat">These z-scores look dramatic, but z-scores can be inflated by high dimensionality (3072 dims). What would these numbers look like with a different embedding model? A different classifier? Different operator definitions? The three modes test how much structure comes from the LLM's reasoning vs. dictionary definitions alone.</p>
+    </div>
+    <div class="metrics-grid" id="metrics-grid">
+      <div class="loading">Loading metrics...</div>
+    </div>
+    <div class="panel taxonomy-bar" id="taxonomy-bar" style="margin-top:1.5rem;">
+      <h3 style="font-family:var(--mono);font-size:0.85rem;font-weight:600;color:var(--white);margin-bottom:0.5rem;">Taxonomy Comparison</h3>
+      <p style="font-size:0.78rem;color:var(--text-dim);margin-bottom:1rem;">Z-scores of centroid separation for different ways of grouping the same verbs. Higher magnitude = groups are more separated than random. EO operators show more separation than random but less than some coarser groupings.</p>
+      <div id="taxonomy-bars"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TRIAD FUSION ═══════════════ -->
+  <section id="fusion">
+    <div class="section-header">
+      <h2>Triad Fusion Visualizer</h2>
+      <p class="caveat">The generative pattern: operator&#x2081; + operator&#x2082; &#x2192; operator&#x2083;. Does the geometric midpoint of the first two operators predict the third's location? The pattern appears consistent across all three triads — but SUP's small sample size (19 verbs in WordNet English) makes the Interpretation triad geometrically unstable. Is the pattern real or an artifact of sparse data?</p>
+    </div>
+    <div class="fusion-grid" id="fusion-grid">
+      <div class="loading">Loading triad data...</div>
+    </div>
+    <div class="panel" style="margin-top:1rem;">
+      <div id="fusion-plot"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ VERB BROWSER ═══════════════ -->
+  <section id="verbs">
+    <div class="section-header">
+      <h2>Verb Browser</h2>
+      <p class="caveat">All 11,933 classified verb senses. Search, filter by operator or confidence, and examine the LLM's reasoning for each classification. This is where you can audit individual decisions — find the verbs you think are misclassified, the edge cases that don't fit, the places where the framework strains.</p>
+    </div>
+    <div class="panel">
+      <div class="verb-controls">
+        <input type="text" id="verb-search" placeholder="Search verbs..." autocomplete="off">
+        <select id="verb-op-filter">
+          <option value="">All operators</option>
+        </select>
+        <select id="verb-conf-filter">
+          <option value="">All confidence</option>
+          <option value="H">High</option>
+          <option value="M">Medium</option>
+          <option value="L">Low</option>
+        </select>
+        <span class="verb-count" id="verb-count"></span>
+      </div>
+      <div class="verb-table-wrap">
+        <table class="verb-table">
+          <thead>
+            <tr>
+              <th>Verb</th>
+              <th>Operator</th>
+              <th>Conf</th>
+              <th>Scale</th>
+              <th>Reasoning</th>
+              <th>Alt</th>
+            </tr>
+          </thead>
+          <tbody id="verb-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ LOOKING FORWARD ═══════════════ -->
+  <section id="forward">
+    <div class="section-header">
+      <h2>Open Questions &amp; Next Experiments</h2>
+      <p class="caveat">These are genuine invitations, not rhetorical flourishes. Each represents a real vulnerability in the current analysis or a genuinely unknown next step.</p>
+    </div>
+    <div class="questions-grid">
+      <div class="question-card">
+        <h4>Is nine the right number?</h4>
+        <p>Would unsupervised clustering find better structure at k=7 or k=12? What if some operators should merge (ALT+REC?) or split? The k-sweep data is available in the metrics panel — the silhouette scores show no sharp elbow at 9.</p>
+      </div>
+      <div class="question-card">
+        <h4>LLM classifier bias</h4>
+        <p>The LLM was told about nine operators. How much structure is it imposing? Replicate with a different LLM, different operator descriptions, or blind classification. The "Definition-only" Mode B partially tests this — structure persists but weakens.</p>
+      </div>
+      <div class="question-card">
+        <h4>Cross-linguistic validation</h4>
+        <p>Does the pattern hold in verb systems with very different structures? 27 languages show z-scores consistently below random, but the effect varies enormously. Small corpora (Tagalog, Tamil) show weak signals — is that noise or genuine typological variation?</p>
+      </div>
+      <div class="question-card">
+        <h4>Type-signature formalization</h4>
+        <p>Can the operators be defined as pure input&#x2192;output type signatures, and do those signatures predict classification better than natural language descriptions? Mode A already uses type-signature embeddings — but the signatures were written by the same LLM.</p>
+      </div>
+      <div class="question-card">
+        <h4>Adversarial examples</h4>
+        <p>Find verbs that genuinely break the framework — actions that can't be classified into any operator, or that equally belong to three or more. The boundary verbs in the confusion matrix are a starting point. Can you find worse cases?</p>
+      </div>
+      <div class="question-card">
+        <h4>Non-verb tests</h4>
+        <p>EO claims to describe transformations generally. Do noun-formation patterns, syntactic constructions, or narrative structures decompose the same way? The verb lexicon is just the first test case.</p>
+      </div>
+      <div class="question-card">
+        <h4>The INS problem</h4>
+        <p>INS contains 63% of all verbs — 7,528 of 11,933. Is this a meaningful finding about the prevalence of "bringing into being" in language, or is INS simply absorbing everything the classifier can't confidently place elsewhere?</p>
+      </div>
+      <div class="question-card">
+        <h4>SUP's vanishing act</h4>
+        <p>Only 19 verbs classified as SUP in English WordNet. Is superposition genuinely rare in lexicalized verb forms, or is the operator too narrowly defined? Cross-linguistic data shows SUP ranges from 0% to 2.5% — consistently tiny but nonzero.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  EO Lexical Analysis — Open Workbench &middot; Data and analysis are preliminary, not conclusions &middot; <a href="https://github.com/clovenbradshaw-ctrl/eo-lexical-analysis">Source on GitHub</a>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   CONSTANTS & COLOR MAP
+   ═══════════════════════════════════════════════════════════════ */
+const OP_ORDER = ['NUL','DES','INS','SEG','CON','SYN','ALT','SUP','REC'];
+const OP_COLORS = {
+  NUL: '#d4915c', DES: '#e8b84a', INS: '#f0d060',
+  SEG: '#4a9ec8', CON: '#5bb8d4', SYN: '#6dd4c8',
+  ALT: '#a87ccf', SUP: '#cf7cb8', REC: '#e07ca0'
+};
+const OP_NAMES = {
+  NUL: 'Nullification', DES: 'Designation', INS: 'Instantiation',
+  SEG: 'Segmentation', CON: 'Connection', SYN: 'Synthesis',
+  ALT: 'Alternation', SUP: 'Superposition', REC: 'Recursion'
+};
+const SCALE_MAP = {phys:'physical',soci:'social',psyc:'psychological',info:'informational'};
+const PLOTLY_BG = '#08080d';
+const PLOTLY_PAPER = '#08080d';
+const PLOTLY_GRID = '#1a1b28';
+const PLOTLY_TEXT = '#5a6275';
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA LOADING
+   ═══════════════════════════════════════════════════════════════ */
+let DATA = {};
+
+async function loadJSON(name) {
+  const resp = await fetch('data/' + name);
+  return resp.json();
+}
+
+async function loadAllData() {
+  const [operators, confusion, boundaries, metrics, embeddings, influence] = await Promise.all([
+    loadJSON('operators.json'),
+    loadJSON('confusion.json'),
+    loadJSON('boundaries.json'),
+    loadJSON('metrics.json'),
+    loadJSON('embeddings.json'),
+    loadJSON('influence.json'),
+  ]);
+  DATA = { operators, confusion, boundaries, metrics, embeddings, influence };
+
+  renderOperators();
+  renderConfusion();
+  renderMetrics();
+  renderEmbeddings();
+  renderFusion();
+
+  // Verbs loaded separately (large file)
+  loadJSON('verbs.json').then(function(verbs) {
+    DATA.verbs = verbs;
+    renderVerbs();
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAV SCROLL HIGHLIGHT
+   ═══════════════════════════════════════════════════════════════ */
+function updateNav() {
+  var sections = document.querySelectorAll('section[id]');
+  var scrollY = window.scrollY + 100;
+  var currentId = '';
+  sections.forEach(function(s) {
+    if (s.offsetTop <= scrollY) currentId = s.id;
+  });
+  document.querySelectorAll('nav a').forEach(function(a) {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + currentId);
+  });
+}
+window.addEventListener('scroll', updateNav, {passive: true});
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER: OPERATORS
+   ═══════════════════════════════════════════════════════════════ */
+function renderOperators() {
+  var ops = DATA.operators;
+  var triads = [
+    { name: 'Existence', cls: 'triad-existence', ops: ['NUL','DES','INS'] },
+    { name: 'Structure', cls: 'triad-structure', ops: ['SEG','CON','SYN'] },
+    { name: 'Interpretation', cls: 'triad-interpretation', ops: ['ALT','SUP','REC'] },
+  ];
+
+  var grid = document.getElementById('triads-grid');
+  grid.innerHTML = triads.map(function(triad) {
+    var cards = triad.ops.map(function(op, i) {
+      var o = ops[op];
+      var html = '<div class="op-card" data-op="' + op + '" onclick="selectOp(\'' + op + '\')">' +
+        '<div class="op-card-header">' +
+          '<div class="op-symbol op-bg-' + op.toLowerCase() + '">' + o.symbol + '</div>' +
+          '<div class="op-name">' + op + '</div>' +
+          '<div class="op-count">' + o.total.toLocaleString() + '</div>' +
+        '</div>' +
+        '<div class="op-def">' + o.def + '</div>' +
+      '</div>';
+      if (i === 0) {
+        html += '<div class="fusion-arrow">' + triad.ops[0] + ' + ' + triad.ops[1] + ' &rarr; ' + triad.ops[2] + '</div>';
+      }
+      return html;
+    }).join('');
+
+    return '<div class="triad-group ' + triad.cls + '">' +
+      '<div class="triad-label">' + triad.name + ' Triad</div>' +
+      cards +
+    '</div>';
+  }).join('');
+}
+
+var selectedOp = null;
+function selectOp(op) {
+  var detail = document.getElementById('op-detail');
+
+  if (selectedOp === op) {
+    selectedOp = null;
+    detail.style.display = 'none';
+    document.querySelectorAll('.op-card').forEach(function(c) { c.classList.remove('active'); });
+    return;
+  }
+
+  selectedOp = op;
+  document.querySelectorAll('.op-card').forEach(function(c) { c.classList.remove('active'); });
+  var card = document.querySelector('.op-card[data-op="' + op + '"]');
+  if (card) card.classList.add('active');
+
+  var o = DATA.operators[op];
+
+  detail.style.display = 'block';
+  detail.innerHTML =
+    '<div class="panel">' +
+      '<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">' +
+        '<div class="op-symbol op-bg-' + op.toLowerCase() + '" style="font-size:1.4rem;width:2.2rem;height:2.2rem;">' + o.symbol + '</div>' +
+        '<div>' +
+          '<div style="font-family:var(--mono);font-size:1rem;font-weight:600;color:var(--white);">' + op + ' &mdash; ' + OP_NAMES[op] + '</div>' +
+          '<div style="font-size:0.8rem;color:var(--text-dim);">' + o.total.toLocaleString() + ' verbs &middot; ' + o.triad + ' triad</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="op-detail-grid">' +
+        '<div class="detail-card">' +
+          '<h4>Prototypes (purest examples)</h4>' +
+          o.prototypes.map(function(p) {
+            return '<div style="margin-bottom:0.5rem;">' +
+              '<span class="verb-tag">' + escHtml(p.verb) + '</span>' +
+              '<span style="font-family:var(--mono);font-size:0.68rem;color:var(--text-muted);"> margin ' + p.margin + '</span>' +
+              '<div style="font-size:0.73rem;color:var(--text-dim);margin-top:0.15rem;">' + escHtml(p.reason) + '</div>' +
+            '</div>';
+          }).join('') +
+        '</div>' +
+        '<div class="detail-card">' +
+          '<h4>Territory</h4>' +
+          '<div class="metric-line"><span class="label">Core (margin &gt; 0.10)</span><span>' + o.territory.core.toLocaleString() + '</span></div>' +
+          '<div class="metric-line"><span class="label">Settled (0.02&ndash;0.10)</span><span>' + o.territory.settled.toLocaleString() + '</span></div>' +
+          '<div class="metric-line"><span class="label">Contested (&plusmn;0.02)</span><span>' + o.territory.contested + '</span></div>' +
+          '<div class="metric-line"><span class="label">Foreign (&lt; -0.02)</span><span>' + o.territory.foreign + '</span></div>' +
+          '<div class="metric-line"><span class="label">Mean margin</span><span>' + o.margin_mean + '</span></div>' +
+          '<h4 style="margin-top:1rem;">Nearest Operators</h4>' +
+          o.neighbors.map(function(n) {
+            return '<div class="metric-line"><span class="label op-color-' + n.op.toLowerCase() + '">' + n.op + '</span><span>' + n.sim + '</span></div>';
+          }).join('') +
+          '<h4 style="margin-top:1rem;">Scale Distribution</h4>' +
+          Object.entries(o.scales).map(function(entry) {
+            return '<div class="metric-line"><span class="label">' + entry[0] + '</span><span>' + entry[1] + '</span></div>';
+          }).join('') +
+        '</div>' +
+        '<div class="detail-card" style="grid-column:1/-1;">' +
+          '<h4>Event Horizon (boundary verbs, margin &asymp; 0)</h4>' +
+          '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0.5rem;">' +
+          o.horizon.map(function(h) {
+            return '<div style="padding:0.4rem;background:var(--bg-hover);border-radius:4px;">' +
+              '<span class="verb-tag">' + escHtml(h.verb) + '</span>' +
+              '<span style="font-family:var(--mono);font-size:0.68rem;color:var(--text-muted);"> &harr; ' + h.neighbor + ' margin ' + h.margin + '</span>' +
+            '</div>';
+          }).join('') +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  detail.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER: CONFUSION MATRIX
+   ═══════════════════════════════════════════════════════════════ */
+function renderConfusion() {
+  var conf = DATA.confusion.confusion;
+
+  // Build matrix
+  var matrix = OP_ORDER.map(function(from) {
+    return OP_ORDER.map(function(to) {
+      if (from === to) return 0;
+      return (conf[from] && conf[from][to]) ? conf[from][to] : 0;
+    });
+  });
+
+  var heatmapData = [{
+    z: matrix,
+    x: OP_ORDER,
+    y: OP_ORDER,
+    type: 'heatmap',
+    colorscale: [
+      [0, '#0e0f16'],
+      [0.01, '#151025'],
+      [0.05, '#1a1535'],
+      [0.15, '#2d2060'],
+      [0.3, '#4a3090'],
+      [0.5, '#7040b0'],
+      [0.7, '#a050c0'],
+      [1, '#e070d0']
+    ],
+    hovertemplate: '%{y} \u2192 %{x}: %{z} verbs<extra></extra>',
+    showscale: false,
+    text: matrix.map(function(row) { return row.map(function(v) { return v > 0 ? v : ''; }); }),
+    texttemplate: '%{text}',
+    textfont: { family: 'IBM Plex Mono', size: 11, color: '#c8cdd8' },
+  }];
+
+  var layout = {
+    paper_bgcolor: PLOTLY_PAPER,
+    plot_bgcolor: PLOTLY_BG,
+    font: { family: 'IBM Plex Mono', color: PLOTLY_TEXT, size: 12 },
+    margin: { l: 50, r: 20, t: 30, b: 50 },
+    xaxis: { title: 'Runner-up', side: 'bottom', tickfont: { size: 11 } },
+    yaxis: { title: 'Assigned', autorange: 'reversed', tickfont: { size: 11 } },
+    height: 460,
+  };
+
+  Plotly.newPlot('confusion-heatmap', heatmapData, layout, {
+    displayModeBar: false,
+    responsive: true,
+  });
+
+  document.getElementById('confusion-heatmap').on('plotly_click', function(d) {
+    var pt = d.points[0];
+    var from = pt.y;
+    var to = pt.x;
+    if (from === to) return;
+    showBoundaryVerbs(from, to);
+  });
+}
+
+function showBoundaryVerbs(from, to) {
+  var panel = document.getElementById('boundary-panel');
+  var pair = [from, to].sort().join('-');
+  var verbs = DATA.boundaries[pair] || [];
+  var count = DATA.confusion.symmetric_pairs[pair] || 0;
+
+  if (verbs.length === 0) {
+    panel.innerHTML = '<h4>' + from + ' \u2194 ' + to + '</h4>' +
+      '<p style="font-size:0.78rem;color:var(--text-muted);">No boundary verb examples available for this pair (' + count + ' confusions).</p>';
+    return;
+  }
+
+  panel.innerHTML =
+    '<h4>' + from + ' \u2194 ' + to + ' \u2014 ' + count + ' total confusions</h4>' +
+    '<p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem;">Verbs the classifier found ambiguous between these two operators:</p>' +
+    verbs.map(function(v) {
+      return '<div class="boundary-verb">' +
+        '<span class="verb-name">' + escHtml(v.verb) + '</span>' +
+        '<span class="verb-op op-bg-' + v.operator.toLowerCase() + '">' + v.operator + '</span>' +
+        '<div class="verb-reason">' + escHtml(v.reason) + '</div>' +
+      '</div>';
+    }).join('');
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER: METRICS
+   ═══════════════════════════════════════════════════════════════ */
+function renderMetrics() {
+  var modes = DATA.metrics.modes;
+  var modeDescs = {
+    'Type-signature': "LLM's reasoning about input\u2192output transformation type",
+    'Definition': 'WordNet definitions only \u2014 zero operator information',
+    'Combined': 'Definition + type-signature + operator context',
+  };
+  var modeLetters = {'Type-signature':'A','Definition':'B','Combined':'C'};
+
+  var grid = document.getElementById('metrics-grid');
+  grid.innerHTML = modes.map(function(m) {
+    return '<div class="mode-card">' +
+      '<h3>Mode ' + modeLetters[m.name] + ': ' + m.name + '</h3>' +
+      '<div class="mode-desc">' + modeDescs[m.name] + '</div>' +
+      '<div class="metric-row">' +
+        '<span class="metric-label" title="Adjusted Rand Index: agreement between k-means clusters and operator labels. 0 = random, 1 = perfect agreement.">ARI \u24d8</span>' +
+        '<span class="metric-value">' + m.ari.toFixed(4) + '</span>' +
+      '</div>' +
+      '<div class="metric-row">' +
+        '<span class="metric-label" title="Normalized Mutual Information: how much knowing the cluster tells you about the operator. 0 = nothing, 1 = everything.">NMI \u24d8</span>' +
+        '<span class="metric-value">' + m.nmi.toFixed(4) + '</span>' +
+      '</div>' +
+      '<div class="metric-row">' +
+        '<span class="metric-label" title="Silhouette score: how well each verb fits its assigned cluster vs. the nearest other cluster. Range -1 to 1; higher = more distinct clusters.">Silhouette \u24d8</span>' +
+        '<span class="metric-value">' + m.silhouette.toFixed(4) + '</span>' +
+      '</div>' +
+      '<div class="metric-row">' +
+        '<span class="metric-label" title="Best achievable accuracy when optimally matching k-means clusters to operators.">Matched acc \u24d8</span>' +
+        '<span class="metric-value">' + (m.matched_accuracy * 100).toFixed(1) + '%</span>' +
+      '</div>' +
+      '<div class="metric-row">' +
+        '<span class="metric-label" title="How many standard deviations the operator centroids are more separated than centroids of random groups of the same size. Large negative = much more separated than random.">Z-score \u24d8</span>' +
+        '<span class="metric-value highlight">' + m.z_score.toFixed(1) + '</span>' +
+      '</div>' +
+      '<div class="metric-row">' +
+        '<span class="metric-label" title="The k value with the highest silhouette score in a sweep from 3 to 20.">Best k \u24d8</span>' +
+        '<span class="metric-value">' + m.best_k + '</span>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+
+  renderTaxonomyBars();
+}
+
+function renderTaxonomyBars() {
+  var tax = DATA.metrics.taxonomy.results;
+  var container = document.getElementById('taxonomy-bars');
+
+  var entries = Object.entries(tax).sort(function(a, b) { return a[1].z_score - b[1].z_score; });
+  var maxMag = Math.abs(entries[0][1].z_score);
+
+  var colors = {
+    'EO operators': '#a87ccf',
+    'EO triads': '#cf7cb8',
+    'Scale (phys/soc/psych/info)': '#5bb8d4',
+    'WordNet lexicographer': '#6dd4c8',
+    'Morphological (prefix)': '#e8b84a',
+    'Operator\u00d7Scale': '#d4915c',
+    'Random baseline (mean of 20)': '#3a4055',
+  };
+
+  container.innerHTML = entries.map(function(entry) {
+    var name = entry[0];
+    var data = entry[1];
+    var pct = Math.min(100, (Math.abs(data.z_score) / maxMag) * 100);
+    var color = colors[name] || '#5a6275';
+    return '<div class="taxonomy-row">' +
+      '<div class="tax-name">' + name + '</div>' +
+      '<div class="tax-bar">' +
+        '<div class="tax-fill" style="width:' + pct + '%;background:' + color + ';opacity:0.7;"></div>' +
+      '</div>' +
+      '<div class="tax-val" style="color:' + color + ';">' + data.z_score.toFixed(1) + '</div>' +
+    '</div>';
+  }).join('');
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER: EMBEDDINGS
+   ═══════════════════════════════════════════════════════════════ */
+var currentEmbedView = 'scatter';
+
+function renderEmbeddings() {
+  // Build legend
+  var legend = document.getElementById('embed-legend');
+  legend.innerHTML = OP_ORDER.map(function(op) {
+    return '<div class="legend-item"><div class="legend-dot" style="background:' + OP_COLORS[op] + '"></div>' + op + '</div>';
+  }).join('');
+
+  // Controls
+  document.querySelectorAll('.embed-controls button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.embed-controls button').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentEmbedView = btn.dataset.view;
+      plotEmbeddings();
+    });
+  });
+
+  plotEmbeddings();
+}
+
+function plotEmbeddings() {
+  var emb = DATA.embeddings;
+  var traces = [];
+
+  if (currentEmbedView === 'scatter' || currentEmbedView === 'triads') {
+    var groups = {};
+    emb.scatter.forEach(function(pt) {
+      var key = currentEmbedView === 'triads'
+        ? (DATA.operators[pt.op] ? DATA.operators[pt.op].triad : 'Unknown')
+        : pt.op;
+      if (!groups[key]) groups[key] = { x: [], y: [], z: [] };
+      groups[key].x.push(pt.x);
+      groups[key].y.push(pt.y);
+      groups[key].z.push(pt.z);
+    });
+
+    var triadColors = { Existence: '#e8b84a', Structure: '#5bb8d4', Interpretation: '#a87ccf' };
+
+    Object.entries(groups).forEach(function(entry) {
+      var key = entry[0], pts = entry[1];
+      var color = currentEmbedView === 'triads' ? (triadColors[key] || '#666') : (OP_COLORS[key] || '#666');
+      traces.push({
+        type: 'scatter3d',
+        mode: 'markers',
+        name: key,
+        x: pts.x, y: pts.y, z: pts.z,
+        marker: { size: 2.5, color: color, opacity: 0.5 },
+        hovertemplate: key + '<br>(%{x:.3f}, %{y:.3f}, %{z:.3f})<extra></extra>',
+      });
+    });
+  }
+
+  // Always show centroids in scatter mode
+  if (currentEmbedView === 'centroids' || currentEmbedView === 'scatter') {
+    var centroidsByOp = {};
+    emb.centroids.forEach(function(c) {
+      if (!centroidsByOp[c.op]) centroidsByOp[c.op] = { x: [], y: [], z: [], labels: [], sizes: [] };
+      centroidsByOp[c.op].x.push(c.x);
+      centroidsByOp[c.op].y.push(c.y);
+      centroidsByOp[c.op].z.push(c.z);
+      centroidsByOp[c.op].labels.push(c.op + ' (' + c.pos + '/' + c.ref + '): ' + c.n + ' verbs');
+      centroidsByOp[c.op].sizes.push(Math.max(6, Math.sqrt(c.n) * 1.5));
+    });
+
+    Object.entries(centroidsByOp).forEach(function(entry) {
+      var op = entry[0], data = entry[1];
+      traces.push({
+        type: 'scatter3d',
+        mode: 'markers',
+        name: op + ' centroids',
+        x: data.x, y: data.y, z: data.z,
+        marker: {
+          size: currentEmbedView === 'centroids' ? data.sizes : data.sizes.map(function(s) { return s * 0.8; }),
+          color: OP_COLORS[op],
+          opacity: 0.9,
+          symbol: 'diamond',
+          line: { width: 1, color: '#fff' },
+        },
+        text: data.labels,
+        hovertemplate: '%{text}<extra></extra>',
+        showlegend: currentEmbedView === 'centroids',
+      });
+    });
+  }
+
+  if (currentEmbedView === 'triads') {
+    var triadOps = [['NUL','DES','INS'],['SEG','CON','SYN'],['ALT','SUP','REC']];
+    var triadColors2 = ['#e8b84a','#5bb8d4','#a87ccf'];
+    var triadLabels = ['Existence','Structure','Interpretation'];
+
+    triadOps.forEach(function(ops, ti) {
+      var opCentroids = ops.map(function(op) {
+        var pts = emb.centroids.filter(function(c) { return c.op === op; });
+        if (pts.length === 0) return null;
+        return {
+          x: pts.reduce(function(s, p) { return s + p.x; }, 0) / pts.length,
+          y: pts.reduce(function(s, p) { return s + p.y; }, 0) / pts.length,
+          z: pts.reduce(function(s, p) { return s + p.z; }, 0) / pts.length,
+        };
+      });
+
+      if (opCentroids.every(function(c) { return c !== null; })) {
+        var lineX = opCentroids.map(function(c){return c.x;}).concat([opCentroids[0].x]);
+        var lineY = opCentroids.map(function(c){return c.y;}).concat([opCentroids[0].y]);
+        var lineZ = opCentroids.map(function(c){return c.z;}).concat([opCentroids[0].z]);
+        traces.push({
+          type: 'scatter3d',
+          mode: 'lines+markers',
+          name: triadLabels[ti] + ' triad',
+          x: lineX, y: lineY, z: lineZ,
+          line: { width: 4, color: triadColors2[ti] },
+          marker: { size: 10, color: triadColors2[ti], symbol: 'diamond', line: { width: 1, color: '#fff' } },
+          text: ops.concat([ops[0]]),
+          hovertemplate: '%{text}<extra></extra>',
+        });
+      }
+    });
+  }
+
+  var layout = {
+    paper_bgcolor: PLOTLY_PAPER,
+    plot_bgcolor: PLOTLY_BG,
+    font: { family: 'IBM Plex Mono', color: PLOTLY_TEXT, size: 10 },
+    margin: { l: 0, r: 0, t: 0, b: 0 },
+    scene: {
+      bgcolor: PLOTLY_BG,
+      xaxis: { gridcolor: PLOTLY_GRID, zerolinecolor: PLOTLY_GRID, title: 'PC1', showbackground: false },
+      yaxis: { gridcolor: PLOTLY_GRID, zerolinecolor: PLOTLY_GRID, title: 'PC2', showbackground: false },
+      zaxis: { gridcolor: PLOTLY_GRID, zerolinecolor: PLOTLY_GRID, title: 'PC3', showbackground: false },
+      camera: { eye: { x: 1.5, y: 1.5, z: 1.2 } },
+    },
+    showlegend: true,
+    legend: {
+      bgcolor: 'rgba(0,0,0,0)',
+      font: { size: 10, color: PLOTLY_TEXT },
+      x: 0.01, y: 0.99,
+    },
+    height: 600,
+  };
+
+  Plotly.newPlot('embed-plot', traces, layout, {
+    displayModeBar: true,
+    modeBarButtonsToRemove: ['toImage', 'sendDataToCloud'],
+    responsive: true,
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER: TRIAD FUSION
+   ═══════════════════════════════════════════════════════════════ */
+function renderFusion() {
+  var ops = DATA.operators;
+  var modes = DATA.metrics.modes;
+  var triads = [
+    { name: 'Existence', ops: ['NUL','DES','INS'], color: '#e8b84a' },
+    { name: 'Structure', ops: ['SEG','CON','SYN'], color: '#5bb8d4' },
+    { name: 'Interpretation', ops: ['ALT','SUP','REC'], color: '#a87ccf' },
+  ];
+
+  var cm = modes[0].centroid_matrix; // Mode A centroid matrix
+
+  var grid = document.getElementById('fusion-grid');
+  grid.innerHTML = triads.map(function(triad) {
+    var a = triad.ops[0], b = triad.ops[1], c = triad.ops[2];
+    var aIdx = OP_ORDER.indexOf(a);
+    var bIdx = OP_ORDER.indexOf(b);
+    var cIdx = OP_ORDER.indexOf(c);
+
+    var simAB = cm[aIdx][bIdx];
+    var simAC = cm[aIdx][cIdx];
+    var simBC = cm[bIdx][cIdx];
+    var midpointSim = ((simAC + simBC) / 2).toFixed(4);
+
+    return '<div class="fusion-card">' +
+      '<h3 style="color:' + triad.color + ';">' + triad.name + '</h3>' +
+      '<div class="fusion-eq">' +
+        '<span class="op-sym op-color-' + a.toLowerCase() + '">' + ops[a].symbol + ' ' + a + '</span>' +
+        '<span style="color:var(--text-muted);"> + </span>' +
+        '<span class="op-sym op-color-' + b.toLowerCase() + '">' + ops[b].symbol + ' ' + b + '</span>' +
+        '<span style="color:var(--text-muted);"> \u2192 </span>' +
+        '<span class="op-sym op-color-' + c.toLowerCase() + '">' + ops[c].symbol + ' ' + c + '</span>' +
+      '</div>' +
+      '<div class="fusion-metric">' + a + '\u2194' + b + ' similarity: <span>' + simAB.toFixed(4) + '</span></div>' +
+      '<div class="fusion-metric">' + a + '\u2194' + c + ' similarity: <span>' + simAC.toFixed(4) + '</span></div>' +
+      '<div class="fusion-metric">' + b + '\u2194' + c + ' similarity: <span>' + simBC.toFixed(4) + '</span></div>' +
+      '<div class="fusion-metric">Midpoint\u2192' + c + ' approx: <span>' + midpointSim + '</span></div>' +
+      '<div class="fusion-metric">Population: <span>' + ops[a].total + ' + ' + ops[b].total + ' \u2192 ' + ops[c].total + '</span></div>' +
+      (triad.name === 'Interpretation' ? '<div style="font-size:0.72rem;color:var(--text-muted);margin-top:0.5rem;font-style:italic;">\u26a0 SUP has only ' + ops.SUP.total + ' verbs \u2014 geometrically unstable</div>' : '') +
+    '</div>';
+  }).join('');
+
+  plotFusionBars(cm, triads);
+}
+
+function plotFusionBars(cm, triads) {
+  var traces = [];
+
+  triads.forEach(function(triad) {
+    var indices = triad.ops.map(function(o) { return OP_ORDER.indexOf(o); });
+    var a = indices[0], b = indices[1], c = indices[2];
+    var pairs = [
+      { label: triad.ops[0] + '\u2194' + triad.ops[1], val: cm[a][b] },
+      { label: triad.ops[0] + '\u2194' + triad.ops[2], val: cm[a][c] },
+      { label: triad.ops[1] + '\u2194' + triad.ops[2], val: cm[b][c] },
+    ];
+
+    traces.push({
+      type: 'bar',
+      name: triad.name,
+      x: pairs.map(function(p) { return p.label; }),
+      y: pairs.map(function(p) { return p.val; }),
+      marker: { color: triad.color, opacity: 0.7 },
+      hovertemplate: '%{x}: %{y:.4f}<extra></extra>',
+    });
+  });
+
+  var layout = {
+    paper_bgcolor: PLOTLY_PAPER,
+    plot_bgcolor: PLOTLY_BG,
+    font: { family: 'IBM Plex Mono', color: PLOTLY_TEXT, size: 10 },
+    margin: { l: 50, r: 20, t: 30, b: 70 },
+    xaxis: { tickangle: -30, tickfont: { size: 9 } },
+    yaxis: { title: 'Centroid cosine similarity', gridcolor: PLOTLY_GRID },
+    barmode: 'group',
+    showlegend: true,
+    legend: {
+      bgcolor: 'rgba(0,0,0,0)',
+      font: { size: 10, color: PLOTLY_TEXT },
+    },
+    height: 400,
+  };
+
+  Plotly.newPlot('fusion-plot', traces, layout, {
+    displayModeBar: false,
+    responsive: true,
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER: VERB BROWSER
+   ═══════════════════════════════════════════════════════════════ */
+var VERBS_PER_PAGE = 200;
+
+function renderVerbs() {
+  // Populate operator filter
+  var opFilter = document.getElementById('verb-op-filter');
+  OP_ORDER.forEach(function(op) {
+    var opt = document.createElement('option');
+    opt.value = op;
+    opt.textContent = op + ' (' + OP_NAMES[op] + ')';
+    opFilter.appendChild(opt);
+  });
+
+  document.getElementById('verb-search').addEventListener('input', debounce(filterVerbs, 200));
+  document.getElementById('verb-op-filter').addEventListener('change', filterVerbs);
+  document.getElementById('verb-conf-filter').addEventListener('change', filterVerbs);
+
+  filterVerbs();
+}
+
+function filterVerbs() {
+  var search = document.getElementById('verb-search').value.toLowerCase();
+  var opF = document.getElementById('verb-op-filter').value;
+  var confF = document.getElementById('verb-conf-filter').value;
+
+  var filtered = DATA.verbs;
+  if (search) filtered = filtered.filter(function(v) { return v.v.toLowerCase().indexOf(search) !== -1; });
+  if (opF) filtered = filtered.filter(function(v) { return v.op === opF; });
+  if (confF) filtered = filtered.filter(function(v) { return v.c === confF; });
+
+  document.getElementById('verb-count').textContent =
+    filtered.length.toLocaleString() + ' of ' + DATA.verbs.length.toLocaleString() + ' verbs' +
+    (filtered.length > VERBS_PER_PAGE ? ' (showing first ' + VERBS_PER_PAGE + ')' : '');
+
+  var tbody = document.getElementById('verb-tbody');
+  var show = filtered.slice(0, VERBS_PER_PAGE);
+
+  tbody.innerHTML = show.map(function(v) {
+    var scaleFull = SCALE_MAP[v.s] || v.s;
+    return '<tr>' +
+      '<td class="col-verb">' + escHtml(v.v) + '</td>' +
+      '<td><span class="col-op op-bg-' + v.op.toLowerCase() + '">' + v.op + '</span></td>' +
+      '<td class="col-conf">' + (v.c === 'H' ? 'High' : v.c === 'M' ? 'Med' : 'Low') + '</td>' +
+      '<td class="col-conf">' + scaleFull + '</td>' +
+      '<td class="col-reason">' + escHtml(v.r) + '</td>' +
+      '<td class="col-alt">' + (v.a ? escHtml(v.a) : '\u2014') + '</td>' +
+    '</tr>';
+  }).join('');
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
+function escHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function debounce(fn, ms) {
+  var t;
+  return function() {
+    var args = arguments;
+    var self = this;
+    clearTimeout(t);
+    t = setTimeout(function() { fn.apply(self, args); }, ms);
+  };
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════════════════════════════ */
+loadAllData();
+</script>
+</body>
+</html>
