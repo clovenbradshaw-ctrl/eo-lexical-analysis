@@ -1,1 +1,95 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergent Ontology</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0e12;
+    --surface: #141820;
+    --surface-hover: #1a2030;
+    --border: #252d3a;
+    --text: #d4dae4;
+    --text-dim: #6b7a90;
+    --accent: #5ba4cf;
+    --accent-dim: #2d5a78;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    max-width: 520px;
+    padding: 2rem;
+  }
+  h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+  p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .links a {
+    display: block;
+    padding: 0.9rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .links a:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent-dim);
+    color: var(--accent);
+  }
+  .links .label {
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  .links .desc {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-top: 0.2rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Emergent Ontology</h1>
+  <p>Cross-linguistic lexical analysis and operator classification framework.</p>
+  <div class="links">
+    <a href="wiki/">
+      <div class="label">Wiki</div>
+      <div class="desc">Documentation and knowledge base</div>
+    </a>
+    <a href="data/crossling/">
+      <div class="label">Crosslinguistic Corpus</div>
+      <div class="desc">27 languages &middot; ~230 files &middot; UD treebanks</div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EO Wiki</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0e12;
+  --surface: #141820;
+  --surface-2: #1a2030;
+  --border: #252d3a;
+  --text: #d4dae4;
+  --text-dim: #6b7a90;
+  --accent: #5ba4cf;
+  --accent-dim: #2d5a78;
+  --accent-hover: #7bb8dc;
+  --danger: #cf5b5b;
+  --success: #5bcf7b;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* --- NAV --- */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .brand {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+nav .links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+nav .links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+nav .links a:hover, nav .links a.active { color: var(--accent); }
+
+nav .mode-toggle {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+nav .mode-toggle:hover {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+}
+
+nav .mode-toggle.admin-active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(91, 164, 207, 0.1);
+}
+
+/* --- MAIN --- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* --- CONTENT RENDERING --- */
+.wiki-content h1 {
+  font-family: var(--mono);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.wiki-content h2 {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.wiki-content h3 {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.wiki-content p {
+  margin-bottom: 1rem;
+}
+
+.wiki-content ul, .wiki-content ol {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.wiki-content li {
+  margin-bottom: 0.3rem;
+}
+
+.wiki-content a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.wiki-content a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.wiki-content code {
+  font-family: var(--mono);
+  background: var(--surface);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+.wiki-content pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.wiki-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.wiki-content blockquote {
+  border-left: 3px solid var(--accent-dim);
+  padding-left: 1rem;
+  color: var(--text-dim);
+  margin: 1rem 0;
+}
+
+.wiki-content strong { color: #fff; }
+
+.wiki-content em { color: var(--text-dim); }
+
+/* --- PAGE META --- */
+.page-meta {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* --- PAGE LIST --- */
+.page-list {
+  list-style: none;
+}
+
+.page-list li {
+  margin-bottom: 0.25rem;
+}
+
+.page-list a {
+  display: block;
+  padding: 0.65rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.page-list a:hover {
+  background: var(--surface-2);
+  border-color: var(--accent-dim);
+  color: var(--accent);
+}
+
+.page-list .page-title {
+  font-weight: 500;
+}
+
+.page-list .page-updated {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.2rem;
+}
+
+/* --- ADMIN EDITOR --- */
+.editor-wrap {
+  margin-top: 1.5rem;
+}
+
+.editor-wrap textarea {
+  width: 100%;
+  min-height: 400px;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.editor-wrap textarea:focus {
+  border-color: var(--accent-dim);
+}
+
+.editor-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  align-items: center;
+}
+
+.btn {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn:hover {
+  background: var(--surface-2);
+  border-color: var(--accent-dim);
+}
+
+.btn-primary {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+}
+
+.btn-danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: rgba(207, 91, 91, 0.15);
+}
+
+.editor-bar .status {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--success);
+  margin-left: auto;
+}
+
+/* --- HISTORY --- */
+.history-list {
+  list-style: none;
+}
+
+.history-item {
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.history-item:hover {
+  background: var(--surface-2);
+  border-color: var(--accent-dim);
+}
+
+.history-meta {
+  display: flex;
+  gap: 1rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.25rem;
+}
+
+.history-action {
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.action-create { background: rgba(91, 207, 123, 0.15); color: var(--success); }
+.action-edit { background: rgba(91, 164, 207, 0.15); color: var(--accent); }
+.action-delete { background: rgba(207, 91, 91, 0.15); color: var(--danger); }
+
+.history-title {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* --- NEW PAGE FORM --- */
+.new-page-form {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.new-page-form label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 0.3rem;
+}
+
+.new-page-form input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.new-page-form input:focus {
+  border-color: var(--accent-dim);
+}
+
+/* --- 404 --- */
+.not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.not-found h1 {
+  font-family: var(--mono);
+  font-size: 3rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 640px) {
+  nav { padding: 0.75rem 1rem; gap: 1rem; }
+  main { padding: 1.5rem 1rem; }
+  .wiki-content h1 { font-size: 1.4rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="./" id="nav-brand">EO Wiki</a>
+  <div class="links">
+    <a href="./" id="nav-home">pages</a>
+    <a href="./?view=history" id="nav-history">history</a>
+  </div>
+  <button class="mode-toggle" id="mode-toggle" onclick="toggleAdmin()">public</button>
+</nav>
+
+<main id="app"></main>
+
+<script>
+// ============================================================
+// EO Wiki — two DBs, no frameworks
+// current.json = current state (content as should be read)
+// history.json = append-only log of all changes
+// ============================================================
+
+const DB_PATH = 'db/';
+let currentDB = {};   // slug -> { title, content, updated, author }
+let historyDB = [];   // [ { slug, title, content, timestamp, author, action } ]
+let adminMode = false;
+
+// --- DETECT BASE PATH ---
+// Find where /wiki/ is in the current path to determine the base
+function getBasePath() {
+  const path = window.location.pathname;
+  const wikiIdx = path.indexOf('/wiki');
+  if (wikiIdx !== -1) return path.substring(0, wikiIdx) + '/wiki/';
+  return path.endsWith('/') ? path : path + '/';
+}
+
+const BASE = getBasePath();
+
+// --- ROUTING ---
+function getSlug() {
+  const path = window.location.pathname;
+  // Check sessionStorage for SPA redirect from 404.html
+  const redirectPath = sessionStorage.getItem('spa-redirect');
+  if (redirectPath) {
+    sessionStorage.removeItem('spa-redirect');
+    const slug = extractSlug(redirectPath);
+    if (slug) {
+      history.replaceState(null, '', BASE + slug + '/');
+      return slug;
+    }
+  }
+  return extractSlug(path);
+}
+
+function extractSlug(path) {
+  // Remove base path, then get the slug
+  let rel = path;
+  if (rel.startsWith(BASE)) {
+    rel = rel.substring(BASE.length);
+  } else {
+    // Try to find /wiki/ and get everything after
+    const idx = rel.indexOf('/wiki/');
+    if (idx !== -1) rel = rel.substring(idx + 6);
+  }
+  // Clean up: remove trailing slash, decode
+  rel = rel.replace(/^\/+|\/+$/g, '');
+  return decodeURIComponent(rel) || '';
+}
+
+function getView() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('view') || '';
+}
+
+function navigate(slug) {
+  const url = slug ? BASE + encodeURIComponent(slug) + '/' : BASE;
+  history.pushState(null, '', url);
+  render();
+}
+
+// --- MARKDOWN RENDERER (minimal) ---
+function md(text) {
+  if (!text) return '';
+  let html = text
+    // Escape HTML
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  // Code blocks (``` ... ```)
+  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
+    return '<pre><code>' + code.trim() + '</code></pre>';
+  });
+
+  // Inline code
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+  // Headings
+  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+
+  // Horizontal rules
+  html = html.replace(/^---+$/gm, '<hr>');
+
+  // Blockquotes
+  html = html.replace(/^&gt; (.+)$/gm, '<blockquote>$1</blockquote>');
+
+  // Bold + Italic
+  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+  // Links — wiki-local links (no protocol) resolve relative to wiki base
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) => {
+    if (!/^https?:\/\//.test(href) && !href.startsWith('/')) {
+      // Relative wiki link
+      return '<a href="' + BASE + href + '/" data-wiki>' + text + '</a>';
+    }
+    return '<a href="' + href + '">' + text + '</a>';
+  });
+
+  // Unordered lists
+  html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+  html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+
+  // Paragraphs — wrap remaining text blocks
+  html = html.split('\n\n').map(block => {
+    block = block.trim();
+    if (!block) return '';
+    if (/^<(h[1-3]|ul|ol|pre|hr|blockquote)/.test(block)) return block;
+    // Don't wrap if it's already a block element
+    if (block.startsWith('<')) return block;
+    return '<p>' + block.replace(/\n/g, '<br>') + '</p>';
+  }).join('\n');
+
+  return html;
+}
+
+// --- DB OPERATIONS ---
+async function loadDBs() {
+  try {
+    const [currentRes, historyRes] = await Promise.all([
+      fetch(DB_PATH + 'current.json'),
+      fetch(DB_PATH + 'history.json')
+    ]);
+    if (currentRes.ok) currentDB = await currentRes.json();
+    if (historyRes.ok) historyDB = await historyRes.json();
+  } catch (e) {
+    console.error('Failed to load DBs:', e);
+  }
+  // Merge any localStorage drafts (admin edits not yet committed to repo)
+  const drafts = JSON.parse(localStorage.getItem('eo-wiki-drafts') || '{}');
+  for (const [slug, page] of Object.entries(drafts)) {
+    currentDB[slug] = page;
+  }
+  const draftHistory = JSON.parse(localStorage.getItem('eo-wiki-draft-history') || '[]');
+  historyDB = historyDB.concat(draftHistory);
+}
+
+function saveDraft(slug, title, content, action) {
+  const now = new Date().toISOString();
+  const page = { title, content, updated: now, author: 'admin' };
+
+  // Update current state in memory
+  if (action === 'delete') {
+    delete currentDB[slug];
+  } else {
+    currentDB[slug] = page;
+  }
+
+  // Save to localStorage drafts
+  const drafts = JSON.parse(localStorage.getItem('eo-wiki-drafts') || '{}');
+  if (action === 'delete') {
+    delete drafts[slug];
+  } else {
+    drafts[slug] = page;
+  }
+  localStorage.setItem('eo-wiki-drafts', JSON.stringify(drafts));
+
+  // Append to draft history
+  const entry = { slug, title, content, timestamp: now, author: 'admin', action };
+  historyDB.push(entry);
+  const draftHistory = JSON.parse(localStorage.getItem('eo-wiki-draft-history') || '[]');
+  draftHistory.push(entry);
+  localStorage.setItem('eo-wiki-draft-history', JSON.stringify(draftHistory));
+}
+
+function exportDBs() {
+  const currentBlob = new Blob([JSON.stringify(currentDB, null, 2)], { type: 'application/json' });
+  const historyBlob = new Blob([JSON.stringify(historyDB, null, 2)], { type: 'application/json' });
+
+  const a1 = document.createElement('a');
+  a1.href = URL.createObjectURL(currentBlob);
+  a1.download = 'current.json';
+  a1.click();
+
+  setTimeout(() => {
+    const a2 = document.createElement('a');
+    a2.href = URL.createObjectURL(historyBlob);
+    a2.download = 'history.json';
+    a2.click();
+  }, 100);
+}
+
+// --- ADMIN TOGGLE ---
+function toggleAdmin() {
+  adminMode = !adminMode;
+  const btn = document.getElementById('mode-toggle');
+  btn.textContent = adminMode ? 'admin' : 'public';
+  btn.classList.toggle('admin-active', adminMode);
+  render();
+}
+
+// --- RENDER FUNCTIONS ---
+function render() {
+  const slug = getSlug();
+  const view = getView();
+
+  // Update nav active state
+  document.getElementById('nav-home').classList.toggle('active', !slug && view !== 'history');
+  document.getElementById('nav-history').classList.toggle('active', view === 'history');
+
+  if (view === 'history') {
+    renderHistory();
+  } else if (!slug || slug === 'index.html') {
+    renderIndex();
+  } else if (currentDB[slug]) {
+    renderPage(slug);
+  } else {
+    render404(slug);
+  }
+}
+
+function renderIndex() {
+  const app = document.getElementById('app');
+  const slugs = Object.keys(currentDB).sort();
+
+  let html = '<div class="wiki-content"><h1>Pages</h1></div>';
+
+  if (adminMode) {
+    html += `
+      <div class="new-page-form">
+        <label>Create new page</label>
+        <input type="text" id="new-slug" placeholder="page-slug (e.g. my-new-page)">
+        <input type="text" id="new-title" placeholder="Page Title">
+        <button class="btn btn-primary" onclick="createPage()">Create</button>
+      </div>`;
+  }
+
+  html += '<ul class="page-list">';
+  for (const slug of slugs) {
+    const page = currentDB[slug];
+    html += `<li>
+      <a href="${BASE}${encodeURIComponent(slug)}/" data-wiki>
+        <div class="page-title">${esc(page.title)}</div>
+        <div class="page-updated">/${slug}/ &middot; ${formatDate(page.updated)}</div>
+      </a>
+    </li>`;
+  }
+  html += '</ul>';
+
+  if (slugs.length === 0) {
+    html += '<p style="color:var(--text-dim);margin-top:1rem;">No pages yet.</p>';
+  }
+
+  app.innerHTML = html;
+  document.title = 'EO Wiki';
+}
+
+function renderPage(slug) {
+  const app = document.getElementById('app');
+  const page = currentDB[slug];
+
+  let html = `<div class="page-meta">
+    <span>/${slug}/</span>
+    <span>${formatDate(page.updated)}</span>
+    <span>${esc(page.author)}</span>
+  </div>`;
+
+  if (adminMode) {
+    html += `
+      <div class="wiki-content" id="preview">${md(page.content)}</div>
+      <div class="editor-wrap">
+        <textarea id="editor" oninput="updatePreview()">${esc(page.content)}</textarea>
+        <div class="editor-bar">
+          <button class="btn btn-primary" onclick="savePage('${slug}')">Save</button>
+          <button class="btn btn-danger" onclick="deletePage('${slug}')">Delete</button>
+          <button class="btn" onclick="exportDBs()">Export DBs</button>
+          <span class="status" id="save-status"></span>
+        </div>
+      </div>`;
+  } else {
+    html += `<div class="wiki-content">${md(page.content)}</div>`;
+  }
+
+  // Show page history
+  const pageHistory = historyDB.filter(h => h.slug === slug).reverse();
+  if (pageHistory.length > 0) {
+    html += '<div style="margin-top:3rem;">';
+    html += '<div class="wiki-content"><h2>Page History</h2></div>';
+    html += '<ul class="history-list">';
+    for (const entry of pageHistory) {
+      html += historyItemHTML(entry);
+    }
+    html += '</ul></div>';
+  }
+
+  app.innerHTML = html;
+  document.title = page.title + ' — EO Wiki';
+}
+
+function renderHistory() {
+  const app = document.getElementById('app');
+  const sorted = [...historyDB].reverse();
+
+  let html = '<div class="wiki-content"><h1>History</h1>';
+  html += '<p>Append-only log of all changes.</p></div>';
+
+  if (adminMode) {
+    html += `<div style="margin:1rem 0;">
+      <button class="btn" onclick="exportDBs()">Export DBs</button>
+    </div>`;
+  }
+
+  html += '<ul class="history-list">';
+  for (const entry of sorted) {
+    html += historyItemHTML(entry);
+  }
+  html += '</ul>';
+
+  if (sorted.length === 0) {
+    html += '<p style="color:var(--text-dim);margin-top:1rem;">No history yet.</p>';
+  }
+
+  app.innerHTML = html;
+  document.title = 'History — EO Wiki';
+}
+
+function render404(slug) {
+  const app = document.getElementById('app');
+  let html = `<div class="not-found">
+    <h1>404</h1>
+    <p>Page <strong>/${esc(slug)}/</strong> does not exist.</p>
+    <a href="${BASE}" class="btn">Back to wiki</a>
+  </div>`;
+
+  if (adminMode) {
+    html += `
+      <div class="new-page-form" style="margin-top:2rem;max-width:500px;margin-left:auto;margin-right:auto;">
+        <label>Create this page?</label>
+        <input type="text" id="new-title" placeholder="Page Title" value="${esc(slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}">
+        <button class="btn btn-primary" onclick="createPageFromSlug('${esc(slug)}')">Create /${esc(slug)}/</button>
+      </div>`;
+  }
+
+  app.innerHTML = html;
+  document.title = '404 — EO Wiki';
+}
+
+function historyItemHTML(entry) {
+  return `<li class="history-item" onclick="navigate('${esc(entry.slug)}')">
+    <div class="history-meta">
+      <span class="history-action action-${entry.action}">${entry.action}</span>
+      <span>${formatDate(entry.timestamp)}</span>
+      <span>${esc(entry.author)}</span>
+    </div>
+    <div class="history-title">/${esc(entry.slug)}/ — ${esc(entry.title)}</div>
+  </li>`;
+}
+
+// --- ADMIN ACTIONS ---
+function updatePreview() {
+  const editor = document.getElementById('editor');
+  const preview = document.getElementById('preview');
+  if (editor && preview) {
+    preview.innerHTML = md(editor.value);
+  }
+}
+
+function savePage(slug) {
+  const editor = document.getElementById('editor');
+  const page = currentDB[slug];
+  saveDraft(slug, page.title, editor.value, 'edit');
+  const status = document.getElementById('save-status');
+  if (status) {
+    status.textContent = 'saved';
+    setTimeout(() => status.textContent = '', 2000);
+  }
+}
+
+function deletePage(slug) {
+  if (!confirm('Delete /' + slug + '/?')) return;
+  const page = currentDB[slug];
+  saveDraft(slug, page.title, page.content, 'delete');
+  navigate('');
+}
+
+function createPage() {
+  const slugInput = document.getElementById('new-slug');
+  const titleInput = document.getElementById('new-title');
+  const slug = slugInput.value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-');
+  const title = titleInput.value.trim();
+  if (!slug || !title) return;
+  saveDraft(slug, title, '# ' + title + '\n\nNew page.', 'create');
+  navigate(slug);
+}
+
+function createPageFromSlug(slug) {
+  const titleInput = document.getElementById('new-title');
+  const title = titleInput.value.trim() || slug;
+  saveDraft(slug, title, '# ' + title + '\n\nNew page.', 'create');
+  navigate(slug);
+}
+
+// --- HELPERS ---
+function esc(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function formatDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+
+// --- CLICK INTERCEPTION (SPA navigation) ---
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[data-wiki]');
+  if (!a) return;
+  e.preventDefault();
+  const href = a.getAttribute('href');
+  const slug = extractSlug(href);
+  navigate(slug);
+});
+
+// --- NAV LINKS ---
+document.getElementById('nav-brand').addEventListener('click', (e) => {
+  e.preventDefault();
+  history.pushState(null, '', BASE);
+  render();
+});
+
+document.getElementById('nav-home').addEventListener('click', (e) => {
+  e.preventDefault();
+  history.pushState(null, '', BASE);
+  render();
+});
+
+document.getElementById('nav-history').addEventListener('click', (e) => {
+  e.preventDefault();
+  history.pushState(null, '', BASE + '?view=history');
+  render();
+});
+
+// --- POPSTATE ---
+window.addEventListener('popstate', render);
+
+// --- INIT ---
+loadDBs().then(render);
+</script>
+</body>
+</html>

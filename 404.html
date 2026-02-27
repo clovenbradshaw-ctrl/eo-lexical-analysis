@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting…</title>
+<script>
+  // GitHub Pages SPA routing
+  // When a path like /wiki/test-page/ doesn't match a file,
+  // GH Pages serves this 404.html. We save the path and redirect
+  // to the wiki SPA, which picks it up from sessionStorage.
+  var path = window.location.pathname;
+  if (path.indexOf('/wiki/') !== -1 || path.indexOf('/wiki') === path.length - 5) {
+    sessionStorage.setItem('spa-redirect', path);
+    // Navigate to the wiki index.html
+    var base = path.substring(0, path.indexOf('/wiki/') + 6);
+    window.location.replace(base);
+  } else {
+    // Not a wiki path — show a basic 404
+    document.write(
+      '<style>body{font-family:sans-serif;background:#0c0e12;color:#6b7a90;display:flex;align-items:center;justify-content:center;min-height:100vh;}</style>' +
+      '<div style="text-align:center"><h1 style="color:#d4dae4;font-size:3rem">404</h1><p>Page not found.</p></div>'
+    );
+  }
+</script>
+</head>
+<body></body>
+</html>

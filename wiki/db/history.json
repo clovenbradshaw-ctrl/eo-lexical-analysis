@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "home",
+    "title": "Emergent Ontology Wiki",
+    "content": "# Emergent Ontology Wiki\n\nWelcome to the Emergent Ontology knowledge base.\n\nThis wiki documents the theoretical framework, cross-linguistic analysis, and operator classification system behind the EO project.\n\n## Quick Links\n\n- [Test Page](test-page) — Verify wiki functionality\n- [Crosslinguistic Corpus](/data/crossling/) — Browse the 27-language dataset\n\n## About\n\nEmergent Ontology is a framework for understanding how meaning arises across languages through a finite set of semantic operators. The lexical analysis component extracts verbs from Universal Dependencies treebanks and classifies them using the 9-operator system.\n\n---\n\n*Edit this page to add your own content.*",
+    "timestamp": "2026-02-27T00:00:00Z",
+    "author": "system",
+    "action": "create"
+  },
+  {
+    "slug": "test-page",
+    "title": "Test Page",
+    "content": "# Test Page\n\nThis is a test page for the Emergent Ontology wiki. If you can read this, the wiki is working.\n\n## What is this?\n\nThis wiki serves as the documentation and knowledge base for the **Emergent Ontology** project — a cross-linguistic lexical analysis framework that maps verb semantics across 27 languages using a 9-operator classification system.\n\n## Operators\n\n- **ALT** — Alteration\n- **CON** — Continuation\n- **DES** — Destruction\n- **INS** — Instantiation\n- **NUL** — Nullification\n- **REC** — Reception\n- **SEG** — Segregation\n- **SUP** — Superposition\n- **SYN** — Synchronization\n\n---\n\n*This page was created automatically to verify wiki functionality.*",
+    "timestamp": "2026-02-27T00:00:00Z",
+    "author": "system",
+    "action": "create"
+  }
+]
