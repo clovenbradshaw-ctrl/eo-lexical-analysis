@@ -44,12 +44,12 @@ def build_operators():
     }
     short_defs = {
         "NUL": "Removal, negation, voiding — making something absent",
-        "DES": "Naming, typing, marking — assigning identity or category",
+        "DES": "Distinguishing, marking difference — drawing distinctions",
         "INS": "Creating, appearing, bringing into being — new existence",
         "SEG": "Dividing, splitting, differentiating — creating boundaries",
         "CON": "Linking, relating, joining — building persistent connections",
         "SYN": "Combining, merging, unifying — creating wholes from parts",
-        "ALT": "Switching perspective, reframing — same thing, different lens",
+        "ALT": "Changing state, toggling — same entity, different state",
         "SUP": "Holding contradictions simultaneously — unresolved tension",
         "REC": "Self-referential restructuring — rebuilding from held tension",
     }

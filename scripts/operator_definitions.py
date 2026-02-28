@@ -23,22 +23,27 @@ OPERATORS = {
     },
     "DES": {
         "symbol": "⊡",
-        "short_def": "Carve a domain into stable types by naming, defining, and establishing constraints.",
+        "short_def": "Draw a distinction — register something as different from its ground, marking what it is.",
         "full_spec": (
-            "DES designates and defines — it carves a domain into stable types by naming entities, "
-            "assigning categories, defining meanings, and establishing constraints. "
-            "Type: (State, typeDefinition) → State, where the output state includes a new entry in the "
-            "definition set mapping a name to criteria. "
-            "Domain: any concept needing formal definition — field names, category labels, unit systems, "
+            "DES distinguishes — it draws a distinction where there wasn't one, registering something "
+            "as different from its ground. Before any naming, before any classification — distinction. "
+            "Something becomes something rather than anything. "
+            "Type: (State, distinctionCriteria) → State, where the output state includes a new entry in the "
+            "definition set mapping a distinction to criteria. "
+            "Domain: any difference needing to be marked — field names, category labels, unit systems, "
             "validation rules, schemas, ontologies. "
-            "Codomain: system with enriched definition set. "
-            "Invariants: DES creates types not instances, DES is additive (new definitions don't destroy old), "
-            "DES definitions can themselves have context and provenance. "
+            "Codomain: system with enriched distinction set. "
+            "Invariants: DES creates types not instances, DES is additive (new distinctions don't destroy old), "
+            "DES distinctions can themselves have context and provenance. "
+            "Biological ground: a receptor responds to a molecule, distinguishing it from the medium. "
+            "DES scales from receptor distinguishing molecule from medium, to infant distinguishing "
+            "mother's face from background, to philosopher carving a new conceptual category. "
+            "The operation is always the same: draw a distinction where there wasn't one. "
             "Examples: naming a column, creating a category, defining a metric, establishing a unit, "
             "writing a schema, specifying a validation rule, declaring a type."
         ),
         "triad": "existence", "role": "figure",
-        "verbs_seed": ["name","define","label","classify","categorize","type","designate","specify","declare","identify","tag","annotate","mark","title","characterize","describe","denote","term","call","dub","formalize","codify","standardize"],
+        "verbs_seed": ["name","define","label","classify","categorize","type","designate","specify","declare","identify","tag","annotate","mark","title","characterize","describe","denote","term","call","dub","formalize","codify","standardize","distinguish"],
     },
     "INS": {
         "symbol": "△",
@@ -117,23 +122,27 @@ OPERATORS = {
     },
     "ALT": {
         "symbol": "∿",
-        "short_def": "Switch perspective, definition, or interpretive frame without changing underlying data.",
+        "short_def": "Change state — same entity, different state. Toggle between alternatives.",
         "full_spec": (
-            "ALT alternates — it switches perspective, definition, or interpretive frame "
-            "without changing underlying data. Between one state and the next is not nothing; "
+            "ALT alternates — it changes the state of an entity without changing the entity itself. "
+            "Same entity, different state. Between one state and the next is not nothing; "
             "it is where most of life actually happens. "
-            "Type: (State, alternateDefinition) → State, returning the state under alternate interpretation "
-            "with original preserved. Choice of frame affects all downstream operations. "
-            "Domain: definitions (GAAP vs Internal), scales (Team vs Org), temporal frames (Monthly vs Quarterly), "
-            "categorization schemes, unit systems. "
-            "Codomain: alternate interpretation or view. "
-            "Invariants: ALT is reversible (can switch back), ALT does not modify data, "
-            "multiple ALT frames can coexist (leads to SUP), ALT composes with REC for multi-perspective views. "
+            "Type: (State, alternateState) → State, returning the entity under alternate state "
+            "with original preserved. Choice of state affects all downstream operations. "
+            "Domain: states (open vs closed), phases (solid vs liquid), scales (Team vs Org), "
+            "temporal frames (Monthly vs Quarterly), categorization schemes, unit systems. "
+            "Codomain: alternate state or configuration. "
+            "Invariants: ALT is reversible (can switch back), ALT does not modify the entity, "
+            "multiple ALT states can coexist (leads to SUP), ALT composes with REC for multi-state views. "
+            "Biological ground: a bacterium's flagellum spins one direction to swim forward, reverses "
+            "to tumble. Same motor, different state. "
+            "Frame-switching and perspective change are complex instances of ALT — things ALT can do "
+            "when applied at higher scales. But the definition is simpler: state change. Toggle. "
             "Examples: view revenue as GAAP vs internal, see data at team-level vs org-level, "
-            "display in USD vs EUR, use fiscal year vs calendar year, reframe interpretation."
+            "display in USD vs EUR, use fiscal year vs calendar year, convert between states."
         ),
         "triad": "interpretation", "role": "ground",
-        "verbs_seed": ["switch","alternate","reframe","reinterpret","translate","convert","toggle","shift","pivot","transform","transpose","remap","recontextualize","redefine","recalibrate","recast","reread","reorient","modulate","vary"],
+        "verbs_seed": ["switch","alternate","toggle","convert","translate","shift","pivot","transform","transpose","remap","redefine","recalibrate","recast","reorient","modulate","vary","reframe","reinterpret","recontextualize"],
     },
     "SUP": {
         "symbol": "∥",
@@ -182,7 +191,7 @@ OPERATORS = {
 TRIADS = {
     "existence": {"operators": ["NUL","DES","INS"], "description": "The ground — what exists, what is named, what is instantiated.", "degree_of_freedom": "one — hierarchical model"},
     "structure": {"operators": ["SEG","CON","SYN"], "description": "The figure — boundaries, connections, wholes.", "degree_of_freedom": "two — relational model"},
-    "interpretation": {"operators": ["ALT","SUP","REC"], "description": "The pattern — frame-switching, contradiction-holding, self-reference.", "degree_of_freedom": "three — temporal freedom"},
+    "interpretation": {"operators": ["ALT","SUP","REC"], "description": "The pattern — state-change, contradiction-holding, self-reference.", "degree_of_freedom": "three — temporal freedom"},
 }
 
 HELIX_ORDER = ["NUL","DES","INS","SEG","CON","SYN","ALT","SUP","REC"]

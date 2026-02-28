@@ -35,10 +35,10 @@ THE NINE OPERATORS:
    Yes: omit, lack, vanish, forget, deplete, silence, starve, deprive, empty, erase, void
    No: "displease" (nothing is missing), "break" (that's partition → SEG)
 
-2. DES (⊡) — Designate: something gets named or typed
-   Input: an unnamed or untyped thing. Output: that thing now has a category, label, or identity.
-   The verb assigns WHAT something IS. It draws a definitional boundary.
-   Yes: name, define, label, classify, diagnose, brand, title, baptize, declare, identify, dub
+2. DES (⊡) — Distinguish: something gets marked as different
+   Input: an undifferentiated field. Output: something has been registered as distinct from its ground.
+   The verb draws a DISTINCTION — marks what something IS by separating it from what it isn't.
+   Yes: name, define, label, classify, diagnose, brand, title, baptize, declare, identify, dub, distinguish
    No: "describe" in the sense of adding details (that adds observations → INS)
 
 3. INS (△) — Instantiate: something new appears
@@ -69,11 +69,11 @@ THE NINE OPERATORS:
    Yes: merge, fuse, synthesize, blend, brew, cook, compose, weave, summarize, compile, mix
    No: "gather" (collecting without transforming into new whole — that's INS, adding to a set)
 
-7. ALT (∿) — Alternate: the frame shifts
-   Input: thing + old frame. Output: same thing + new frame. The thing doesn't change; the lens does.
-   The verb reinterprets, translates, or shifts perspective. Reversible.
-   Yes: translate, reinterpret, convert, reframe, disguise, decode, rethink, paraphrase, adapt
-   No: "restructure" (that changes the thing itself, not just the view — that's REC)
+7. ALT (∿) — Alternate: the state changes
+   Input: entity + old state. Output: same entity + new state. The entity persists; its state changes.
+   The verb toggles, converts, or changes state. Reversible. Same thing, different state.
+   Yes: translate, convert, toggle, switch, freeze, melt, reframe, disguise, decode, adapt
+   No: "restructure" (that changes the entity itself at its foundations — that's REC)
 
 8. SUP (∥) — Superpose: contradictions coexist
    Input: a resolved state. Output: an unresolved state where incompatible values are held together.

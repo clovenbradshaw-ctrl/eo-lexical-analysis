@@ -12,7 +12,7 @@ TEST 1: SECOND-CHOICE ANALYSIS
   If SUP/REC almost never appear even as second choice, the poverty is real.
 
 TEST 2: TARGETED RE-CLASSIFICATION
-  Take all ALT verbs and specifically ask: "Is this really ALT (reframing),
+  Take all ALT verbs and specifically ask: "Is this really ALT (state-change),
   or is it SUP (holding contradiction)?" Do the same for INS vs REC boundary.
   Use a more targeted prompt that explains the distinction carefully.
 
@@ -72,19 +72,19 @@ def test1_second_choices(client):
 
 The nine operators:
   NUL: Nullification — removing, negating, making absent, voiding
-  DES: Designation — naming, typing, categorizing, assigning identity
+  DES: Distinction — drawing distinctions, marking difference, registering something as different from its ground
   INS: Instantiation — bringing into presence, creating, manifesting, performing
   SEG: Segmentation — cutting, dividing, separating, breaking apart
   CON: Connection — linking, joining, relating, binding together
   SYN: Synthesis — merging, combining, fusing into unified whole
-  ALT: Alternation — reframing, changing perspective, shifting interpretation
+  ALT: Alternation — changing state, toggling, same entity different state
   SUP: Superposition — holding contradictory states simultaneously, maintaining productive tension between incompatible truths
   REC: Reconstitution — restructuring foundations, rebuilding from ground up, fundamental reorganization (not just restoration)
 
 For each verb, provide your TOP 3 operator choices with confidence scores (0.0-1.0, must sum to ≤ 1.0).
 
 Key distinctions to attend to:
-  ALT vs SUP: ALT changes FROM one frame TO another. SUP holds BOTH frames at once without resolving.
+  ALT vs SUP: ALT changes FROM one state TO another. SUP holds BOTH states at once without resolving.
   INS vs REC: INS brings something new into being. REC restructures something existing at its foundations.
   NUL vs SUP: NUL removes or negates. SUP holds absence and presence simultaneously.
 
@@ -191,17 +191,17 @@ def test2_reclassify(client):
     # Test ALT vs SUP
     alt_sup_prompt = """You are performing a targeted audit of verb classifications.
 
-These verbs were all classified as ALT (alternation — reframing, changing perspective).
+These verbs were all classified as ALT (alternation — changing state, toggling).
 Your job: determine if any are actually SUP (superposition — holding contradictory states simultaneously).
 
 The key distinction:
-  ALT: The verb describes CHANGING from one frame/state to another. There is movement between perspectives. At any moment, one frame is active.
+  ALT: The verb describes CHANGING from one state to another. Same entity, different state. At any moment, one state is active.
   SUP: The verb describes HOLDING two or more incompatible states at the SAME TIME. Both are simultaneously true. There is no resolution, no movement — just sustained tension.
 
 Examples:
   "convert" = ALT (changes from one state to another)
   "straddle" = SUP (occupies two positions at once)
-  "reframe" = ALT (shifts perspective)
+  "toggle" = ALT (switches between states)
   "juggle" = SUP (maintains multiple things simultaneously)
   "oscillate" = could be either — if it implies being in one state then another, ALT; if it implies a standing wave of both, SUP
 

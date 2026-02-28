@@ -54,11 +54,11 @@ GROUPINGS = {
     },
     'diag_main': {
         'Diag_A': ['NUL','CON','REC'],  # main diagonal: null-state, bonding, rebuilding
-        'Diag_B': ['DES','SYN','ALT'],  # typing, combining, reframing
+        'Diag_B': ['DES','SYN','ALT'],  # typing, combining, state-change
         'Diag_C': ['INS','SEG','SUP'],  # appearing, cutting, holding contradiction
     },
     'diag_anti': {
-        'Anti_A': ['INS','CON','ALT'],  # anti-diagonal: appearing, bonding, reframing
+        'Anti_A': ['INS','CON','ALT'],  # anti-diagonal: appearing, bonding, state-change
         'Anti_B': ['NUL','SYN','SUP'],  # null-state, combining, holding contradiction
         'Anti_C': ['DES','SEG','REC'],  # typing, cutting, rebuilding
     },
