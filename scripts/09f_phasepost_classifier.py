@@ -47,7 +47,7 @@ POSITIONS = {
 }
 
 OP_NAMES = {
-    'NUL':'Nullification','DES':'Designation','INS':'Instantiation',
+    'NUL':'Nullification','DES':'Distinction','INS':'Instantiation',
     'SEG':'Segmentation','CON':'Connection','SYN':'Synthesis',
     'ALT':'Alternation','SUP':'Superposition','REC':'Reconstitution',
 }

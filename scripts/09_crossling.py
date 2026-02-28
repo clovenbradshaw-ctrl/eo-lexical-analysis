@@ -106,11 +106,11 @@ Something that was present — energy, substance, connection, presence —
 is gone, and the goneness itself is the new condition.
 Examples across domains: deplete, silence, evacuate, boycott, fade, die out.
 
-DES (⊡) — ASSIGN TYPE
-Fix an untyped or ambiguously typed entity within a category. The entity
-does not change — it gets designated. Before: undifferentiated. After:
-named, classified, officially belonging to a kind.
-Examples: designate, define, elect, legalize, certify, must, should.
+DES (⊡) — DRAW DISTINCTION
+Register something as different from its ground. Before: undifferentiated.
+After: something has become something rather than anything. A distinction
+has been drawn where there wasn't one.
+Examples: designate, define, distinguish, elect, legalize, certify, must, should.
 
 INS (△) — SOMETHING APPEARS
 Create a new event, entity, or state in the world. Before: it was not.
@@ -132,10 +132,11 @@ Combine separate elements into a unified whole that transcends its parts.
 The product is something none of the inputs were. Emergent novelty.
 Examples: synthesize, braid, bake, amalgamate, total, compromise.
 
-ALT (∿) — SWITCH FRAME
-Transform the framework applied to something without changing the thing
-itself. The substrate persists; the perspective or state-frame rotates.
-Examples: reinterpret, freeze, alternate, americanize, clarify, translate.
+ALT (∿) — CHANGE STATE
+Same entity, different state. The entity persists; its state changes.
+Toggle, switch, convert. The thing itself is unchanged; what changes
+is which state it occupies.
+Examples: toggle, freeze, alternate, convert, americanize, clarify, translate.
 
 SUP (∥) — HOLD INCOMPATIBLE WITHOUT RESOLUTION
 Maintain multiple mutually exclusive values simultaneously without
