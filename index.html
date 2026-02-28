@@ -1234,41 +1234,27 @@ footer a:hover { color: var(--text); }
 <main>
   <!-- ═══════════════ ABOUT ═══════════════ -->
   <section id="about">
-    <div class="hero">
-      <h1>Experiential Ontology<br>Lexical Analysis</h1>
-      <p class="subtitle">
-        Nine transformation operators. ~12,000 classified verb senses. All data open for audit.
-      </p>
-
-      <div class="explainer">
-        <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span class="explainer-icon">&#9654;</span>
-          <span class="explainer-label">What is this?</span>
-        </button>
-        <div class="explainer-body">
-          <p>EO proposed that every verb in every language performs one of 9 transformation types, arranged as three triads. This site tests that claim empirically: ~12,000 verb senses classified by LLM, embedded, and measured. Explore whether the categories cluster mathematically or are just imposed.</p>
-        </div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker" style="color:var(--white);font-size:0.78rem;">EO</span>
+        <span class="cell-title" style="font-size:0.92rem;">Experiential Ontology &mdash; Lexical Analysis</span>
+        <span class="cell-chevron">&#9654;</span>
       </div>
-
-      <p class="invitation">
-        Preliminary explorations, not conclusions. Break it if you can.
-      </p>
-      <div class="stat-row">
-        <div class="stat-item"><span>11,933</span> verb senses classified</div>
-        <div class="stat-item"><span>9</span> operators in 3 triads</div>
-        <div class="stat-item"><span>3</span> embedding modes tested</div>
-        <div class="stat-item"><span>27</span> languages (crosslinguistic)</div>
+      <div class="cell-body">
+        <p>EO proposed that every verb in every language performs one of <strong>9 transformation types</strong>, arranged as three triads. This notebook tests that claim empirically: ~12,000 verb senses classified by LLM, embedded, and measured.</p>
+        <p>Explore whether the categories cluster mathematically or are just imposed. <em>Preliminary explorations, not conclusions. Break it if you can.</em></p>
+        <div class="stat-row" style="margin-top:0.75rem;">
+          <div class="stat-item"><span>11,933</span> verb senses classified</div>
+          <div class="stat-item"><span>9</span> operators in 3 triads</div>
+          <div class="stat-item"><span>3</span> embedding modes tested</div>
+          <div class="stat-item"><span>27</span> languages (crosslinguistic)</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════ METHODOLOGY ═══════════════ -->
   <section id="methodology">
-    <div class="section-header">
-      <h2>Methodology &amp; Data Provenance</h2>
-      <p class="caveat">Every classification decision is auditable. Expand cells to see the actual prompts, pipeline, and outputs.</p>
-    </div>
-
     <!-- Cell 1: The Classification Prompt -->
     <div class="notebook-cell open">
       <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
@@ -1428,214 +1414,225 @@ psychological    1,240  (10%)</div>
 
   <!-- ═══════════════ OPERATORS ═══════════════ -->
   <section id="operators">
-    <div class="section-header">
-      <h2>Operator Overview</h2>
-      <p class="caveat">Three triads, generative pattern: op&#x2081; + op&#x2082; &#x2192; op&#x2083;. Click to explore.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About operators</span>
-      </button>
-      <div class="explainer-body">
-        <p>Three triads: <strong>Existence</strong> (NUL, DES, INS) — whether things exist. <strong>Structure</strong> (SEG, CON, SYN) — how things arrange. <strong>Interpretation</strong> (ALT, SUP, REC) — how things are understood. In each triad, op&#x2081; + op&#x2082; &#8594; op&#x2083;. Click any card for examples.</p>
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">source</span>
+        <span class="cell-title">Operator Overview &mdash; how this works</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>Three triads: <strong>Existence</strong> (NUL, DES, INS) &mdash; whether things exist. <strong>Structure</strong> (SEG, CON, SYN) &mdash; how things arrange. <strong>Interpretation</strong> (ALT, SUP, REC) &mdash; how things are understood. In each triad, op&#x2081; + op&#x2082; &#8594; op&#x2083;.</p>
+        <div class="cell-code"><span class="cm"># scripts/08_topology.py &rarr; operators.json</span>
+<span class="cm"># Prototypes, territory boundaries, nearest neighbors per operator</span></div>
       </div>
     </div>
-    <div class="triads-grid" id="triads-grid">
-      <div class="loading">Loading operators...</div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Click any operator to explore</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <div class="triads-grid" id="triads-grid">
+          <div class="loading">Loading operators...</div>
+        </div>
+        <div class="op-detail" id="op-detail" style="display:none;"></div>
+      </div>
     </div>
-    <div class="op-detail" id="op-detail" style="display:none;"></div>
   </section>
 
   <!-- ═══════════════ EMBEDDING EXPLORER ═══════════════ -->
   <section id="embeddings">
-    <div class="section-header">
-      <h2>Embedding Explorer</h2>
-      <p class="caveat">3D PCA of definition embeddings, colored by operator. Unsupervised k=9 finds no alignment — structure appears only after LLM classification.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About this chart</span>
-      </button>
-      <div class="explainer-body">
-        <p>Each dot is a verb in 3D PCA space, colored by operator. Diamonds are centroids. If categories are real, same-colored dots should cluster. Caveat: unsupervised clustering at k=9 doesn't find these groups — they only appear after LLM classification.</p>
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">source</span>
+        <span class="cell-title">Embedding Explorer &mdash; how this works</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>3D PCA of 3072-dimensional definition embeddings, colored by operator. Each dot is a verb; diamonds are centroids. If categories are real, same-colored dots should cluster.</p>
+        <div class="cell-note">
+          <strong>Caveat:</strong> Unsupervised clustering at k=9 doesn't find these groups &mdash; they only appear after LLM classification.
+        </div>
+        <div class="cell-code"><span class="cm"># scripts/05_phasepost.py &rarr; embeddings.json</span>
+<span class="cm"># PCA reduction of 3072d embeddings to 3d for visualization</span></div>
       </div>
     </div>
-    <div class="panel">
-      <div class="embed-controls">
-        <button class="active" data-view="scatter">Scatter + Centroids</button>
-        <button data-view="centroids">Centroids only</button>
-        <button data-view="triads">By Triad</button>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">3D PCA scatter</span>
+        <span class="cell-chevron">&#9654;</span>
       </div>
-      <div id="embed-plot"></div>
-      <div class="embed-legend" id="embed-legend"></div>
+      <div class="cell-body">
+        <div class="embed-controls">
+          <button class="active" data-view="scatter">Scatter + Centroids</button>
+          <button data-view="centroids">Centroids only</button>
+          <button data-view="triads">By Triad</button>
+        </div>
+        <div id="embed-plot"></div>
+        <div class="embed-legend" id="embed-legend"></div>
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════ CONFUSION MATRIX ═══════════════ -->
   <section id="confusion">
-    <div class="section-header">
-      <h2>Confusion Matrix</h2>
-      <p class="caveat">Every operator's primary confusion is with INS (63% of all verbs). Click any cell for boundary verbs.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About confusion</span>
-      </button>
-      <div class="explainer-body">
-        <p>Row = assigned operator, column = runner-up. Brighter cells = more toss-ups. Click any cell to see the boundary verbs. Note: INS dominates every row — either genuinely fundamental or a catch-all.</p>
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">source</span>
+        <span class="cell-title">Confusion Matrix &mdash; how this works</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>Row = assigned operator, column = runner-up. Brighter cells = more toss-ups. Click any cell to see the actual boundary verbs the classifier found ambiguous.</p>
+        <div class="cell-note">
+          <strong>Note:</strong> INS dominates every row &mdash; every operator's primary confusion is with INS (63% of all verbs). Either genuinely fundamental or a catch-all.
+        </div>
+        <div class="cell-code"><span class="cm"># scripts/09_confusion.py &rarr; confusion.json + boundaries.json</span>
+<span class="cm"># Cross-tabulates primary vs. runner-up operator with verb-level examples</span></div>
       </div>
     </div>
-    <div class="confusion-container">
-      <div class="heatmap-wrap">
-        <div id="confusion-heatmap"></div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Click any cell for boundary verbs</span>
+        <span class="cell-chevron">&#9654;</span>
       </div>
-      <div class="boundary-panel" id="boundary-panel">
-        <h4>Click a cell to see boundary verbs</h4>
-        <p style="font-size:0.78rem;color:var(--text-muted);">The heatmap shows how many verbs were classified as one operator but had another as their runner-up. Symmetric pairs combine both directions.</p>
+      <div class="cell-body">
+        <div class="confusion-container">
+          <div class="heatmap-wrap">
+            <div id="confusion-heatmap"></div>
+          </div>
+          <div class="boundary-panel" id="boundary-panel">
+            <h4>Click a cell to see boundary verbs</h4>
+            <p style="font-size:0.78rem;color:var(--text-muted);">The heatmap shows how many verbs were classified as one operator but had another as their runner-up. Symmetric pairs combine both directions.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════ METRICS DASHBOARD ═══════════════ -->
   <section id="metrics">
-    <div class="section-header">
-      <h2>Metrics Dashboard</h2>
-      <p class="caveat">Z-scores may inflate in 3072 dims. Three modes test LLM reasoning vs. definitions alone.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About metrics</span>
-      </button>
-      <div class="explainer-body">
-        <p><strong>ARI/NMI:</strong> agreement between unsupervised clusters and operator labels (0=random, 1=perfect). <strong>Silhouette:</strong> within-cluster vs. between-cluster distance. <strong>Z-score:</strong> separation vs. random baseline (inflatable in high dims). Three modes test bias: A=LLM reasoning, B=definitions only, C=combined.</p>
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">source</span>
+        <span class="cell-title">Metrics Dashboard &mdash; how this works</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>Three embedding modes test whether structure comes from LLM reasoning or the definitions themselves:</p>
+        <div class="cell-code"><span class="cm"># scripts/06_reembed.py &rarr; metrics.json</span>
+<span class="kw">Mode A</span>: Type-signature  <span class="cm"># LLM's reasoning about input&rarr;output transformation</span>
+<span class="kw">Mode B</span>: Definition       <span class="cm"># WordNet definitions only &mdash; zero operator information</span>
+<span class="kw">Mode C</span>: Combined         <span class="cm"># Definition + type-signature + operator context</span></div>
+        <p><strong>ARI/NMI:</strong> agreement between unsupervised clusters and operator labels (0=random, 1=perfect). <strong>Silhouette:</strong> within-cluster vs. between-cluster distance. <strong>Z-score:</strong> separation vs. random baseline.</p>
+        <div class="cell-note">
+          <strong>Caveat:</strong> Z-scores may inflate in 3072 dimensions. The taxonomy comparison includes Operator&times;Scale, which uses both axes of EO's own classification (see <a href="#methodology" style="color:var(--accent);">Methodology</a>).
+        </div>
       </div>
     </div>
-    <div class="metrics-grid" id="metrics-grid">
-      <div class="loading">Loading metrics...</div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Embedding mode comparison</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <div class="metrics-grid" id="metrics-grid">
+          <div class="loading">Loading metrics...</div>
+        </div>
+      </div>
     </div>
-    <div class="panel taxonomy-bar" id="taxonomy-bar" style="margin-top:1.5rem;">
-      <h3 style="font-family:var(--mono);font-size:0.85rem;font-weight:600;color:var(--white);margin-bottom:0.5rem;">Taxonomy Comparison</h3>
-      <p style="font-size:0.78rem;color:var(--text-dim);margin-bottom:1rem;">Centroid separation z-scores across grouping methods.</p>
-      <div id="taxonomy-bars"></div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Taxonomy comparison &mdash; z-scores across grouping methods</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <div id="taxonomy-bar">
+          <div id="taxonomy-bars"></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════ TRIAD FUSION ═══════════════ -->
   <section id="fusion">
-    <div class="section-header">
-      <h2>Triad Fusion Visualizer</h2>
-      <p class="caveat">Does midpoint of op&#x2081;, op&#x2082; predict op&#x2083;? Pattern holds, but SUP (19 verbs) makes Interpretation triad unstable.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About fusion</span>
-      </button>
-      <div class="explainer-body">
-        <p>Does the geometric midpoint of op&#x2081; and op&#x2082; predict op&#x2083;'s centroid? Pattern holds across all triads, but SUP's tiny sample (19 verbs) makes the Interpretation triad unstable.</p>
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">source</span>
+        <span class="cell-title">Triad Fusion &mdash; how this works</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>EO claims each triad has a generative pattern: op&#x2081; + op&#x2082; &#8594; op&#x2083;. Test: does the geometric midpoint of op&#x2081; and op&#x2082; centroids land near op&#x2083;'s centroid?</p>
+        <div class="cell-code"><span class="cm"># Uses Mode A centroid matrix from scripts/06_reembed.py</span>
+<span class="cm"># midpoint(centroid_op1, centroid_op2) &asymp; centroid_op3 ?</span></div>
+        <div class="cell-note">
+          <strong>Caveat:</strong> SUP has only 19 verbs &mdash; the Interpretation triad is geometrically unstable.
+        </div>
       </div>
     </div>
-    <div class="fusion-grid" id="fusion-grid">
-      <div class="loading">Loading triad data...</div>
-    </div>
-    <div class="panel" style="margin-top:1rem;">
-      <div id="fusion-plot"></div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Triad cards + centroid similarity</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <div class="fusion-grid" id="fusion-grid">
+          <div class="loading">Loading triad data...</div>
+        </div>
+        <div style="margin-top:1rem;">
+          <div id="fusion-plot"></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════ VERB BROWSER ═══════════════ -->
   <section id="verbs">
-    <div class="section-header">
-      <h2>Verb Browser</h2>
-      <p class="caveat">All 11,933 verb senses. Search, filter, audit individual classifications.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About this table</span>
-      </button>
-      <div class="explainer-body">
-        <p>Every classified verb sense with operator, confidence, scale, LLM reasoning, and runner-up alternative. Search, filter, and audit individual classifications.</p>
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">source</span>
+        <span class="cell-title">Verb Browser &mdash; how this works</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>All 11,933 classified verb senses. The "Reasoning" column is the LLM's one-sentence justification from the <a href="#methodology" style="color:var(--accent);">classification prompt</a>. Every single classification is auditable here.</p>
+        <div class="cell-code"><span class="cm"># scripts/04_llm_classify.py &rarr; verbs.json (2.0 MB, 11,933 entries)</span>
+<span class="cm"># Fields: verb, operator, confidence, scale, reason, alternative</span></div>
       </div>
     </div>
-    <div class="panel">
-      <div class="verb-controls">
-        <input type="text" id="verb-search" placeholder="Search verbs..." autocomplete="off">
-        <select id="verb-op-filter">
-          <option value="">All operators</option>
-        </select>
-        <select id="verb-conf-filter">
-          <option value="">All confidence</option>
-          <option value="H">High</option>
-          <option value="M">Medium</option>
-          <option value="L">Low</option>
-        </select>
-        <select id="verb-scale-filter">
-          <option value="">All scales</option>
-          <option value="phys">Physical</option>
-          <option value="soci">Social</option>
-          <option value="info">Informational</option>
-          <option value="psyc">Psychological</option>
-        </select>
-        <span class="verb-count" id="verb-count"></span>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Search, filter, audit</span>
+        <span class="cell-chevron">&#9654;</span>
       </div>
-      <div class="verb-table-wrap">
-        <table class="verb-table">
-          <thead>
-            <tr>
-              <th>Verb</th>
-              <th>Operator</th>
-              <th>Conf</th>
-              <th>Scale</th>
-              <th>Reasoning</th>
-              <th>Alt</th>
-            </tr>
-          </thead>
-          <tbody id="verb-tbody"></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ CROSSLINGUISTIC VERB BROWSER ═══════════════ -->
-  <section id="crossling">
-    <div class="section-header">
-      <h2>Crosslinguistic Verb Browser</h2>
-      <p class="caveat">27 languages, 14 families. Click any language to browse its classified verbs.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About crosslinguistic</span>
-      </button>
-      <div class="explainer-body">
-        <p>Same 9 operators applied across 27 languages, 14 families. Click any language to load its classified verbs.</p>
-      </div>
-    </div>
-    <div class="panel">
-      <div id="crossling-chart"></div>
-    </div>
-    <div class="crossling-lang-grid" id="crossling-lang-grid"></div>
-    <div class="crossling-detail" id="crossling-detail" style="display:none">
-      <div class="panel">
-        <div class="cl-header" id="crossling-lang-name"></div>
-        <div class="cl-header-meta" id="crossling-lang-meta"></div>
+      <div class="cell-body">
         <div class="verb-controls">
-          <input type="text" id="cl-verb-search" placeholder="Search verbs or glosses..." autocomplete="off">
-          <select id="cl-verb-op-filter">
+          <input type="text" id="verb-search" placeholder="Search verbs..." autocomplete="off">
+          <select id="verb-op-filter">
             <option value="">All operators</option>
           </select>
-          <select id="cl-verb-conf-filter">
+          <select id="verb-conf-filter">
             <option value="">All confidence</option>
-            <option value="high">High</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
+            <option value="H">High</option>
+            <option value="M">Medium</option>
+            <option value="L">Low</option>
           </select>
-          <span class="verb-count" id="cl-verb-count"></span>
+          <select id="verb-scale-filter">
+            <option value="">All scales</option>
+            <option value="phys">Physical</option>
+            <option value="soci">Social</option>
+            <option value="info">Informational</option>
+            <option value="psyc">Psychological</option>
+          </select>
+          <span class="verb-count" id="verb-count"></span>
         </div>
         <div class="verb-table-wrap">
           <table class="verb-table">
@@ -1644,12 +1641,82 @@ psychological    1,240  (10%)</div>
                 <th>Verb</th>
                 <th>Operator</th>
                 <th>Conf</th>
-                <th>Gloss</th>
+                <th>Scale</th>
+                <th>Reasoning</th>
                 <th>Alt</th>
               </tr>
             </thead>
-            <tbody id="cl-verb-tbody"></tbody>
+            <tbody id="verb-tbody"></tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CROSSLINGUISTIC VERB BROWSER ═══════════════ -->
+  <section id="crossling">
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">source</span>
+        <span class="cell-title">Crosslinguistic Browser &mdash; how this works</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>Same 9 operators applied across <strong>27 languages, 14 families</strong>. Each language's verbs were independently classified using the same prompt structure.</p>
+        <div class="cell-code"><span class="cm"># scripts/11_crossling.py &rarr; crossling.json + per-language GCS files</span>
+<span class="cm"># Independent classification per language, then z-score comparison</span></div>
+      </div>
+    </div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Language distribution</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <div id="crossling-chart"></div>
+      </div>
+    </div>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Click a language to drill down</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <div class="crossling-lang-grid" id="crossling-lang-grid"></div>
+        <div class="crossling-detail" id="crossling-detail" style="display:none">
+          <div style="margin-top:1rem;">
+            <div class="cl-header" id="crossling-lang-name"></div>
+            <div class="cl-header-meta" id="crossling-lang-meta"></div>
+            <div class="verb-controls">
+              <input type="text" id="cl-verb-search" placeholder="Search verbs or glosses..." autocomplete="off">
+              <select id="cl-verb-op-filter">
+                <option value="">All operators</option>
+              </select>
+              <select id="cl-verb-conf-filter">
+                <option value="">All confidence</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <span class="verb-count" id="cl-verb-count"></span>
+            </div>
+            <div class="verb-table-wrap">
+              <table class="verb-table">
+                <thead>
+                  <tr>
+                    <th>Verb</th>
+                    <th>Operator</th>
+                    <th>Conf</th>
+                    <th>Gloss</th>
+                    <th>Alt</th>
+                  </tr>
+                </thead>
+                <tbody id="cl-verb-tbody"></tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1657,51 +1724,48 @@ psychological    1,240  (10%)</div>
 
   <!-- ═══════════════ LOOKING FORWARD ═══════════════ -->
   <section id="forward">
-    <div class="section-header">
-      <h2>Open Questions &amp; Next Experiments</h2>
-      <p class="caveat">Real vulnerabilities and unknowns.</p>
-    </div>
-    <div class="explainer">
-      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
-        <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">About this section</span>
-      </button>
-      <div class="explainer-body">
-        <p>Known vulnerabilities and genuinely open questions. Each card is a place where the framework could break.</p>
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">&nbsp;</span>
+        <span class="cell-title">Open Questions &amp; Next Experiments</span>
+        <span class="cell-chevron">&#9654;</span>
       </div>
-    </div>
-    <div class="questions-grid">
-      <div class="question-card">
-        <h4>Is nine the right number?</h4>
-        <p>No sharp elbow at k=9 in silhouette scores. Some operators may need merging or splitting.</p>
-      </div>
-      <div class="question-card">
-        <h4>LLM classifier bias</h4>
-        <p>The LLM knew about the 9 operators. Mode B (definitions only) partially tests this — structure persists but weakens.</p>
-      </div>
-      <div class="question-card">
-        <h4>Cross-linguistic validation</h4>
-        <p>27 languages show z-scores below random, but effect varies. Small corpora show weak signals.</p>
-      </div>
-      <div class="question-card">
-        <h4>Type-signature formalization</h4>
-        <p>Can operators be defined as pure type signatures? Mode A uses them, but they were written by the same LLM.</p>
-      </div>
-      <div class="question-card">
-        <h4>Adversarial examples</h4>
-        <p>Find verbs that break the framework. Boundary verbs in the confusion matrix are a starting point.</p>
-      </div>
-      <div class="question-card">
-        <h4>Non-verb tests</h4>
-        <p>Do nouns, syntax, or narrative structures decompose the same way? Verbs are just the first test.</p>
-      </div>
-      <div class="question-card">
-        <h4>The INS problem</h4>
-        <p>INS contains 63% of all verbs (7,528). Genuine prevalence or catch-all bin?</p>
-      </div>
-      <div class="question-card">
-        <h4>SUP's vanishing act</h4>
-        <p>Only 19 verbs as SUP. Cross-linguistically 0%–2.5% — consistently tiny but nonzero.</p>
+      <div class="cell-body">
+        <p>Known vulnerabilities and genuinely open questions. Each is a place where the framework could break.</p>
+        <div class="questions-grid">
+          <div class="question-card">
+            <h4>Is nine the right number?</h4>
+            <p>No sharp elbow at k=9 in silhouette scores. Some operators may need merging or splitting.</p>
+          </div>
+          <div class="question-card">
+            <h4>LLM classifier bias</h4>
+            <p>The LLM knew about the 9 operators. Mode B (definitions only) partially tests this &mdash; structure persists but weakens.</p>
+          </div>
+          <div class="question-card">
+            <h4>Cross-linguistic validation</h4>
+            <p>27 languages show z-scores below random, but effect varies. Small corpora show weak signals.</p>
+          </div>
+          <div class="question-card">
+            <h4>Type-signature formalization</h4>
+            <p>Can operators be defined as pure type signatures? Mode A uses them, but they were written by the same LLM.</p>
+          </div>
+          <div class="question-card">
+            <h4>Adversarial examples</h4>
+            <p>Find verbs that break the framework. Boundary verbs in the confusion matrix are a starting point.</p>
+          </div>
+          <div class="question-card">
+            <h4>Non-verb tests</h4>
+            <p>Do nouns, syntax, or narrative structures decompose the same way? Verbs are just the first test.</p>
+          </div>
+          <div class="question-card">
+            <h4>The INS problem</h4>
+            <p>INS contains 63% of all verbs (7,528). Genuine prevalence or catch-all bin?</p>
+          </div>
+          <div class="question-card">
+            <h4>SUP's vanishing act</h4>
+            <p>Only 19 verbs as SUP. Cross-linguistically 0%&ndash;2.5% &mdash; consistently tiny but nonzero.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
