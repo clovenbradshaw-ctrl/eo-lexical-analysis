@@ -75,7 +75,7 @@ THE NINE OPERATORS:
    Yes: translate, reinterpret, convert, reframe, disguise, decode, rethink, paraphrase, adapt
    No: "restructure" (that changes the thing itself, not just the view — that's REC)
 
-8. SUP (⊕) — Superpose: contradictions coexist
+8. SUP (∥) — Superpose: contradictions coexist
    Input: a resolved state. Output: an unresolved state where incompatible values are held together.
    The verb creates or maintains a condition where MULTIPLE INCOMPATIBLE things are simultaneously true.
    Yes: contradict, conflict, equivocate, straddle, oscillate, haunt, paradox, complicate

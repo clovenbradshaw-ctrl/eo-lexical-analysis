@@ -137,7 +137,7 @@ Transform the framework applied to something without changing the thing
 itself. The substrate persists; the perspective or state-frame rotates.
 Examples: reinterpret, freeze, alternate, americanize, clarify, translate.
 
-SUP (⊕) — HOLD INCOMPATIBLE WITHOUT RESOLUTION
+SUP (∥) — HOLD INCOMPATIBLE WITHOUT RESOLUTION
 Maintain multiple mutually exclusive values simultaneously without
 collapsing into any one. Stable coexistence of contradiction.
 Examples: vacillate, contradict, straddle, doubt, haunt, equivocate.
@@ -571,7 +571,7 @@ def phase3_analyze():
 
     # ── SUP ANALYSIS ──────────────────────────────────────────────
     print(f"\n{'='*70}")
-    print("  SUP (⊕) ACROSS LANGUAGES")
+    print("  SUP (∥) ACROSS LANGUAGES")
     print(f"{'='*70}")
 
     sup_data = [(lang, d['op_pcts'].get('SUP', 0), d['op_counts'].get('SUP', 0), d['n_classified'])
@@ -757,7 +757,7 @@ def phase3_analyze():
         bars = ax.barh(range(len(langs_sup)), pcts_sup, color=colors)
         ax.set_yticks(range(len(langs_sup)))
         ax.set_yticklabels([f"{l} [{all_langs[l]['family']}]" for l in langs_sup], fontsize=9)
-        ax.set_xlabel("SUP (⊕) as % of all verbs")
+        ax.set_xlabel("SUP (∥) as % of all verbs")
         ax.set_title("Superposition Operator Across Languages\n(red=ancient, orange=medieval, blue=modern)")
         ax.invert_yaxis()
         plt.tight_layout()
