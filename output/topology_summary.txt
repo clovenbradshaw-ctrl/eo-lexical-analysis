@@ -341,7 +341,7 @@ EO OPERATOR TOPOLOGY: CENTROIDS, HORIZONS, AND EMPIRICAL DEFINITIONS
     recode                    → actually near REC [margin=-0.025]
 
 ──────────────────────────────────────────────────────────────────────
-  SUP (⊕) — 19 verbs
+  SUP (∥) — 19 verbs
 ──────────────────────────────────────────────────────────────────────
 
   TERRITORY:

@@ -31,7 +31,7 @@ def build_operators():
     operators = {}
     op_order = ["NUL", "DES", "INS", "SEG", "CON", "SYN", "ALT", "SUP", "REC"]
     symbols = {"NUL": "∅", "DES": "⊡", "INS": "△", "SEG": "｜", "CON": "⋈",
-               "SYN": "∨", "ALT": "∿", "SUP": "⊕", "REC": "⟳"}
+               "SYN": "∨", "ALT": "∿", "SUP": "∥", "REC": "⟳"}
     triads = {
         "NUL": "Existence", "DES": "Existence", "INS": "Existence",
         "SEG": "Structure", "CON": "Structure", "SYN": "Structure",

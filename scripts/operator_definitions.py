@@ -136,7 +136,7 @@ OPERATORS = {
         "verbs_seed": ["switch","alternate","reframe","reinterpret","translate","convert","toggle","shift","pivot","transform","transpose","remap","recontextualize","redefine","recalibrate","recast","reread","reorient","modulate","vary"],
     },
     "SUP": {
-        "symbol": "⊕",
+        "symbol": "∥",
         "short_def": "Hold multiple incompatible values simultaneously without forcing resolution.",
         "full_spec": (
             "SUP superposes — it represents multiple co-valid observations simultaneously "
