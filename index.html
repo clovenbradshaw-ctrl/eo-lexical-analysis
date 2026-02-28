@@ -181,21 +181,21 @@ main {
 }
 
 section {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   scroll-margin-top: 64px;
 }
 
 .section-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .section-header h2 {
   font-family: var(--mono);
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--white);
   letter-spacing: -0.02em;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .section-header .caveat {
@@ -219,39 +219,39 @@ section {
    HERO / ABOUT
    ═══════════════════════════════════════════════════════════════ */
 .hero {
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 1.5rem;
   max-width: 800px;
 }
 
 .hero h1 {
   font-family: var(--mono);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--white);
   letter-spacing: -0.03em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .hero .subtitle {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: var(--text);
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .hero .invitation {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--text-dim);
   border-left: 2px solid var(--border);
   padding-left: 1rem;
   font-style: italic;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .stat-row {
   display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
 }
 
@@ -996,9 +996,9 @@ footer a:hover { color: var(--text); }
 .explainer {
   background: var(--explainer-bg);
   border: 1px solid var(--explainer-border);
-  border-left: 3px solid var(--explainer-accent);
+  border-left: 2px solid var(--explainer-accent);
   border-radius: var(--panel-radius);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   overflow: hidden;
   transition: border-color 0.2s;
 }
@@ -1095,25 +1095,21 @@ footer a:hover { color: var(--text); }
     <div class="hero">
       <h1>Experiential Ontology<br>Lexical Analysis</h1>
       <p class="subtitle">
-        An open workbench for examining a philosophical experiment: do nine formal operators — a proposed grammar of transformation types — have empirical reality in natural language?
-        ~12,000 English verb senses were classified, embedded, and measured. The data is here so you can audit it.
+        Nine transformation operators. ~12,000 classified verb senses. All data open for audit.
       </p>
 
-      <div class="explainer open">
+      <div class="explainer">
         <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
           <span class="explainer-icon">&#9654;</span>
-          <span class="explainer-label">Wait, what is this? (plain-English explainer)</span>
+          <span class="explainer-label">What is this?</span>
         </button>
         <div class="explainer-body">
-          <p><strong>The big idea:</strong> Someone proposed that every verb in every language — "run," "think," "create," "destroy," all of them — is doing one of only 9 types of transformation. Not 9 random categories, but 9 specific patterns arranged in a tidy structure of three groups of three.</p>
-          <p><strong>The question:</strong> Is that actually true, or is it just a nice-sounding theory? This site is the experiment. We took nearly 12,000 English verb meanings, had an AI classify each one into one of the 9 types, and then ran math on the results to see if the categories hold up.</p>
-          <p><strong>What you'll find here:</strong> Interactive charts that let you explore whether these 9 categories are "real" — meaning verbs in the same category cluster together mathematically, not just because someone said they should. You can search individual verbs, see where the AI was confused, and judge for yourself.</p>
-          <div class="eli5">Think of it like this: someone says all recipes are either baking, frying, boiling, grilling, steaming, braising, roasting, sauteing, or poaching. This project checks whether that's a genuine pattern in cooking or just an arbitrary way to slice things up.</div>
+          <p>EO proposed that every verb in every language performs one of 9 transformation types, arranged as three triads. This site tests that claim empirically: ~12,000 verb senses classified by LLM, embedded, and measured. Explore whether the categories cluster mathematically or are just imposed.</p>
         </div>
       </div>
 
       <p class="invitation">
-        These are preliminary explorations, not proven conclusions. The data is here so you can examine the methodology, audit the classifications, identify weaknesses, and propose better experiments. The strongest version of this framework is the one that survives serious attempts to break it.
+        Preliminary explorations, not conclusions. Break it if you can.
       </p>
       <div class="stat-row">
         <div class="stat-item"><span>11,933</span> verb senses classified</div>
@@ -1128,20 +1124,15 @@ footer a:hover { color: var(--text); }
   <section id="operators">
     <div class="section-header">
       <h2>Operator Overview</h2>
-      <p class="caveat">Nine operators arranged in three triads, each following the generative pattern: operator&#x2081; + operator&#x2082; &#x2192; operator&#x2083;. Click any operator to explore its verb population, prototypes, and boundary cases.</p>
+      <p class="caveat">Three triads, generative pattern: op&#x2081; + op&#x2082; &#x2192; op&#x2083;. Click to explore.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">What am I looking at? (plain-English explainer)</span>
+        <span class="explainer-label">About operators</span>
       </button>
       <div class="explainer-body">
-        <p><strong>The 9 operators</strong> are the proposed "building blocks" of what verbs do. They're grouped into three families of three:</p>
-        <p><strong>Existence</strong> (the warm-colored ones) — about whether something exists: <strong>Nullification</strong> (making something not exist, like "erase" or "destroy"), <strong>Designation</strong> (pointing at or naming something, like "identify" or "label"), and <strong>Instantiation</strong> (bringing something into being, like "create" or "build").</p>
-        <p><strong>Structure</strong> (the blue ones) — about how things are arranged: <strong>Segmentation</strong> (dividing things, like "split" or "separate"), <strong>Connection</strong> (joining things, like "link" or "attach"), and <strong>Synthesis</strong> (merging into something new, like "blend" or "unify").</p>
-        <p><strong>Interpretation</strong> (the purple ones) — about how things are understood: <strong>Alternation</strong> (switching between states, like "toggle" or "swap"), <strong>Superposition</strong> (holding multiple states at once, like "overlap"), and <strong>Recursion</strong> (self-reference or looping, like "repeat" or "reflect").</p>
-        <p>The pattern "op1 + op2 &#8594; op3" means the third operator in each group is supposedly the combination of the first two. Click any operator card to see its best examples and edge cases.</p>
-        <div class="eli5">Imagine all verbs fall into three big families (Existence, Structure, Interpretation), and each family has three members. The first member is about "doing less," the second about "doing more," and the third is both combined. This chart lets you browse all nine and see which verbs belong where.</div>
+        <p>Three triads: <strong>Existence</strong> (NUL, DES, INS) — whether things exist. <strong>Structure</strong> (SEG, CON, SYN) — how things arrange. <strong>Interpretation</strong> (ALT, SUP, REC) — how things are understood. In each triad, op&#x2081; + op&#x2082; &#8594; op&#x2083;. Click any card for examples.</p>
       </div>
     </div>
     <div class="triads-grid" id="triads-grid">
@@ -1154,19 +1145,15 @@ footer a:hover { color: var(--text); }
   <section id="embeddings">
     <div class="section-header">
       <h2>Embedding Explorer</h2>
-      <p class="caveat">3D PCA projection of verb definition embeddings (English, crosslinguistic corpus), colored by operator assignment. Unsupervised clustering found no alignment at k=9 — the structure only appears when the LLM classifies first. How much of this is the LLM imposing categories it was told about? The centroids (large markers) show where each operator's verbs cluster; the scatter shows individual verbs.</p>
+      <p class="caveat">3D PCA of definition embeddings, colored by operator. Unsupervised k=9 finds no alignment — structure appears only after LLM classification.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">What is this 3D chart? (plain-English explainer)</span>
+        <span class="explainer-label">About this chart</span>
       </button>
       <div class="explainer-body">
-        <p><strong>What you're seeing:</strong> Each tiny dot is one of the ~12,000 verbs, floating in 3D space. Verbs that mean similar things appear near each other. The dots are colored by which of the 9 operators they were assigned to.</p>
-        <p><strong>How it works:</strong> An AI read each verb's dictionary definition and converted the meaning into a long list of numbers (an "embedding" — think of it as a mathematical fingerprint of meaning). Those number-lists live in a space with thousands of dimensions. We squashed that down to 3 dimensions so humans can see it — that's the "PCA projection" part.</p>
-        <p><strong>What to look for:</strong> If the 9 operator categories are real, verbs of the same color should clump together. The big diamond markers show the average position of each operator's verbs. You can drag to rotate, scroll to zoom.</p>
-        <p><strong>The catch:</strong> When the computer tries to find 9 groups on its own (without being told the categories), it doesn't find these same groups. The clusters only show up after the AI classifies verbs into categories it was told about. That's a red flag — it might mean the AI is just imposing the pattern rather than discovering it.</p>
-        <div class="eli5">Imagine you dumped 12,000 colored balls into a room — each color represents a verb category. This 3D chart shows where those balls landed. If the colors form neat clusters, the categories might be real. If they're all mixed up, maybe the categories are made up. You be the judge.</div>
+        <p>Each dot is a verb in 3D PCA space, colored by operator. Diamonds are centroids. If categories are real, same-colored dots should cluster. Caveat: unsupervised clustering at k=9 doesn't find these groups — they only appear after LLM classification.</p>
       </div>
     </div>
     <div class="panel">
@@ -1184,19 +1171,15 @@ footer a:hover { color: var(--text); }
   <section id="confusion">
     <div class="section-header">
       <h2>Confusion Matrix</h2>
-      <p class="caveat">Every operator's primary confusion is with INS. Is this because instantiation is genuinely the existential ground of the system, or because INS is a poorly-bounded catch-all that absorbs 63% of all verbs? Look at the actual verbs on each boundary and decide. Click any cell to see the verbs that live on that boundary.</p>
+      <p class="caveat">Every operator's primary confusion is with INS (63% of all verbs). Click any cell for boundary verbs.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">What's a confusion matrix? (plain-English explainer)</span>
+        <span class="explainer-label">About confusion</span>
       </button>
       <div class="explainer-body">
-        <p><strong>What this shows:</strong> When the AI classified each verb, it picked a "winner" (the best-fitting operator) and a "runner-up" (the second-best). This grid shows how often each pair of operators appeared as winner and runner-up.</p>
-        <p><strong>How to read it:</strong> The row is the operator the verb was assigned to. The column is what the AI almost chose instead. Brighter cells mean more verbs were toss-ups between those two operators. Click any cell to see the actual verbs that the AI found hard to decide between.</p>
-        <p><strong>What it reveals:</strong> INS (Instantiation — "bring into being") shows up everywhere. Almost every operator's biggest confusion is with INS. This could mean INS is genuinely fundamental to language, or it could mean INS is a vague catch-all that absorbs everything the AI isn't sure about.</p>
-        <p><strong>"Boundary verbs"</strong> are the interesting ones — verbs that sit right on the line between two categories. They're where the framework gets tested hardest. If a verb makes sense in both categories, the boundary might be real. If it's just a bad classification, the category might be too blurry.</p>
-        <div class="eli5">Picture a teacher grading essays into 9 categories. This chart shows which categories the teacher most often hesitated between. If "Category A" and "Category B" have a bright square, lots of essays could've gone either way. Click a square to see the specific essays that were hard to grade.</div>
+        <p>Row = assigned operator, column = runner-up. Brighter cells = more toss-ups. Click any cell to see the boundary verbs. Note: INS dominates every row — either genuinely fundamental or a catch-all.</p>
       </div>
     </div>
     <div class="confusion-container">
@@ -1214,22 +1197,15 @@ footer a:hover { color: var(--text); }
   <section id="metrics">
     <div class="section-header">
       <h2>Metrics Dashboard</h2>
-      <p class="caveat">These z-scores look dramatic, but z-scores can be inflated by high dimensionality (3072 dims). What would these numbers look like with a different embedding model? A different classifier? Different operator definitions? The three modes test how much structure comes from the LLM's reasoning vs. dictionary definitions alone.</p>
+      <p class="caveat">Z-scores may inflate in 3072 dims. Three modes test LLM reasoning vs. definitions alone.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">What do these numbers mean? (plain-English explainer)</span>
+        <span class="explainer-label">About metrics</span>
       </button>
       <div class="explainer-body">
-        <p><strong>This is the scorecard.</strong> Each number answers a different version of the question: "Are these 9 categories statistically real?"</p>
-        <p><strong>ARI (Adjusted Rand Index):</strong> If you let a computer group the verbs on its own (without telling it about the 9 operators), how much does it agree with our classification? 0 = no agreement (random), 1 = perfect agreement. Low scores here mean the computer would draw different lines than we did.</p>
-        <p><strong>NMI (Normalized Mutual Information):</strong> How much does knowing which computer-group a verb is in tell you about which operator it belongs to? 0 = knowing one tells you nothing about the other. 1 = knowing one tells you everything.</p>
-        <p><strong>Silhouette:</strong> For each verb, is it closer to other verbs in its own operator, or closer to verbs in a different operator? Higher = verbs stick with their own kind. Negative = verbs are closer to a different group (bad sign).</p>
-        <p><strong>Z-score:</strong> How far from "random" are our operator groupings? A very negative z-score means the operators are much more separated than random groups would be. But beware: this number can be inflated when you have lots of dimensions (and we have 3,072).</p>
-        <p><strong>The three modes</strong> are a bias test. Mode A uses the AI's own reasoning. Mode B uses only dictionary definitions (no operator info). Mode C combines both. If structure disappears in Mode B, the AI might be seeing patterns it created.</p>
-        <p><strong>Taxonomy Comparison</strong> (below) compares our 9 operators against other ways to group verbs — like by word origin, by grammatical category, etc. This tells you if the operators are doing something special or if any grouping would look this good.</p>
-        <div class="eli5">Imagine you sorted your music into 9 mood-based playlists. These numbers measure whether songs in the same playlist actually sound alike (silhouette), whether a blind algorithm would sort them the same way (ARI), and whether your playlists are more coherent than random shuffles (z-score). The three "modes" check if you're just imagining the patterns.</div>
+        <p><strong>ARI/NMI:</strong> agreement between unsupervised clusters and operator labels (0=random, 1=perfect). <strong>Silhouette:</strong> within-cluster vs. between-cluster distance. <strong>Z-score:</strong> separation vs. random baseline (inflatable in high dims). Three modes test bias: A=LLM reasoning, B=definitions only, C=combined.</p>
       </div>
     </div>
     <div class="metrics-grid" id="metrics-grid">
@@ -1237,7 +1213,7 @@ footer a:hover { color: var(--text); }
     </div>
     <div class="panel taxonomy-bar" id="taxonomy-bar" style="margin-top:1.5rem;">
       <h3 style="font-family:var(--mono);font-size:0.85rem;font-weight:600;color:var(--white);margin-bottom:0.5rem;">Taxonomy Comparison</h3>
-      <p style="font-size:0.78rem;color:var(--text-dim);margin-bottom:1rem;">Z-scores of centroid separation for different ways of grouping the same verbs. Higher magnitude = groups are more separated than random. EO operators show more separation than random but less than some coarser groupings.</p>
+      <p style="font-size:0.78rem;color:var(--text-dim);margin-bottom:1rem;">Centroid separation z-scores across grouping methods.</p>
       <div id="taxonomy-bars"></div>
     </div>
   </section>
@@ -1246,20 +1222,15 @@ footer a:hover { color: var(--text); }
   <section id="fusion">
     <div class="section-header">
       <h2>Triad Fusion Visualizer</h2>
-      <p class="caveat">The generative pattern: operator&#x2081; + operator&#x2082; &#x2192; operator&#x2083;. Does the geometric midpoint of the first two operators predict the third's location? The pattern appears consistent across all three triads — but SUP's small sample size (19 verbs in WordNet English) makes the Interpretation triad geometrically unstable. Is the pattern real or an artifact of sparse data?</p>
+      <p class="caveat">Does midpoint of op&#x2081;, op&#x2082; predict op&#x2083;? Pattern holds, but SUP (19 verbs) makes Interpretation triad unstable.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">What's "triad fusion"? (plain-English explainer)</span>
+        <span class="explainer-label">About fusion</span>
       </button>
       <div class="explainer-body">
-        <p><strong>The claim:</strong> In each group of three operators, the third one is the "child" of the first two. Nullification + Designation = Instantiation. Segmentation + Connection = Synthesis. Alternation + Superposition = Recursion.</p>
-        <p><strong>How we test it:</strong> We find the average position of each operator's verbs in mathematical space (the "centroid"). Then we check: is the third operator's centroid near the midpoint of the other two? If so, the "fusion" idea has geometric support.</p>
-        <p><strong>The similarity numbers</strong> measure how close pairs of operators are to each other. Higher = more similar. The "Midpoint approximation" asks: if you averaged the first two operators, how close would you get to the third?</p>
-        <p><strong>The catch:</strong> The Interpretation triad (ALT, SUP, REC) is shaky because SUP (Superposition) only has 19 verbs in English. With so few data points, the centroid is unreliable — like trying to find the "average" of a tiny sample.</p>
-        <p><strong>The bar chart below</strong> visualizes these same similarity scores side by side so you can compare the three triads at a glance.</p>
-        <div class="eli5">Imagine three recipes: dish A, dish B, and dish C. The theory says dish C is a combination of A and B — like how a s'more combines chocolate and marshmallow. This section checks whether C's flavor profile really sits between A and B, or whether that's just a coincidence.</div>
+        <p>Does the geometric midpoint of op&#x2081; and op&#x2082; predict op&#x2083;'s centroid? Pattern holds across all triads, but SUP's tiny sample (19 verbs) makes the Interpretation triad unstable.</p>
       </div>
     </div>
     <div class="fusion-grid" id="fusion-grid">
@@ -1274,23 +1245,15 @@ footer a:hover { color: var(--text); }
   <section id="verbs">
     <div class="section-header">
       <h2>Verb Browser</h2>
-      <p class="caveat">All 11,933 classified verb senses. Search, filter by operator or confidence, and examine the LLM's reasoning for each classification. This is where you can audit individual decisions — find the verbs you think are misclassified, the edge cases that don't fit, the places where the framework strains.</p>
+      <p class="caveat">All 11,933 verb senses. Search, filter, audit individual classifications.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">How do I read this table? (plain-English explainer)</span>
+        <span class="explainer-label">About this table</span>
       </button>
       <div class="explainer-body">
-        <p><strong>This is the raw data.</strong> Every single verb that was classified, along with the AI's reasoning for why it picked each category.</p>
-        <p><strong>Verb:</strong> The word itself (often a specific "sense" — "run a race" vs. "run a company" are different entries).</p>
-        <p><strong>Operator:</strong> Which of the 9 categories the AI assigned it to (the colored label).</p>
-        <p><strong>Conf (Confidence):</strong> How sure the AI was. High = very confident, Medium = fairly sure, Low = it was a close call.</p>
-        <p><strong>Scale:</strong> The domain the verb operates in — physical (touching, moving), social (relating to others), psychological (thinking, feeling), or informational (data, communication).</p>
-        <p><strong>Reasoning:</strong> The AI's explanation for its choice, in its own words. This is where you can judge whether the classification makes sense.</p>
-        <p><strong>Alt (Alternative):</strong> The runner-up operator — what the AI would have picked if forced to choose differently. If this column often shows a particular operator, the boundary between those two categories might be blurry.</p>
-        <p>Use the search box to look up specific verbs, or the dropdown filters to browse by operator or confidence level.</p>
-        <div class="eli5">This is a giant spreadsheet of every verb and why the AI sorted it the way it did. Search for your favorite verb, read the reasoning, and see if you agree. If you find obvious mistakes, that's valuable feedback — it means the categories might need work.</div>
+        <p>Every classified verb sense with operator, confidence, scale, LLM reasoning, and runner-up alternative. Search, filter, and audit individual classifications.</p>
       </div>
     </div>
     <div class="panel">
@@ -1329,17 +1292,15 @@ footer a:hover { color: var(--text); }
   <section id="crossling">
     <div class="section-header">
       <h2>Crosslinguistic Verb Browser</h2>
-      <p class="caveat">Operator distributions across 27 typologically diverse languages spanning 14 families and 4 historical eras. The stacked bars show each language's operator profile. Click any language to load and browse its classified verbs from the cloud corpus.</p>
+      <p class="caveat">27 languages, 14 families. Click any language to browse its classified verbs.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">What am I looking at? (plain-English explainer)</span>
+        <span class="explainer-label">About crosslinguistic</span>
       </button>
       <div class="explainer-body">
-        <p><strong>This is the same 9-operator analysis applied to 27 different languages.</strong> Each bar shows what percentage of a language's verbs fell into each category. If the framework captures something real about how verbs work, the overall shape should look roughly similar across languages &mdash; and it does.</p>
-        <p><strong>Click any language</strong> in the chart or in the grid below to load its full verb list from the cloud corpus. You can then search and filter individual verbs, see their English glosses, and check the operator assignments.</p>
-        <div class="eli5">Same categories, different languages. Click one to see its verbs.</div>
+        <p>Same 9 operators applied across 27 languages, 14 families. Click any language to load its classified verbs.</p>
       </div>
     </div>
     <div class="panel">
@@ -1385,63 +1346,56 @@ footer a:hover { color: var(--text); }
   <section id="forward">
     <div class="section-header">
       <h2>Open Questions &amp; Next Experiments</h2>
-      <p class="caveat">These are genuine invitations, not rhetorical flourishes. Each represents a real vulnerability in the current analysis or a genuinely unknown next step.</p>
+      <p class="caveat">Real vulnerabilities and unknowns.</p>
     </div>
     <div class="explainer">
       <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
         <span class="explainer-icon">&#9654;</span>
-        <span class="explainer-label">Why does this section matter? (plain-English explainer)</span>
+        <span class="explainer-label">About this section</span>
       </button>
       <div class="explainer-body">
-        <p><strong>This is the honesty section.</strong> Every analysis has weaknesses, and listing them openly is how science works. Each card below describes a real problem or unanswered question about this project.</p>
-        <p><strong>Why it matters:</strong> If someone presents a theory and doesn't mention its weak points, be suspicious. These questions represent the places where the framework could break — and where the most interesting work remains to be done.</p>
-        <p>Some highlights in plain English:</p>
-        <p><strong>"Is nine the right number?"</strong> — Maybe there should be 7 operators, or 12. The data doesn't strongly point to exactly 9.</p>
-        <p><strong>"LLM classifier bias"</strong> — The AI was told about the 9 categories before classifying. It might just be confirming what it was told, not discovering real patterns.</p>
-        <p><strong>"The INS problem"</strong> — One category (Instantiation) contains 63% of all verbs. That's suspiciously dominant — it might just be a "miscellaneous" bin.</p>
-        <p><strong>"SUP's vanishing act"</strong> — One category (Superposition) has only 19 verbs. That's suspiciously tiny — is it a real category or a rounding error?</p>
-        <div class="eli5">This is the "here's what could be wrong" section. Good research admits its weaknesses. Each card is basically saying "we don't know if this part holds up yet — here's how you could test it."</div>
+        <p>Known vulnerabilities and genuinely open questions. Each card is a place where the framework could break.</p>
       </div>
     </div>
     <div class="questions-grid">
       <div class="question-card">
         <h4>Is nine the right number?</h4>
-        <p>Would unsupervised clustering find better structure at k=7 or k=12? What if some operators should merge (ALT+REC?) or split? The k-sweep data is available in the metrics panel — the silhouette scores show no sharp elbow at 9.</p>
+        <p>No sharp elbow at k=9 in silhouette scores. Some operators may need merging or splitting.</p>
       </div>
       <div class="question-card">
         <h4>LLM classifier bias</h4>
-        <p>The LLM was told about nine operators. How much structure is it imposing? Replicate with a different LLM, different operator descriptions, or blind classification. The "Definition-only" Mode B partially tests this — structure persists but weakens.</p>
+        <p>The LLM knew about the 9 operators. Mode B (definitions only) partially tests this — structure persists but weakens.</p>
       </div>
       <div class="question-card">
         <h4>Cross-linguistic validation</h4>
-        <p>Does the pattern hold in verb systems with very different structures? 27 languages show z-scores consistently below random, but the effect varies enormously. Small corpora (Tagalog, Tamil) show weak signals — is that noise or genuine typological variation?</p>
+        <p>27 languages show z-scores below random, but effect varies. Small corpora show weak signals.</p>
       </div>
       <div class="question-card">
         <h4>Type-signature formalization</h4>
-        <p>Can the operators be defined as pure input&#x2192;output type signatures, and do those signatures predict classification better than natural language descriptions? Mode A already uses type-signature embeddings — but the signatures were written by the same LLM.</p>
+        <p>Can operators be defined as pure type signatures? Mode A uses them, but they were written by the same LLM.</p>
       </div>
       <div class="question-card">
         <h4>Adversarial examples</h4>
-        <p>Find verbs that genuinely break the framework — actions that can't be classified into any operator, or that equally belong to three or more. The boundary verbs in the confusion matrix are a starting point. Can you find worse cases?</p>
+        <p>Find verbs that break the framework. Boundary verbs in the confusion matrix are a starting point.</p>
       </div>
       <div class="question-card">
         <h4>Non-verb tests</h4>
-        <p>EO claims to describe transformations generally. Do noun-formation patterns, syntactic constructions, or narrative structures decompose the same way? The verb lexicon is just the first test case.</p>
+        <p>Do nouns, syntax, or narrative structures decompose the same way? Verbs are just the first test.</p>
       </div>
       <div class="question-card">
         <h4>The INS problem</h4>
-        <p>INS contains 63% of all verbs — 7,528 of 11,933. Is this a meaningful finding about the prevalence of "bringing into being" in language, or is INS simply absorbing everything the classifier can't confidently place elsewhere?</p>
+        <p>INS contains 63% of all verbs (7,528). Genuine prevalence or catch-all bin?</p>
       </div>
       <div class="question-card">
         <h4>SUP's vanishing act</h4>
-        <p>Only 19 verbs classified as SUP in English WordNet. Is superposition genuinely rare in lexicalized verb forms, or is the operator too narrowly defined? Cross-linguistic data shows SUP ranges from 0% to 2.5% — consistently tiny but nonzero.</p>
+        <p>Only 19 verbs as SUP. Cross-linguistically 0%–2.5% — consistently tiny but nonzero.</p>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  EO Lexical Analysis — Open Workbench &middot; Data and analysis are preliminary, not conclusions &middot; <a href="https://github.com/clovenbradshaw-ctrl/eo-lexical-analysis">Source on GitHub</a>
+  EO Lexical Analysis &middot; <a href="https://github.com/clovenbradshaw-ctrl/eo-lexical-analysis">Source</a>
 </footer>
 
 <script>
