@@ -787,6 +787,85 @@ section {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   CROSSLINGUISTIC VERB BROWSER
+   ═══════════════════════════════════════════════════════════════ */
+.crossling-lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.crossling-lang-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.crossling-lang-card:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-dim);
+}
+
+.crossling-lang-card.active {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.crossling-lang-card .cl-name {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.crossling-lang-card .cl-meta {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  margin-top: 0.15rem;
+}
+
+.crossling-lang-card .cl-bar {
+  display: flex;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.4rem;
+}
+
+.crossling-detail {
+  margin-top: 1rem;
+}
+
+.crossling-detail .cl-header {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.15rem;
+}
+
+.crossling-detail .cl-header-meta {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.verb-table .col-gloss {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  max-width: 300px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .crossling-lang-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    LOOKING FORWARD
    ═══════════════════════════════════════════════════════════════ */
 .questions-grid {
@@ -1001,6 +1080,7 @@ footer a:hover { color: var(--text); }
     <a href="#metrics">Metrics</a>
     <a href="#fusion">Triads</a>
     <a href="#verbs">Verbs</a>
+    <a href="#crossling">Crossling</a>
     <a href="#forward">Open Questions</a>
     <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">
       <span class="theme-icon" id="theme-icon">&#9790;</span>
@@ -1245,6 +1325,62 @@ footer a:hover { color: var(--text); }
     </div>
   </section>
 
+  <!-- ═══════════════ CROSSLINGUISTIC VERB BROWSER ═══════════════ -->
+  <section id="crossling">
+    <div class="section-header">
+      <h2>Crosslinguistic Verb Browser</h2>
+      <p class="caveat">Operator distributions across 27 typologically diverse languages spanning 14 families and 4 historical eras. The stacked bars show each language's operator profile. Click any language to load and browse its classified verbs from the cloud corpus.</p>
+    </div>
+    <div class="explainer">
+      <button class="explainer-toggle" onclick="this.parentElement.classList.toggle('open')">
+        <span class="explainer-icon">&#9654;</span>
+        <span class="explainer-label">What am I looking at? (plain-English explainer)</span>
+      </button>
+      <div class="explainer-body">
+        <p><strong>This is the same 9-operator analysis applied to 27 different languages.</strong> Each bar shows what percentage of a language's verbs fell into each category. If the framework captures something real about how verbs work, the overall shape should look roughly similar across languages &mdash; and it does.</p>
+        <p><strong>Click any language</strong> in the chart or in the grid below to load its full verb list from the cloud corpus. You can then search and filter individual verbs, see their English glosses, and check the operator assignments.</p>
+        <div class="eli5">Same categories, different languages. Click one to see its verbs.</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div id="crossling-chart"></div>
+    </div>
+    <div class="crossling-lang-grid" id="crossling-lang-grid"></div>
+    <div class="crossling-detail" id="crossling-detail" style="display:none">
+      <div class="panel">
+        <div class="cl-header" id="crossling-lang-name"></div>
+        <div class="cl-header-meta" id="crossling-lang-meta"></div>
+        <div class="verb-controls">
+          <input type="text" id="cl-verb-search" placeholder="Search verbs or glosses..." autocomplete="off">
+          <select id="cl-verb-op-filter">
+            <option value="">All operators</option>
+          </select>
+          <select id="cl-verb-conf-filter">
+            <option value="">All confidence</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          <span class="verb-count" id="cl-verb-count"></span>
+        </div>
+        <div class="verb-table-wrap">
+          <table class="verb-table">
+            <thead>
+              <tr>
+                <th>Verb</th>
+                <th>Operator</th>
+                <th>Conf</th>
+                <th>Gloss</th>
+                <th>Alt</th>
+              </tr>
+            </thead>
+            <tbody id="cl-verb-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════ LOOKING FORWARD ═══════════════ -->
   <section id="forward">
     <div class="section-header">
@@ -1379,6 +1515,7 @@ function replotAllCharts() {
     var cm = DATA.metrics.modes[0].centroid_matrix;
     plotFusionBars(cm, triads);
   }
+  if (DATA.crossling) plotCrosslingChart();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -1404,21 +1541,24 @@ async function loadJSON(name) {
 }
 
 async function loadAllData() {
-  const [operators, confusion, boundaries, metrics, embeddings, influence] = await Promise.all([
+  const [operators, confusion, boundaries, metrics, embeddings, influence, crossling] = await Promise.all([
     loadJSON('operators.json'),
     loadJSON('confusion.json'),
     loadJSON('boundaries.json'),
     loadJSON('metrics.json'),
     loadJSON('embeddings.json'),
     loadJSON('influence.json'),
+    loadJSON('crossling.json'),
   ]);
-  DATA = { operators, confusion, boundaries, metrics, embeddings, influence };
+  DATA = { operators, confusion, boundaries, metrics, embeddings, influence, crossling };
+  DATA.crosslingVerbs = {};
 
   renderOperators();
   renderConfusion();
   renderMetrics();
   renderEmbeddings();
   renderFusion();
+  renderCrossling();
 
   // Verbs loaded separately (large file)
   loadJSON('verbs.json').then(function(verbs) {
@@ -2021,6 +2161,209 @@ function filterVerbs() {
       '<td class="col-conf">' + scaleFull + '</td>' +
       '<td class="col-reason">' + escHtml(v.r) + '</td>' +
       '<td class="col-alt">' + (v.a ? escHtml(v.a) : '\u2014') + '</td>' +
+    '</tr>';
+  }).join('');
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER: CROSSLINGUISTIC VERB BROWSER
+   ═══════════════════════════════════════════════════════════════ */
+var CROSSLING_GCS = 'https://storage.googleapis.com/intelechia-content/im/lexical%20analysis/crossling';
+var clSelectedLang = null;
+
+function renderCrossling() {
+  plotCrosslingChart();
+  renderCrosslingGrid();
+}
+
+function plotCrosslingChart() {
+  var langs = DATA.crossling.languages;
+  var langNames = Object.keys(langs).sort(function(a, b) {
+    var eraOrder = {ancient: 0, medieval: 1, modern: 2};
+    var ea = eraOrder[langs[a].era] || 3, eb = eraOrder[langs[b].era] || 3;
+    if (ea !== eb) return ea - eb;
+    return a.localeCompare(b);
+  });
+
+  var pc = getPlotlyColors();
+  var traces = OP_ORDER.map(function(op) {
+    return {
+      name: op,
+      type: 'bar',
+      orientation: 'h',
+      y: langNames.map(function(l) { return l.replace(/_/g, ' '); }),
+      x: langNames.map(function(l) { return (langs[l].op_pcts || {})[op] || 0; }),
+      marker: { color: OP_COLORS[op] },
+      hovertemplate: '%{y}: ' + op + ' = %{x:.1f}%<extra></extra>',
+    };
+  });
+
+  Plotly.newPlot('crossling-chart', traces, {
+    barmode: 'stack',
+    xaxis: { title: '% of classified verbs', gridcolor: pc.grid, color: pc.text, ticksuffix: '%' },
+    yaxis: { autorange: 'reversed', color: pc.text, tickfont: { family: "'IBM Plex Mono'", size: 10 } },
+    plot_bgcolor: pc.bg,
+    paper_bgcolor: pc.paper,
+    font: { color: pc.text, family: "'IBM Plex Mono'" },
+    margin: { l: 155, r: 20, t: 10, b: 45 },
+    legend: { orientation: 'h', y: -0.12, font: { size: 10 } },
+    height: Math.max(480, langNames.length * 20),
+  }, { responsive: true });
+
+  document.getElementById('crossling-chart').on('plotly_click', function(data) {
+    var langDisplay = data.points[0].y;
+    selectCrosslingLang(langDisplay.replace(/ /g, '_'));
+  });
+}
+
+function renderCrosslingGrid() {
+  var langs = DATA.crossling.languages;
+  var langNames = Object.keys(langs).sort(function(a, b) {
+    var eraOrder = {ancient: 0, medieval: 1, modern: 2};
+    var ea = eraOrder[langs[a].era] || 3, eb = eraOrder[langs[b].era] || 3;
+    if (ea !== eb) return ea - eb;
+    return a.localeCompare(b);
+  });
+
+  var grid = document.getElementById('crossling-lang-grid');
+  grid.innerHTML = langNames.map(function(lang) {
+    var d = langs[lang];
+    var display = lang.replace(/_/g, ' ');
+    var era = d.era ? d.era.charAt(0).toUpperCase() + d.era.slice(1) : '';
+    var barHtml = OP_ORDER.map(function(op) {
+      var pct = (d.op_pcts || {})[op] || 0;
+      return '<div style="width:' + pct + '%;background:' + OP_COLORS[op] + '"></div>';
+    }).join('');
+
+    return '<div class="crossling-lang-card" data-lang="' + escHtml(lang) + '" onclick="selectCrosslingLang(\'' + escHtml(lang) + '\')">' +
+      '<div class="cl-name">' + escHtml(display) + '</div>' +
+      '<div class="cl-meta">' + escHtml(d.family || '') + ' &middot; ' + era + ' &middot; ' + (d.n_verbs || 0).toLocaleString() + ' verbs</div>' +
+      '<div class="cl-bar">' + barHtml + '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function selectCrosslingLang(lang) {
+  var detail = document.getElementById('crossling-detail');
+
+  // Deselect previous card
+  var prev = document.querySelector('.crossling-lang-card.active');
+  if (prev) prev.classList.remove('active');
+
+  if (clSelectedLang === lang) {
+    clSelectedLang = null;
+    detail.style.display = 'none';
+    return;
+  }
+
+  clSelectedLang = lang;
+  detail.style.display = '';
+
+  // Highlight card
+  var card = document.querySelector('.crossling-lang-card[data-lang="' + lang + '"]');
+  if (card) card.classList.add('active');
+
+  var langInfo = DATA.crossling.languages[lang] || {};
+  var display = lang.replace(/_/g, ' ');
+  document.getElementById('crossling-lang-name').textContent = display;
+  document.getElementById('crossling-lang-meta').textContent =
+    (langInfo.family || '') + ' \u00b7 ' + (langInfo.era || '') + ' \u00b7 ' +
+    (langInfo.n_verbs || 0).toLocaleString() + ' verbs in corpus';
+
+  // Check cache
+  if (DATA.crosslingVerbs[lang]) {
+    initCrosslingVerbTable(DATA.crosslingVerbs[lang]);
+    return;
+  }
+
+  // Show loading
+  document.getElementById('cl-verb-tbody').innerHTML =
+    '<tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:2rem;">Loading ' + escHtml(display) + ' verbs\u2026</td></tr>';
+  document.getElementById('cl-verb-count').textContent = 'Loading\u2026';
+
+  var url = CROSSLING_GCS + '/' + encodeURIComponent(lang) + '/classified.json';
+  fetch(url)
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data) {
+      DATA.crosslingVerbs[lang] = data;
+      if (clSelectedLang === lang) initCrosslingVerbTable(data);
+    })
+    .catch(function(err) {
+      if (clSelectedLang === lang) {
+        document.getElementById('cl-verb-tbody').innerHTML =
+          '<tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:2rem;">Failed to load: ' + escHtml(err.message) + '</td></tr>';
+        document.getElementById('cl-verb-count').textContent = 'Error';
+      }
+    });
+
+  detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function initCrosslingVerbTable(data) {
+  // Populate operator filter
+  var opFilter = document.getElementById('cl-verb-op-filter');
+  opFilter.innerHTML = '<option value="">All operators</option>';
+  OP_ORDER.forEach(function(op) {
+    var opt = document.createElement('option');
+    opt.value = op;
+    opt.textContent = op + ' (' + OP_NAMES[op] + ')';
+    opFilter.appendChild(opt);
+  });
+
+  // Reset filters
+  document.getElementById('cl-verb-search').value = '';
+  document.getElementById('cl-verb-conf-filter').value = '';
+  opFilter.value = '';
+
+  // Attach listeners (replace element to clear old listeners)
+  var searchEl = document.getElementById('cl-verb-search');
+  var newSearch = searchEl.cloneNode(true);
+  searchEl.parentNode.replaceChild(newSearch, searchEl);
+  newSearch.addEventListener('input', debounce(filterCrosslingVerbs, 200));
+
+  document.getElementById('cl-verb-op-filter').onchange = filterCrosslingVerbs;
+  document.getElementById('cl-verb-conf-filter').onchange = filterCrosslingVerbs;
+
+  filterCrosslingVerbs();
+}
+
+function filterCrosslingVerbs() {
+  var data = DATA.crosslingVerbs[clSelectedLang];
+  if (!data || !data.classifications) return;
+
+  var search = document.getElementById('cl-verb-search').value.toLowerCase();
+  var opF = document.getElementById('cl-verb-op-filter').value;
+  var confF = document.getElementById('cl-verb-conf-filter').value;
+
+  var filtered = data.classifications;
+  if (search) {
+    filtered = filtered.filter(function(v) {
+      return (v.verb && v.verb.toLowerCase().indexOf(search) !== -1) ||
+             (v.gloss && v.gloss.toLowerCase().indexOf(search) !== -1);
+    });
+  }
+  if (opF) filtered = filtered.filter(function(v) { return v.operator === opF; });
+  if (confF) filtered = filtered.filter(function(v) { return v.confidence === confF; });
+
+  var total = data.classifications.length;
+  document.getElementById('cl-verb-count').textContent =
+    filtered.length.toLocaleString() + ' of ' + total.toLocaleString() + ' verbs' +
+    (filtered.length > VERBS_PER_PAGE ? ' (showing first ' + VERBS_PER_PAGE + ')' : '');
+
+  var show = filtered.slice(0, VERBS_PER_PAGE);
+  document.getElementById('cl-verb-tbody').innerHTML = show.map(function(v) {
+    var opKey = (v.operator || '').toUpperCase();
+    var conf = v.confidence || '';
+    var confLabel = conf ? conf.charAt(0).toUpperCase() + conf.slice(1) : '\u2014';
+    return '<tr>' +
+      '<td class="col-verb">' + escHtml(v.verb) + '</td>' +
+      '<td><span class="col-op op-bg-' + opKey.toLowerCase() + '">' + escHtml(opKey) + '</span></td>' +
+      '<td class="col-conf">' + escHtml(confLabel) + '</td>' +
+      '<td class="col-gloss">' + escHtml(v.gloss || '') + '</td>' +
+      '<td class="col-alt">' + (v.alternative ? escHtml(v.alternative) : '\u2014') + '</td>' +
     '</tr>';
   }).join('');
 }
