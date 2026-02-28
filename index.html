@@ -1061,6 +1061,147 @@ footer a:hover { color: var(--text); }
   border-left: 2px solid var(--explainer-accent);
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   NOTEBOOK CELLS (methodology section)
+   ═══════════════════════════════════════════════════════════════ */
+.notebook-cell {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--panel-radius);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.cell-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+}
+.cell-header:hover { background: var(--bg-hover); }
+
+.cell-marker {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+  min-width: 3.5rem;
+}
+
+.cell-title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--white);
+  flex: 1;
+}
+
+.cell-chevron {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+.notebook-cell.open .cell-chevron { transform: rotate(90deg); }
+
+.cell-body {
+  display: none;
+  padding: 1rem;
+}
+.notebook-cell.open .cell-body { display: block; }
+
+.cell-body p {
+  font-size: 0.84rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 0.7rem;
+}
+.cell-body p:last-child { margin-bottom: 0; }
+
+.cell-body strong { color: var(--white); font-weight: 600; }
+
+.cell-code {
+  background: var(--bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  line-height: 1.65;
+  color: var(--text);
+  white-space: pre;
+}
+
+.cell-code .kw { color: var(--alt); }
+.cell-code .str { color: var(--ins); }
+.cell-code .cm { color: var(--text-muted); font-style: italic; }
+.cell-code .hi { color: var(--accent); font-weight: 500; }
+.cell-code .warn { color: var(--rec); font-weight: 500; }
+
+.cell-output {
+  background: var(--bg);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  line-height: 1.65;
+  color: var(--text);
+  white-space: pre;
+}
+
+.cell-note {
+  background: var(--explainer-bg);
+  border: 1px solid var(--explainer-border);
+  border-left: 3px solid var(--rec);
+  border-radius: 6px;
+  padding: 0.65rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.pipeline-step {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: baseline;
+}
+.pipeline-step:last-child { border-bottom: none; }
+
+.step-num {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 2rem;
+  text-align: right;
+}
+
+.step-script {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--white);
+  min-width: 180px;
+}
+
+.step-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
 /* scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -1074,6 +1215,7 @@ footer a:hover { color: var(--text); }
   <div class="nav-inner">
     <span class="nav-title">E.O.</span>
     <a href="#about">About</a>
+    <a href="#methodology">Methodology</a>
     <a href="#operators">Operators</a>
     <a href="#embeddings">Embeddings</a>
     <a href="#confusion">Confusion</a>
@@ -1116,6 +1258,170 @@ footer a:hover { color: var(--text); }
         <div class="stat-item"><span>9</span> operators in 3 triads</div>
         <div class="stat-item"><span>3</span> embedding modes tested</div>
         <div class="stat-item"><span>27</span> languages (crosslinguistic)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ METHODOLOGY ═══════════════ -->
+  <section id="methodology">
+    <div class="section-header">
+      <h2>Methodology &amp; Data Provenance</h2>
+      <p class="caveat">Every classification decision is auditable. Expand cells to see the actual prompts, pipeline, and outputs.</p>
+    </div>
+
+    <!-- Cell 1: The Classification Prompt -->
+    <div class="notebook-cell open">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">In [1]</span>
+        <span class="cell-title">The Classification Prompt</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>Each verb sense is classified by a <strong>single LLM call</strong> (Claude, via <code style="font-family:var(--mono);font-size:0.82em;color:var(--accent);">scripts/04_llm_classify.py</code>). The prompt asks the model three questions and returns <strong>both the operator and the scale in one response</strong>:</p>
+        <div class="cell-code">Classify each verb into one operator (NUL, DES, INS, SEG, CON, SYN, ALT, SUP, REC).
+
+For each verb ask:
+1. What is the <span class="hi">INPUT state</span> and <span class="hi">OUTPUT state</span>?
+2. What <span class="hi">STRUCTURALLY changed</span>? (gap appeared? new thing? parts? link? whole?
+   frame? contradiction? rebuild?)
+3. At what <span class="hi">SCALE</span>? (<span class="warn">physical/social/informational/psychological</span>)
+
+VERBS:
+- "kill": cause to die; terminate [Frames: Killing, Transitive_action]
+- "define": determine the essential quality of
+- ...
+
+Return a JSON array. Each element:
+- "verb": the verb
+- "operator": NUL/DES/INS/SEG/CON/SYN/ALT/SUP/REC
+- "confidence": "high"/"medium"/"low"
+- "reason": one sentence &mdash; name the input, output, and what changed
+- "alternative": second-best operator if confidence is not high, else null
+- <span class="warn">"scale": "physical"/"social"/"informational"/"psychological"</span></div>
+        <div class="cell-note">
+          <strong>Key point:</strong> The four scales (physical, social, informational, psychological) are <strong>not</strong> from WordNet or any external taxonomy. They are part of EO's own classification system, assigned in the same LLM call that assigns the operator. Both labels come from the same prompt, the same model, in the same pass.
+        </div>
+      </div>
+    </div>
+
+    <!-- Cell 2: What the LLM Returns -->
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">Out [1]</span>
+        <span class="cell-title">Sample LLM Output</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>The LLM returns one JSON object per verb. Every classification you see in the Verb Browser comes from an object like this:</p>
+        <div class="cell-output">[
+  {
+    "verb": "kill",
+    "operator": "<span class="hi">NUL</span>",
+    "confidence": "high",
+    "reason": "Input: living entity. Output: entity no longer alive.
+               A gap where life was.",
+    "alternative": null,
+    "scale": "<span class="warn">physical</span>"
+  },
+  {
+    "verb": "define",
+    "operator": "<span class="hi">DES</span>",
+    "confidence": "high",
+    "reason": "Input: thing without explicit definition. Output: thing
+               with definitional boundary drawn. Assigns essential nature.",
+    "alternative": null,
+    "scale": "<span class="warn">informational</span>"
+  },
+  ...
+]</div>
+        <p>The <strong>"reason"</strong> field is the LLM's one-sentence justification. You can audit every single one in the <a href="#verbs" style="color:var(--accent);">Verb Browser</a> below.</p>
+      </div>
+    </div>
+
+    <!-- Cell 3: Scale Provenance -->
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">In [2]</span>
+        <span class="cell-title">Scale Labels: Provenance &amp; Implications</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>Each verb gets <strong>two EO labels simultaneously</strong>:</p>
+        <div class="cell-code"><span class="cm"># Two axes, one LLM call:</span>
+<span class="kw">operator</span>  = NUL | DES | INS | SEG | CON | SYN | ALT | SUP | REC   <span class="cm"># 9 values</span>
+<span class="kw">scale</span>     = physical | social | informational | psychological      <span class="cm"># 4 values</span>
+
+<span class="cm"># "kill" &rarr; operator=NUL, scale=physical</span>
+<span class="cm"># "forget" &rarr; operator=NUL, scale=psychological</span>
+<span class="cm"># Same operator, different scale.</span></div>
+        <p>The scale distribution across all 11,933 verbs:</p>
+        <div class="cell-output" id="scale-dist-output">physical         6,511  (55%)
+social           2,406  (20%)
+informational    1,776  (15%)
+psychological    1,240  (10%)</div>
+        <div class="cell-note">
+          <strong>Why this matters for the Taxonomy Comparison:</strong> In the Metrics section, "Operator&times;Scale" appears as a taxonomy row. That's the Cartesian product of operator (9) and scale (4) &mdash; up to 36 combined labels. Since <em>both axes come from EO's own LLM classification</em>, this is EO's full label set competing against single-axis external taxonomies (WordNet lexicographer files, morphological prefixes). It is not an apples-to-apples comparison.
+        </div>
+      </div>
+    </div>
+
+    <!-- Cell 4: Pipeline Overview -->
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">In [3]</span>
+        <span class="cell-title">Full Pipeline (12 scripts)</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>All scripts live in <code style="font-family:var(--mono);font-size:0.82em;color:var(--accent);">scripts/</code>. Each step reads from the previous step's output. You can re-run any step independently.</p>
+        <div class="pipeline-step"><span class="step-num">01</span><span class="step-script">01_extract_verbs.py</span><span class="step-desc">Extract verb lemmas from WordNet</span></div>
+        <div class="pipeline-step"><span class="step-num">02</span><span class="step-script">02_enrich.py</span><span class="step-desc">Add definitions, frames, frequency data</span></div>
+        <div class="pipeline-step"><span class="step-num">03</span><span class="step-script">03_embed.py</span><span class="step-desc">Generate embeddings (text-embedding-3-large, 3072d)</span></div>
+        <div class="pipeline-step"><span class="step-num">04</span><span class="step-script">04_llm_classify.py</span><span class="step-desc">LLM assigns <strong>operator + scale</strong> per verb sense</span></div>
+        <div class="pipeline-step"><span class="step-num">05</span><span class="step-script">05_phasepost.py</span><span class="step-desc">Post-classification embedding (3 modes: A, B, C)</span></div>
+        <div class="pipeline-step"><span class="step-num">06</span><span class="step-script">06_reembed.py</span><span class="step-desc">Re-embed with/without operator context for bias test</span></div>
+        <div class="pipeline-step"><span class="step-num">07</span><span class="step-script">07_explore.py</span><span class="step-desc">Per-operator exploration and scale breakdowns</span></div>
+        <div class="pipeline-step"><span class="step-num">08</span><span class="step-script">08_topology.py</span><span class="step-desc">Prototypes, horizons, territory, neighbors</span></div>
+        <div class="pipeline-step"><span class="step-num">09</span><span class="step-script">09_confusion.py</span><span class="step-desc">Confusion matrix and boundary verbs</span></div>
+        <div class="pipeline-step"><span class="step-num">10</span><span class="step-script">10_recursive.py</span><span class="step-desc">Recursive sub-clustering within operators</span></div>
+        <div class="pipeline-step"><span class="step-num">11</span><span class="step-script">11_crossling.py</span><span class="step-desc">Cross-linguistic classification (27 languages)</span></div>
+        <div class="pipeline-step"><span class="step-num">12</span><span class="step-script">12_taxonomy.py</span><span class="step-desc">Taxonomy comparison (z-scores vs. external groupings)</span></div>
+        <p style="margin-top:0.75rem;">Data consolidation: <code style="font-family:var(--mono);font-size:0.82em;color:var(--accent);">build_site_data.py</code> transforms raw outputs into the JSON files this site loads.</p>
+      </div>
+    </div>
+
+    <!-- Cell 5: External vs Internal Taxonomies -->
+    <div class="notebook-cell">
+      <div class="cell-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="cell-marker">In [4]</span>
+        <span class="cell-title">What Comes from Where</span>
+        <span class="cell-chevron">&#9654;</span>
+      </div>
+      <div class="cell-body">
+        <p>Different parts of the data have different provenance. Knowing which is which matters for evaluating the results:</p>
+        <div class="cell-code"><span class="hi">EO-internal (from the LLM classification prompt):</span>
+  operator          &mdash; NUL, DES, INS, SEG, CON, SYN, ALT, SUP, REC
+  scale             &mdash; physical, social, informational, psychological
+  triad             &mdash; Existence, Structure, Interpretation (derived from operator)
+  confidence        &mdash; high, medium, low
+  reason            &mdash; one-sentence LLM justification
+  alternative       &mdash; runner-up operator
+
+<span class="kw">External (independent of EO):</span>
+  verb lemmas       &mdash; WordNet 3.1
+  definitions       &mdash; WordNet 3.1
+  frames            &mdash; FrameNet / VerbNet (via enrichment)
+  embeddings        &mdash; OpenAI text-embedding-3-large
+  lexicographer     &mdash; WordNet lexicographer files (44 categories)
+  morphological     &mdash; prefix-based grouping (re-, un-, de-, etc.)
+
+<span class="cm">The Taxonomy Comparison in Metrics compares:</span>
+<span class="cm">  EO operators (9 groups)        vs. random baseline</span>
+<span class="cm">  EO triads (3 groups)           vs. random baseline</span>
+<span class="cm">  Scale (4 groups)               vs. random baseline   &larr; EO-internal</span>
+<span class="cm">  Operator&times;Scale (up to 36)      vs. random baseline   &larr; EO-internal, both axes</span>
+<span class="cm">  WordNet lexicographer (44)     vs. random baseline   &larr; external</span>
+<span class="cm">  Morphological prefix           vs. random baseline   &larr; external</span></div>
       </div>
     </div>
   </section>
@@ -1267,6 +1573,13 @@ footer a:hover { color: var(--text); }
           <option value="H">High</option>
           <option value="M">Medium</option>
           <option value="L">Low</option>
+        </select>
+        <select id="verb-scale-filter">
+          <option value="">All scales</option>
+          <option value="phys">Physical</option>
+          <option value="soci">Social</option>
+          <option value="info">Informational</option>
+          <option value="psyc">Psychological</option>
         </select>
         <span class="verb-count" id="verb-count"></span>
       </div>
@@ -2085,6 +2398,7 @@ function renderVerbs() {
   document.getElementById('verb-search').addEventListener('input', debounce(filterVerbs, 200));
   document.getElementById('verb-op-filter').addEventListener('change', filterVerbs);
   document.getElementById('verb-conf-filter').addEventListener('change', filterVerbs);
+  document.getElementById('verb-scale-filter').addEventListener('change', filterVerbs);
 
   filterVerbs();
 }
@@ -2093,11 +2407,13 @@ function filterVerbs() {
   var search = document.getElementById('verb-search').value.toLowerCase();
   var opF = document.getElementById('verb-op-filter').value;
   var confF = document.getElementById('verb-conf-filter').value;
+  var scaleF = document.getElementById('verb-scale-filter').value;
 
   var filtered = DATA.verbs;
   if (search) filtered = filtered.filter(function(v) { return v.v.toLowerCase().indexOf(search) !== -1; });
   if (opF) filtered = filtered.filter(function(v) { return v.op === opF; });
   if (confF) filtered = filtered.filter(function(v) { return v.c === confF; });
+  if (scaleF) filtered = filtered.filter(function(v) { return v.s === scaleF; });
 
   document.getElementById('verb-count').textContent =
     filtered.length.toLocaleString() + ' of ' + DATA.verbs.length.toLocaleString() + ' verbs' +
