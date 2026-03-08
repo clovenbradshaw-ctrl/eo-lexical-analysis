@@ -856,16 +856,29 @@ window.extractClauses = async function() {
     const result = await Engine.runConlluParse(raw);
 
     document.getElementById('clause-results').style.display = '';
+    const argStruct = result.clause_summary?.arg_structure || {};
     document.getElementById('clause-stats').innerHTML = `
       <div class="stat-card"><div class="stat-label">Clauses</div><div class="stat-value">${result.n_clauses}</div></div>
       <div class="stat-card"><div class="stat-label">Unique Verbs</div><div class="stat-value">${result.n_verbs}</div></div>
+      <div class="stat-card"><div class="stat-label">Intransitive</div><div class="stat-value">${argStruct.intransitive||0}</div></div>
+      <div class="stat-card"><div class="stat-label">Transitive</div><div class="stat-value">${argStruct.transitive||0}</div></div>
+      <div class="stat-card"><div class="stat-label">Ditransitive</div><div class="stat-value">${argStruct.ditransitive||0}</div></div>
     `;
 
     const summary = result.clause_summary || {};
-    const samples = summary.sample_clauses || [];
-    document.getElementById('clause-tbody').innerHTML = samples.slice(0, 100).map(c => {
-      const parts = c.split(' ');
-      return `<tr><td>${escHtml(summary.arg_structure?Object.keys(summary.arg_structure)[0]:'')}</td><td style="color:var(--white);">${escHtml(parts[1]||parts[0])}</td><td>${escHtml(parts[0]||'')}</td><td>${escHtml(parts[2]||'')}</td><td style="font-size:0.65rem;">${escHtml(c)}</td></tr>`;
+    const structured = summary.sample_clauses_structured || [];
+    const patternCounts = summary.pattern_counts || {};
+    document.getElementById('clause-tbody').innerHTML = structured.slice(0, 200).map(c => {
+      // Determine argument structure pattern
+      let pattern = '';
+      if (c.object && c.indirect_object) pattern = 'ditransitive';
+      else if (c.object) pattern = 'transitive';
+      else pattern = 'intransitive';
+
+      const oblStr = Array.isArray(c.oblique) ? c.oblique.join(', ') : (c.oblique || '');
+      const objParts = [c.object || '', c.indirect_object ? 'io:' + c.indirect_object : '', oblStr ? 'obl:' + oblStr : '', c.complement ? 'comp:' + c.complement : ''].filter(Boolean).join(' ');
+
+      return `<tr><td>${escHtml(pattern)}</td><td style="color:var(--white);">${escHtml(c.verb||'')}</td><td>${escHtml(c.subject||'')}</td><td>${escHtml(objParts)}</td><td style="font-size:0.65rem;">${escHtml(c.full_text||'')}</td></tr>`;
     }).join('');
 
     log('cell-corpus', `Extracted ${result.n_clauses} clauses from ${lang}`, 'success');
