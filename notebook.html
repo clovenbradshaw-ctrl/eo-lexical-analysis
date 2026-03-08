@@ -725,6 +725,30 @@ window.runSetup = async function() {
     const cachedCls = await Storage.loadClassifications();
     if (cachedCls) { STATE.classifications = cachedCls; log('cell-setup', '  Restored cached classifications', 'success'); }
 
+    // Restore clause language dropdown from cached crossling data
+    try {
+      const allCrossling = await Storage.listCrossling();
+      const sel = document.getElementById('clause-lang-select');
+      for (const key of Object.keys(allCrossling)) {
+        // Keys ending with _conllu are raw CoNLL-U data; other keys are result objects
+        const langName = key.endsWith('_conllu') ? key.replace(/_conllu$/, '') : key;
+        // Only add if this key has raw data (either a string or object with .raw)
+        const val = allCrossling[key];
+        const hasRaw = typeof val === 'string' || (val && val.raw);
+        if (hasRaw && !sel.querySelector(`option[value="${langName}"]`)) {
+          const opt = document.createElement('option');
+          opt.value = langName;
+          opt.textContent = langName.replace(/_/g, ' ');
+          sel.appendChild(opt);
+          STATE.crosslingData[langName] = val;
+        }
+      }
+      const nLangs = sel.options.length - 1; // minus the placeholder
+      if (nLangs > 0) log('cell-setup', `  Restored ${nLangs} downloaded language(s) for clause extraction`, 'success');
+    } catch (e) {
+      console.warn('Failed to restore crossling dropdown:', e);
+    }
+
     updateSidebarStatus();
     setStatus('cell-setup', 'complete');
     log('cell-setup', 'Setup complete.', 'success');
