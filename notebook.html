@@ -789,11 +789,63 @@ window.runLoadCorpus = async function() {
 
     updateSidebarStatus();
     setStatus('cell-corpus', 'complete');
+
+    // Auto-download all treebanks in the background (skip already cached)
+    autoDownloadAllLanguages();
   } catch (e) {
     setStatus('cell-corpus', 'error');
     log('cell-corpus', 'Error: ' + e.message, 'error');
   }
 };
+
+async function autoDownloadAllLanguages() {
+  const languages = CorpusManager.UD_LANGUAGES;
+  const total = languages.length;
+  let done = 0;
+  let skipped = 0;
+
+  log('cell-corpus', `Auto-downloading all ${total} treebanks (skipping cached)...`);
+
+  for (const lang of languages) {
+    // Skip if already in STATE or cached in IndexedDB
+    if (STATE.crosslingData[lang.name]) {
+      skipped++;
+      done++;
+      const card = document.querySelector(`.lang-card[data-lang="${lang.name}"]`);
+      if (card) card.classList.add('downloaded');
+      continue;
+    }
+
+    const cached = await Storage.loadCrossling(lang.name);
+    if (cached && (typeof cached === 'string' ? cached : cached.raw)) {
+      STATE.crosslingData[lang.name] = cached;
+      skipped++;
+      done++;
+      const card = document.querySelector(`.lang-card[data-lang="${lang.name}"]`);
+      if (card) card.classList.add('downloaded');
+      // Ensure it's in the clause dropdown
+      const sel = document.getElementById('clause-lang-select');
+      if (!sel.querySelector(`option[value="${lang.name}"]`)) {
+        const opt = document.createElement('option');
+        opt.value = lang.name;
+        opt.textContent = lang.name.replace(/_/g, ' ');
+        sel.appendChild(opt);
+      }
+      continue;
+    }
+
+    try {
+      await downloadLanguage(lang.name);
+      done++;
+      log('cell-corpus', `  [${done}/${total}] ${lang.name} done`);
+    } catch (e) {
+      done++;
+      log('cell-corpus', `  [${done}/${total}] ${lang.name} failed: ${e.message}`, 'error');
+    }
+  }
+
+  log('cell-corpus', `All treebanks processed: ${total - skipped} downloaded, ${skipped} from cache`, 'success');
+}
 
 function renderCorpusTable(verbs) {
   const tbody = document.getElementById('corpus-tbody');
