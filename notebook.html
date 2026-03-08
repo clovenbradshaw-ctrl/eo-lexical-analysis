@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EO Lexical Analysis — Experiment Notebook</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.4/full/pyodide.js"></script>
+<script>
+(function(){if(localStorage.getItem('eo-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+</script>
+<style>
+/* ═══ ROOT & THEME ═══ */
+:root {
+  --bg: #08080d; --bg-surface: #0e0f16; --bg-card: #12131c; --bg-hover: #191a26;
+  --border: #1e2030; --border-subtle: #161828;
+  --text: #c8cdd8; --text-dim: #5a6275; --text-muted: #3a4055; --white: #e8ecf4;
+  --nul: #d4915c; --des: #e8b84a; --ins: #f0d060;
+  --seg: #4a9ec8; --con: #5bb8d4; --syn: #6dd4c8;
+  --alt: #a87ccf; --sup: #cf7cb8; --rec: #e07ca0;
+  --accent: #5ba0cf; --accent-dim: #2d5878;
+  --mono: 'IBM Plex Mono','Menlo',monospace; --serif: 'Source Serif 4',Georgia,serif;
+  --panel-radius: 8px;
+  --success: #2ecc71; --warning: #f39c12; --error: #e74c3c; --info: #3498db;
+  --plotly-bg: #08080d; --plotly-paper: #08080d; --plotly-grid: #1a1b28; --plotly-text: #5a6275;
+}
+[data-theme="light"] {
+  --bg: #f5f5f0; --bg-surface: #eeeee8; --bg-card: #ffffff; --bg-hover: #e8e8e0;
+  --border: #d4d4cc; --border-subtle: #e0e0d8;
+  --text: #3a3a35; --text-dim: #6b6b60; --text-muted: #9a9a90; --white: #1a1a18;
+  --plotly-bg: #f5f5f0; --plotly-paper: #f5f5f0; --plotly-grid: #d4d4cc; --plotly-text: #6b6b60;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 15px; }
+body { background: var(--bg); color: var(--text); font-family: var(--mono); line-height: 1.6; }
+
+/* ═══ LAYOUT ═══ */
+.app-container { display: flex; min-height: 100vh; }
+
+/* ═══ SIDEBAR ═══ */
+.sidebar {
+  width: 280px; min-width: 280px; background: var(--bg-surface); border-right: 1px solid var(--border);
+  padding: 1.2rem; display: flex; flex-direction: column; gap: 1rem;
+  overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+.sidebar h2 { font-size: 0.85rem; color: var(--white); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.sidebar-section { border-bottom: 1px solid var(--border); padding-bottom: 0.8rem; }
+.sidebar-section:last-child { border-bottom: none; }
+.sidebar label { display: block; font-size: 0.75rem; color: var(--text-dim); margin: 0.4rem 0 0.2rem; }
+.sidebar input[type="password"], .sidebar input[type="text"], .sidebar select {
+  width: 100%; padding: 0.35rem 0.5rem; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text); font-family: var(--mono); font-size: 0.75rem;
+}
+.sidebar input:focus, .sidebar select:focus { outline: none; border-color: var(--accent); }
+
+/* ═══ MAIN CONTENT ═══ */
+.main-content { flex: 1; padding: 1.5rem 2rem; max-width: 1100px; }
+
+/* ═══ TOP BAR ═══ */
+.top-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.8rem 0; margin-bottom: 1rem; border-bottom: 1px solid var(--border);
+}
+.top-bar h1 { font-family: var(--serif); font-size: 1.3rem; color: var(--white); font-weight: 400; }
+.top-bar-actions { display: flex; gap: 0.5rem; align-items: center; }
+
+/* ═══ BUTTONS ═══ */
+.btn {
+  padding: 0.35rem 0.8rem; border-radius: 4px; border: 1px solid var(--border);
+  background: var(--bg-card); color: var(--text); font-family: var(--mono); font-size: 0.75rem;
+  cursor: pointer; transition: all 0.15s;
+}
+.btn:hover { background: var(--bg-hover); border-color: var(--accent); }
+.btn-primary { background: var(--accent-dim); border-color: var(--accent); color: var(--white); }
+.btn-primary:hover { background: var(--accent); }
+.btn-sm { padding: 0.2rem 0.5rem; font-size: 0.7rem; }
+.btn-run { background: #1a3a20; border-color: var(--success); color: var(--success); }
+.btn-run:hover { background: #2a5a30; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ═══ NOTEBOOK CELLS ═══ */
+.cell {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--panel-radius);
+  margin-bottom: 1rem; overflow: hidden;
+}
+.cell-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.6rem 1rem; cursor: pointer; user-select: none;
+  background: var(--bg-surface); border-bottom: 1px solid var(--border);
+}
+.cell-header:hover { background: var(--bg-hover); }
+.cell-title { display: flex; align-items: center; gap: 0.5rem; }
+.cell-number {
+  width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--accent-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; color: var(--accent); font-weight: 600;
+}
+.cell-name { font-size: 0.82rem; color: var(--white); font-weight: 500; }
+.cell-desc { font-size: 0.7rem; color: var(--text-dim); margin-left: 0.3rem; }
+.cell-actions { display: flex; align-items: center; gap: 0.4rem; }
+.cell-status {
+  font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 10px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.status-idle { background: var(--bg-hover); color: var(--text-muted); }
+.status-running { background: #1a3a20; color: var(--success); animation: pulse 1.5s infinite; }
+.status-complete { background: #1a3a20; color: var(--success); }
+.status-error { background: #3a1a1a; color: var(--error); }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.cell-body { padding: 1rem; display: none; }
+.cell.expanded .cell-body { display: block; }
+.cell-body .cell-expand-arrow { display: none; }
+
+.cell-output {
+  background: var(--bg); border: 1px solid var(--border-subtle); border-radius: 4px;
+  padding: 0.6rem; margin-top: 0.8rem; max-height: 500px; overflow-y: auto;
+  font-size: 0.72rem; line-height: 1.5;
+}
+.log-line { color: var(--text-dim); white-space: pre-wrap; word-break: break-all; }
+.log-line.success { color: var(--success); }
+.log-line.error { color: var(--error); }
+
+/* ═══ TABS ═══ */
+.tab-bar { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 0.8rem; }
+.tab-btn {
+  padding: 0.4rem 1rem; font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim);
+  background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ═══ DATA TABLE ═══ */
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; }
+.data-table th { text-align: left; padding: 0.35rem 0.5rem; color: var(--text-dim); border-bottom: 1px solid var(--border); font-weight: 500; }
+.data-table td { padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border-subtle); }
+.data-table tr:hover td { background: var(--bg-hover); }
+
+/* ═══ GRID ═══ */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.6rem; margin: 0.6rem 0; }
+.stat-card { background: var(--bg-surface); padding: 0.6rem; border-radius: 4px; border: 1px solid var(--border-subtle); }
+.stat-label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-value { font-size: 1.1rem; color: var(--white); font-weight: 500; margin-top: 0.15rem; }
+
+/* ═══ LANGUAGE GRID ═══ */
+.lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.5rem; }
+.lang-card {
+  background: var(--bg-surface); padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border-subtle);
+  cursor: pointer; transition: all 0.15s;
+}
+.lang-card:hover { border-color: var(--accent); background: var(--bg-hover); }
+.lang-card.downloaded { border-color: var(--success); }
+.lang-card .lang-name { font-size: 0.78rem; color: var(--white); font-weight: 500; }
+.lang-card .lang-meta { font-size: 0.65rem; color: var(--text-dim); }
+
+/* ═══ PROGRESS ═══ */
+.progress-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; margin: 0.5rem 0; }
+.progress-fill { height: 100%; background: var(--accent); transition: width 0.3s; border-radius: 2px; }
+
+/* ═══ OPERATOR BADGES ═══ */
+.op-badge { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.7rem; font-weight: 600; }
+.op-nul { background: rgba(212,145,92,0.2); color: var(--nul); }
+.op-des { background: rgba(232,184,74,0.2); color: var(--des); }
+.op-ins { background: rgba(240,208,96,0.2); color: var(--ins); }
+.op-seg { background: rgba(74,158,200,0.2); color: var(--seg); }
+.op-con { background: rgba(91,184,212,0.2); color: var(--con); }
+.op-syn { background: rgba(109,212,200,0.2); color: var(--syn); }
+.op-alt { background: rgba(168,124,207,0.2); color: var(--alt); }
+.op-sup { background: rgba(207,124,184,0.2); color: var(--sup); }
+.op-rec { background: rgba(224,124,160,0.2); color: var(--rec); }
+
+/* ═══ SEARCH ═══ */
+.search-input {
+  width: 100%; padding: 0.4rem 0.6rem; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text); font-family: var(--mono); font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.search-input:focus { outline: none; border-color: var(--accent); }
+
+/* ═══ PLOT CONTAINER ═══ */
+.plot-container { width: 100%; min-height: 350px; margin: 0.5rem 0; }
+
+/* ═══ MODAL ═══ */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+  z-index: 1000; align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--panel-radius);
+  padding: 1.5rem; max-width: 500px; width: 90%;
+}
+.modal h3 { color: var(--white); font-size: 0.9rem; margin-bottom: 1rem; }
+
+/* ═══ SIDEBAR TOGGLE (mobile) ═══ */
+@media (max-width: 768px) {
+  .sidebar { position: fixed; left: -280px; z-index: 100; transition: left 0.3s; }
+  .sidebar.open { left: 0; }
+  .sidebar-toggle { display: block; }
+}
+@media (min-width: 769px) {
+  .sidebar-toggle { display: none; }
+}
+
+/* ═══ THEME TOGGLE ═══ */
+.theme-toggle { cursor: pointer; font-size: 1.1rem; background: none; border: none; color: var(--text-dim); }
+.theme-toggle:hover { color: var(--white); }
+
+/* ═══ NAV LINK ═══ */
+.nav-link { color: var(--accent); text-decoration: none; font-size: 0.72rem; }
+.nav-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="app-container">
+
+<!-- ═══════════ SIDEBAR ═══════════ -->
+<aside class="sidebar" id="sidebar">
+  <div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+      <h2 style="margin:0;">Configuration</h2>
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">&#9681;</button>
+    </div>
+    <a href="index.html" class="nav-link">&larr; Back to Workbench</a>
+  </div>
+
+  <div class="sidebar-section">
+    <h2>API Keys</h2>
+    <label for="openai-key">OpenAI Key</label>
+    <input type="password" id="openai-key" placeholder="sk-..." onchange="saveApiKey('openai',this.value)">
+    <label for="anthropic-key">Anthropic Key</label>
+    <input type="password" id="anthropic-key" placeholder="sk-ant-..." onchange="saveApiKey('anthropic',this.value)">
+  </div>
+
+  <div class="sidebar-section">
+    <h2>Settings</h2>
+    <label for="embedding-model">Embedding Model</label>
+    <select id="embedding-model" onchange="saveSetting('embeddingModel',this.value)">
+      <option value="text-embedding-3-large">text-embedding-3-large (3072d)</option>
+      <option value="text-embedding-3-small">text-embedding-3-small (1536d)</option>
+    </select>
+    <label for="llm-backend">LLM Backend</label>
+    <select id="llm-backend" onchange="saveSetting('llmBackend',this.value)">
+      <option value="anthropic">Anthropic (Claude Sonnet)</option>
+      <option value="openai">OpenAI (GPT-4o-mini)</option>
+    </select>
+    <label for="batch-size">Batch Size</label>
+    <input type="text" id="batch-size" value="50" onchange="saveSetting('batchSize',parseInt(this.value)||50)">
+  </div>
+
+  <div class="sidebar-section">
+    <h2>Data Status</h2>
+    <div id="status-corpus" class="stat-label" style="margin:0.2rem 0;">Corpus: not loaded</div>
+    <div id="status-embeddings" class="stat-label" style="margin:0.2rem 0;">Embeddings: none</div>
+    <div id="status-classifications" class="stat-label" style="margin:0.2rem 0;">Classifications: none</div>
+    <div id="status-pyodide" class="stat-label" style="margin:0.2rem 0;">Pyodide: not loaded</div>
+  </div>
+
+  <div class="sidebar-section">
+    <h2>Quick Actions</h2>
+    <button class="btn btn-primary" style="width:100%;margin-bottom:0.3rem;" onclick="runFullPipeline()">Run Full Pipeline</button>
+    <button class="btn" style="width:100%;margin-bottom:0.3rem;" onclick="exportAllResults()">Export All Results</button>
+    <button class="btn" style="width:100%;" onclick="importResults()">Import Results</button>
+    <input type="file" id="import-file" accept=".json" style="display:none;" onchange="handleImport(this)">
+  </div>
+</aside>
+
+<!-- ═══════════ MAIN CONTENT ═══════════ -->
+<main class="main-content">
+
+<div class="top-bar">
+  <div>
+    <button class="sidebar-toggle btn btn-sm" onclick="document.getElementById('sidebar').classList.toggle('open')">Menu</button>
+    <h1>EO Lexical Analysis &mdash; Experiment Notebook</h1>
+  </div>
+  <div class="top-bar-actions">
+    <span id="pipeline-status" style="font-size:0.7rem;color:var(--text-dim);"></span>
+  </div>
+</div>
+
+<!-- ═══ CELL 0: SETUP ═══ -->
+<div class="cell expanded" id="cell-setup">
+  <div class="cell-header" onclick="toggleCell('cell-setup')">
+    <div class="cell-title">
+      <span class="cell-number">0</span>
+      <span class="cell-name">Setup &amp; Initialization</span>
+      <span class="cell-desc">Load Pyodide runtime and existing data</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runSetup()">Run</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <p style="font-size:0.75rem;color:var(--text-dim);margin-bottom:0.5rem;">
+      Initializes the Python runtime (Pyodide) in your browser and loads pre-computed data from the repository.
+      This takes ~30 seconds on first load (downloads numpy, scipy, scikit-learn as WebAssembly).
+    </p>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-label">Pyodide</div><div class="stat-value" id="setup-pyodide">Not loaded</div></div>
+      <div class="stat-card"><div class="stat-label">Packages</div><div class="stat-value" id="setup-packages">-</div></div>
+      <div class="stat-card"><div class="stat-label">Pre-computed Data</div><div class="stat-value" id="setup-data">-</div></div>
+    </div>
+    <div class="cell-output" id="setup-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 1: CORPUS ═══ -->
+<div class="cell" id="cell-corpus">
+  <div class="cell-header" onclick="toggleCell('cell-corpus')">
+    <div class="cell-title">
+      <span class="cell-number">1</span>
+      <span class="cell-name">Corpus Management</span>
+      <span class="cell-desc">Download, inspect, add/remove verbs and languages</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runLoadCorpus()">Load</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'corpus-english')">English Verbs</button>
+      <button class="tab-btn" onclick="switchTab(this,'corpus-crossling')">Cross-Linguistic</button>
+      <button class="tab-btn" onclick="switchTab(this,'corpus-clauses')">Semantic Clauses</button>
+    </div>
+
+    <!-- English Verbs Tab -->
+    <div class="tab-panel active" id="tab-corpus-english">
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-label">Total Verbs</div><div class="stat-value" id="corpus-total">-</div></div>
+        <div class="stat-card"><div class="stat-label">VerbNet</div><div class="stat-value" id="corpus-verbnet">-</div></div>
+        <div class="stat-card"><div class="stat-label">FrameNet</div><div class="stat-value" id="corpus-framenet">-</div></div>
+        <div class="stat-card"><div class="stat-label">WordNet</div><div class="stat-value" id="corpus-wordnet">-</div></div>
+      </div>
+      <div style="display:flex;gap:0.5rem;margin:0.5rem 0;">
+        <input class="search-input" style="flex:1;" id="corpus-search" placeholder="Search verbs..." oninput="filterCorpusTable()">
+        <button class="btn btn-sm" onclick="downloadCorpus()">Download CSV</button>
+        <button class="btn btn-sm" onclick="document.getElementById('corpus-upload').click()">Upload</button>
+        <input type="file" id="corpus-upload" accept=".csv,.json" style="display:none;" onchange="handleCorpusUpload(this)">
+      </div>
+      <div style="max-height:400px;overflow-y:auto;">
+        <table class="data-table" id="corpus-table">
+          <thead><tr><th>Verb</th><th>Definition</th><th>Sources</th></tr></thead>
+          <tbody id="corpus-tbody"><tr><td colspan="3" style="text-align:center;color:var(--text-dim);padding:1rem;">Click "Load" to load corpus data</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cross-Linguistic Tab -->
+    <div class="tab-panel" id="tab-corpus-crossling">
+      <p style="font-size:0.72rem;color:var(--text-dim);margin-bottom:0.5rem;">
+        Click a language to download its UD treebank and extract verbs. Data is fetched from GitHub.
+      </p>
+      <div class="lang-grid" id="lang-grid"></div>
+      <div id="crossling-detail" style="display:none;margin-top:1rem;">
+        <h3 style="color:var(--white);font-size:0.85rem;" id="crossling-lang-title"></h3>
+        <div class="stats-grid" id="crossling-stats"></div>
+        <div style="max-height:300px;overflow-y:auto;">
+          <table class="data-table" id="crossling-table">
+            <thead><tr><th>Verb</th><th>Operator</th><th>Confidence</th><th>Gloss</th></tr></thead>
+            <tbody id="crossling-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Semantic Clauses Tab -->
+    <div class="tab-panel" id="tab-corpus-clauses">
+      <p style="font-size:0.72rem;color:var(--text-dim);margin-bottom:0.5rem;">
+        Extract predicate-argument structures (semantic clauses) from downloaded UD treebanks.
+        Select a language with downloaded data, then click "Extract Clauses".
+      </p>
+      <div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;">
+        <select id="clause-lang-select" style="flex:1;padding:0.35rem;background:var(--bg);border:1px solid var(--border);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:0.75rem;">
+          <option value="">Select a language...</option>
+        </select>
+        <button class="btn btn-run btn-sm" onclick="extractClauses()">Extract Clauses</button>
+      </div>
+      <div id="clause-results" style="display:none;">
+        <div class="stats-grid" id="clause-stats"></div>
+        <div style="max-height:300px;overflow-y:auto;">
+          <table class="data-table" id="clause-table">
+            <thead><tr><th>Pattern</th><th>Verb</th><th>Subject</th><th>Object</th><th>Full</th></tr></thead>
+            <tbody id="clause-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="cell-output" id="corpus-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 2: EMBEDDINGS ═══ -->
+<div class="cell" id="cell-embeddings">
+  <div class="cell-header" onclick="toggleCell('cell-embeddings')">
+    <div class="cell-title">
+      <span class="cell-number">2</span>
+      <span class="cell-name">Embeddings</span>
+      <span class="cell-desc">Generate or inspect verb embeddings</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runEmbeddings()">Generate</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-label">Embedding Shape</div><div class="stat-value" id="emb-shape">-</div></div>
+      <div class="stat-card"><div class="stat-label">Model</div><div class="stat-value" id="emb-model">-</div></div>
+      <div class="stat-card"><div class="stat-label">Pairwise Similarity</div><div class="stat-value" id="emb-sim">-</div></div>
+    </div>
+    <div class="progress-bar" id="emb-progress-bar" style="display:none;"><div class="progress-fill" id="emb-progress-fill"></div></div>
+    <div class="plot-container" id="emb-pca-plot"></div>
+    <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
+      <button class="btn btn-sm" onclick="downloadEmbeddings()">Download Embeddings</button>
+    </div>
+    <div class="cell-output" id="embeddings-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 3: ANALYSIS ═══ -->
+<div class="cell" id="cell-analysis">
+  <div class="cell-header" onclick="toggleCell('cell-analysis')">
+    <div class="cell-title">
+      <span class="cell-number">3</span>
+      <span class="cell-name">Foundational Analysis</span>
+      <span class="cell-desc">Completeness, Minimality, Orthogonality, Clustering, Boundaries</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runAnalysis()">Run All</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'analysis-completeness')">Completeness</button>
+      <button class="tab-btn" onclick="switchTab(this,'analysis-orthogonality')">Orthogonality</button>
+      <button class="tab-btn" onclick="switchTab(this,'analysis-clustering')">Clustering</button>
+      <button class="tab-btn" onclick="switchTab(this,'analysis-boundaries')">Boundaries</button>
+    </div>
+    <div class="tab-panel active" id="tab-analysis-completeness">
+      <div class="stats-grid" id="completeness-stats"></div>
+      <div class="plot-container" id="completeness-plot"></div>
+    </div>
+    <div class="tab-panel" id="tab-analysis-orthogonality">
+      <div class="plot-container" id="orthogonality-plot"></div>
+    </div>
+    <div class="tab-panel" id="tab-analysis-clustering">
+      <div class="stats-grid" id="clustering-stats"></div>
+      <div class="plot-container" id="clustering-plot"></div>
+    </div>
+    <div class="tab-panel" id="tab-analysis-boundaries">
+      <div class="stats-grid" id="boundary-stats"></div>
+      <div style="max-height:400px;overflow-y:auto;">
+        <table class="data-table" id="boundary-table">
+          <thead><tr><th>Verb</th><th>Op 1</th><th>Sim 1</th><th>Op 2</th><th>Sim 2</th><th>Gap</th></tr></thead>
+          <tbody id="boundary-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
+      <button class="btn btn-sm" onclick="downloadAnalysis()">Download Analysis JSON</button>
+    </div>
+    <div class="cell-output" id="analysis-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 4: LLM CLASSIFICATION ═══ -->
+<div class="cell" id="cell-classify">
+  <div class="cell-header" onclick="toggleCell('cell-classify')">
+    <div class="cell-title">
+      <span class="cell-number">4</span>
+      <span class="cell-name">LLM Classification</span>
+      <span class="cell-desc">Classify verbs with OpenAI or Anthropic</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runClassify()">Classify</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;">
+      <input class="search-input" style="flex:1;" id="classify-single" placeholder="Classify a single verb...">
+      <button class="btn btn-sm" onclick="classifySingle()">Classify</button>
+    </div>
+    <div class="progress-bar" id="classify-progress-bar" style="display:none;"><div class="progress-fill" id="classify-progress-fill"></div></div>
+    <div class="stats-grid" id="classify-stats"></div>
+    <div style="max-height:400px;overflow-y:auto;">
+      <table class="data-table" id="classify-table">
+        <thead><tr><th>Verb</th><th>Operator</th><th>Confidence</th><th>Gloss</th><th>Alternative</th></tr></thead>
+        <tbody id="classify-tbody"><tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:1rem;">No classifications yet</td></tr></tbody>
+      </table>
+    </div>
+    <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
+      <button class="btn btn-sm" onclick="downloadClassifications()">Download JSON</button>
+      <button class="btn btn-sm" onclick="downloadClassificationsCSV()">Download CSV</button>
+    </div>
+    <div class="cell-output" id="classify-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 5: TOPOLOGY ═══ -->
+<div class="cell" id="cell-topology">
+  <div class="cell-header" onclick="toggleCell('cell-topology')">
+    <div class="cell-title">
+      <span class="cell-number">5</span>
+      <span class="cell-name">Topology &amp; Deep Dive</span>
+      <span class="cell-desc">Centroids, territories, event horizons, operator exploration</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runTopology()">Run</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div class="stats-grid" id="topology-stats"></div>
+    <div class="plot-container" id="topology-plot"></div>
+    <div id="topology-operators"></div>
+    <div class="cell-output" id="topology-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 6: CROSS-LINGUISTIC ANALYSIS ═══ -->
+<div class="cell" id="cell-crossling-analysis">
+  <div class="cell-header" onclick="toggleCell('cell-crossling-analysis')">
+    <div class="cell-title">
+      <span class="cell-number">6</span>
+      <span class="cell-name">Cross-Linguistic Analysis</span>
+      <span class="cell-desc">Compare operator distributions across languages</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runCrosslingAnalysis()">Analyze</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div class="plot-container" id="crossling-heatmap-plot"></div>
+    <div class="plot-container" id="crossling-sup-plot"></div>
+    <div class="cell-output" id="crossling-analysis-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 7: FALSIFICATION ═══ -->
+<div class="cell" id="cell-falsify">
+  <div class="cell-header" onclick="toggleCell('cell-falsify')">
+    <div class="cell-title">
+      <span class="cell-number">7</span>
+      <span class="cell-name">Falsification &amp; Validation</span>
+      <span class="cell-desc">Random baseline, missing operators, k-testing</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+      <button class="btn btn-run btn-sm" onclick="event.stopPropagation();runFalsify()">Run</button>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div class="stats-grid" id="falsify-stats"></div>
+    <div class="plot-container" id="falsify-plot"></div>
+    <div class="cell-output" id="falsify-output"></div>
+  </div>
+</div>
+
+<!-- ═══ CELL 8: RESULTS ═══ -->
+<div class="cell" id="cell-results">
+  <div class="cell-header" onclick="toggleCell('cell-results')">
+    <div class="cell-title">
+      <span class="cell-number">8</span>
+      <span class="cell-name">Results &amp; Export</span>
+      <span class="cell-desc">Browse all generated results, download as ZIP</span>
+    </div>
+    <div class="cell-actions">
+      <span class="cell-status status-idle">Idle</span>
+    </div>
+  </div>
+  <div class="cell-body">
+    <div id="results-list"></div>
+    <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
+      <button class="btn btn-primary" onclick="exportAllResults()">Export All as JSON</button>
+      <button class="btn" onclick="clearAllData()">Clear All Cached Data</button>
+    </div>
+  </div>
+</div>
+
+</main>
+</div>
+
+<!-- ═══════════ JAVASCRIPT ═══════════ -->
+<script type="module">
+import Storage from './js/storage.js';
+import ApiClient from './js/api-client.js';
+import CorpusManager from './js/corpus-manager.js';
+import NotebookEngine from './js/notebook-engine.js';
+import Export from './js/export.js';
+
+// Make modules globally accessible
+window.Storage = Storage;
+window.ApiClient = ApiClient;
+window.CorpusManager = CorpusManager;
+window.Engine = NotebookEngine;
+window.Export = Export;
+
+// ── App State ──
+const STATE = {
+  corpus: null,
+  embeddings: null,
+  classifications: null,
+  precomputed: null,
+  crosslingData: {},
+};
+window.STATE = STATE;
+
+// ── Theme ──
+window.toggleTheme = function() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'light' ? '' : 'light';
+  if (next) document.documentElement.setAttribute('data-theme', 'light');
+  else document.documentElement.removeAttribute('data-theme');
+  localStorage.setItem('eo-theme', next || 'dark');
+};
+
+// ── Cell toggle ──
+window.toggleCell = function(id) {
+  document.getElementById(id).classList.toggle('expanded');
+};
+
+// ── Tab switching ──
+window.switchTab = function(btn, panelSuffix) {
+  const bar = btn.parentElement;
+  const cell = bar.parentElement;
+  bar.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  cell.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  const panel = cell.querySelector('#tab-' + panelSuffix);
+  if (panel) panel.classList.add('active');
+};
+
+// ── Settings ──
+window.saveApiKey = function(provider, key) { Storage.setApiKey(provider, key); };
+window.saveSetting = function(key, val) { Storage.setSetting(key, val); };
+
+function loadSettings() {
+  document.getElementById('openai-key').value = Storage.getApiKey('openai') ? '********' : '';
+  document.getElementById('anthropic-key').value = Storage.getApiKey('anthropic') ? '********' : '';
+  document.getElementById('embedding-model').value = Storage.getSetting('embeddingModel', 'text-embedding-3-large');
+  document.getElementById('llm-backend').value = Storage.getSetting('llmBackend', 'anthropic');
+  document.getElementById('batch-size').value = Storage.getSetting('batchSize', 50);
+}
+
+// ── Helpers ──
+function escHtml(s) { return s ? s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : ''; }
+function log(cellId, msg, cls) {
+  const el = document.querySelector(`#${cellId} .cell-output`) || document.getElementById(cellId + '-output');
+  if (el) { el.innerHTML += `<div class="log-line ${cls||''}">${escHtml(msg)}</div>`; el.scrollTop = el.scrollHeight; }
+}
+function setStatus(cellId, status) {
+  const cell = document.getElementById(cellId);
+  if (!cell) return;
+  const s = cell.querySelector('.cell-status');
+  if (s) { s.className = `cell-status status-${status}`; s.textContent = {idle:'Idle',running:'Running...',complete:'Complete',error:'Error'}[status]||status; }
+}
+function clearOutput(cellId) {
+  const el = document.querySelector(`#${cellId} .cell-output`) || document.getElementById(cellId + '-output');
+  if (el) el.innerHTML = '';
+}
+function getPlotlyColors() {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  return {
+    bg: isLight ? '#f5f5f0' : '#08080d',
+    paper: isLight ? '#f5f5f0' : '#08080d',
+    grid: isLight ? '#d4d4cc' : '#1a1b28',
+    text: isLight ? '#6b6b60' : '#5a6275',
+    font: isLight ? '#3a3a35' : '#c8cdd8',
+  };
+}
+const OP_COLORS = ['#d4915c','#e8b84a','#f0d060','#4a9ec8','#5bb8d4','#6dd4c8','#a87ccf','#cf7cb8','#e07ca0'];
+const HELIX = ['NUL','DES','INS','SEG','CON','SYN','ALT','SUP','REC'];
+
+function updateSidebarStatus() {
+  const cs = document.getElementById('status-corpus');
+  const es = document.getElementById('status-embeddings');
+  const cl = document.getElementById('status-classifications');
+  const ps = document.getElementById('status-pyodide');
+  cs.textContent = STATE.corpus ? `Corpus: ${Object.keys(STATE.corpus).length} verbs` : 'Corpus: not loaded';
+  es.textContent = STATE.embeddings ? `Embeddings: ${STATE.embeddings.count} vectors` : 'Embeddings: none';
+  cl.textContent = STATE.classifications ? `Classifications: ${STATE.classifications.length}` : 'Classifications: none';
+  ps.textContent = Engine.isPyodideReady() ? 'Pyodide: ready' : 'Pyodide: not loaded';
+}
+
+// ═══════════════════════════════════════════════════════════
+// CELL RUNNERS
+// ═══════════════════════════════════════════════════════════
+
+// ── Cell 0: Setup ──
+window.runSetup = async function() {
+  setStatus('cell-setup', 'running');
+  clearOutput('cell-setup');
+  const el = document.getElementById;
+  try {
+    log('cell-setup', 'Initializing Pyodide (this takes ~30s on first load)...');
+    document.getElementById('setup-pyodide').textContent = 'Loading...';
+    await Engine.initPyodide((msg) => {
+      log('cell-setup', '  ' + msg);
+      document.getElementById('setup-pyodide').textContent = msg;
+    });
+    document.getElementById('setup-pyodide').textContent = 'Ready';
+    document.getElementById('setup-packages').textContent = 'numpy, scipy, sklearn';
+    log('cell-setup', 'Pyodide initialized with numpy, scipy, scikit-learn', 'success');
+
+    // Load pre-computed data
+    log('cell-setup', 'Loading pre-computed data from repository...');
+    STATE.precomputed = await CorpusManager.loadPrecomputedData('');
+    const loaded = Object.keys(STATE.precomputed).filter(k => STATE.precomputed[k]);
+    document.getElementById('setup-data').textContent = loaded.length + ' files';
+    log('cell-setup', '  Loaded: ' + loaded.join(', '), 'success');
+
+    // Load cached data from IndexedDB
+    const cachedCorpus = await Storage.loadCorpus();
+    if (cachedCorpus) { STATE.corpus = cachedCorpus; log('cell-setup', '  Restored cached corpus', 'success'); }
+    const cachedCls = await Storage.loadClassifications();
+    if (cachedCls) { STATE.classifications = cachedCls; log('cell-setup', '  Restored cached classifications', 'success'); }
+
+    updateSidebarStatus();
+    setStatus('cell-setup', 'complete');
+    log('cell-setup', 'Setup complete.', 'success');
+  } catch (e) {
+    setStatus('cell-setup', 'error');
+    log('cell-setup', 'Error: ' + e.message, 'error');
+  }
+};
+
+// ── Cell 1: Corpus ──
+window.runLoadCorpus = async function() {
+  setStatus('cell-corpus', 'running');
+  clearOutput('cell-corpus');
+  try {
+    // Try pre-computed first
+    let verbs = STATE.precomputed?.verbs;
+    if (!verbs) {
+      log('cell-corpus', 'Fetching corpus from repository...');
+      const resp = await fetch('data/verbs.json').catch(() => null);
+      if (resp && resp.ok) verbs = await resp.json();
+    }
+    if (!verbs) {
+      // Try combined_corpus.json
+      const resp2 = await fetch('data/combined_corpus.json').catch(() => null);
+      if (resp2 && resp2.ok) verbs = await resp2.json();
+    }
+    if (verbs) {
+      STATE.corpus = verbs;
+      await Storage.saveCorpus(verbs);
+      renderCorpusTable(verbs);
+      log('cell-corpus', `Loaded ${Object.keys(verbs).length} verbs`, 'success');
+    } else {
+      log('cell-corpus', 'No pre-computed corpus found. Upload a corpus file or run step 01.', 'error');
+    }
+
+    // Build language grid
+    buildLanguageGrid();
+
+    updateSidebarStatus();
+    setStatus('cell-corpus', 'complete');
+  } catch (e) {
+    setStatus('cell-corpus', 'error');
+    log('cell-corpus', 'Error: ' + e.message, 'error');
+  }
+};
+
+function renderCorpusTable(verbs) {
+  const tbody = document.getElementById('corpus-tbody');
+  const entries = Object.entries(verbs).slice(0, 200);
+  let total = Object.keys(verbs).length;
+  document.getElementById('corpus-total').textContent = total.toLocaleString();
+
+  tbody.innerHTML = entries.map(([verb, info]) => {
+    const def = typeof info === 'string' ? info : (info.definition || info.def || '');
+    const src = typeof info === 'object' ? (info.sources || []).join(', ') : '';
+    return `<tr><td style="color:var(--white);font-weight:500;">${escHtml(verb)}</td><td style="font-size:0.7rem;">${escHtml(def).substring(0,80)}</td><td style="font-size:0.65rem;color:var(--text-dim);">${escHtml(src)}</td></tr>`;
+  }).join('');
+  if (total > 200) tbody.innerHTML += `<tr><td colspan="3" style="text-align:center;color:var(--text-dim);">...and ${total-200} more</td></tr>`;
+}
+
+window.filterCorpusTable = function() {
+  if (!STATE.corpus) return;
+  const q = document.getElementById('corpus-search').value.toLowerCase();
+  if (!q) { renderCorpusTable(STATE.corpus); return; }
+  const filtered = {};
+  for (const [verb, info] of Object.entries(STATE.corpus)) {
+    if (verb.toLowerCase().includes(q)) filtered[verb] = info;
+  }
+  renderCorpusTable(filtered);
+};
+
+function buildLanguageGrid() {
+  const grid = document.getElementById('lang-grid');
+  grid.innerHTML = CorpusManager.UD_LANGUAGES.map(lang => {
+    const era = {ancient:'ancient',medieval:'medieval',modern:'modern'}[lang.era]||'';
+    return `<div class="lang-card" data-lang="${lang.name}" onclick="downloadLanguage('${lang.name}')">
+      <div class="lang-name">${lang.name.replace(/_/g,' ')}</div>
+      <div class="lang-meta">${lang.family} | ${era} | ${lang.region}</div>
+    </div>`;
+  }).join('');
+}
+
+window.downloadLanguage = async function(langName) {
+  const card = document.querySelector(`.lang-card[data-lang="${langName}"]`);
+  log('cell-corpus', `Downloading ${langName} treebank...`);
+  try {
+    const result = await CorpusManager.downloadTreebank(langName, (p) => {
+      log('cell-corpus', `  Split ${p.split}: ${p.downloaded}/${p.total} downloaded`);
+    });
+
+    // Parse with Pyodide
+    if (Engine.isPyodideReady()) {
+      log('cell-corpus', `  Extracting verbs from CoNLL-U...`);
+      const parsed = await Engine.runConlluParse(result.raw);
+      result.verbs = parsed.verbs;
+      result.n_verbs = parsed.n_verbs;
+      result.clause_summary = parsed.clause_summary;
+      log('cell-corpus', `  Extracted ${parsed.n_verbs} verbs, ${parsed.n_clauses} clauses`, 'success');
+    }
+
+    STATE.crosslingData[langName] = result;
+    await Storage.saveCrossling(langName, result);
+    if (card) card.classList.add('downloaded');
+
+    // Add to clause language selector
+    const sel = document.getElementById('clause-lang-select');
+    if (!sel.querySelector(`option[value="${langName}"]`)) {
+      const opt = document.createElement('option');
+      opt.value = langName;
+      opt.textContent = langName.replace(/_/g, ' ');
+      sel.appendChild(opt);
+    }
+  } catch (e) {
+    log('cell-corpus', `  Error: ${e.message}`, 'error');
+  }
+};
+
+window.extractClauses = async function() {
+  const lang = document.getElementById('clause-lang-select').value;
+  if (!lang) return;
+  if (!Engine.isPyodideReady()) { log('cell-corpus', 'Pyodide not ready. Run setup first.', 'error'); return; }
+
+  const data = STATE.crosslingData[lang] || await Storage.loadCrossling(lang + '_conllu');
+  if (!data) { log('cell-corpus', 'No data for ' + lang + '. Download the treebank first.', 'error'); return; }
+
+  log('cell-corpus', `Extracting clauses from ${lang}...`);
+  try {
+    const raw = typeof data === 'string' ? data : data.raw;
+    const result = await Engine.runConlluParse(raw);
+
+    document.getElementById('clause-results').style.display = '';
+    document.getElementById('clause-stats').innerHTML = `
+      <div class="stat-card"><div class="stat-label">Clauses</div><div class="stat-value">${result.n_clauses}</div></div>
+      <div class="stat-card"><div class="stat-label">Unique Verbs</div><div class="stat-value">${result.n_verbs}</div></div>
+    `;
+
+    const summary = result.clause_summary || {};
+    const samples = summary.sample_clauses || [];
+    document.getElementById('clause-tbody').innerHTML = samples.slice(0, 100).map(c => {
+      const parts = c.split(' ');
+      return `<tr><td>${escHtml(summary.arg_structure?Object.keys(summary.arg_structure)[0]:'')}</td><td style="color:var(--white);">${escHtml(parts[1]||parts[0])}</td><td>${escHtml(parts[0]||'')}</td><td>${escHtml(parts[2]||'')}</td><td style="font-size:0.65rem;">${escHtml(c)}</td></tr>`;
+    }).join('');
+
+    log('cell-corpus', `Extracted ${result.n_clauses} clauses from ${lang}`, 'success');
+  } catch (e) {
+    log('cell-corpus', 'Error: ' + e.message, 'error');
+  }
+};
+
+// ── Cell 2: Embeddings ──
+window.runEmbeddings = async function() {
+  setStatus('cell-embeddings', 'running');
+  clearOutput('cell-embeddings');
+
+  if (!STATE.corpus || Object.keys(STATE.corpus).length === 0) {
+    log('cell-embeddings', 'No corpus loaded. Run step 1 first.', 'error');
+    setStatus('cell-embeddings', 'error');
+    return;
+  }
+
+  try {
+    const verbs = Object.keys(STATE.corpus);
+    const texts = verbs.map(v => {
+      const info = STATE.corpus[v];
+      const def = typeof info === 'string' ? info : (info.definition || info.def || v);
+      return `${v}: ${def}`;
+    });
+
+    log('cell-embeddings', `Generating embeddings for ${texts.length} verbs...`);
+    document.getElementById('emb-progress-bar').style.display = '';
+
+    const result = await ApiClient.generateEmbeddings(texts, (p) => {
+      document.getElementById('emb-progress-fill').style.width = p.pct + '%';
+      log('cell-embeddings', `  ${p.done}/${p.total} (${p.pct}%)`);
+    });
+
+    STATE.embeddings = { ...result, verb_names: verbs };
+    await Storage.saveEmbeddings('main', STATE.embeddings);
+
+    document.getElementById('emb-shape').textContent = `${result.count} x ${result.dim}`;
+    document.getElementById('emb-model').textContent = result.model;
+    document.getElementById('emb-progress-bar').style.display = 'none';
+
+    log('cell-embeddings', `Generated ${result.count} embeddings (${result.dim}d)`, 'success');
+
+    // Compute PCA if Pyodide is ready
+    if (Engine.isPyodideReady() && result.embeddings.length > 0) {
+      log('cell-embeddings', 'Computing PCA projection...');
+      // We'd need operator embeddings too - generate them from operator definitions
+      log('cell-embeddings', 'PCA visualization available after analysis step.', 'success');
+    }
+
+    updateSidebarStatus();
+    setStatus('cell-embeddings', 'complete');
+  } catch (e) {
+    document.getElementById('emb-progress-bar').style.display = 'none';
+    setStatus('cell-embeddings', 'error');
+    log('cell-embeddings', 'Error: ' + e.message, 'error');
+  }
+};
+
+// ── Cell 3: Analysis ──
+window.runAnalysis = async function() {
+  setStatus('cell-analysis', 'running');
+  clearOutput('cell-analysis');
+
+  if (!Engine.isPyodideReady()) { log('cell-analysis', 'Pyodide not ready. Run setup first.', 'error'); setStatus('cell-analysis','error'); return; }
+
+  try {
+    // Try pre-computed data first
+    const precomp = STATE.precomputed || {};
+    if (precomp.metrics || precomp.boundaries || precomp.confusion) {
+      log('cell-analysis', 'Rendering pre-computed analysis results...');
+      renderPrecomputedAnalysis(precomp);
+      setStatus('cell-analysis', 'complete');
+      log('cell-analysis', 'Analysis rendered from pre-computed data. Generate new embeddings and re-run to compute fresh results.', 'success');
+      return;
+    }
+
+    if (!STATE.embeddings) {
+      log('cell-analysis', 'No embeddings available. Run step 2 first.', 'error');
+      setStatus('cell-analysis', 'error');
+      return;
+    }
+
+    log('cell-analysis', 'Running analysis (this may take a moment)...');
+    // Run analysis via Pyodide
+    log('cell-analysis', 'Analysis requires operator embeddings. Generate them first.', 'error');
+    setStatus('cell-analysis', 'error');
+  } catch (e) {
+    setStatus('cell-analysis', 'error');
+    log('cell-analysis', 'Error: ' + e.message, 'error');
+  }
+};
+
+function renderPrecomputedAnalysis(data) {
+  // Completeness
+  if (data.metrics) {
+    const m = data.metrics;
+    const dist = m.distribution || {};
+    document.getElementById('completeness-stats').innerHTML = HELIX.map(op => {
+      const count = dist[op] || 0;
+      return `<div class="stat-card"><div class="stat-label"><span class="op-badge op-${op.toLowerCase()}">${op}</span></div><div class="stat-value">${count.toLocaleString()}</div></div>`;
+    }).join('');
+
+    // Distribution bar chart
+    const pc = getPlotlyColors();
+    Plotly.newPlot('completeness-plot', [{
+      x: HELIX, y: HELIX.map(op => dist[op] || 0),
+      type: 'bar', marker: { color: OP_COLORS },
+    }], {
+      paper_bgcolor: pc.paper, plot_bgcolor: pc.bg,
+      font: { family: 'IBM Plex Mono', color: pc.font, size: 11 },
+      title: { text: 'Verb Distribution by Operator', font: { size: 14 } },
+      xaxis: { gridcolor: pc.grid }, yaxis: { gridcolor: pc.grid, title: 'Count' },
+      margin: { t: 40, b: 40, l: 60, r: 20 },
+    }, { responsive: true });
+  }
+
+  // Orthogonality
+  if (data.confusion) {
+    const conf = data.confusion.confusion || {};
+    const matrix = HELIX.map(from => HELIX.map(to => (from === to ? 0 : (conf[from]?.[to] || 0))));
+    const pc = getPlotlyColors();
+    Plotly.newPlot('orthogonality-plot', [{
+      z: matrix, x: HELIX, y: HELIX, type: 'heatmap',
+      colorscale: [[0,'#0e0f16'],[0.5,'#4a3090'],[1,'#e070d0']],
+      hovertemplate: '%{y} → %{x}: %{z}<extra></extra>',
+    }], {
+      paper_bgcolor: pc.paper, plot_bgcolor: pc.bg,
+      font: { family: 'IBM Plex Mono', color: pc.font, size: 11 },
+      title: { text: 'Operator Confusion Matrix', font: { size: 14 } },
+      margin: { t: 40, b: 40, l: 60, r: 20 },
+    }, { responsive: true });
+  }
+
+  // Boundaries
+  if (data.boundaries) {
+    const b = data.boundaries;
+    document.getElementById('boundary-stats').innerHTML = `
+      <div class="stat-card"><div class="stat-label">Mean Gap</div><div class="stat-value">${(b.mean_gap || 0).toFixed(4)}</div></div>
+      <div class="stat-card"><div class="stat-label">Median Gap</div><div class="stat-value">${(b.median_gap || 0).toFixed(4)}</div></div>
+    `;
+    const ambig = b.most_ambiguous || [];
+    document.getElementById('boundary-tbody').innerHTML = ambig.slice(0, 30).map(v =>
+      `<tr><td style="color:var(--white);">${escHtml(v.verb)}</td><td><span class="op-badge op-${(v.op1||'').toLowerCase()}">${v.op1}</span></td><td>${(v.sim1||0).toFixed(4)}</td><td><span class="op-badge op-${(v.op2||'').toLowerCase()}">${v.op2}</span></td><td>${(v.sim2||0).toFixed(4)}</td><td>${(v.gap||0).toFixed(4)}</td></tr>`
+    ).join('');
+  }
+}
+
+// ── Cell 4: Classification ──
+window.runClassify = async function() {
+  setStatus('cell-classify', 'running');
+  clearOutput('cell-classify');
+
+  if (!STATE.corpus || Object.keys(STATE.corpus).length === 0) {
+    log('cell-classify', 'No corpus loaded. Run step 1 first.', 'error');
+    setStatus('cell-classify', 'error');
+    return;
+  }
+
+  try {
+    const verbs = Object.entries(STATE.corpus).slice(0, 500).map(([verb, info]) => ({
+      verb,
+      definition: typeof info === 'string' ? info : (info.definition || ''),
+    }));
+
+    log('cell-classify', `Classifying ${verbs.length} verbs...`);
+    document.getElementById('classify-progress-bar').style.display = '';
+
+    const results = await ApiClient.classifyVerbs(verbs, (p) => {
+      document.getElementById('classify-progress-fill').style.width = p.pct + '%';
+    });
+
+    STATE.classifications = results;
+    await Storage.saveClassifications(results);
+    document.getElementById('classify-progress-bar').style.display = 'none';
+
+    renderClassifications(results);
+    updateSidebarStatus();
+    setStatus('cell-classify', 'complete');
+    log('cell-classify', `Classified ${results.length} verbs`, 'success');
+  } catch (e) {
+    document.getElementById('classify-progress-bar').style.display = 'none';
+    setStatus('cell-classify', 'error');
+    log('cell-classify', 'Error: ' + e.message, 'error');
+  }
+};
+
+window.classifySingle = async function() {
+  const verb = document.getElementById('classify-single').value.trim();
+  if (!verb) return;
+  try {
+    log('cell-classify', `Classifying "${verb}"...`);
+    const result = await ApiClient.classifySingleVerb(verb);
+    if (result) {
+      log('cell-classify', `  ${verb} → ${result.operator} (${result.confidence}) — ${result.gloss || ''}`, 'success');
+    }
+  } catch (e) {
+    log('cell-classify', 'Error: ' + e.message, 'error');
+  }
+};
+
+function renderClassifications(cls) {
+  const tbody = document.getElementById('classify-tbody');
+  const dist = {};
+  for (const c of cls) { dist[c.operator] = (dist[c.operator]||0) + 1; }
+
+  document.getElementById('classify-stats').innerHTML = HELIX.map(op =>
+    `<div class="stat-card"><div class="stat-label"><span class="op-badge op-${op.toLowerCase()}">${op}</span></div><div class="stat-value">${dist[op]||0}</div></div>`
+  ).join('');
+
+  tbody.innerHTML = cls.slice(0, 200).map(c =>
+    `<tr><td style="color:var(--white);">${escHtml(c.verb)}</td><td><span class="op-badge op-${(c.operator||'').toLowerCase()}">${c.operator}</span></td><td>${escHtml(c.confidence||'')}</td><td style="font-size:0.7rem;">${escHtml(c.gloss||'')}</td><td style="font-size:0.7rem;">${escHtml(c.alternative||'')}</td></tr>`
+  ).join('');
+}
+
+// ── Cell 5: Topology ──
+window.runTopology = async function() {
+  setStatus('cell-topology', 'running');
+  clearOutput('cell-topology');
+
+  if (STATE.precomputed?.operators) {
+    renderTopology(STATE.precomputed.operators);
+    setStatus('cell-topology', 'complete');
+    return;
+  }
+
+  log('cell-topology', 'Topology requires pre-computed data or embeddings+classifications.', 'error');
+  setStatus('cell-topology', 'error');
+};
+
+function renderTopology(opsData) {
+  if (!opsData) return;
+  const ops = Array.isArray(opsData) ? opsData : opsData.operators || [];
+  const container = document.getElementById('topology-operators');
+  container.innerHTML = ops.filter(o => o).map(op => `
+    <div style="background:var(--bg-surface);padding:0.8rem;border-radius:4px;border:1px solid var(--border-subtle);margin-bottom:0.5rem;">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
+        <span class="op-badge op-${(op.operator||'').toLowerCase()}" style="font-size:0.85rem;">${op.operator}</span>
+        <span style="color:var(--white);font-size:0.82rem;">${op.total||0} verbs</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.3rem;font-size:0.7rem;">
+        <div>Core: ${op.territory?.core||0}</div>
+        <div>Settled: ${op.territory?.settled||0}</div>
+        <div>Contested: ${op.territory?.contested||0}</div>
+        <div>Foreign: ${op.territory?.foreign||0}</div>
+      </div>
+      <div style="margin-top:0.3rem;font-size:0.7rem;color:var(--text-dim);">
+        Prototypes: ${(op.prototypes||[]).map(p => p.verb).join(', ')}
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── Cell 6: Cross-linguistic analysis ──
+window.runCrosslingAnalysis = async function() {
+  setStatus('cell-crossling-analysis', 'running');
+  clearOutput('cell-crossling-analysis');
+
+  try {
+    // Load pre-computed crossling data
+    let crossData = STATE.precomputed?.crossling;
+    if (!crossData) {
+      const resp = await fetch('data/crossling.json').catch(() => null);
+      if (resp && resp.ok) crossData = await resp.json();
+    }
+
+    if (crossData && crossData.languages) {
+      renderCrosslingHeatmap(crossData);
+      setStatus('cell-crossling-analysis', 'complete');
+      log('cell-crossling-analysis', `Rendered ${Object.keys(crossData.languages).length} languages`, 'success');
+    } else {
+      log('cell-crossling-analysis', 'No cross-linguistic data. Download treebanks and classify verbs first.', 'error');
+      setStatus('cell-crossling-analysis', 'error');
+    }
+  } catch (e) {
+    setStatus('cell-crossling-analysis', 'error');
+    log('cell-crossling-analysis', 'Error: ' + e.message, 'error');
+  }
+};
+
+function renderCrosslingHeatmap(data) {
+  const langs = Object.keys(data.languages);
+  const matrix = langs.map(l => HELIX.map(op => data.languages[l].op_pcts?.[op] || 0));
+  const pc = getPlotlyColors();
+
+  Plotly.newPlot('crossling-heatmap-plot', [{
+    z: matrix, x: HELIX,
+    y: langs.map(l => l.replace(/_/g, ' ')),
+    type: 'heatmap', colorscale: 'YlOrRd',
+    hovertemplate: '%{y} %{x}: %{z:.1f}%<extra></extra>',
+  }], {
+    paper_bgcolor: pc.paper, plot_bgcolor: pc.bg,
+    font: { family: 'IBM Plex Mono', color: pc.font, size: 10 },
+    title: { text: 'EO Operator Distribution Across Languages', font: { size: 14 } },
+    margin: { t: 40, b: 40, l: 140, r: 20 },
+    height: Math.max(400, langs.length * 22),
+  }, { responsive: true });
+
+  // SUP chart
+  const supData = langs.map(l => ({
+    lang: l.replace(/_/g, ' '),
+    pct: data.languages[l].op_pcts?.SUP || 0,
+    era: data.languages[l].era,
+  })).sort((a, b) => b.pct - a.pct);
+
+  Plotly.newPlot('crossling-sup-plot', [{
+    y: supData.map(d => d.lang),
+    x: supData.map(d => d.pct),
+    type: 'bar', orientation: 'h',
+    marker: { color: supData.map(d => d.era === 'ancient' ? '#e74c3c' : d.era === 'medieval' ? '#e67e22' : '#3498db') },
+  }], {
+    paper_bgcolor: pc.paper, plot_bgcolor: pc.bg,
+    font: { family: 'IBM Plex Mono', color: pc.font, size: 10 },
+    title: { text: 'SUP Operator Across Languages (red=ancient, blue=modern)', font: { size: 13 } },
+    xaxis: { title: '% of verbs', gridcolor: pc.grid },
+    yaxis: { autorange: 'reversed' },
+    margin: { t: 40, b: 40, l: 140, r: 20 },
+    height: Math.max(400, supData.length * 22),
+  }, { responsive: true });
+}
+
+// ── Cell 7: Falsification ──
+window.runFalsify = async function() {
+  setStatus('cell-falsify', 'running');
+  clearOutput('cell-falsify');
+
+  if (!Engine.isPyodideReady()) { log('cell-falsify', 'Pyodide not ready. Run setup first.', 'error'); setStatus('cell-falsify','error'); return; }
+
+  try {
+    // Try pre-computed
+    let report = null;
+    const resp = await fetch('output/falsification_report.json').catch(() => null);
+    if (resp && resp.ok) report = await resp.json();
+
+    if (report) {
+      const ta = report.test_a_random_baseline || {};
+      document.getElementById('falsify-stats').innerHTML = `
+        <div class="stat-card"><div class="stat-label">EO Z-Score</div><div class="stat-value">${(ta.eo_z_score||0).toFixed(1)}</div></div>
+        <div class="stat-card"><div class="stat-label">Random Mean</div><div class="stat-value">${(ta.random_taxonomy_z_mean||0).toFixed(1)}</div></div>
+        <div class="stat-card"><div class="stat-label">EO vs Random</div><div class="stat-value">${(ta.eo_vs_random_ratio||0).toFixed(0)}x</div></div>
+      `;
+
+      const pc = getPlotlyColors();
+      const rz = ta.random_taxonomy_z_range || [-1, 1];
+      Plotly.newPlot('falsify-plot', [
+        { x: Array.from({length:20}, (_, i) => rz[0] + (rz[1]-rz[0])*i/19), type: 'histogram', name: 'Random', marker: { color: 'lightblue' } },
+      ], {
+        paper_bgcolor: pc.paper, plot_bgcolor: pc.bg,
+        font: { family: 'IBM Plex Mono', color: pc.font, size: 11 },
+        title: { text: 'EO vs Random Taxonomies (Z-Scores)', font: { size: 14 } },
+        shapes: [{ type: 'line', x0: ta.eo_z_score, x1: ta.eo_z_score, y0: 0, y1: 1, yref: 'paper', line: { color: 'red', width: 3 } }],
+        margin: { t: 40, b: 40, l: 60, r: 20 },
+      }, { responsive: true });
+
+      setStatus('cell-falsify', 'complete');
+      log('cell-falsify', 'Rendered pre-computed falsification results.', 'success');
+    } else {
+      log('cell-falsify', 'No pre-computed falsification data. Need embeddings and classifications to run.', 'error');
+      setStatus('cell-falsify', 'error');
+    }
+  } catch (e) {
+    setStatus('cell-falsify', 'error');
+    log('cell-falsify', 'Error: ' + e.message, 'error');
+  }
+};
+
+// ── Downloads ──
+window.downloadCorpus = function() {
+  if (STATE.corpus) Export.exportCorpusCSV(STATE.corpus, 'eo_corpus.csv');
+};
+window.downloadEmbeddings = function() {
+  if (STATE.embeddings) Export.downloadJSON(STATE.embeddings, 'eo_embeddings.json');
+};
+window.downloadClassifications = function() {
+  if (STATE.classifications) Export.exportClassifications(STATE.classifications, 'eo_classifications.json');
+};
+window.downloadClassificationsCSV = function() {
+  if (STATE.classifications) Export.exportClassificationsCSV(STATE.classifications, 'eo_classifications.csv');
+};
+window.downloadAnalysis = function() {
+  if (STATE.precomputed) Export.downloadJSON(STATE.precomputed, 'eo_analysis.json');
+};
+window.exportAllResults = async function() { await Export.downloadAllResults(); };
+window.importResults = function() { document.getElementById('import-file').click(); };
+window.handleImport = async function(input) {
+  if (input.files[0]) {
+    await Export.importFromFile(input.files[0]);
+    log('cell-results', 'Imported data successfully. Reload to see changes.', 'success');
+  }
+};
+window.handleCorpusUpload = async function(input) {
+  if (!input.files[0]) return;
+  const text = await input.files[0].text();
+  const name = input.files[0].name;
+  try {
+    let verbs;
+    if (name.endsWith('.csv')) verbs = CorpusManager.parseUploadedCSV(text);
+    else verbs = CorpusManager.parseUploadedJSON(text);
+    const dict = {};
+    for (const v of verbs) dict[v.verb] = v;
+    STATE.corpus = { ...STATE.corpus, ...dict };
+    await Storage.saveCorpus(STATE.corpus);
+    renderCorpusTable(STATE.corpus);
+    log('cell-corpus', `Added ${verbs.length} verbs from ${name}`, 'success');
+  } catch (e) {
+    log('cell-corpus', 'Upload error: ' + e.message, 'error');
+  }
+};
+window.clearAllData = async function() {
+  if (confirm('Clear all cached data? This cannot be undone.')) {
+    await Storage.clearAll();
+    STATE.corpus = null; STATE.embeddings = null; STATE.classifications = null;
+    updateSidebarStatus();
+    log('cell-results', 'All cached data cleared.', 'success');
+  }
+};
+
+// ── Full Pipeline ──
+window.runFullPipeline = async function() {
+  await runSetup();
+  await runLoadCorpus();
+  // Remaining steps require API keys
+  const hasOpenAI = !!Storage.getApiKey('openai');
+  const hasAnthropic = !!Storage.getApiKey('anthropic');
+  if (hasOpenAI) await runEmbeddings();
+  if (hasOpenAI || hasAnthropic) await runClassify();
+  await runAnalysis();
+  await runCrosslingAnalysis();
+  await runFalsify();
+};
+
+// ── Init ──
+loadSettings();
+updateSidebarStatus();
+</script>
+</body>
+</html>
