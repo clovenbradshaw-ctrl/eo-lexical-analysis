@@ -1,0 +1,19 @@
+{
+  "jupyter-lite-schema-version": 0,
+  "jupyter-config-data": {
+    "appName": "EO Lexical Analysis — Experiment Notebook",
+    "appUrl": "./lab",
+    "defaultKernelName": "python",
+    "disabledExtensions": [],
+    "settingsOverrides": {
+      "@jupyterlab/apputils-extension:themes": {
+        "theme": "JupyterLab Dark"
+      },
+      "@jupyterlab/notebook-extension:tracker": {
+        "codeCellConfig": {
+          "lineNumbers": true
+        }
+      }
+    }
+  }
+}

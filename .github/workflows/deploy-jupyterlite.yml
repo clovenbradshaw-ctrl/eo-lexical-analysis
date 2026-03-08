@@ -1,0 +1,64 @@
+name: Build and Deploy JupyterLite
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install JupyterLite
+        run: |
+          pip install jupyterlite-core jupyterlite-pyodide-kernel
+
+      - name: Build JupyterLite
+        run: |
+          jupyter lite build \
+            --content content \
+            --output-dir _output
+
+      - name: Copy static assets to output
+        run: |
+          # Copy the existing site files
+          cp index.html _output/index.html
+          cp -r data _output/data 2>/dev/null || true
+          cp -r output _output/output 2>/dev/null || true
+          cp -r py _output/py
+          cp -r js _output/js
+          cp notebook.html _output/notebook.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _output
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
