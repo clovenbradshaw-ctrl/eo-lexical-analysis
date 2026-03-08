@@ -127,8 +127,8 @@ def extract_clauses(text):
         # Build token lookup by id
         tokens = {t["id"]: t for t in sent}
 
-        # Find all verbs (VERB upos)
-        verb_tokens = [t for t in sent if t["upos"] == "VERB"]
+        # Find all predicates (VERB and AUX that head clauses)
+        verb_tokens = [t for t in sent if t["upos"] in ("VERB", "AUX")]
 
         for verb in verb_tokens:
             clause = {
@@ -224,5 +224,17 @@ def summarize_clauses(clauses):
         "top_verbs": dict(verb_counts.most_common(30)),
         "pattern_counts": dict(pattern_counts.most_common(20)),
         "arg_structure": dict(arg_structure_counts),
-        "sample_clauses": [c["full_text"] for c in clauses[:50]],
+        "sample_clauses": [c["full_text"] for c in clauses[:500]],
+        "sample_clauses_structured": [
+            {
+                "verb": c["verb"],
+                "subject": c["subject"],
+                "object": c["object"],
+                "indirect_object": c["indirect_object"],
+                "oblique": c["oblique"],
+                "complement": c["complement"],
+                "full_text": c["full_text"],
+            }
+            for c in clauses[:500]
+        ],
     }
