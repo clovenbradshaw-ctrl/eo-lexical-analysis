@@ -385,7 +385,7 @@ def visualize_comparison(results):
 
 # ─── Main ─────────────────────────────────────────────────────────
 
-def run(backend_name):
+def run(backend_name, force=False):
     t_start = time.time()
     log("=" * 60)
     log(f"STEP 6: RE-EMBED WITH TYPE SIGNATURES (backend: {backend_name})")
@@ -397,32 +397,28 @@ def run(backend_name):
 
     results = []
 
-    # A: Type-signature only
-    log(f"\n{'='*50}")
-    log(f"EMBEDDING MODE A: Type-signature reasoning only")
-    log(f"{'='*50}")
-    embs_sig = embed_fn(texts_sig)
-    np.savez_compressed(os.path.join(DATA_DIR, "reembed_signature.npz"), embeddings=embs_sig, labels=labels)
-    log(f"  ✓ Saved reembed_signature.npz")
-    results.append(analyze_embeddings(embs_sig, labels, verbs, "Type-signature"))
+    modes = [
+        ("A", "Type-signature reasoning only", "Type-signature", "reembed_signature.npz", texts_sig),
+        ("B", "Original definition only", "Definition", "reembed_definition.npz", texts_def),
+        ("C", "Combined (verb + definition + type-signature + operator)", "Combined", "reembed_combined.npz", texts_combined),
+    ]
 
-    # B: Original definition only
-    log(f"\n{'='*50}")
-    log(f"EMBEDDING MODE B: Original definition only")
-    log(f"{'='*50}")
-    embs_def = embed_fn(texts_def)
-    np.savez_compressed(os.path.join(DATA_DIR, "reembed_definition.npz"), embeddings=embs_def, labels=labels)
-    log(f"  ✓ Saved reembed_definition.npz")
-    results.append(analyze_embeddings(embs_def, labels, verbs, "Definition"))
+    for letter, description, mode_name, filename, texts in modes:
+        log(f"\n{'='*50}")
+        log(f"EMBEDDING MODE {letter}: {description}")
+        log(f"{'='*50}")
 
-    # C: Combined
-    log(f"\n{'='*50}")
-    log(f"EMBEDDING MODE C: Combined (verb + definition + type-signature + operator)")
-    log(f"{'='*50}")
-    embs_comb = embed_fn(texts_combined)
-    np.savez_compressed(os.path.join(DATA_DIR, "reembed_combined.npz"), embeddings=embs_comb, labels=labels)
-    log(f"  ✓ Saved reembed_combined.npz")
-    results.append(analyze_embeddings(embs_comb, labels, verbs, "Combined"))
+        cache_path = os.path.join(DATA_DIR, filename)
+        if not force and os.path.exists(cache_path):
+            cached = np.load(cache_path)
+            embs = cached["embeddings"]
+            log(f"  ✓ Loaded cached {filename} ({embs.shape}), skipping API call (use --force to re-embed)")
+        else:
+            embs = embed_fn(texts)
+            np.savez_compressed(cache_path, embeddings=embs, labels=labels)
+            log(f"  ✓ Saved {filename}")
+
+        results.append(analyze_embeddings(embs, labels, verbs, mode_name))
 
     # Compare
     log(f"\n{'='*60}")
@@ -451,5 +447,6 @@ def run(backend_name):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--backend", choices=list(BACKENDS.keys()), default="openai")
+    parser.add_argument("--force", action="store_true", help="Force re-embedding even if cached files exist")
     args = parser.parse_args()
-    run(args.backend)
+    run(args.backend, force=args.force)

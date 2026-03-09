@@ -107,15 +107,29 @@ BACKENDS = {"openai": embed_openai, "sentence-transformers": embed_st}
 
 # ─── Main ─────────────────────────────────────────────────────────
 
-def run(backend_name):
+def run(backend_name, force=False):
     log("="*60)
     log(f"STEP 2: EMBEDDING (backend: {backend_name})")
     log("="*60)
-    
+
+    verb_path = os.path.join(DATA_DIR, "verb_embeddings.npz")
+    op_path = os.path.join(DATA_DIR, "operator_embeddings.npz")
+    meta_path = os.path.join(DATA_DIR, "embedding_metadata.json")
+
+    # Check cache
+    if not force and os.path.exists(verb_path) and os.path.exists(op_path):
+        log(f"\n  ✓ Cached embeddings found, loading from disk (use --force to re-embed)")
+        verb_data = np.load(verb_path)
+        op_data = np.load(op_path)
+        log(f"    verb_embeddings.npz: enriched {verb_data['enriched'].shape}, bare {verb_data['bare'].shape}")
+        log(f"    operator_embeddings.npz: short_def {op_data['short_def'].shape}, full_spec {op_data['full_spec'].shape}, seed_verbs {op_data['seed_verbs'].shape}")
+        log(f"\n✓ Step 2 complete (cached). Embedding dim: {verb_data['enriched'].shape[1]}")
+        return
+
     embed_fn = BACKENDS[backend_name]
     corpus = load_corpus()
     op_texts = build_operator_texts()
-    
+
     # Prepare texts
     verb_texts = [e["embed_text"] for e in corpus]
     verb_names = [e["verb"] for e in corpus]
@@ -123,7 +137,7 @@ def run(backend_name):
     op_short = [op_texts[op]["short_def"] for op in HELIX_ORDER]
     op_full = [op_texts[op]["full_spec"] for op in HELIX_ORDER]
     op_seed = [op_texts[op]["seed_verbs"] for op in HELIX_ORDER]
-    
+
     log(f"\nTexts to embed:")
     log(f"  Enriched verb texts:  {len(verb_texts)}")
     log(f"  Bare verb names:      {len(bare_texts)}")
@@ -131,60 +145,61 @@ def run(backend_name):
     log(f"  Operator full specs:  {len(op_full)}")
     log(f"  Operator seed verbs:  {len(op_seed)}")
     log(f"  Total API calls:      5 rounds")
-    
+
     # Embed each set
     log(f"\n{'─'*40}")
     log(f"Round 1/5: Enriched verb texts ({len(verb_texts)} texts)")
     log(f"{'─'*40}")
     verb_embs = embed_fn(verb_texts)
     log(f"  Shape: {verb_embs.shape}")
-    
+
     log(f"\n{'─'*40}")
     log(f"Round 2/5: Bare verb names ({len(bare_texts)} texts)")
     log(f"{'─'*40}")
     bare_embs = embed_fn(bare_texts)
     log(f"  Shape: {bare_embs.shape}")
-    
+
     log(f"\n{'─'*40}")
     log(f"Round 3/5: Operator short definitions (9 texts)")
     log(f"{'─'*40}")
     op_short_embs = embed_fn(op_short)
     log(f"  Shape: {op_short_embs.shape}")
-    
+
     log(f"\n{'─'*40}")
     log(f"Round 4/5: Operator full specifications (9 texts)")
     log(f"{'─'*40}")
     op_full_embs = embed_fn(op_full)
     log(f"  Shape: {op_full_embs.shape}")
-    
+
     log(f"\n{'─'*40}")
     log(f"Round 5/5: Operator seed verb lists (9 texts)")
     log(f"{'─'*40}")
     op_seed_embs = embed_fn(op_seed)
     log(f"  Shape: {op_seed_embs.shape}")
-    
+
     # Save
     log(f"\nSaving embeddings...")
-    np.savez_compressed(os.path.join(DATA_DIR, "verb_embeddings.npz"), enriched=verb_embs, bare=bare_embs)
+    np.savez_compressed(verb_path, enriched=verb_embs, bare=bare_embs)
     log(f"  ✓ verb_embeddings.npz")
-    
-    np.savez_compressed(os.path.join(DATA_DIR, "operator_embeddings.npz"), short_def=op_short_embs, full_spec=op_full_embs, seed_verbs=op_seed_embs)
+
+    np.savez_compressed(op_path, short_def=op_short_embs, full_spec=op_full_embs, seed_verbs=op_seed_embs)
     log(f"  ✓ operator_embeddings.npz")
-    
+
     meta = {
         "backend": backend_name, "embedding_dim": int(verb_embs.shape[1]),
         "num_verbs": len(verb_names), "verb_names": verb_names,
         "operator_order": HELIX_ORDER,
         "operator_texts": {op: op_texts[op] for op in HELIX_ORDER},
     }
-    with open(os.path.join(DATA_DIR, "embedding_metadata.json"), "w") as f:
+    with open(meta_path, "w") as f:
         json.dump(meta, f, indent=2)
     log(f"  ✓ embedding_metadata.json")
-    
+
     log(f"\n✓ Step 2 complete. Embedding dim: {verb_embs.shape[1]}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--backend", choices=list(BACKENDS.keys()), default="openai")
+    parser.add_argument("--force", action="store_true", help="Force re-embedding even if cached files exist")
     args = parser.parse_args()
-    run(args.backend)
+    run(args.backend, force=args.force)
