@@ -415,6 +415,18 @@ body { background: var(--bg); color: var(--text); font-family: var(--mono); line
       <div class="stat-card"><div class="stat-label">Model</div><div class="stat-value" id="emb-model">-</div></div>
       <div class="stat-card"><div class="stat-label">Pairwise Similarity</div><div class="stat-value" id="emb-sim">-</div></div>
     </div>
+    <div style="display:flex;align-items:center;gap:0.75rem;margin:0.5rem 0;">
+      <label style="font-size:0.75rem;color:var(--text-dim);">Max verbs to embed:</label>
+      <select id="emb-max-verbs" onchange="Storage.setSetting('maxEmbedVerbs',this.value)" style="background:var(--bg-card);color:var(--white);border:1px solid var(--border);border-radius:4px;padding:0.25rem 0.5rem;font-size:0.75rem;">
+        <option value="1000">1,000</option>
+        <option value="2000">2,000</option>
+        <option value="5000" selected>5,000</option>
+        <option value="10000">10,000</option>
+        <option value="20000">20,000</option>
+        <option value="0">All (no limit)</option>
+      </select>
+      <span id="emb-verb-count" style="font-size:0.7rem;color:var(--text-dim);"></span>
+    </div>
     <div class="progress-bar" id="emb-progress-bar" style="display:none;"><div class="progress-fill" id="emb-progress-fill"></div></div>
     <div class="plot-container" id="emb-pca-plot"></div>
     <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
@@ -686,8 +698,11 @@ function updateSidebarStatus() {
   const es = document.getElementById('status-embeddings');
   const cl = document.getElementById('status-classifications');
   const ps = document.getElementById('status-pyodide');
-  cs.textContent = STATE.corpus ? `Corpus: ${Object.keys(STATE.corpus).length} verbs` : 'Corpus: not loaded';
+  const corpusSize = STATE.corpus ? Object.keys(STATE.corpus).length : 0;
+  cs.textContent = STATE.corpus ? `Corpus: ${corpusSize} verbs` : 'Corpus: not loaded';
   es.textContent = STATE.embeddings ? `Embeddings: ${STATE.embeddings.count} vectors` : 'Embeddings: none';
+  const verbCountEl = document.getElementById('emb-verb-count');
+  if (verbCountEl && corpusSize > 0) verbCountEl.textContent = `(${corpusSize.toLocaleString()} available)`;
   cl.textContent = STATE.classifications ? `Classifications: ${STATE.classifications.length}` : 'Classifications: none';
   ps.textContent = Engine.isPyodideReady() ? 'Pyodide: ready' : 'Pyodide: not loaded';
 }
@@ -719,9 +734,37 @@ window.runSetup = async function() {
     document.getElementById('setup-data').textContent = loaded.length + ' files';
     log('cell-setup', '  Loaded: ' + loaded.join(', '), 'success');
 
+    // Restore embedding limit setting
+    const savedMaxVerbs = Storage.getSetting('maxEmbedVerbs', '5000');
+    const maxVerbsSelect = document.getElementById('emb-max-verbs');
+    if (maxVerbsSelect) maxVerbsSelect.value = savedMaxVerbs;
+
     // Load cached data from IndexedDB
-    const cachedCorpus = await Storage.loadCorpus();
-    if (cachedCorpus) { STATE.corpus = cachedCorpus; log('cell-setup', '  Restored cached corpus', 'success'); }
+    let cachedCorpus = await Storage.loadCorpus();
+    if (cachedCorpus) {
+      // Normalize stale array-format cache (pre-fix data)
+      if (Array.isArray(cachedCorpus)) {
+        const dict = {};
+        for (const entry of cachedCorpus) {
+          const name = entry.v || entry.verb || entry.lemma || '';
+          if (name && !dict[name]) {
+            dict[name] = {
+              definition: entry.r || entry.definition || entry.def || entry.gloss || '',
+              operator: entry.op || '',
+              language: entry.l || '',
+              confidence: entry.c || '',
+              source: entry.s || '',
+              alternative: entry.a || '',
+            };
+          }
+        }
+        cachedCorpus = dict;
+        await Storage.saveCorpus(dict);
+        log('cell-setup', '  Migrated cached corpus from array to dict format', 'warning');
+      }
+      STATE.corpus = cachedCorpus;
+      log('cell-setup', '  Restored cached corpus', 'success');
+    }
     const cachedEmb = await Storage.loadEmbeddings('main');
     if (cachedEmb) { STATE.embeddings = cachedEmb; log('cell-setup', `  Restored cached embeddings (${cachedEmb.count} vectors)`, 'success'); }
     const cachedCls = await Storage.loadClassifications();
@@ -984,11 +1027,40 @@ window.extractClauses = async function() {
 };
 
 // ── Cell 2: Embeddings ──
-const MAX_EMBEDDING_VERBS = 5000;
+
+// Normalize a corpus value to ensure it's a dict keyed by verb name
+function normalizeCorpus(corpus) {
+  if (!corpus) return corpus;
+  if (Array.isArray(corpus)) {
+    const dict = {};
+    for (const entry of corpus) {
+      const name = entry.v || entry.verb || entry.lemma || '';
+      if (name && !dict[name]) {
+        dict[name] = {
+          definition: entry.r || entry.definition || entry.def || entry.gloss || '',
+          operator: entry.op || '',
+          language: entry.l || '',
+          confidence: entry.c || '',
+          source: entry.s || '',
+          alternative: entry.a || '',
+        };
+      }
+    }
+    return dict;
+  }
+  return corpus;
+}
 
 window.runEmbeddings = async function() {
   setStatus('cell-embeddings', 'running');
   clearOutput('cell-embeddings');
+
+  // Safety: normalize corpus if it's still in array format
+  if (Array.isArray(STATE.corpus)) {
+    STATE.corpus = normalizeCorpus(STATE.corpus);
+    await Storage.saveCorpus(STATE.corpus);
+    log('cell-embeddings', 'Normalized corpus format.', 'warning');
+  }
 
   if (!STATE.corpus || Object.keys(STATE.corpus).length === 0) {
     log('cell-embeddings', 'No corpus loaded. Run step 1 first.', 'error');
@@ -998,11 +1070,11 @@ window.runEmbeddings = async function() {
 
   try {
     let verbs = Object.keys(STATE.corpus);
+    const maxVerbs = parseInt(document.getElementById('emb-max-verbs').value) || 0;
 
-    // Safety limit to prevent browser OOM crash
-    if (verbs.length > MAX_EMBEDDING_VERBS) {
-      log('cell-embeddings', `Corpus has ${verbs.length} verbs — limiting to ${MAX_EMBEDDING_VERBS} to avoid browser memory issues.`, 'warning');
-      verbs = verbs.slice(0, MAX_EMBEDDING_VERBS);
+    if (maxVerbs > 0 && verbs.length > maxVerbs) {
+      log('cell-embeddings', `Corpus has ${verbs.length} verbs — limiting to ${maxVerbs} (change in dropdown above).`, 'warning');
+      verbs = verbs.slice(0, maxVerbs);
     }
 
     const texts = verbs.map(v => {
@@ -1046,6 +1118,19 @@ window.runEmbeddings = async function() {
   }
 };
 
+// ── Operator embedding texts (one per operator, used to generate centroids) ──
+const OPERATOR_EMBED_TEXTS = {
+  NUL: 'NUL — MARK ABSENCE: Transform a state by making the absence of something the salient fact. Negate, remove, erase, void, nullify, cancel.',
+  DES: 'DES — DRAW DISTINCTION: Register something as different from its ground. Identify, notice, discern, perceive, recognize, distinguish.',
+  INS: 'INS — SOMETHING APPEARS: Create a new event, entity, or state in the world. Begin, create, produce, generate, introduce, emit.',
+  SEG: 'SEG — ONE BECOMES MANY: Transform a unity into parts by introducing a boundary. Divide, split, cut, separate, break, fragment.',
+  CON: 'CON — CREATE PERSISTENT LINK: Establish a relationship between separate identities that persists. Connect, attach, bind, join, link, associate.',
+  SYN: 'SYN — MANY BECOME ONE NEW THING: Combine separate elements into a unified whole. Merge, fuse, blend, synthesize, unify, integrate.',
+  ALT: 'ALT — CHANGE STATE: Same entity, different state. Toggle, switch, convert, transform, modify, alter.',
+  SUP: 'SUP — HOLD INCOMPATIBLE WITHOUT RESOLUTION: Maintain multiple mutually exclusive values simultaneously. Endure, tolerate, sustain, bear, withstand.',
+  REC: 'REC — REBUILD AROUND NEW CENTER: Take an existing structure and reorganize it around a different principle. Restructure, reorganize, reform, reframe, rebuild.',
+};
+
 // ── Cell 3: Analysis ──
 window.runAnalysis = async function() {
   setStatus('cell-analysis', 'running');
@@ -1064,16 +1149,85 @@ window.runAnalysis = async function() {
       return;
     }
 
-    if (!STATE.embeddings) {
+    if (!STATE.embeddings || !STATE.embeddings.embeddings || !STATE.embeddings.embeddings.length) {
       log('cell-analysis', 'No embeddings available. Run step 2 first.', 'error');
       setStatus('cell-analysis', 'error');
       return;
     }
 
     log('cell-analysis', 'Running analysis (this may take a moment)...');
-    // Run analysis via Pyodide
-    log('cell-analysis', 'Analysis requires operator embeddings. Generate them first.', 'error');
-    setStatus('cell-analysis', 'error');
+
+    // Generate operator embeddings using the same model as verb embeddings
+    log('cell-analysis', 'Generating operator embeddings...');
+    const opTexts = HELIX.map(op => OPERATOR_EMBED_TEXTS[op]);
+    const opResult = await ApiClient.generateEmbeddings(opTexts);
+    const opEmbeddings = opResult.embeddings;
+    log('cell-analysis', `  Generated ${opEmbeddings.length} operator embeddings (${opResult.dim}d)`, 'success');
+
+    const verbEmbeddings = STATE.embeddings.embeddings;
+    const verbNames = STATE.embeddings.verb_names || Object.keys(STATE.corpus || {}).slice(0, verbEmbeddings.length);
+
+    // Run completeness test (operator assignment)
+    log('cell-analysis', 'Running completeness test...');
+    const completeness = await Engine.runCompleteness(verbEmbeddings, opEmbeddings, verbNames);
+
+    // Render distribution
+    const dist = completeness.distribution || {};
+    document.getElementById('completeness-stats').innerHTML = HELIX.map(op => {
+      const count = dist[op] || 0;
+      return `<div class="stat-card"><div class="stat-label"><span class="op-badge op-${op.toLowerCase()}">${op}</span></div><div class="stat-value">${count.toLocaleString()}</div></div>`;
+    }).join('');
+
+    const pc = getPlotlyColors();
+    Plotly.newPlot('completeness-plot', [{
+      x: HELIX, y: HELIX.map(op => dist[op] || 0),
+      type: 'bar', marker: { color: OP_COLORS },
+    }], {
+      paper_bgcolor: pc.paper, plot_bgcolor: pc.bg,
+      font: { family: 'IBM Plex Mono', color: pc.font, size: 11 },
+      title: { text: 'Verb Distribution by Operator', font: { size: 14 } },
+      xaxis: { gridcolor: pc.grid }, yaxis: { gridcolor: pc.grid, title: 'Count' },
+      margin: { t: 40, b: 40, l: 60, r: 20 },
+    }, { responsive: true });
+    log('cell-analysis', `  Completeness: ${HELIX.filter(op => (dist[op] || 0) > 0).length}/9 operators populated`, 'success');
+
+    // Run orthogonality test
+    log('cell-analysis', 'Running orthogonality test...');
+    const ortho = await Engine.runOrthogonality(opEmbeddings);
+    if (ortho.sim_matrix) {
+      const matrix = ortho.sim_matrix;
+      Plotly.newPlot('orthogonality-plot', [{
+        z: matrix, x: HELIX, y: HELIX, type: 'heatmap',
+        colorscale: [[0,'#0e0f16'],[0.5,'#4a3090'],[1,'#e070d0']],
+        hovertemplate: '%{y} → %{x}: %{z:.3f}<extra></extra>',
+      }], {
+        paper_bgcolor: pc.paper, plot_bgcolor: pc.bg,
+        font: { family: 'IBM Plex Mono', color: pc.font, size: 11 },
+        title: { text: 'Operator Similarity Matrix', font: { size: 14 } },
+        margin: { t: 40, b: 40, l: 60, r: 20 },
+      }, { responsive: true });
+      log('cell-analysis', `  Mean off-diagonal similarity: ${(ortho.mean_off_diagonal || 0).toFixed(4)}`, 'success');
+    }
+
+    // Run clustering test
+    log('cell-analysis', 'Running clustering test...');
+    const clustering = await Engine.runClustering(verbEmbeddings, opEmbeddings, verbNames);
+
+    // Boundary stats
+    if (clustering.boundary_verbs) {
+      const ambig = clustering.boundary_verbs;
+      document.getElementById('boundary-stats').innerHTML = `
+        <div class="stat-card"><div class="stat-label">Mean Gap</div><div class="stat-value">${(clustering.mean_gap || 0).toFixed(4)}</div></div>
+        <div class="stat-card"><div class="stat-label">Median Gap</div><div class="stat-value">${(clustering.median_gap || 0).toFixed(4)}</div></div>
+      `;
+      document.getElementById('boundary-tbody').innerHTML = ambig.slice(0, 30).map(v =>
+        `<tr><td style="color:var(--white);">${escHtml(v.verb || '')}</td><td><span class="op-badge op-${(v.op1||'').toLowerCase()}">${v.op1}</span></td><td>${(v.sim1||0).toFixed(4)}</td><td><span class="op-badge op-${(v.op2||'').toLowerCase()}">${v.op2}</span></td><td>${(v.sim2||0).toFixed(4)}</td><td>${(v.gap||0).toFixed(4)}</td></tr>`
+      ).join('');
+      log('cell-analysis', `  Found ${ambig.length} boundary verbs (gap < median)`, 'success');
+    }
+
+    setStatus('cell-analysis', 'complete');
+    log('cell-analysis', 'Analysis complete.', 'success');
   } catch (e) {
     setStatus('cell-analysis', 'error');
     log('cell-analysis', 'Error: ' + e.message, 'error');
