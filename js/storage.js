@@ -127,7 +127,14 @@ const Storage = {
     }
 
     // Store metadata (everything except the raw embeddings array)
-    const meta = { ...data, embeddings: null, _chunked: true, _chunkCount: Math.ceil(vectors.length / CHUNK_SIZE) };
+    // Avoid spread to prevent temporarily duplicating the large embeddings array in memory
+    const meta = {};
+    for (const k of Object.keys(data)) {
+      if (k !== 'embeddings') meta[k] = data[k];
+    }
+    meta.embeddings = null;
+    meta._chunked = true;
+    meta._chunkCount = Math.ceil(vectors.length / CHUNK_SIZE);
     await dbPut(STORES.embeddings, key, meta);
 
     // Store embedding vectors in chunks
