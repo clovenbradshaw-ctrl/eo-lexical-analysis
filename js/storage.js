@@ -152,11 +152,12 @@ const Storage = {
     // Handle legacy non-chunked data
     if (!meta._chunked) return meta;
 
-    // Reassemble chunks
-    const embeddings = [];
+    // Reassemble chunks — use concat instead of push(...chunk) to avoid
+    // call-stack overflow when chunks contain many vectors.
+    let embeddings = [];
     for (let i = 0; i < meta._chunkCount; i++) {
       const chunk = await dbGet(STORES.embeddings, `${key}_chunk_${i}`);
-      if (chunk) embeddings.push(...chunk);
+      if (chunk) embeddings = embeddings.concat(chunk);
     }
 
     const { _chunked, _chunkCount, ...rest } = meta;

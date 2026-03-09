@@ -35,30 +35,60 @@ async function generateEmbeddings(texts, onProgress) {
   if (!apiKey) throw new Error('OpenAI API key not set. Configure in sidebar.');
 
   const model = Storage.getSetting('embeddingModel', 'text-embedding-3-large');
-  const batchSize = 2048;
+  // Keep batch size small to avoid huge JSON responses that crash the browser.
+  // text-embedding-3-large returns 3072 dims; 256 vectors ≈ 6MB per response.
+  const batchSize = 256;
+  const maxRetries = 3;
   const allEmbeddings = [];
 
   for (let i = 0; i < texts.length; i += batchSize) {
     const batch = texts.slice(i, i + batchSize);
+    let lastError = null;
 
-    const response = await fetch('https://api.openai.com/v1/embeddings', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({ model, input: batch }),
-    });
+    for (let attempt = 0; attempt < maxRetries; attempt++) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 120000);
 
-    if (!response.ok) {
-      const err = await response.json().catch(() => ({}));
-      throw new Error(`OpenAI API error ${response.status}: ${err.error?.message || response.statusText}`);
+      try {
+        const response = await fetch('https://api.openai.com/v1/embeddings', {
+          method: 'POST',
+          signal: controller.signal,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({ model, input: batch }),
+        });
+        clearTimeout(timeout);
+
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(`OpenAI API error ${response.status}: ${err.error?.message || response.statusText}`);
+        }
+
+        const data = await response.json();
+        const sorted = data.data.sort((a, b) => a.index - b.index);
+        for (const item of sorted) {
+          allEmbeddings.push(item.embedding);
+        }
+
+        lastError = null;
+        break; // success — exit retry loop
+      } catch (e) {
+        clearTimeout(timeout);
+        lastError = e;
+        if (e.name === 'AbortError') {
+          lastError = new Error(`Embedding API request timed out (batch ${Math.floor(i / batchSize) + 1})`);
+        }
+        // Wait before retrying (exponential backoff)
+        if (attempt < maxRetries - 1) {
+          await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt)));
+        }
+      }
     }
 
-    const data = await response.json();
-    const sorted = data.data.sort((a, b) => a.index - b.index);
-    for (const item of sorted) {
-      allEmbeddings.push(item.embedding);
+    if (lastError) {
+      throw new Error(`Embedding failed at batch ${Math.floor(i / batchSize) + 1}: ${lastError.message}`);
     }
 
     if (onProgress) {
