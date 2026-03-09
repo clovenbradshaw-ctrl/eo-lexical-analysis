@@ -104,9 +104,58 @@ const Storage = {
   async saveCorpus(data) { return dbPut(STORES.corpus, 'main', data); },
   async loadCorpus() { return dbGet(STORES.corpus, 'main'); },
 
-  // Embeddings
-  async saveEmbeddings(key, data) { return dbPut(STORES.embeddings, key, data); },
-  async loadEmbeddings(key) { return dbGet(STORES.embeddings, key); },
+  // Embeddings — chunked storage to avoid IndexedDB memory limits.
+  // Large embedding arrays are split into chunks of CHUNK_SIZE vectors each,
+  // stored under keys like "main_chunk_0", "main_chunk_1", etc.
+  // Metadata (model, dim, count, verb_names) is stored under the base key.
+  async saveEmbeddings(key, data) {
+    const CHUNK_SIZE = 1000;
+    const vectors = data.embeddings || [];
+
+    // Clear any previous chunks for this key
+    const db = await openDB();
+    const existingKeys = await new Promise((resolve, reject) => {
+      const tx = db.transaction(STORES.embeddings, 'readonly');
+      const req = tx.objectStore(STORES.embeddings).getAllKeys();
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+    for (const k of existingKeys) {
+      if (k === key || (typeof k === 'string' && k.startsWith(key + '_chunk_'))) {
+        await dbDelete(STORES.embeddings, k);
+      }
+    }
+
+    // Store metadata (everything except the raw embeddings array)
+    const meta = { ...data, embeddings: null, _chunked: true, _chunkCount: Math.ceil(vectors.length / CHUNK_SIZE) };
+    await dbPut(STORES.embeddings, key, meta);
+
+    // Store embedding vectors in chunks
+    for (let i = 0; i < vectors.length; i += CHUNK_SIZE) {
+      const chunkIndex = Math.floor(i / CHUNK_SIZE);
+      const chunk = vectors.slice(i, i + CHUNK_SIZE);
+      await dbPut(STORES.embeddings, `${key}_chunk_${chunkIndex}`, chunk);
+    }
+  },
+
+  async loadEmbeddings(key) {
+    const meta = await dbGet(STORES.embeddings, key);
+    if (!meta) return undefined;
+
+    // Handle legacy non-chunked data
+    if (!meta._chunked) return meta;
+
+    // Reassemble chunks
+    const embeddings = [];
+    for (let i = 0; i < meta._chunkCount; i++) {
+      const chunk = await dbGet(STORES.embeddings, `${key}_chunk_${i}`);
+      if (chunk) embeddings.push(...chunk);
+    }
+
+    const { _chunked, _chunkCount, ...rest } = meta;
+    return { ...rest, embeddings };
+  },
+
   async listEmbeddings() { return dbGetAll(STORES.embeddings); },
 
   // Classifications

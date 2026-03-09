@@ -722,6 +722,8 @@ window.runSetup = async function() {
     // Load cached data from IndexedDB
     const cachedCorpus = await Storage.loadCorpus();
     if (cachedCorpus) { STATE.corpus = cachedCorpus; log('cell-setup', '  Restored cached corpus', 'success'); }
+    const cachedEmb = await Storage.loadEmbeddings('main');
+    if (cachedEmb) { STATE.embeddings = cachedEmb; log('cell-setup', `  Restored cached embeddings (${cachedEmb.count} vectors)`, 'success'); }
     const cachedCls = await Storage.loadClassifications();
     if (cachedCls) { STATE.classifications = cachedCls; log('cell-setup', '  Restored cached classifications', 'success'); }
 
