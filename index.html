@@ -1253,12 +1253,15 @@ footer a:hover { color: var(--text); }
         <span class="explainer-label">About this table</span>
       </button>
       <div class="explainer-body">
-        <p>Every classified verb sense with operator, confidence, scale, LLM reasoning, and runner-up alternative. Search, filter, and audit individual classifications.</p>
+        <p>Every classified verb sense across all 27 languages with operator, confidence, scale, LLM reasoning, and runner-up alternative. English verbs include full classification detail; crosslinguistic verbs include glosses. Search, filter by language, and audit individual classifications.</p>
       </div>
     </div>
     <div class="panel">
       <div class="verb-controls">
         <input type="text" id="verb-search" placeholder="Search verbs..." autocomplete="off">
+        <select id="verb-lang-filter">
+          <option value="">All languages</option>
+        </select>
         <select id="verb-op-filter">
           <option value="">All operators</option>
         </select>
@@ -1275,10 +1278,11 @@ footer a:hover { color: var(--text); }
           <thead>
             <tr>
               <th>Verb</th>
+              <th>Language</th>
               <th>Operator</th>
               <th>Conf</th>
               <th>Scale</th>
-              <th>Reasoning</th>
+              <th>Reasoning / Gloss</th>
               <th>Alt</th>
             </tr>
           </thead>
@@ -2073,6 +2077,17 @@ function plotFusionBars(cm, triads) {
 var VERBS_PER_PAGE = 200;
 
 function renderVerbs() {
+  // Populate language filter
+  var langFilter = document.getElementById('verb-lang-filter');
+  var langs = {};
+  DATA.verbs.forEach(function(v) { if (v.l) langs[v.l] = (langs[v.l] || 0) + 1; });
+  Object.keys(langs).sort().forEach(function(lang) {
+    var opt = document.createElement('option');
+    opt.value = lang;
+    opt.textContent = lang.replace(/_/g, ' ') + ' (' + langs[lang].toLocaleString() + ')';
+    langFilter.appendChild(opt);
+  });
+
   // Populate operator filter
   var opFilter = document.getElementById('verb-op-filter');
   OP_ORDER.forEach(function(op) {
@@ -2083,6 +2098,7 @@ function renderVerbs() {
   });
 
   document.getElementById('verb-search').addEventListener('input', debounce(filterVerbs, 200));
+  document.getElementById('verb-lang-filter').addEventListener('change', filterVerbs);
   document.getElementById('verb-op-filter').addEventListener('change', filterVerbs);
   document.getElementById('verb-conf-filter').addEventListener('change', filterVerbs);
 
@@ -2091,11 +2107,16 @@ function renderVerbs() {
 
 function filterVerbs() {
   var search = document.getElementById('verb-search').value.toLowerCase();
+  var langF = document.getElementById('verb-lang-filter').value;
   var opF = document.getElementById('verb-op-filter').value;
   var confF = document.getElementById('verb-conf-filter').value;
 
   var filtered = DATA.verbs;
-  if (search) filtered = filtered.filter(function(v) { return v.v.toLowerCase().indexOf(search) !== -1; });
+  if (search) filtered = filtered.filter(function(v) {
+    return v.v.toLowerCase().indexOf(search) !== -1 ||
+           (v.r && v.r.toLowerCase().indexOf(search) !== -1);
+  });
+  if (langF) filtered = filtered.filter(function(v) { return v.l === langF; });
   if (opF) filtered = filtered.filter(function(v) { return v.op === opF; });
   if (confF) filtered = filtered.filter(function(v) { return v.c === confF; });
 
@@ -2108,10 +2129,13 @@ function filterVerbs() {
 
   tbody.innerHTML = show.map(function(v) {
     var scaleFull = SCALE_MAP[v.s] || v.s;
+    var confLabel = v.c === 'H' ? 'High' : v.c === 'M' ? 'Med' : v.c === 'L' ? 'Low' : '\u2014';
+    var langDisplay = (v.l || 'English').replace(/_/g, ' ');
     return '<tr>' +
       '<td class="col-verb">' + escHtml(v.v) + '</td>' +
+      '<td class="col-conf">' + escHtml(langDisplay) + '</td>' +
       '<td><span class="col-op op-bg-' + v.op.toLowerCase() + '">' + v.op + '</span></td>' +
-      '<td class="col-conf">' + (v.c === 'H' ? 'High' : v.c === 'M' ? 'Med' : 'Low') + '</td>' +
+      '<td class="col-conf">' + confLabel + '</td>' +
       '<td class="col-conf">' + scaleFull + '</td>' +
       '<td class="col-reason">' + escHtml(v.r) + '</td>' +
       '<td class="col-alt">' + (v.a ? escHtml(v.a) : '\u2014') + '</td>' +

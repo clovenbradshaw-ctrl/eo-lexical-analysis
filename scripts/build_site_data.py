@@ -155,10 +155,11 @@ def build_metrics():
 
 
 def build_verbs():
-    """Build verb browser data from explore files."""
+    """Build verb browser data from explore files + crosslinguistic data."""
     op_order = ["NUL", "DES", "INS", "SEG", "CON", "SYN", "ALT", "SUP", "REC"]
     all_verbs = []
 
+    # English verbs from explore files (with full classification detail)
     for op in op_order:
         explore = load(f"explore_{op}.json")
         for v in explore["all_verbs"]:
@@ -169,10 +170,38 @@ def build_verbs():
                 "s": v["scale"][:4] if v.get("scale") else "?",  # phys/soci/psyc/info
                 "r": v.get("reason", ""),
                 "a": v.get("alternative"),
+                "l": "English",
             })
 
-    # Sort by verb name
-    all_verbs.sort(key=lambda x: x["v"].lower())
+    # Crosslinguistic verbs from 27-cell analysis (all languages)
+    try:
+        cells = load("crossling_27_cells.json")
+        seen = set()  # deduplicate English verbs already added
+        for v in all_verbs:
+            seen.add(("English", v["v"]))
+
+        for lang, ldata in cells.get("languages", {}).items():
+            for cell_name, cell in ldata.get("cells", {}).items():
+                for v in cell.get("verbs", []):
+                    key = (lang, v["verb"])
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    all_verbs.append({
+                        "v": v["verb"],
+                        "op": v.get("operator", "?"),
+                        "c": "?",
+                        "s": "?",
+                        "r": v.get("gloss", ""),
+                        "a": None,
+                        "l": lang,
+                    })
+        print(f"    (includes {len(all_verbs)} verbs across {len(set(v['l'] for v in all_verbs))} languages)")
+    except Exception as e:
+        print(f"    (crosslinguistic data not available: {e})")
+
+    # Sort by language then verb name
+    all_verbs.sort(key=lambda x: (x["l"].lower(), x["v"].lower()))
     return all_verbs
 
 
