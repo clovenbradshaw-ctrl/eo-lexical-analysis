@@ -125,6 +125,7 @@ sys.stdout = _capture
 // ── Pre-built analysis runners ──────────────────────────────
 
 async function runCompleteness(verbEmbeddings, opEmbeddings, verbNames) {
+  if (!verbEmbeddings.length || !opEmbeddings.length) throw new Error('Empty embeddings array');
   const py = await initPyodide();
 
   // Pass data to Python
@@ -156,6 +157,7 @@ result
 
 
 async function runClustering(verbEmbeddings, opEmbeddings, verbNames) {
+  if (!verbEmbeddings.length || !opEmbeddings.length) throw new Error('Empty embeddings array');
   const py = await initPyodide();
 
   py.globals.set('verb_embs_flat', py.toPy(verbEmbeddings.flat()));
@@ -182,6 +184,7 @@ result
 
 
 async function runOrthogonality(opEmbeddings) {
+  if (!opEmbeddings.length) throw new Error('Empty embeddings array');
   const py = await initPyodide();
 
   py.globals.set('op_embs_flat', py.toPy(opEmbeddings.flat()));
@@ -202,6 +205,7 @@ result
 
 
 async function runPCA(verbEmbeddings, opEmbeddings, nearestIdx) {
+  if (!verbEmbeddings.length || !opEmbeddings.length) throw new Error('Empty embeddings array');
   const py = await initPyodide();
 
   py.globals.set('verb_embs_flat', py.toPy(verbEmbeddings.flat()));
@@ -252,6 +256,7 @@ summary = summarize_clauses(clauses)
 
 
 async function runFalsification(embeddings, labels) {
+  if (!embeddings.length) throw new Error('Empty embeddings array');
   const py = await initPyodide();
 
   py.globals.set('embs_flat', py.toPy(embeddings.flat()));
