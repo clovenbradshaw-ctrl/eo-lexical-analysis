@@ -778,6 +778,24 @@ window.runLoadCorpus = async function() {
       if (resp2 && resp2.ok) verbs = await resp2.json();
     }
     if (verbs) {
+      // Normalize: if verbs.json is an array of objects, convert to dict keyed by verb name
+      if (Array.isArray(verbs)) {
+        const dict = {};
+        for (const entry of verbs) {
+          const name = entry.v || entry.verb || entry.lemma || '';
+          if (name && !dict[name]) {
+            dict[name] = {
+              definition: entry.r || entry.definition || entry.def || entry.gloss || '',
+              operator: entry.op || '',
+              language: entry.l || '',
+              confidence: entry.c || '',
+              source: entry.s || '',
+              alternative: entry.a || '',
+            };
+          }
+        }
+        verbs = dict;
+      }
       STATE.corpus = verbs;
       await Storage.saveCorpus(verbs);
       renderCorpusTable(verbs);
@@ -966,6 +984,8 @@ window.extractClauses = async function() {
 };
 
 // ── Cell 2: Embeddings ──
+const MAX_EMBEDDING_VERBS = 5000;
+
 window.runEmbeddings = async function() {
   setStatus('cell-embeddings', 'running');
   clearOutput('cell-embeddings');
@@ -977,10 +997,19 @@ window.runEmbeddings = async function() {
   }
 
   try {
-    const verbs = Object.keys(STATE.corpus);
+    let verbs = Object.keys(STATE.corpus);
+
+    // Safety limit to prevent browser OOM crash
+    if (verbs.length > MAX_EMBEDDING_VERBS) {
+      log('cell-embeddings', `Corpus has ${verbs.length} verbs — limiting to ${MAX_EMBEDDING_VERBS} to avoid browser memory issues.`, 'warning');
+      verbs = verbs.slice(0, MAX_EMBEDDING_VERBS);
+    }
+
     const texts = verbs.map(v => {
       const info = STATE.corpus[v];
-      const def = typeof info === 'string' ? info : (info.definition || info.def || v);
+      if (!info) return v;
+      const def = typeof info === 'string' ? info
+        : (info.definition || info.def || info.r || info.gloss || v);
       return `${v}: ${def}`;
     });
 
