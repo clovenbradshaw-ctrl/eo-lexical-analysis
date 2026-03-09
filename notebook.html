@@ -1027,7 +1027,7 @@ window.runAnalysis = async function() {
   try {
     // Try pre-computed data first
     const precomp = STATE.precomputed || {};
-    if (precomp.metrics || precomp.boundaries || precomp.confusion) {
+    if (precomp.operators || precomp.metrics || precomp.boundaries || precomp.confusion) {
       log('cell-analysis', 'Rendering pre-computed analysis results...');
       renderPrecomputedAnalysis(precomp);
       setStatus('cell-analysis', 'complete');
@@ -1052,10 +1052,19 @@ window.runAnalysis = async function() {
 };
 
 function renderPrecomputedAnalysis(data) {
-  // Completeness
-  if (data.metrics) {
-    const m = data.metrics;
-    const dist = m.distribution || {};
+  // Completeness — build distribution from operators.json totals or metrics.distribution
+  const hasOperators = data.operators && typeof data.operators === 'object';
+  const hasMetrics = data.metrics && typeof data.metrics === 'object';
+  if (hasOperators || hasMetrics) {
+    // Build distribution: prefer operators.json totals, fall back to metrics.distribution
+    const dist = {};
+    if (hasOperators) {
+      for (const op of HELIX) {
+        dist[op] = data.operators[op]?.total || 0;
+      }
+    } else {
+      Object.assign(dist, data.metrics.distribution || {});
+    }
     document.getElementById('completeness-stats').innerHTML = HELIX.map(op => {
       const count = dist[op] || 0;
       return `<div class="stat-card"><div class="stat-label"><span class="op-badge op-${op.toLowerCase()}">${op}</span></div><div class="stat-value">${count.toLocaleString()}</div></div>`;
@@ -1128,6 +1137,7 @@ window.runClassify = async function() {
 
     const results = await ApiClient.classifyVerbs(verbs, (p) => {
       document.getElementById('classify-progress-fill').style.width = p.pct + '%';
+      log('cell-classify', `  Progress: ${p.done}/${p.total} verbs (${p.pct}%)`);
     });
 
     STATE.classifications = results;

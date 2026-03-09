@@ -104,8 +104,12 @@ ${verbList}
 Respond in JSON array format:
 [{"verb": "...", "operator": "...", "confidence": "...", "gloss": "...", "alternative": ""}]`;
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 120000);
+
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`,
@@ -120,6 +124,7 @@ Respond in JSON array format:
         max_tokens: 4096,
       }),
     });
+    clearTimeout(timeout);
 
     if (!response.ok) {
       const err = await response.json().catch(() => ({}));
@@ -137,7 +142,7 @@ Respond in JSON array format:
       const batchResults = JSON.parse(text);
       classifications.push(...batchResults);
     } catch (e) {
-      console.warn('Failed to parse batch', i, e);
+      console.warn('Failed to parse batch', i, text, e);
     }
 
     if (onProgress) {
@@ -179,8 +184,12 @@ ${verbList}
 Respond in JSON array format:
 [{"verb": "...", "operator": "...", "confidence": "...", "gloss": "...", "alternative": ""}]`;
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 120000);
+
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         'Content-Type': 'application/json',
         'x-api-key': apiKey,
@@ -194,6 +203,7 @@ Respond in JSON array format:
         messages: [{ role: 'user', content: prompt }],
       }),
     });
+    clearTimeout(timeout);
 
     if (!response.ok) {
       const err = await response.json().catch(() => ({}));
@@ -210,7 +220,7 @@ Respond in JSON array format:
       const batchResults = JSON.parse(text);
       classifications.push(...batchResults);
     } catch (e) {
-      console.warn('Failed to parse batch', i, e);
+      console.warn('Failed to parse batch', i, text, e);
     }
 
     if (onProgress) {
