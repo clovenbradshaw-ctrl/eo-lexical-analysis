@@ -390,19 +390,30 @@ def main():
 
     operators_to_explore = HELIX_ORDER if args.all else [args.operator.upper()]
 
+    all_reports = {}
     for op in operators_to_explore:
         if op not in HELIX_ORDER:
             log(f"  Unknown operator: {op}")
             continue
         report = explore_operator(op, records, embs)
         if report:
+            all_reports[op] = report
             visualize_operator(op, records, embs, report)
 
     visualize_full_map(records, embs)
 
+    # Save a single combined file in the scripts directory when --all is used
+    if args.all and all_reports:
+        combined_path = os.path.join(SCRIPTS_DIR, "explore_all_report.json")
+        with open(combined_path, "w") as f:
+            json.dump(all_reports, f, indent=2)
+        log(f"\n  ✓ Saved combined report: {combined_path}")
+
     log(f"\n{'='*60}")
     log(f"EXPLORATION COMPLETE")
     log(f"Reports: {OUTPUT_DIR}/explore_*.json")
+    if args.all:
+        log(f"Combined: {os.path.abspath(os.path.join(SCRIPTS_DIR, 'explore_all_report.json'))}")
     log(f"Visuals: {VIZ_DIR}/explore_*.png")
     log(f"{'='*60}")
 
